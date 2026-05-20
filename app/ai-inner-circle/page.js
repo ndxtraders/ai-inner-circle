@@ -43,15 +43,11 @@ export default function AIInnerCirclePage() {
               Your human voice sells it. AI scales it.
             </h1>
             <p className="text-lead text-ink-muted mb-10">
-              A working group for founder-led brands that need revenue systems, not more "ideas"
-              So pipeline grows without burning you out.
+              A working cohort for founder-led brands that need revenue systems so pipeline grows without burning you out.
             </p>
             <div className="flex flex-wrap gap-4">
               <Button href="https://revvaughn.com/contact" external variant="primary">
                 Join the Waitlist
-              </Button>
-              <Button href="/#briefings" variant="ghost">
-                Get the Briefings
               </Button>
             </div>
           </div>
