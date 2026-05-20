@@ -332,7 +332,7 @@ export default function Home() {
             <div className="md:col-span-8">
               <p className="eyebrow mb-6">About</p>
               <h2 className="text-h1 font-semibold mb-6 leading-tight">
-                Most revenue problems don't come from a lack of leads or effort. They come from breakdowns inside the funnel. That's where I work.
+                Most revenue problems come from breakdowns inside the funnel. That's where I work.
               </h2>
               <div className="space-y-5 text-body text-ink-muted">
                 <p>
