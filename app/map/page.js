@@ -374,11 +374,16 @@ export default function MapPage() {
   const hasRed = redCount > 0
   const redQuestions = QUESTIONS.filter((_, i) => answers[i] === 'red')
 
-  // Download results as PDF
-  const handleDownload = useCallback(async () => {
-    try {
+  // Build the results PDF from an answers array. Derives every value from the
+  // array, so it works at reveal time (before React state settles) and on download.
+  const buildPdf = useCallback(async (answersArr) => {
       const { default: jsPDF } = await import('jspdf')
       const pdf = new jsPDF('p', 'mm', 'a4')
+      const totalFriction = getTotalFriction(answersArr)
+      const categoryStatuses = CATEGORIES.map((_, i) => getCategoryStatus(answersArr, i))
+      const categoryFrictions = CATEGORIES.map((_, i) => getCategoryFriction(answersArr, i))
+      const hasRed = answersArr.some((a) => a === 'red')
+      const redQuestions = QUESTIONS.filter((_, i) => answersArr[i] === 'red')
       const pageWidth = 210
       const pageHeight = 297
       const margin = 20
@@ -503,7 +508,7 @@ export default function MapPage() {
         const cellGap = 3
         catQuestions.forEach((q, qi) => {
           const qIndex = q.id - 1
-          const status = answers[qIndex]
+          const status = answersArr[qIndex]
           const x = margin + qi * (cellSize + cellGap)
           const color = status ? statusColors[status] : [240, 240, 240]
           pdf.setFillColor(...color)
@@ -592,11 +597,18 @@ export default function MapPage() {
       pdf.setTextColor(...muted)
       pdf.text('Next step: Book your AI Systems Audit at revvaughn.com/ai-audit', margin, y)
 
+      return pdf
+  }, [])
+
+  // Download results as PDF (manual button)
+  const handleDownload = useCallback(async () => {
+    try {
+      const pdf = await buildPdf(answers)
       pdf.save('ai-priority-map-results.pdf')
     } catch (err) {
       console.error('Download failed:', err)
     }
-  }, [answers, totalFriction, hasRed, categoryStatuses, categoryFrictions, redQuestions])
+  }, [answers, buildPdf])
 
   // Animations
   useEffect(() => {
@@ -636,23 +648,37 @@ export default function MapPage() {
     if (final && final.every((a) => a !== null)) {
       setRevealed(true)
 
-      // Send results to MailerLite
+      let email = null
       try {
-        const email = sessionStorage.getItem('map_email')
-        if (email) {
-          const friction = getTotalFriction(final)
-          fetch('/api/save-results', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-              email,
-              answers: final,
-              totalFriction: friction,
-            }),
-          }).catch(() => {})
-        }
+        email = sessionStorage.getItem('map_email')
       } catch (e) {
         // sessionStorage might not be available
+      }
+
+      if (email) {
+        const friction = getTotalFriction(final)
+
+        // Send structured results to MailerLite (existing behavior)
+        fetch('/api/save-results', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            email,
+            answers: final,
+            totalFriction: friction,
+          }),
+        }).catch(() => {})
+
+        // Archive the generated PDF to Supabase Storage so results are never lost
+        // if the visitor leaves without downloading.
+        buildPdf(final)
+          .then((pdf) => {
+            const fd = new FormData()
+            fd.append('email', email)
+            fd.append('pdf', pdf.output('blob'), 'results.pdf')
+            return fetch('/api/save-pdf', { method: 'POST', body: fd })
+          })
+          .catch(() => {})
       }
     }
   }
