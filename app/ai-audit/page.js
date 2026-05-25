@@ -7,7 +7,7 @@ import Button from '../components/Button'
 export const metadata = {
   title: 'AI Audit — Rev Vaughn',
   description:
-    'A customized AI implementation roadmap for founder-led brands. 6-10 hours of deep-work synthesis to find the exact tools, sequence, and integrations that fit your business.',
+    'A customized AI implementation roadmap for founder-led brands. 6-8 hours of deep-work synthesis to find the exact tools, sequence, and integrations that fit your business.',
   openGraph: {
     title: 'AI Audit — Rev Vaughn',
     description:
@@ -32,7 +32,7 @@ export default function AIAuditPage() {
                 Your Customized AI Implementation Roadmap
               </h1>
               <p className="text-lead text-ink-muted mb-10">
-                I spend 6&ndash;10 hours deep-diving into your specific processes to find the
+                I spend 6&ndash;8 hours deep-diving into your specific processes to find the
                 exact AI tools, sequence, and integrations that fit your business. You get
                 an Action Plan you can execute.
               </p>
@@ -130,7 +130,7 @@ export default function AIAuditPage() {
                 Deep-Work Synthesis
               </h3>
               <p className="text-body text-ink-muted">
-                I take 6&ndash;10 hours behind the scenes to build your customized roadmap.
+                I take 6&ndash;8 hours behind the scenes to build your customized roadmap.
                 I evaluate which AI agents, LLMs, or automated workflows fit your actual budget
                 and skill level. No over-engineering. Only what works.
               </p>
@@ -189,7 +189,7 @@ export default function AIAuditPage() {
             <div className="space-y-5 text-body text-ink-soft">
               <p>
                 Founder&rsquo;s early access special pricing is based on my current capacity. To maintain the
-                6&ndash;10 hours of manual attention I give to every audit, this price will
+                6&ndash;8 hours of manual attention I give to every audit, this price will
                 be increasing very soon. If you leave and come back later, it will likely be higher.
               </p>
               <p>
