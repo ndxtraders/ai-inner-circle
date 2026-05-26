@@ -15,6 +15,7 @@ const PAGES = [
   { path: '/resources', priority: 0.7, changeFrequency: 'weekly' },
   { path: '/contact', priority: 0.5, changeFrequency: 'yearly' },
   { path: '/privacy-terms', priority: 0.3, changeFrequency: 'yearly' },
+  { path: '/awakened-mind/privacy-terms', priority: 0.3, changeFrequency: 'yearly' },
 ]
 
 export default function sitemap() {
