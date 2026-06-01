@@ -30,6 +30,46 @@ const PILLARS = [
   },
 ]
 
+const CADENCE = [
+  { stat: '2', label: 'Live workshops per month' },
+  { stat: '1', label: 'New skill every week' },
+  { stat: 'Weekly', label: 'Friday QA with Rev' },
+  { stat: 'Always', label: 'Direct access to Rev in Skool' },
+]
+
+const MONTHS = [
+  {
+    n: '01',
+    theme: 'Strategic Foundations',
+    body: 'Positioning, offer validation, market intelligence, and brand voice. Fix upstream before building downstream.',
+  },
+  {
+    n: '02',
+    theme: 'Messaging Systems',
+    body: 'Offer design, sales pages, copywriting, and humanization. Turn expertise into words that sell.',
+  },
+  {
+    n: '03',
+    theme: 'Content Engine',
+    body: 'LinkedIn profile, ghostwriting, content repurposing, and hooks. Scale content without losing your voice.',
+  },
+  {
+    n: '04',
+    theme: 'Email & Lead Generation',
+    body: 'Lead magnets, email sequences, LinkedIn outreach, and carousel content. Build the full opt-in and nurture system.',
+  },
+  {
+    n: '05',
+    theme: 'Research & Conversion',
+    body: 'Market research, pricing strategy, cold email, and page CRO. Move revenue with data and precision.',
+  },
+  {
+    n: '06',
+    theme: 'Advanced Operations',
+    body: 'Prompt engineering, GTM teardowns, business model design, and AI business coaching. Full-stack systems thinking.',
+  },
+]
+
 export default function AIInnerCirclePage() {
   return (
     <>
@@ -122,6 +162,34 @@ export default function AIInnerCirclePage() {
                 You&rsquo;re ready to be coached. And to put in the work.
               </li>
             </ul>
+          </div>
+        </Section>
+
+        {/* Curriculum */}
+        <Section bg="grey" width="content">
+          <div className="max-w-prose mb-12">
+            <div className="eyebrow mb-4">What you get every month</div>
+            <h2 className="text-h1 font-semibold tracking-tight text-ink">
+              Structured. Sequential. Built to compound.
+            </h2>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-20">
+            {CADENCE.map((c) => (
+              <div key={c.label} className="border-t-2 border-accent pt-4">
+                <div className="text-h2 font-semibold text-ink mb-2">{c.stat}</div>
+                <div className="text-body text-ink-muted">{c.label}</div>
+              </div>
+            ))}
+          </div>
+          <div className="eyebrow mb-8">The 6-month curriculum</div>
+          <div className="grid md:grid-cols-3 gap-10">
+            {MONTHS.map((m) => (
+              <div key={m.n} className="border-t border-ink pt-6">
+                <div className="text-small font-medium text-accent mb-3">{m.n}</div>
+                <h3 className="text-h3 font-semibold text-ink mb-3">{m.theme}</h3>
+                <p className="text-body text-ink-muted">{m.body}</p>
+              </div>
+            ))}
           </div>
         </Section>
 
