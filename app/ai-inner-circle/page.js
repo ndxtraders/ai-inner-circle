@@ -33,8 +33,8 @@ const PILLARS = [
 const CADENCE = [
   { stat: '2', label: 'Workshops every month. Live and recorded.' },
   { stat: '1', label: 'New skill every Monday. Use it that week.' },
-  { stat: 'Weekly', label: 'Friday QA. Real problems. Real answers.' },
-  { stat: 'Always', label: 'Direct access to Rev inside the community.' },
+  { stat: 'Weekly', label: 'Friday Q&A with Rev' },
+  { stat: 'Daily', label: 'Direct access to Rev inside the community.' },
 ]
 
 const MONTHS = [
@@ -48,13 +48,13 @@ const MONTHS = [
     n: '02',
     theme: 'Messaging Systems',
     body: 'You write copy that converts. Offer design, sales pages, and messaging that does the selling for you.',
-    skills: ['Offer Creation', 'Copywriting', 'Copy Editing', 'Blazer Humanizer'],
+    skills: ['Offer Creation', 'Copywriting', 'Copy Editing', 'AI Check to avoid AI slop'],
   },
   {
     n: '03',
     theme: 'Content Engine',
     body: 'You show up consistently. LinkedIn profile optimized, posts ghostwritten, content repurposed across channels.',
-    skills: ['LinkedIn Profile Architect', 'LinkedIn Ghostwriter', 'Content Repurposing', 'YouTube Hook Creator'],
+    skills: ['LinkedIn Profile Architect', 'LinkedIn Ghostwriter', 'Content Repurposing', 'Hook Creator'],
   },
   {
     n: '04',
@@ -66,13 +66,13 @@ const MONTHS = [
     n: '05',
     theme: 'Research & Conversion',
     body: 'You grow with data. Market research, pricing, cold outreach, and page fixes that move revenue.',
-    skills: ['Market Sauce Research', 'Pricing Strategy', 'Cold Email', 'Page CRO'],
+    skills: ['Market Sauce Research', 'Pricing Strategy', 'Email Outreach', 'Conversion Rate Optimization'],
   },
   {
     n: '06',
     theme: 'Advanced Operations',
-    body: 'You operate like a full team. Advanced prompts, GTM teardowns, and a complete business model.',
-    skills: ['Engineer Any Prompt', 'GTM Teardown', 'Business Model Canvas', 'AI Business Coach'],
+    body: 'You operate like a full team. Advanced prompts, Go-To-Market teardowns, and a complete rebuild.',
+    skills: ['Engineer Any Prompt', 'Go-To-Market Teardown', 'Go-To-Market Rebuild', 'AI Business Coach'],
   },
 ]
 
