@@ -110,7 +110,7 @@ export default function AIInnerCirclePage() {
             </div>
             <div className="space-y-5 text-body text-ink-soft">
               <p>
-                Here&rsquo;s what I see every week. Founders doing $1M to $20M in revenue, stuck
+                Every week, I see founders who are doing $1M to $20M in revenue, stuck
                 in one of two places. Either they&rsquo;re doing everything themselves and can&rsquo;t
                 keep up. Or they&rsquo;re using AI and creating "AI Slop" their audience ignores.
               </p>
