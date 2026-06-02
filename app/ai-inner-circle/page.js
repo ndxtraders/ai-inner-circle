@@ -158,7 +158,7 @@ export default function AIInnerCirclePage() {
               <li className="border-b border-rule pb-4">
                 You are the face and voice of the brand. That's your advantage and your constraint.
                 You&rsquo;ve paid agencies and bought courses, but revenue didn&rsquo;t grow.
-                You need a system that compounds. Not another list of tactics.
+                You need a system that compounds, not another list of tactics.
                 If you&rsquo;re ready to be coached and to put in the work.
                 AI Inner Circle could be the best investment you make.
               </li>
