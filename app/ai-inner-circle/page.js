@@ -32,7 +32,7 @@ const PILLARS = [
 
 const CADENCE = [
   { stat: '2', label: 'Workshops every month. Live and recorded.' },
-  { stat: '1', label: 'New skill every Monday. Use it that week.' },
+  { stat: '1', label: 'New skill every Tuesday. Use it that same day.' },
   { stat: 'Weekly', label: 'Friday Q&A with Rev' },
   { stat: 'Daily', label: 'Direct access to Rev inside the community.' },
 ]
