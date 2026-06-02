@@ -157,15 +157,10 @@ export default function AIInnerCirclePage() {
             <ul className="space-y-4 text-body text-ink-soft">
               <li className="border-b border-rule pb-4">
                 You are the face and voice of the brand. That's your advantage and your constraint.
-              </li>
-              <li className="border-b border-rule pb-4">
-                You&rsquo;ve paid agencies and bought courses. Revenue didn&rsquo;t move.
-              </li>
-              <li className="border-b border-rule pb-4">
+                You&rsquo;ve paid agencies and bought courses, but revenue didn&rsquo;t grow.
                 You need a system that compounds. Not another list of tactics.
-              </li>
-              <li className="pb-4">
-                You&rsquo;re ready to be coached. And to put in the work.
+                If you&rsquo;re ready to be coached and to put in the work.
+                AI Inner Circle could be the best investment you make.
               </li>
             </ul>
           </div>
