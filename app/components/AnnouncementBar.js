@@ -32,7 +32,7 @@ export default function AnnouncementBar() {
             href="/ai"
             className="underline underline-offset-2 hover:no-underline font-semibold whitespace-nowrap"
           >
-            Take the 5-Minute AI Priority Map →
+            Take the 5-Minute Assessment →
           </Link>
         </p>
         <div className="flex-1 flex justify-end">
