@@ -128,7 +128,7 @@ const PILLARS = [
 ]
 
 const CADENCE = [
-  { stat: '2', label: 'Workshops every month. Live and recorded.' },
+  { stat: '1-2', label: 'Workshops every month. Live and recorded.' },
   { stat: '1', label: 'New skill every Tuesday. Use it that same day.' },
   { stat: 'Weekly', label: 'Friday Q&A with Rev' },
   { stat: 'Daily', label: 'Direct access to Rev inside the community.' },
@@ -363,7 +363,7 @@ export default function AIInnerCirclePage() {
               <div className="text-small text-ink-muted mb-8">per month</div>
               <ul className="space-y-3 text-body text-ink-soft mb-10 flex-1">
                 <li className="flex gap-3"><span className="text-accent mt-1">–</span>Full 6-month curriculum (one skill per week)</li>
-                <li className="flex gap-3"><span className="text-accent mt-1">–</span>2 live workshops per month</li>
+                <li className="flex gap-3"><span className="text-accent mt-1">–</span>1-2 live workshops per month</li>
                 <li className="flex gap-3"><span className="text-accent mt-1">–</span>Friday Q&amp;A with Rev</li>
                 <li className="flex gap-3"><span className="text-accent mt-1">–</span>Daily community access</li>
               </ul>
