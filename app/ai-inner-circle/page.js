@@ -210,7 +210,7 @@ export default function AIInnerCirclePage() {
         </section>
 
         {/* 3. WHY IT EXISTS */}
-        <Section bg="grey" width="content">
+        <Section bg="paper" width="content">
           <div className="grid md:grid-cols-2 gap-12 items-start">
             <div>
               <div className="eyebrow mb-4">Why it exists</div>
@@ -235,7 +235,7 @@ export default function AIInnerCirclePage() {
         </Section>
 
         {/* 4. THREE PILLARS */}
-        <Section bg="paper" width="content">
+        <Section bg="grey" width="content">
           <div className="max-w-prose mb-14">
             <div className="eyebrow mb-4">The three pillars</div>
             <h2 className="text-h1 font-semibold tracking-tight text-ink">
