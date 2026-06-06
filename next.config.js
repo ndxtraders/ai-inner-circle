@@ -21,8 +21,10 @@ const nextConfig = {
       { source: '/coach-s-checklist', destination: '/resources', permanent: true },
       // Legacy AI Priority Map landing page — superseded by /ai
       { source: '/ai-priority-map', destination: '/ai', permanent: true },
+      // aiinnercircle.com domain redirect → AI Inner Circle page
+      { source: '/:path*', has: [{ type: 'host', value: 'aiinnercircle.com' }], destination: 'https://revvaughn.com/ai-inner-circle', permanent: true },
+      { source: '/:path*', has: [{ type: 'host', value: 'www.aiinnercircle.com' }], destination: 'https://revvaughn.com/ai-inner-circle', permanent: true },
     ]
   },
 }
-
 module.exports = nextConfig
