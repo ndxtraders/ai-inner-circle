@@ -274,15 +274,13 @@ export default function AIInnerCirclePage() {
             </div>
             <div className="space-y-5 text-body text-ink-soft">
               <p>
-                Every week, I see founders doing $1M to $20M in revenue, stuck in one of two places.
+                Every week, I see founders stuck in one of two places.
                 Either they&rsquo;re doing everything themselves and can&rsquo;t keep up. Or they&rsquo;re
                 using AI and creating &ldquo;AI Slop&rdquo; their audience ignores.
               </p>
-              <p>Both cost pipeline. Both waste time.</p>
               <p>
-                The Inner Circle is where we build the middle ground. You keep control of your voice
-                and your brand. AI handles the execution. And you work alongside other operators
-                solving the same problem.
+                AI Inner Circle is where we amplify you the business owner. You keep control of your voice
+                and your brand for human trust. AI handles execution for speed and scale.
               </p>
             </div>
           </div>
