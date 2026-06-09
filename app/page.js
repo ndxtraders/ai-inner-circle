@@ -321,7 +321,7 @@ export default function Home() {
             <div className="md:col-span-4">
               <div className="aspect-[4/5] relative w-full max-w-xs">
                 <Image
-                  src="/headshot-4.png"
+                  src="/Rev-Vaughn-800.jpg"
                   alt="Rev Vaughn"
                   fill
                   sizes="(max-width: 768px) 100vw, 320px"
