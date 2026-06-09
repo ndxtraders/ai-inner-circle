@@ -245,6 +245,7 @@ export default function AIInnerCirclePage() {
                 width={220}
                 height={220}
                 className="opacity-90"
+                unoptimized
               />
             </div>
           </div>
@@ -363,6 +364,7 @@ export default function AIInnerCirclePage() {
                   fill
                   sizes="(max-width: 768px) 100vw, 320px"
                   className="object-cover grayscale"
+                  unoptimized
                 />
               </div>
             </div>
