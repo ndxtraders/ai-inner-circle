@@ -120,6 +120,9 @@ export default function Home() {
                 <span key={c} className="whitespace-nowrap">{c}</span>
               ))}
             </div>
+            <div className="mt-8 text-center">
+              <Button href="/case-studies" variant="secondary">View Case Studies &rarr;</Button>
+            </div>
           </div>
         </section>
 
@@ -170,6 +173,9 @@ export default function Home() {
               </p>
             </li>
           </ul>
+          <div className="mt-12">
+            <Button href="/case-studies" variant="secondary">View All Case Studies &rarr;</Button>
+          </div>
         </Section>
 
         {/* 4. TESTIMONIALS */}

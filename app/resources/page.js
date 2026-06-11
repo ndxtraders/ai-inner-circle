@@ -36,6 +36,18 @@ export default function ResourcesPage() {
           </p>
         </Section>
 
+        {/* Case Studies */}
+        <Section bg="grey" width="prose">
+          <div className="eyebrow mb-6">Case Studies</div>
+          <h2 className="text-h1 font-semibold tracking-tight text-ink mb-6">
+            See the work in action.
+          </h2>
+          <p className="text-lead text-ink-muted leading-relaxed mb-10">
+            Real campaigns, real numbers. Eight case studies from founder-led brands across direct response, lifecycle, and launch.
+          </p>
+          <Button href="/case-studies" variant="primary">View Case Studies &rarr;</Button>
+        </Section>
+
         {/* Resource list */}
         <Section bg="grey" width="content">
           <div className="eyebrow mb-4">The Library</div>
