@@ -114,7 +114,7 @@ export default function Home() {
         {/* 2. AUTHORITY STRIP */}
         <section className="bg-paper-grey border-y border-rule py-12">
           <div className="max-w-wide mx-auto px-6">
-            <p className="text-h3 font-semibold text-ink mb-6 text-center">Selected Clients &amp; Business Launches</p>
+            <p className="text-h3 font-semibold text-ink mb-6 text-center">Clients &amp; Campaigns</p>
             <div className="flex flex-wrap justify-center gap-x-8 gap-y-3 text-body text-ink-soft">
               {CLIENTS.map((c) => (
                 <span key={c} className="whitespace-nowrap">{c}</span>
@@ -131,7 +131,7 @@ export default function Home() {
           <div className="max-w-prose mb-12">
             <p className="eyebrow mb-4">Selected Wins</p>
             <h2 className="text-h1 font-semibold text-ink leading-tight">
-              A few cool things I&rsquo;ve done.
+              Results from the field.
             </h2>
           </div>
           <ul className="grid md:grid-cols-2 gap-x-10 gap-y-8">
@@ -174,7 +174,7 @@ export default function Home() {
             </li>
           </ul>
           <div className="mt-12">
-            <Button href="/case-studies" variant="secondary">View All Case Studies &rarr;</Button>
+            <Button href="/case-studies" variant="secondary">View Case Studies &rarr;</Button>
           </div>
         </Section>
 
@@ -209,8 +209,8 @@ export default function Home() {
         {/* 6. WHAT I DO */}
         <Section bg="grey" width="content">
           <div className="max-w-prose mb-14">
-            <p className="eyebrow mb-6">AI Growth Systems</p>
-            <h2 className="text-h1 font-semibold mb-6">Human for trust. AI for scale.</h2>
+            <p className="eyebrow mb-6">The three pillars</p>
+            <h2 className="text-h1 font-semibold mb-6">Grow without being the bottleneck.</h2>
             <p className="text-lead text-ink-muted">
               Most founders have a bottleneck. Adding AI before fixing it only makes it worse. I fix the system first, then scale it.
             </p>
@@ -338,14 +338,11 @@ export default function Home() {
             <div className="md:col-span-8">
               <p className="eyebrow mb-6">About</p>
               <h2 className="text-h1 font-semibold mb-6 leading-tight">
-                Most revenue problems come from breakdowns inside the funnel. That's where I work.
+                I&rsquo;m not teaching theory. I&rsquo;m building with these tools right now.
               </h2>
               <div className="space-y-5 text-body text-ink-muted">
                 <p>
-                  I help founders fix funnel leaks, sharpen messaging, and close the gap between marketing and sales. My approach combines strategy, psychology, and execution... supported by AI where it adds leverage.
-                </p>
-                <p>
-                  After 25 years building businesses across six countries, I now help founders and leadership teams create revenue systems that convert more consistently and scale more predictably.
+                  I&rsquo;ve founded or helped build over a dozen businesses across six countries &mdash; Japan, Korea, Taiwan, China, the UK, and the US. Every system I recommend is one I&rsquo;m actively running right now. You&rsquo;re not getting a playbook. You&rsquo;re getting what&rsquo;s working today.
                 </p>
               </div>
             </div>

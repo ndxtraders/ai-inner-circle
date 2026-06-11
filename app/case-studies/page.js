@@ -519,7 +519,7 @@ export default function CaseStudies() {
         <section className="bg-paper-grey border-y border-rule py-12">
           <div className="max-w-wide mx-auto px-6">
             <p className="text-h3 font-semibold text-ink mb-6 text-center">
-              Selected Clients &amp; Business Launches
+              Clients &amp; Campaigns
             </p>
             <div className="flex flex-wrap justify-center gap-x-8 gap-y-3 text-body text-ink-soft">
               {CLIENTS.map((c) => (
