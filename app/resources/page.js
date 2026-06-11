@@ -36,8 +36,20 @@ export default function ResourcesPage() {
           </p>
         </Section>
 
-        {/* Case Studies */}
+        {/* Articles */}
         <Section bg="grey" width="prose">
+          <div className="eyebrow mb-6">Articles</div>
+          <h2 className="text-h1 font-semibold tracking-tight text-ink mb-6">
+            The thinking behind the work.
+          </h2>
+          <p className="text-lead text-ink-muted leading-relaxed mb-10">
+            Thought leadership on AI writing, revenue systems, and marketing strategy. Written when I have something worth saying.
+          </p>
+          <Button href="/articles" variant="primary">Browse Articles &rarr;</Button>
+        </Section>
+
+        {/* Case Studies */}
+        <Section bg="paper" width="prose">
           <div className="eyebrow mb-6">Case Studies</div>
           <h2 className="text-h1 font-semibold tracking-tight text-ink mb-6">
             See the work in action.
