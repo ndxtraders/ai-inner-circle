@@ -278,7 +278,7 @@ export default function Home() {
                   className="object-cover rounded-sm"
                 />
               </div>
-              <div className="eyebrow mb-3">Community</div>
+              <div className="eyebrow mb-3">Membership</div>
               <div className="text-h3 font-semibold">AI Inner Circle</div>
             </div>
             <div className="md:col-span-8">
