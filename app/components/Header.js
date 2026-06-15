@@ -10,14 +10,11 @@ export default function Header() {
           Rev Vaughn
         </Link>
         <nav className="hidden md:flex items-center gap-8 text-small">
-          <Link href="/ai" className="text-ink-muted hover:text-ink transition-colors">
-            AI Assessment
+          <Link href="/ai-leverage" className="text-ink-muted hover:text-ink transition-colors">
+            AI Leverage
           </Link>
           <Link href="/#programs" className="text-ink-muted hover:text-ink transition-colors">
             Programs
-          </Link>
-          <Link href="/ai-inner-circle" className="text-ink-muted hover:text-ink transition-colors">
-            AI Inner Circle
           </Link>
           <Link href="/#about" className="text-ink-muted hover:text-ink transition-colors">
             About
