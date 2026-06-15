@@ -118,7 +118,7 @@ export default function AIBrainPage() {
 
         {/* 1. HERO */}
         <Section bg="paper" width="content" className="pt-20 md:pt-28">
-          <div className="grid md:grid-cols-3 gap-12 items-center">
+          <div className="grid md:grid-cols-3 gap-12 items-start">
             <div className="md:col-span-2">
               <div className="eyebrow mb-6">For founder-led brand owners who use AI every day</div>
               <h1 className="text-display font-semibold tracking-tight text-ink mb-8">
@@ -132,12 +132,8 @@ export default function AIBrainPage() {
               <Button href={CHECKOUT_URL} external variant="primary">
                 Save My Seat
               </Button>
-              <p className="text-small text-ink-faint mt-3">
-                On-demand and self-paced — about 2–3 hours, on your schedule. Live Q&amp;A on Friday.
-                Your order is processed by Stripe via a secure MailerLite checkout.
-              </p>
             </div>
-            <div className="hidden md:flex items-center justify-center">
+            <div className="hidden md:flex items-start justify-center">
               <Image
                 src="/Rev-Vaughn-800.jpg"
                 alt="Rev Vaughn"
@@ -246,22 +242,32 @@ export default function AIBrainPage() {
 
         {/* 6. BEFORE AND AFTER */}
         <Section bg="greyDark" width="content">
-          <div className="max-w-prose mb-14">
+          <div className="max-w-prose mb-10">
             <div className="eyebrow mb-4">Before and after</div>
             <h2 className="text-h1 font-semibold tracking-tight text-ink">
               You stop bending to fit the tool.
             </h2>
           </div>
-          <div className="space-y-10">
+          <div className="border-t border-ink">
+            {/* Column headers (desktop only) */}
+            <div className="hidden md:grid grid-cols-2 gap-8 py-4 border-b border-rule">
+              <div className="eyebrow text-ink-faint">Before</div>
+              <div className="eyebrow flex gap-3">
+                <span className="opacity-0 shrink-0">→</span>After
+              </div>
+            </div>
             {BEFORE_AFTER.map((row, i) => (
-              <div key={i} className="grid md:grid-cols-2 gap-8 border-t border-rule pt-8">
+              <div key={i} className="grid md:grid-cols-2 gap-x-8 gap-y-3 py-6 border-b border-rule items-baseline">
                 <div>
-                  <div className="text-small font-medium text-ink-faint mb-3 uppercase tracking-widest">Before</div>
-                  <p className="text-body text-ink-muted leading-relaxed">{row.before}</p>
+                  <div className="eyebrow text-ink-faint mb-2 md:hidden">Before</div>
+                  <p className="text-body text-ink-muted leading-snug">{row.before}</p>
                 </div>
-                <div className="border-l-2 border-accent pl-6">
-                  <div className="text-small font-medium text-accent mb-3 uppercase tracking-widest">After</div>
-                  <p className="text-body text-ink leading-relaxed">{row.after}</p>
+                <div className="flex gap-3">
+                  <span className="text-accent font-semibold shrink-0">→</span>
+                  <div>
+                    <div className="eyebrow mb-2 md:hidden">After</div>
+                    <p className="text-body text-ink font-medium leading-snug">{row.after}</p>
+                  </div>
                 </div>
               </div>
             ))}
