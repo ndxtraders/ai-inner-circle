@@ -61,9 +61,9 @@ export default function ResourcesPage() {
 
         {/* Resource list */}
         <Section bg="grey" width="content">
-          <div className="eyebrow mb-4">The Library</div>
+          <div className="eyebrow mb-4">The AI Library</div>
           <h2 className="text-h1 font-semibold tracking-tight text-ink mb-12">
-            What&rsquo;s available right now.
+            Featured Skill.
           </h2>
           <div className="space-y-10">
             {RESOURCES.map((item, i) => (
