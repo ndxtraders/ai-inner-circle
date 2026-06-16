@@ -2,7 +2,7 @@ import Image from 'next/image'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import Section from '../components/Section'
-import Button from '../components/Button'
+import WaitlistForm from '../components/WaitlistForm'
 
 export const metadata = {
   title: 'AI Brain Workshop — Rev Vaughn',
@@ -17,11 +17,6 @@ export const metadata = {
     type: 'website',
   },
 }
-
-// TODO: Replace with the live AI Brain workshop checkout URL once the product is
-// created in MailerLite (Stripe processing), e.g. https://checkout.mailerlite.com/checkout/XXXXX
-// This is the single place to update — every CTA on the page reads from it.
-const CHECKOUT_URL = 'https://checkout.mailerlite.com/checkout/REPLACE-ME'
 
 const DELIVERABLES = [
   {
@@ -129,9 +124,11 @@ export default function AIBrainPage() {
                 generic answers and starts working like a partner who’s known you for years. No tech
                 skills required.
               </p>
-              <Button href={CHECKOUT_URL} external variant="primary">
-                Save My Seat
-              </Button>
+              <WaitlistForm buttonLabel="Join the Waitlist" />
+              <p className="text-small text-ink-faint mt-3">
+                Founder’s pricing for the first cohort. No payment now — we’ll email you when
+                enrollment opens.
+              </p>
             </div>
             <div className="hidden md:flex items-start justify-center">
               <Image
@@ -398,11 +395,9 @@ export default function AIBrainPage() {
                 going up to $199 soon — if you leave and come back later, it will likely be higher.
                 Claude Pro ($20/month) is a separate prerequisite, not part of this price.
               </p>
-              <Button href={CHECKOUT_URL} external variant="primary">
-                Save My Seat
-              </Button>
+              <WaitlistForm buttonLabel="Join the Waitlist" />
               <p className="text-small text-ink-faint mt-3">
-                Processed by Stripe via a secure MailerLite checkout.
+                Free to join. No payment now — we’ll email you the moment enrollment opens.
               </p>
             </div>
           </div>
@@ -437,12 +432,10 @@ export default function AIBrainPage() {
               In a few quick hours, you can fix that for good. Teach it who you are — once — and it
               gets sharper every time you use it.
             </p>
-            <Button href={CHECKOUT_URL} external variant="primary">
-              Save My Seat
-            </Button>
+            <WaitlistForm buttonLabel="Join the Waitlist" />
             <p className="text-small text-ink-faint mt-3">
-              On-demand and self-paced. Live Q&amp;A on Friday. Processed by Stripe via a secure
-              MailerLite checkout.
+              On-demand and self-paced. Live Q&amp;A on Friday. Join the waitlist now &mdash; no
+              payment until enrollment opens.
             </p>
           </div>
         </Section>
