@@ -35,7 +35,7 @@ const DELIVERABLES = [
     n: '03',
     title: 'Your first Custom Command.',
     body:
-      'Turn a task you repeat — repurpose a post in your voice, prep for a sales call, review copy against your standards — and turn it into a shortcut slash command like /repurpose-post. Type it, and Claude runs the whole task your way, no re-explaining. Most people who use AI never build this. You will.',
+      'Turn a task you repeat — repurpose a post in your voice, prep for a sales call, review copy against your standards — into a shortcut slash command like /repurpose-post. Type it, and Claude runs the whole task your way, no re-explaining. Most people who use AI never build this. You will.',
   },
 ]
 
@@ -66,7 +66,7 @@ const INCLUDES = [
   'The full on-demand workshop, yours to revisit anytime',
   'A written, step-by-step guide you keep',
   'The guided tools that build your AI Brain for you',
-  'Live Q&A on Friday',
+  'A Live Q&A Call',
   'A setup that’s yours forever, and gets sharper every time you use it',
 ]
 
@@ -434,7 +434,7 @@ export default function AIBrainPage() {
             </p>
             <WaitlistForm buttonLabel="Join the Waitlist" />
             <p className="text-small text-ink-faint mt-3">
-              On-demand and self-paced. Live Q&amp;A on Friday. Join the waitlist now &mdash; no
+              On-demand and self-paced. Live Q&amp;A call. Join the waitlist now &mdash; no
               payment until enrollment opens.
             </p>
           </div>
