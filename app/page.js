@@ -50,7 +50,7 @@ const TESTIMONIALS = [
   },
   {
     quote:
-      'Knocked it out of the park. Exceeded our sales goal. I fully endorse Rev. Kevin Rogers and I hired him to redo our Email Copy Academy funnel, and Rev knocked it out of the park. We even exceeded our sales goal. I was blown away by how well it did.',
+      'Rev is one of the few people I trust enough to write for me. Kevin Rogers and I hired him to redo our Email Copy Academy funnel and Rev knocked it out of the park. We even exceeded our sales goal by 10%, thanks to his improvements to the page and funnel. I was blown away with how well it did. I fully endorse Rev.',
     name: 'Chris Orzechowski',
     title: 'Creator, Email Copy Academy',
     org: '#1 Email Marketing Program',
