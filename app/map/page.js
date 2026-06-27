@@ -713,15 +713,11 @@ export default function MapPage() {
       <header className="border-b border-rule bg-paper">
         <div className="max-w-wide mx-auto px-6 py-5 flex items-center justify-between">
           <Link href="/" className="font-semibold text-lg tracking-tight hover:text-accent transition-colors">
-            Rev Vaughn
+            AI Inner Circle
           </Link>
           <nav className="hidden md:flex items-center gap-8 text-small">
-            <Link href="/#programs" className="text-ink-muted hover:text-ink transition-colors">Programs</Link>
-            <Link href="/ai-inner-circle" className="text-ink-muted hover:text-ink transition-colors">AI Inner Circle</Link>
-            <Link href="/#about" className="text-ink-muted hover:text-ink transition-colors">About</Link>
-            <Link href="/#briefings" className="text-ink-muted hover:text-ink transition-colors">Briefings</Link>
-            <Link href="/resources" className="text-ink-muted hover:text-ink transition-colors">Resources</Link>
-            <Link href="/contact" className="text-ink hover:text-accent transition-colors font-medium">Contact</Link>
+            <Link href="https://revvaughn.com/resources" className="text-ink-muted hover:text-ink transition-colors">Resources</Link>
+            <Link href="https://revvaughn.com/contact" className="text-ink hover:text-accent transition-colors font-medium">Contact</Link>
           </nav>
         </div>
       </header>
@@ -954,7 +950,7 @@ export default function MapPage() {
                       <p className="text-lead text-ink-faint mb-10">
                         In an AI Systems Audit, I provide the exact tech stack and roadmap to flip these to Green.
                       </p>
-                      <Link href="/ai-audit" className="inline-flex items-center gap-3 px-6 py-3 text-small font-medium tracking-wide transition-all duration-200 bg-paper text-ink border border-paper hover:bg-accent hover:text-paper hover:border-accent">
+                      <Link href="https://revvaughn.com/ai-audit" className="inline-flex items-center gap-3 px-6 py-3 text-small font-medium tracking-wide transition-all duration-200 bg-paper text-ink border border-paper hover:bg-accent hover:text-paper hover:border-accent">
                         Book Your Full Systems Diagnostic <ArrowRight className="w-4 h-4" />
                       </Link>
                     </>
@@ -966,7 +962,7 @@ export default function MapPage() {
                       <p className="text-lead text-ink-faint mb-10">
                         You have scale risks, but no fires. To keep optimizing and stay ahead of the curve, join a community of founders mastering these systems.
                       </p>
-                      <Link href="/ai-inner-circle" className="inline-flex items-center gap-3 px-6 py-3 text-small font-medium tracking-wide transition-all duration-200 bg-paper text-ink border border-paper hover:bg-accent hover:text-paper hover:border-accent">
+                      <Link href="/" className="inline-flex items-center gap-3 px-6 py-3 text-small font-medium tracking-wide transition-all duration-200 bg-paper text-ink border border-paper hover:bg-accent hover:text-paper hover:border-accent">
                         Join the AI Inner Circle <ArrowRight className="w-4 h-4" />
                       </Link>
                     </>
@@ -990,8 +986,8 @@ export default function MapPage() {
         <div className="max-w-wide mx-auto px-6 py-10 flex flex-col md:flex-row items-center justify-between gap-4 text-small text-ink-muted">
           <div>&copy; {new Date().getFullYear()} Rev Vaughn. All rights reserved.</div>
           <div className="flex items-center gap-6">
-            <Link href="/resources" className="hover:text-ink transition-colors">Resources</Link>
-            <Link href="/contact" className="hover:text-ink transition-colors">Contact</Link>
+            <Link href="https://revvaughn.com/resources" className="hover:text-ink transition-colors">Resources</Link>
+            <Link href="https://revvaughn.com/contact" className="hover:text-ink transition-colors">Contact</Link>
             <Link href="/privacy-terms" className="hover:text-ink transition-colors">Privacy &amp; Terms</Link>
           </div>
         </div>

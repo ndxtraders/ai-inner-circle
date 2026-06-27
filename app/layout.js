@@ -10,14 +10,14 @@ const poppins = Poppins({
 })
 
 export const metadata = {
-  metadataBase: new URL('https://revvaughn.com'),
-  title: 'Rev Vaughn | GTM Strategy & Revenue Growth Systems for Founder-led Brands',
-  description: 'GTM strategy and revenue growth systems for founder-led brands. Diagnose bottlenecks, architect the system, operate it with AI where it adds leverage.',
+  metadataBase: new URL('https://aiinnercircle.com'),
+  title: 'AI Inner Circle | Rev Vaughn',
+  description: 'Where founder-led brands build revenue systems that actually scale. Your voice. AI doing the work.',
   openGraph: {
-    title: 'Rev Vaughn | GTM Strategy & Revenue Growth Systems',
-    description: 'GTM strategy and revenue growth systems for founder-led brands.',
-    url: 'https://revvaughn.com',
-    siteName: 'Rev Vaughn',
+    title: 'AI Inner Circle | Rev Vaughn',
+    description: 'Where founder-led brands build revenue systems that actually scale. Your voice. AI doing the work.',
+    url: 'https://aiinnercircle.com',
+    siteName: 'AI Inner Circle',
     type: 'website',
   },
 }
@@ -27,12 +27,10 @@ export const viewport = {
   initialScale: 1,
 }
 
-// JSON-LD structured data — Person + Organization schema
-// Builds entity recognition for SEO, AEO, and GEO (Answer/Generative Engine Optimization)
 const PERSON_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'Person',
-  '@id': 'https://revvaughn.com/#person',
+  '@id': 'https://aiinnercircle.com/#person',
   name: 'Rev Vaughn',
   givenName: 'Raul',
   additionalName: 'Rev',
@@ -40,31 +38,12 @@ const PERSON_SCHEMA = {
   alternateName: ['Raul Vaughn', 'Raul "Rev" Vaughn'],
   jobTitle: 'GTM Strategist & Revenue Systems Architect',
   description:
-    'GTM strategist and revenue systems architect helping founder-led brands turn traffic into qualified pipeline and predictable revenue using AI-leveraged growth systems. Track record includes contributions to over $100M in collective revenue across brands like Grant Cardone, 10X Health, Cardone Ventures, SquadUp Summit, Copy Chief, Anacapa Marketing, and FrontPorch.',
-  url: 'https://revvaughn.com',
-  image: 'https://revvaughn.com/headshot-4.png',
-  email: 'mailto:rev@revvaughn.com',
-  worksFor: { '@id': 'https://revvaughn.com/#organization' },
-  knowsAbout: [
-    'Go-to-market strategy',
-    'Revenue growth systems',
-    'Direct response marketing',
-    'B2B demand generation',
-    'Conversion rate optimization',
-    'Funnel architecture',
-    'Fractional CMO services',
-    'AI-leveraged content systems',
-    'Founder-led brand growth',
-  ],
-  address: {
-    '@type': 'PostalAddress',
-    addressRegion: 'CA',
-    addressCountry: 'US',
-  },
+    'GTM strategist and revenue systems architect helping founder-led brands build AI-leveraged revenue growth systems. Founder of AI Inner Circle.',
+  url: 'https://aiinnercircle.com',
+  image: 'https://aiinnercircle.com/Rev-Vaughn-800.jpg',
   sameAs: [
+    'https://revvaughn.com',
     'https://www.linkedin.com/in/revvaughn/',
-    'https://medium.com/@revvaughn',
-    'https://www.youtube.com/@revvaughn1',
     'https://x.com/RaulRevVaughn',
   ],
 }
@@ -72,39 +51,22 @@ const PERSON_SCHEMA = {
 const ORGANIZATION_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
-  '@id': 'https://revvaughn.com/#organization',
-  name: 'Rev Vaughn LLC',
-  alternateName: ['Leads & Clients', 'Rev Vaughn'],
-  legalName: 'Rev Vaughn LLC',
+  '@id': 'https://aiinnercircle.com/#organization',
+  name: 'AI Inner Circle',
   description:
-    'Revenue growth advisory and GTM strategy for founder-led brands. Diagnostic sprints, growth-as-a-service engagements, mentorship, and AI-powered content systems.',
-  url: 'https://revvaughn.com',
-  logo: 'https://revvaughn.com/headshot-4.png',
-  image: 'https://revvaughn.com/headshot-4.png',
-  email: 'rev@revvaughn.com',
-  founder: { '@id': 'https://revvaughn.com/#person' },
-  address: {
-    '@type': 'PostalAddress',
-    addressRegion: 'CA',
-    addressCountry: 'US',
-  },
-  areaServed: 'Worldwide',
-  sameAs: [
-    'https://www.linkedin.com/in/revvaughn/',
-    'https://medium.com/@revvaughn',
-    'https://www.youtube.com/@revvaughn1',
-    'https://x.com/RaulRevVaughn',
-  ],
+    'A private community and coaching program for founder-led brands building GTM and revenue growth systems with AI.',
+  url: 'https://aiinnercircle.com',
+  founder: { '@id': 'https://aiinnercircle.com/#person' },
 }
 
 const WEBSITE_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
-  '@id': 'https://revvaughn.com/#website',
-  url: 'https://revvaughn.com',
-  name: 'Rev Vaughn',
-  description: 'GTM strategy and revenue growth systems for founder-led brands.',
-  publisher: { '@id': 'https://revvaughn.com/#organization' },
+  '@id': 'https://aiinnercircle.com/#website',
+  url: 'https://aiinnercircle.com',
+  name: 'AI Inner Circle',
+  description: 'Where founder-led brands build revenue systems that actually scale.',
+  publisher: { '@id': 'https://aiinnercircle.com/#organization' },
   inLanguage: 'en-US',
 }
 

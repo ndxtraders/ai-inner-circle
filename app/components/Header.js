@@ -7,26 +7,20 @@ export default function Header() {
       <AnnouncementBar />
       <div className="max-w-wide mx-auto px-6 py-5 flex items-center justify-between">
         <Link href="/" className="font-semibold text-lg tracking-tight hover:text-accent transition-colors">
-          Rev Vaughn
+          AI Inner Circle
         </Link>
         <nav className="hidden md:flex items-center gap-8 text-small">
-          <Link href="/ai-leverage" className="text-ink-muted hover:text-ink transition-colors">
-            AI Leverage
-          </Link>
-          <Link href="/#programs" className="text-ink-muted hover:text-ink transition-colors">
-            Consulting
-          </Link>
-          <Link href="/#about" className="text-ink-muted hover:text-ink transition-colors">
-            About
+          <Link href="/map" className="text-ink-muted hover:text-ink transition-colors">
+            AI Assessment
           </Link>
           <Link
-            href="/resources"
+            href="https://revvaughn.com/resources"
             className="text-ink-muted hover:text-ink transition-colors"
           >
             Resources
           </Link>
           <Link
-            href="/contact"
+            href="https://revvaughn.com/contact"
             className="text-ink hover:text-accent transition-colors font-medium"
           >
             Contact

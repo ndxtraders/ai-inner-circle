@@ -1,30 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'export',
   reactStrictMode: true,
   images: {
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: '**',
-      },
-    ],
-  },
-  // 301 redirects from legacy Simvoly URLs to new site equivalents
-  // Preserves SEO equity from previously indexed pages
-  async redirects() {
-    return [
-      { source: '/about', destination: '/#about', permanent: true },
-      { source: '/rev-vaughn', destination: '/#about', permanent: true },
-      { source: '/booking-15-min-call', destination: '/contact', permanent: true },
-      { source: '/influential-founder', destination: '/', permanent: true },
-      { source: '/invitation-funnel', destination: '/resources', permanent: true },
-      { source: '/coach-s-checklist', destination: '/resources', permanent: true },
-      // Legacy AI Priority Map landing page — superseded by /ai
-      { source: '/ai-priority-map', destination: '/ai', permanent: true },
-      // aiinnercircle.com domain redirect → AI Inner Circle page
-      { source: '/:path*', has: [{ type: 'host', value: 'aiinnercircle.com' }], destination: 'https://revvaughn.com/ai-inner-circle', permanent: true },
-      { source: '/:path*', has: [{ type: 'host', value: 'www.aiinnercircle.com' }], destination: 'https://revvaughn.com/ai-inner-circle', permanent: true },
-    ]
+    unoptimized: true,
   },
 }
 module.exports = nextConfig
