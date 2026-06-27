@@ -938,35 +938,51 @@ export default function MapPage() {
             </section>
 
             {/* Dynamic CTA */}
-            <section className="bg-ink py-section">
+            <section className="py-section" style={{ backgroundColor: '#83B14E' }}>
               <div className="max-w-content mx-auto px-6">
-                <div className="max-w-prose">
-                  <p className="text-eyebrow uppercase font-semibold tracking-widest text-ink-faint mb-6">Next Step</p>
-                  {hasRed ? (
-                    <>
-                      <h3 className="font-sans font-semibold text-h1 text-paper mb-4">
-                        You have {redCount} Red Zone{redCount > 1 ? 's' : ''} that need immediate attention.
-                      </h3>
-                      <p className="text-lead text-ink-faint mb-10">
-                        In an AI Systems Audit, I provide the exact tech stack and roadmap to flip these to Green.
-                      </p>
-                      <Link href="/ai-audit" className="inline-flex items-center gap-3 px-6 py-3 text-small font-medium tracking-wide transition-all duration-200 bg-paper text-ink border border-paper hover:bg-accent hover:text-paper hover:border-accent">
-                        Book Your Full Systems Diagnostic <ArrowRight className="w-4 h-4" />
-                      </Link>
-                    </>
-                  ) : (
-                    <>
-                      <h3 className="font-sans font-semibold text-h1 text-paper mb-4">
-                        You&rsquo;ve avoided critical breaking points.
-                      </h3>
-                      <p className="text-lead text-ink-faint mb-10">
-                        You have scale risks, but no fires. To keep optimizing and stay ahead of the curve, join a community of founders mastering these systems.
-                      </p>
-                      <Link href="/" className="inline-flex items-center gap-3 px-6 py-3 text-small font-medium tracking-wide transition-all duration-200 bg-paper text-ink border border-paper hover:bg-accent hover:text-paper hover:border-accent">
-                        Join the AI Inner Circle <ArrowRight className="w-4 h-4" />
-                      </Link>
-                    </>
-                  )}
+                <p className="text-eyebrow uppercase font-semibold tracking-widest text-paper opacity-70 mb-6">Next Step</p>
+                {hasRed ? (
+                  <>
+                    <h3 className="font-sans font-semibold text-h1 text-paper mb-4">
+                      You have {redCount} Red Zone{redCount > 1 ? 's' : ''} that need immediate attention.
+                    </h3>
+                    <p className="text-lead text-paper opacity-80 mb-12">
+                      Two ways to move forward — pick the one that fits where you are right now.
+                    </p>
+                  </>
+                ) : (
+                  <>
+                    <h3 className="font-sans font-semibold text-h1 text-paper mb-4">
+                      You&rsquo;ve avoided critical breaking points.
+                    </h3>
+                    <p className="text-lead text-paper opacity-80 mb-12">
+                      You have scale risks but no fires. Two ways to stay ahead — pick the one that fits where you are right now.
+                    </p>
+                  </>
+                )}
+                <div className="grid md:grid-cols-2 gap-6 max-w-2xl">
+                  {/* Option 1 — Quick Win */}
+                  <div className="bg-paper p-8 flex flex-col">
+                    <p className="text-eyebrow uppercase font-semibold tracking-widest text-ink-faint mb-3">Quick Win</p>
+                    <h4 className="font-sans font-semibold text-h3 text-ink mb-3">Get a roadmap to solve your biggest problem</h4>
+                    <p className="text-body text-ink-muted mb-8 flex-1">
+                      A focused 60-minute session. We identify your highest-leverage AI opportunity and you leave with a clear implementation roadmap.
+                    </p>
+                    <Link href="/quick-win" className="inline-flex items-center gap-2 px-5 py-3 text-small font-medium tracking-wide transition-all duration-200 bg-ink text-paper border border-ink hover:bg-accent hover:border-accent">
+                      Book a Quick Win <ArrowRight className="w-4 h-4" />
+                    </Link>
+                  </div>
+                  {/* Option 2 — AI Audit */}
+                  <div className="bg-paper p-8 flex flex-col">
+                    <p className="text-eyebrow uppercase font-semibold tracking-widest text-ink-faint mb-3">AI Audit</p>
+                    <h4 className="font-sans font-semibold text-h3 text-ink mb-3">Full Customized AI Implementation Roadmap</h4>
+                    <p className="text-body text-ink-muted mb-8 flex-1">
+                      A complete diagnostic of your business. Every system audited, every bottleneck mapped, and a full AI implementation roadmap built for your specific operation.
+                    </p>
+                    <Link href="/ai-audit" className="inline-flex items-center gap-2 px-5 py-3 text-small font-medium tracking-wide transition-all duration-200 bg-ink text-paper border border-ink hover:bg-accent hover:border-accent">
+                      Book Your AI Audit <ArrowRight className="w-4 h-4" />
+                    </Link>
+                  </div>
                 </div>
               </div>
             </section>
