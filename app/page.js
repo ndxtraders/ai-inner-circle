@@ -228,7 +228,7 @@ export default function HomePage() {
             <div className="md:col-span-2">
               <div className="eyebrow mb-6">Go-To-Market · Revenue Systems · AI Leverage</div>
               <h1 className="text-display font-semibold tracking-tight text-ink mb-8">
-                AI Revenue Growth Systems for Founder-Led Brands
+                AI Revenue<br />Growth Systems for<br />Founder-Led Brands
               </h1>
               <p className="text-lead text-ink-muted mb-10">
                 Get access to the AI systems I use every day to attract, engage, and convert buyers.
