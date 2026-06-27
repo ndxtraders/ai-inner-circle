@@ -189,7 +189,7 @@ function PricingCards() {
           <li className="flex gap-3"><span className="text-accent mt-1">–</span>Friday Q&amp;A with Rev</li>
           <li className="flex gap-3"><span className="text-accent mt-1">–</span>Answers to your questions inside the community</li>
         </ul>
-        <Button href="https://revvaughn.com/contact" external variant="primary">
+        <Button href="/contact" variant="primary">
           Join AI Inner Circle
         </Button>
       </div>
@@ -206,7 +206,7 @@ function PricingCards() {
           <li className="flex gap-3"><span className="text-accent mt-1">–</span>Customized to your business, market and offer</li>
           <li className="flex gap-3"><span className="text-accent mt-1">–</span>Email support in between sessions</li>
         </ul>
-        <Button href="https://revvaughn.com/contact" external variant="primary">
+        <Button href="/contact" variant="primary">
           Apply for Coaching
         </Button>
       </div>
@@ -233,7 +233,7 @@ export default function AIInnerCirclePage() {
                 A private Skool community and 1:1 coaching for founder-led brands building GTM and revenue growth systems with AI
               </p>
               <div className="flex flex-wrap gap-4">
-                <Button href="https://revvaughn.com/contact" external variant="primary">
+                <Button href="/contact" variant="primary">
                   Join AI Inner Circle
                 </Button>
               </div>

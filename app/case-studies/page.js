@@ -75,7 +75,7 @@ export default function CaseStudies() {
           <p className="text-body text-ink-muted max-w-prose mb-10">
             Real campaigns I built for founder-led brands. The problem, the system, and what it produced.
           </p>
-          <Button href="https://revvaughn.com/quick-win/" external variant="primary">
+          <Button href="/quick-win" variant="primary">
             Book a Quick Win Consult &rarr;
           </Button>
         </Section>
@@ -134,7 +134,7 @@ export default function CaseStudies() {
             <p className="text-body text-ink-muted leading-relaxed mb-6">
               If growth feels harder than it should, that upstream break is usually why. A Quick Win Consult finds it fast.
             </p>
-            <Button href="https://revvaughn.com/quick-win/" external variant="primary">
+            <Button href="/quick-win" variant="primary">
               Book a Quick Win Consult &rarr;
             </Button>
           </div>
@@ -212,7 +212,7 @@ export default function CaseStudies() {
             <p className="text-body text-ink-muted leading-relaxed mb-6">
               Most brands lose more leads after the click than before it. A Quick Win Consult finds where yours are slipping.
             </p>
-            <Button href="https://revvaughn.com/quick-win/" external variant="primary">
+            <Button href="/quick-win" variant="primary">
               Book a Quick Win Consult &rarr;
             </Button>
           </div>
@@ -260,7 +260,7 @@ export default function CaseStudies() {
             <p className="text-body text-ink-muted leading-relaxed mb-6">
               Most funnels collect signals they never act on. A Quick Win Consult shows you which ones are costing you calls.
             </p>
-            <Button href="https://revvaughn.com/quick-win/" external variant="primary">
+            <Button href="/quick-win" variant="primary">
               Book a Quick Win Consult &rarr;
             </Button>
           </div>
@@ -310,7 +310,7 @@ export default function CaseStudies() {
             <p className="text-body text-ink-muted leading-relaxed mb-6">
               Launches are won before launch day. A Quick Win Consult pressure-tests yours while there is still time to fix it.
             </p>
-            <Button href="https://revvaughn.com/quick-win/" external variant="primary">
+            <Button href="/quick-win" variant="primary">
               Book a Quick Win Consult &rarr;
             </Button>
           </div>
@@ -357,7 +357,7 @@ export default function CaseStudies() {
             <p className="text-body text-ink-muted leading-relaxed mb-6">
               If you don&rsquo;t have a control, you are guessing. A Quick Win Consult helps you find the one campaign worth scaling.
             </p>
-            <Button href="https://revvaughn.com/quick-win/" external variant="primary">
+            <Button href="/quick-win" variant="primary">
               Book a Quick Win Consult &rarr;
             </Button>
           </div>
@@ -406,7 +406,7 @@ export default function CaseStudies() {
             <p className="text-body text-ink-muted leading-relaxed mb-6">
               Your nurture sequence is only as strong as your open rate. A Quick Win Consult shows you what is dragging yours down.
             </p>
-            <Button href="https://revvaughn.com/quick-win/" external variant="primary">
+            <Button href="/quick-win" variant="primary">
               Book a Quick Win Consult &rarr;
             </Button>
           </div>
@@ -452,7 +452,7 @@ export default function CaseStudies() {
             <p className="text-body text-ink-muted leading-relaxed mb-6">
               Most direct-to-consumer brands scale by spending more. A Quick Win Consult finds the offer change that lowers acquisition cost instead.
             </p>
-            <Button href="https://revvaughn.com/quick-win/" external variant="primary">
+            <Button href="/quick-win" variant="primary">
               Book a Quick Win Consult &rarr;
             </Button>
           </div>
@@ -509,7 +509,7 @@ export default function CaseStudies() {
             <p className="text-body text-ink-muted leading-relaxed mb-6">
               Adding AI before the system works just scales the problem. A Quick Win Consult finds what to fix first.
             </p>
-            <Button href="https://revvaughn.com/quick-win/" external variant="primary">
+            <Button href="/quick-win" variant="primary">
               Book a Quick Win Consult &rarr;
             </Button>
           </div>
@@ -558,7 +558,7 @@ export default function CaseStudies() {
           <p className="text-body text-ink-muted max-w-prose mb-10">
             A 60-minute Quick Win Consult to pinpoint what is blocking growth and remove it fast.
           </p>
-          <Button href="https://revvaughn.com/quick-win/" external variant="primary">
+          <Button href="/quick-win" variant="primary">
             Book a Quick Win Consult &rarr;
           </Button>
         </Section>

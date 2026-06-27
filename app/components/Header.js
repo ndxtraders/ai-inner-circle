@@ -21,10 +21,10 @@ export default function Header() {
           <Link href="/map" className="text-ink-muted hover:text-ink transition-colors">
             AI Assessment
           </Link>
-          <Link href="https://revvaughn.com/resources" className="text-ink-muted hover:text-ink transition-colors">
+          <Link href="/resources" className="text-ink-muted hover:text-ink transition-colors">
             Resources
           </Link>
-          <Link href="https://revvaughn.com/contact" className="text-ink hover:text-accent transition-colors font-medium">
+          <Link href="/contact" className="text-ink hover:text-accent transition-colors font-medium">
             Contact
           </Link>
         </nav>
@@ -45,10 +45,10 @@ export default function Header() {
           <Link href="/map" className="text-ink-muted hover:text-ink transition-colors" onClick={() => setOpen(false)}>
             AI Assessment
           </Link>
-          <Link href="https://revvaughn.com/resources" className="text-ink-muted hover:text-ink transition-colors" onClick={() => setOpen(false)}>
+          <Link href="/resources" className="text-ink-muted hover:text-ink transition-colors" onClick={() => setOpen(false)}>
             Resources
           </Link>
-          <Link href="https://revvaughn.com/contact" className="text-ink hover:text-accent transition-colors font-medium" onClick={() => setOpen(false)}>
+          <Link href="/contact" className="text-ink hover:text-accent transition-colors font-medium" onClick={() => setOpen(false)}>
             Contact
           </Link>
         </nav>

@@ -273,7 +273,7 @@ export default function Article() {
           <p className="text-body text-ink-muted max-w-prose mb-10">
             A 60-minute Quick Win Consult to pinpoint what is blocking growth and remove it fast.
           </p>
-          <Button href="https://revvaughn.com/quick-win/" external variant="primary">
+          <Button href="/quick-win" variant="primary">
             Book a Quick Win Consult &rarr;
           </Button>
         </Section>

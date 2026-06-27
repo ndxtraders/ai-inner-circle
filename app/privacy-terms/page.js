@@ -275,10 +275,10 @@ export default function PrivacyTermsPage() {
               If you have any questions regarding this policy or your dealings with our website,
               please contact us at{' '}
               <a
-                href="https://revvaughn.com/contact"
+                href="/contact"
                 className="text-ink underline hover:text-accent transition-colors"
               >
-                https://revvaughn.com/contact
+                aiinnercircle.com/contact
               </a>
               .
             </p>

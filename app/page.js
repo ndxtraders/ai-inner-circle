@@ -190,7 +190,7 @@ function PricingCards() {
           <li className="flex gap-3"><span className="text-accent mt-1">–</span>Friday Q&amp;A with Rev</li>
           <li className="flex gap-3"><span className="text-accent mt-1">–</span>Answers to your questions inside the community</li>
         </ul>
-        <Button href="https://revvaughn.com/contact" external variant="primary">
+        <Button href="/contact" variant="primary">
           Join AI Inner Circle
         </Button>
       </div>
@@ -207,7 +207,7 @@ function PricingCards() {
           <li className="flex gap-3"><span className="text-accent mt-1">–</span>Customized to your business, market and offer</li>
           <li className="flex gap-3"><span className="text-accent mt-1">–</span>Email support in between sessions</li>
         </ul>
-        <Button href="https://revvaughn.com/contact" external variant="primary">
+        <Button href="/contact" variant="primary">
           Apply for Coaching
         </Button>
       </div>
@@ -234,7 +234,7 @@ export default function HomePage() {
                 Get access to the AI systems I use every day to attract, engage, and convert buyers.
               </p>
               <div className="flex flex-wrap gap-4 items-center">
-                <Button href="https://revvaughn.com/contact" external variant="primary">
+                <Button href="/contact" variant="primary">
                   Join AI Inner Circle
                 </Button>
                 <Link href="/map" className="text-body text-ink-muted hover:text-ink transition-colors">
