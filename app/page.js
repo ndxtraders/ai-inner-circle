@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import Section from './components/Section'
@@ -7,7 +8,7 @@ import Button from './components/Button'
 export const metadata = {
   title: 'AI Inner Circle | Rev Vaughn',
   description:
-    'Where founder-led brands build revenue systems that actually scale. Your voice. AI doing the work.',
+    'AI Revenue Systems for Founder-Led Brands. Get access to the AI systems Rev Vaughn uses every day to attract, engage, and convert buyers.',
 }
 
 const CLIENTS = [
@@ -225,17 +226,20 @@ export default function HomePage() {
         <Section bg="paper" width="content" className="pt-20 md:pt-28">
           <div className="grid md:grid-cols-3 gap-10 items-start">
             <div className="md:col-span-2">
-              <div className="eyebrow mb-6">AI Inner Circle</div>
+              <div className="eyebrow mb-6">Go-To-Market · Revenue Systems · AI Leverage</div>
               <h1 className="text-display font-semibold tracking-tight text-ink mb-8">
-                Your human voice sells it. AI scales it.
+                AI Revenue Systems for Founder-Led Brands
               </h1>
               <p className="text-lead text-ink-muted mb-10">
-                A private Skool community and 1:1 coaching for founder-led brands building GTM and revenue growth systems with AI
+                Get access to the AI systems I use every day to attract, engage, and convert buyers.
               </p>
-              <div className="flex flex-wrap gap-4">
+              <div className="flex flex-wrap gap-4 items-center">
                 <Button href="https://revvaughn.com/contact" external variant="primary">
                   Join AI Inner Circle
                 </Button>
+                <Link href="/map" className="text-body text-ink-muted hover:text-ink transition-colors">
+                  Not sure where to start? Take the 5-Minute AI Assessment &rarr;
+                </Link>
               </div>
             </div>
             <div className="hidden md:flex items-start justify-center pt-8">
@@ -262,7 +266,34 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* 3. WHY IT EXISTS */}
+        {/* 3. AI ASSESSMENT BLOCK */}
+        <Section bg="grey" width="content">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <div className="eyebrow mb-4">5-Minute Assessment</div>
+              <h2 className="text-h1 font-semibold tracking-tight text-ink mb-6">
+                Find out exactly where AI fits &mdash; and what to fix first.
+              </h2>
+              <p className="text-body text-ink-muted mb-8">
+                The AI Priority Map asks 15 questions across 5 business pillars. At the end, you get a color-coded breakdown of exactly where your business is leaking time and money &mdash; and the AI system that fixes each one.
+              </p>
+              <Button href="/map" variant="primary">
+                Take the AI Assessment
+              </Button>
+            </div>
+            <div className="flex items-center justify-center">
+              <Image
+                src="/ai-priority-map-preview-v2.png"
+                alt="AI Priority Map Preview"
+                width={480}
+                height={360}
+                className="w-full max-w-md"
+              />
+            </div>
+          </div>
+        </Section>
+
+        {/* 4. WHY IT EXISTS */}
         <Section bg="paper" width="content">
           <div className="grid md:grid-cols-2 gap-12 items-start">
             <div>
@@ -284,7 +315,26 @@ export default function HomePage() {
           </div>
         </Section>
 
-        {/* 4. THREE PILLARS */}
+        {/* 5. SELECTED WINS */}
+        <Section bg="paper" width="content">
+          <div className="max-w-prose mb-12">
+            <p className="eyebrow mb-4">Selected Wins</p>
+            <h2 className="text-h1 font-semibold text-ink leading-tight">
+              Results from the field.
+            </h2>
+          </div>
+          <ul className="grid md:grid-cols-2 gap-x-10 gap-y-8">
+            {WINS.map((w) => (
+              <li key={w.result} className="border-l-2 border-accent pl-6">
+                <p className="text-body text-ink-soft leading-relaxed">
+                  <span className="text-ink font-semibold">{w.result}</span> &mdash; {w.detail}
+                </p>
+              </li>
+            ))}
+          </ul>
+        </Section>
+
+        {/* 6. THREE PILLARS */}
         <Section bg="grey" width="content">
           <div className="max-w-prose mb-14">
             <div className="eyebrow mb-4">The three pillars</div>
@@ -303,7 +353,7 @@ export default function HomePage() {
           </div>
         </Section>
 
-        {/* 5. CURRICULUM */}
+        {/* 7. CURRICULUM */}
         <Section bg="paper" width="content">
           <div className="max-w-prose mb-12">
             <div className="eyebrow mb-4">Inside the membership</div>
@@ -341,8 +391,28 @@ export default function HomePage() {
           </div>
         </Section>
 
-        {/* 6. PRICING — FIRST CTA */}
-        <Section bg="grey" width="content">
+        {/* 8. TESTIMONIALS */}
+        <Section bg="grey" width="wide">
+          <div className="max-w-prose mb-14">
+            <p className="eyebrow mb-6">What the Experts Say</p>
+            <h2 className="text-h1 font-semibold">Selected endorsements.</h2>
+          </div>
+          <div className="grid md:grid-cols-2 gap-x-10 gap-y-14">
+            {TESTIMONIALS.map((t) => (
+              <blockquote key={t.name} className="border-l-2 border-accent pl-6">
+                <p className="text-body text-ink mb-6 leading-relaxed">&ldquo;{t.quote}&rdquo;</p>
+                <footer className="text-small">
+                  <div className="font-semibold text-ink">{t.name}</div>
+                  <div className="text-ink-muted">{t.title}</div>
+                  {t.org && <div className="text-ink-faint">{t.org}</div>}
+                </footer>
+              </blockquote>
+            ))}
+          </div>
+        </Section>
+
+        {/* 9. PRICING — FIRST CTA */}
+        <Section bg="paper" width="content">
           <div className="max-w-prose mb-14">
             <div className="eyebrow mb-4">Join the Inner Circle</div>
             <h2 className="text-h1 font-semibold tracking-tight text-ink">
@@ -352,8 +422,8 @@ export default function HomePage() {
           <PricingCards />
         </Section>
 
-        {/* 7. ABOUT */}
-        <Section bg="paper" width="content">
+        {/* 10. ABOUT */}
+        <Section bg="grey" width="content">
           <div className="grid md:grid-cols-12 gap-10 items-start">
             <div className="md:col-span-4">
               <div className="aspect-[4/5] relative w-full max-w-xs">
@@ -380,46 +450,7 @@ export default function HomePage() {
           </div>
         </Section>
 
-        {/* 8. SELECTED WINS */}
-        <Section bg="paper" width="content">
-          <div className="max-w-prose mb-12">
-            <p className="eyebrow mb-4">Selected Wins</p>
-            <h2 className="text-h1 font-semibold text-ink leading-tight">
-              Results from the field.
-            </h2>
-          </div>
-          <ul className="grid md:grid-cols-2 gap-x-10 gap-y-8">
-            {WINS.map((w) => (
-              <li key={w.result} className="border-l-2 border-accent pl-6">
-                <p className="text-body text-ink-soft leading-relaxed">
-                  <span className="text-ink font-semibold">{w.result}</span> &mdash; {w.detail}
-                </p>
-              </li>
-            ))}
-          </ul>
-        </Section>
-
-        {/* 9. TESTIMONIALS */}
-        <Section bg="grey" width="wide">
-          <div className="max-w-prose mb-14">
-            <p className="eyebrow mb-6">What the Experts Say</p>
-            <h2 className="text-h1 font-semibold">Selected endorsements.</h2>
-          </div>
-          <div className="grid md:grid-cols-2 gap-x-10 gap-y-14">
-            {TESTIMONIALS.map((t) => (
-              <blockquote key={t.name} className="border-l-2 border-accent pl-6">
-                <p className="text-body text-ink mb-6 leading-relaxed">&ldquo;{t.quote}&rdquo;</p>
-                <footer className="text-small">
-                  <div className="font-semibold text-ink">{t.name}</div>
-                  <div className="text-ink-muted">{t.title}</div>
-                  {t.org && <div className="text-ink-faint">{t.org}</div>}
-                </footer>
-              </blockquote>
-            ))}
-          </div>
-        </Section>
-
-        {/* 10. CLOSING CTA */}
+        {/* 11. CLOSING CTA */}
         <Section bg="paper" width="content">
           <div className="max-w-prose mb-14">
             <div className="eyebrow mb-4">Join the Inner Circle</div>
