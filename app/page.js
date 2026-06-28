@@ -146,7 +146,7 @@ const MONTHS = [
     n: '02',
     theme: 'Messaging Systems',
     body: 'You write copy that converts. Offer design, sales pages, and messaging that does the selling for you.',
-    skills: ['Offer Creation', 'Copywriting', 'Copy Editing', 'AI Check to avoid AI slop'],
+    skills: ['Offer Creation', 'AI Writing Clone', 'Copy Editing', 'AI Check to avoid AI slop'],
   },
   {
     n: '03',
@@ -182,7 +182,7 @@ function PricingCards() {
       <div className="border border-rule bg-paper p-8 flex flex-col">
         <div className="eyebrow mb-4">Community</div>
         <h3 className="text-h2 font-semibold text-ink mb-2">AI Inner Circle</h3>
-        <div className="text-display font-semibold text-ink mb-1">$47</div>
+        <div className="text-display font-semibold text-ink mb-1">$49</div>
         <div className="text-small text-ink-muted mb-8">per month</div>
         <ul className="space-y-3 text-body text-ink-soft mb-10 flex-1">
           <li className="flex gap-3"><span className="text-accent mt-1">–</span>Full 6-month curriculum (one skill per week)</li>
@@ -275,7 +275,7 @@ export default function HomePage() {
                 Find out exactly where AI fits &mdash; and what to fix first.
               </h2>
               <p className="text-body text-ink-muted mb-8">
-                The AI Priority Map asks 15 questions across 5 business pillars. At the end, you get a color-coded breakdown of exactly where your business is leaking time and money &mdash; and the AI system that fixes each one.
+                Answer 15 questions across 5 business pillars. At the end, you get a color-coded breakdown of exactly where your business is leaking time and money &mdash; and the AI system that fixes each one.
               </p>
               <Button href="/map" variant="primary">
                 Take the AI Assessment
