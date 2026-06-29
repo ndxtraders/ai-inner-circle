@@ -8,7 +8,7 @@ import Button from './components/Button'
 export const metadata = {
   title: 'AI Inner Circle | Rev Vaughn',
   description:
-    'AI Revenue Growth Systems for B2B Service Providers. Get access to the AI systems Rev Vaughn uses every day to attract, engage, and convert buyers.',
+    'Revenue Growth Systems for B2B Service Providers. Get access to the AI systems Rev Vaughn uses every day to attract, engage, and convert buyers.',
 }
 
 const CLIENTS = [
