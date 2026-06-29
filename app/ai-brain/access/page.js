@@ -11,15 +11,38 @@ export const metadata = {
   robots: { index: false, follow: false },
 }
 
-// Placeholder paths — drop the real files in /public/downloads/ before launch.
+// Each download is gated by its own `ready` flag. Flip a file to ready: true once
+// it's in /public/downloads/. Until then its CTA shows "Coming soon" instead of a
+// dead link, so nothing 404s if someone lands here early.
 const DOWNLOADS = {
-  instructions: '/downloads/AI-Brain-Workshop-Guide.pdf',
-  plugin: '/downloads/ai-brain.plugin',
-  globalInstructions: '/downloads/global-instructions-template.txt',
+  instructions: { href: '/downloads/AI-Brain-Workshop-Guide.pdf', ready: false },
+  plugin: { href: '/downloads/ai-brain.plugin', ready: true },
+  globalInstructions: { href: '/downloads/global-instructions-template.txt', ready: false },
 }
 
 // Placeholder — add the live Q&A join link / details when set.
 const QA_LINK = '#'
+const QA_READY = false
+
+function ComingSoon({ children }) {
+  return (
+    <span
+      aria-disabled="true"
+      className="inline-flex items-center justify-center px-6 py-3 text-small font-medium tracking-wide rounded-none border border-rule bg-paper-grey text-ink-faint cursor-not-allowed select-none"
+    >
+      {children} &middot; Coming soon
+    </span>
+  )
+}
+
+function DownloadCTA({ file, label, variant = 'accent' }) {
+  if (!file.ready) return <ComingSoon>{label}</ComingSoon>
+  return (
+    <Button href={file.href} external download variant={variant}>
+      {label}
+    </Button>
+  )
+}
 
 export default function AIBrainAccessPage() {
   return (
@@ -108,9 +131,7 @@ export default function AIBrainAccessPage() {
                 click along the way. Read it on one screen and build on the other. You keep it, and
                 it&rsquo;s yours to come back to whenever you add something later.
               </p>
-              <Button href={DOWNLOADS.instructions} external download variant="accent">
-                Download the Workshop Guide (PDF)
-              </Button>
+              <DownloadCTA file={DOWNLOADS.instructions} label="Download the Workshop Guide (PDF)" />
               <p className="text-small text-ink-faint mt-3">
                 Start here. A PDF you can keep and search.
               </p>
@@ -122,9 +143,7 @@ export default function AIBrainAccessPage() {
                 A copy-and-paste starting point for the one-time setup that makes Claude know who you
                 are in every chat. The guide tells you exactly where it goes.
               </p>
-              <Button href={DOWNLOADS.globalInstructions} external download variant="secondary">
-                Download the template
-              </Button>
+              <DownloadCTA file={DOWNLOADS.globalInstructions} label="Download the template" variant="secondary" />
             </div>
           </div>
         </Section>
@@ -143,9 +162,7 @@ export default function AIBrainAccessPage() {
                 blank page. You answer a few short prompts and the plugin builds your AI Brain with
                 you and for you.
               </p>
-              <Button href={DOWNLOADS.plugin} external download variant="accent">
-                Download the plugin (ai-brain.plugin)
-              </Button>
+              <DownloadCTA file={DOWNLOADS.plugin} label="Download the plugin (ai-brain.plugin)" />
               <p className="text-small text-ink-faint mt-3">
                 Don&rsquo;t double-click this file. You load it from inside Claude, and the guide
                 walks you through it (Setup Guide 2).
@@ -196,9 +213,13 @@ export default function AIBrainAccessPage() {
               <p className="text-ink-muted">
                 Can&rsquo;t make it live? It&rsquo;s recorded, and you&rsquo;ll get the replay.
               </p>
-              <Button href={QA_LINK} external variant="secondary">
-                Get the Q&amp;A details
-              </Button>
+              {QA_READY ? (
+                <Button href={QA_LINK} external variant="secondary">
+                  Get the Q&amp;A details
+                </Button>
+              ) : (
+                <ComingSoon>Q&amp;A details</ComingSoon>
+              )}
             </div>
           </div>
         </Section>
