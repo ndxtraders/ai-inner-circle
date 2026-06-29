@@ -389,10 +389,10 @@ export default function AIBrainPage() {
               <div className="eyebrow mb-4">AI Brain Workshop</div>
               <h3 className="text-h2 font-semibold text-ink mb-2">Founders’ Cohort</h3>
               <div className="text-display font-semibold text-ink mb-1">$49</div>
-              <div className="text-small text-ink-muted mb-8">one-time — going up to $199 soon</div>
+              <div className="text-small text-ink-muted mb-8">one-time — going up to $99 soon</div>
               <p className="text-body text-ink-soft mb-8 flex-1">
                 Founders’ cohort pricing is early-access and based on current capacity. This price is
-                going up to $199 soon — if you leave and come back later, it will likely be higher.
+                going up to $99 soon — if you leave and come back later, it will likely be higher.
                 Claude Pro ($20/month) is a separate prerequisite, not part of this price.
               </p>
               <WaitlistForm buttonLabel="Join the Waitlist" />
