@@ -15,7 +15,7 @@ export const metadata = {
 // it's in /public/downloads/. Until then its CTA shows "Coming soon" instead of a
 // dead link, so nothing 404s if someone lands here early.
 const DOWNLOADS = {
-  instructions: { href: '/downloads/AI-Brain-Workshop-Guide.pdf', ready: false },
+  instructions: { href: '/downloads/AI-Brain-Workshop-Guide.pdf', ready: true },
   plugin: { href: '/downloads/ai-brain.plugin', ready: true },
   globalInstructions: { href: '/downloads/global-instructions-template.txt', ready: false },
 }
