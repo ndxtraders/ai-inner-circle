@@ -66,8 +66,7 @@ const REQUIREMENTS = [
 ]
 
 const INCLUDES = [
-  'The complete step-by-step guide — short written instructions and a screenshot of every click',
-  'A short intro video that shows you the finished setup before you build it',
+  'The complete step-by-step guide — short written instructions and a screenshot of every important click',
   'The guided tools that build your AI Brain with you and for you',
   'A live Q&A call',
   'A setup that’s yours forever, and gets sharper every time you use it',
@@ -92,7 +91,7 @@ const FAQS = [
   },
   {
     q: 'Is it a video course or a written guide?',
-    a: 'It’s a written, step-by-step guide you download and keep: short instructions with a screenshot of every click. You also get a short intro video and a live Q&A call. For a click-by-click setup, a guide beats video. You see the exact screen, make the click, and move on, instead of dragging a scrubber back and forth. And you keep it as a reference for the next time you want to add something.',
+    a: 'It’s a written, step-by-step guide you download and keep: short instructions with a screenshot of every click. You also get a live Q&A call. For a click-by-click setup, a guide beats video. You see the exact screen, make the click, and move on, instead of dragging a scrubber back and forth. And you keep it as a reference for the next time you want to add something.',
   },
   {
     q: 'Is my information private?',
@@ -301,8 +300,7 @@ export default function AIBrainPage() {
                 you open the guide to the right page instead of scrubbing a two-hour recording.
               </p>
               <p>
-                You also get a short intro video and a live Q&amp;A call. The video shows you the
-                finished setup before you build it. The call is where you bring your own questions.
+                You also get a live Q&amp;A call. The call is where you bring your own questions.
               </p>
             </div>
           </div>
