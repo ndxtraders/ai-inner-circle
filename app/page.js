@@ -279,7 +279,7 @@ export default function HomePage() {
             <div>
               <div className="eyebrow mb-4">5-Minute Assessment</div>
               <h2 className="text-h1 font-semibold tracking-tight text-ink mb-6">
-                Find out exactly where AI fits &mdash; and what to fix first.
+                Find out exactly where AI fits in your business &mdash; and what to do first.
               </h2>
               <p className="text-body text-ink-muted mb-8">
                 Answer 15 questions across 5 business pillars. At the end, you get a color-coded breakdown of exactly where your business is leaking time and money &mdash; and the AI system that fixes each one.
