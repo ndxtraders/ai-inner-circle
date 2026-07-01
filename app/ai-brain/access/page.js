@@ -17,12 +17,14 @@ export const metadata = {
 const DOWNLOADS = {
   instructions: { href: '/downloads/AI-Brain-Workshop-Guide.pdf', ready: true },
   plugin: { href: '/downloads/ai-brain.plugin', ready: true },
-  globalInstructions: { href: '/downloads/global-instructions-template.txt', ready: false },
 }
 
 // Placeholder — add the live Q&A join link / details when set.
 const QA_LINK = '#'
 const QA_READY = false
+
+// Welcome video is hidden until the embed is ready. Flip to true to show it again.
+const SHOW_WELCOME_VIDEO = false
 
 function ComingSoon({ children }) {
   return (
@@ -100,7 +102,8 @@ export default function AIBrainAccessPage() {
           </div>
         </Section>
 
-        {/* 3. WELCOME VIDEO */}
+        {/* 3. WELCOME VIDEO — hidden until the embed is ready (flip SHOW_WELCOME_VIDEO to true) */}
+        {SHOW_WELCOME_VIDEO && (
         <Section bg="paper" width="content">
           <div className="max-w-prose mb-10">
             <div className="eyebrow mb-4">Watch first &middot; 2 minutes</div>
@@ -116,35 +119,25 @@ export default function AIBrainAccessPage() {
             <span className="text-small text-ink-faint">Welcome video</span>
           </div>
         </Section>
+        )}
 
         {/* 4. COMPONENT 1 — THE INSTRUCTIONS */}
         <Section bg="grey" width="content">
-          <div className="grid md:grid-cols-2 gap-12 items-start">
-            <div>
-              <div className="eyebrow mb-4">Component 1 &middot; Your instructions</div>
-              <h2 className="text-h1 font-semibold tracking-tight text-ink mb-6">
-                The Workshop Guide.
-              </h2>
-              <p className="text-body text-ink-soft leading-relaxed mb-8">
-                A written, step-by-step guide with a screenshot of every click. It takes you from
-                nothing to a working AI Brain: what to set up, what to download, and exactly where to
-                click along the way. Read it on one screen and build on the other. You keep it, and
-                it&rsquo;s yours to come back to whenever you add something later.
-              </p>
-              <DownloadCTA file={DOWNLOADS.instructions} label="Download the Workshop Guide (PDF)" />
-              <p className="text-small text-ink-faint mt-3">
-                Start here. A PDF you can keep and search.
-              </p>
-            </div>
-            <div className="border border-rule bg-paper p-8">
-              <div className="eyebrow mb-4">Also included</div>
-              <h3 className="text-h3 font-semibold text-ink mb-3">Global Instructions template</h3>
-              <p className="text-body text-ink-soft leading-relaxed mb-6">
-                A copy-and-paste starting point for the one-time setup that makes Claude know who you
-                are in every chat. The guide tells you exactly where it goes.
-              </p>
-              <DownloadCTA file={DOWNLOADS.globalInstructions} label="Download the template" variant="secondary" />
-            </div>
+          <div className="max-w-prose">
+            <div className="eyebrow mb-4">Component 1 &middot; Your instructions</div>
+            <h2 className="text-h1 font-semibold tracking-tight text-ink mb-6">
+              The Workshop Guide.
+            </h2>
+            <p className="text-body text-ink-soft leading-relaxed mb-8">
+              A written, step-by-step guide with a screenshot of every click. It takes you from
+              nothing to a working AI Brain: what to set up, what to download, and exactly where to
+              click along the way. Read it on one screen and build on the other. You keep it, and
+              it&rsquo;s yours to come back to whenever you add something later.
+            </p>
+            <DownloadCTA file={DOWNLOADS.instructions} label="Download the Workshop Guide (PDF)" />
+            <p className="text-small text-ink-faint mt-3">
+              Start here. A PDF you can keep and search.
+            </p>
           </div>
         </Section>
 
