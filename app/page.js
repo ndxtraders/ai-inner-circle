@@ -331,7 +331,7 @@ export default function HomePage() {
         <Section bg="paper" width="content">
           <div className="grid md:grid-cols-2 gap-12 items-start">
             <div>
-              <div className="eyebrow mb-4">Why it exists</div>
+              <div className="eyebrow mb-4">Why become an AI Inner Circle Member</div>
               <h2 className="text-h1 font-semibold tracking-tight text-ink">
                 &ldquo;Just use AI&rdquo; is not a growth strategy.
               </h2>
