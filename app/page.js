@@ -300,6 +300,33 @@ export default function HomePage() {
           </div>
         </Section>
 
+{/* AI BRAIN WORKSHOP — ENTRY OFFER */}
+        <Section bg="paper" width="content">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <div className="eyebrow mb-4">Start here · Self-paced workshop</div>
+              <h2 className="text-h1 font-semibold tracking-tight text-ink mb-6">
+                Build an AI that knows you, your business, and how you think.
+              </h2>
+              <p className="text-body text-ink-muted mb-8">
+                The AI Brain Workshop is the foundation everything else builds on. In about 2 to 3
+                hours, set up a version of Claude that stops handing you generic answers and starts
+                working like a partner who has known you for years. No tech skills. Yours to keep
+                forever.
+              </p>
+              <Button href="/ai-brain" variant="primary">
+                Explore the AI Brain Workshop
+              </Button>
+            </div>
+            <div className="border-l-2 border-accent pl-6">
+              <p className="text-body text-ink-soft leading-relaxed">
+                A step-by-step guide with a screenshot of every click, the guided plugin that builds
+                your AI Brain with you, and a live Q&amp;A. Founders&rsquo; cohort pricing is open now.
+              </p>
+            </div>
+          </div>
+        </Section>
+
         {/* 4. WHY IT EXISTS */}
         <Section bg="paper" width="content">
           <div className="grid md:grid-cols-2 gap-12 items-start">
