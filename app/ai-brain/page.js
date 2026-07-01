@@ -88,7 +88,7 @@ const FAQS = [
   },
   {
     q: 'What do I need before we start?',
-    a: 'A Claude Pro ($20/month) or Max account, the Claude desktop app (free to download), macOS 11 / Windows 10 or better, and three to five things you’ve written in your own voice — not AI-generated. A short checklist is the first thing in the guide.',
+    a: 'A Claude Pro ($20/month) or Max account, the Claude desktop app (free to download), macOS 11 / Windows 10 or better, and three to five things you’ve written in your own voice — not AI-generated.',
   },
   {
     q: 'Is it a video course or a written guide?',
