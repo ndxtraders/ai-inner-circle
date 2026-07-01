@@ -133,13 +133,20 @@ export default function AIBrainPage() {
                 Founders’ pricing for the first cohort. Instant access the moment you join.
               </p>
             </div>
-            <div className="hidden md:flex items-start justify-center">
+            <div className="hidden md:flex flex-col items-center gap-4">
               <Image
                 src="/Rev-Vaughn-800.jpg"
                 alt="Rev Vaughn"
                 width={400}
                 height={500}
                 className="w-full h-auto max-w-sm"
+              />
+              <Image
+                src="/claude-partner-network.png"
+                alt="Claude Partner Network"
+                width={279}
+                height={30}
+                className="h-auto"
               />
             </div>
           </div>
