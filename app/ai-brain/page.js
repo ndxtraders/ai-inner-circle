@@ -2,18 +2,21 @@ import Image from 'next/image'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import Section from '../components/Section'
-import WaitlistForm from '../components/WaitlistForm'
+import Button from '../components/Button'
+
+// Placeholder checkout — Rev swaps this MailerLite product before launch.
+const GET_ACCESS_URL = 'https://checkout.mailerlite.com/checkout/18357'
 
 export const metadata = {
   title: 'AI Brain Workshop — Rev Vaughn',
   description:
-    'Build an AI that knows your business, your voice, and how you think — in one on-demand workshop. For founder-led brand owners who use AI every day.',
+    'Build an AI that knows your business, your voice, and how you think — in one self-paced workshop. For founder-led brand owners who use AI every day.',
   openGraph: {
     title: 'AI Brain Workshop — Rev Vaughn',
     description:
       'Set up a version of Claude that stops handing you generic answers and starts working like a partner who has known you for years.',
-    url: 'https://revvaughn.com/ai-brain',
-    siteName: 'Rev Vaughn',
+    url: 'https://aiinnercircle.com/ai-brain',
+    siteName: 'AI Inner Circle',
     type: 'website',
   },
 }
@@ -63,10 +66,10 @@ const REQUIREMENTS = [
 ]
 
 const INCLUDES = [
-  'The full on-demand workshop, yours to revisit anytime',
-  'A written, step-by-step guide you keep',
+  'The complete step-by-step guide — short written instructions and a screenshot of every click',
+  'A short intro video that shows you the finished setup before you build it',
   'The guided tools that build your AI Brain with you and for you',
-  'A Live Q&A Call',
+  'A live Q&A call',
   'A setup that’s yours forever, and gets sharper every time you use it',
 ]
 
@@ -77,19 +80,19 @@ const FAQS = [
   },
   {
     q: 'I use ChatGPT, not Claude. Can I still join?',
-    a: 'Yes. This runs on Claude, and getting you set up is part of the session. If you’ve used ChatGPT, you already know enough to follow along. A lot of people come over from ChatGPT for exactly this.',
+    a: 'Yes. This runs on Claude, and getting you set up is part of the guide. If you’ve used ChatGPT, you already know enough to follow along. A lot of people come over from ChatGPT for exactly this.',
   },
   {
     q: 'How long does it take?',
-    a: 'Plan for about 2–3 hours. It’s on-demand, so do it in one sitting or split it across a few — your work saves as you go, and you pick up right where you left off.',
+    a: 'Plan for about 2–3 hours. It’s self-paced, so do it in one sitting or split it across a few. Your work saves as you go, and you pick up right where you left off.',
   },
   {
     q: 'What do I need before we start?',
-    a: 'A Claude Pro ($20/month) or Max account, the Claude desktop app (free to download), and three to five things you’ve written in your own voice — not AI-generated. We send a short checklist before the workshop.',
+    a: 'A Claude Pro ($20/month) or Max account, the Claude desktop app (free to download), and three to five things you’ve written in your own voice — not AI-generated. A short checklist is the first thing in the guide.',
   },
   {
-    q: 'Is it live or recorded?',
-    a: 'The workshop is on-demand — pre-recorded, so every demo is clean and you go at your own pace. The Q&A is live, so you get the best of both: a polished build you can follow anytime, plus real answers to your questions.',
+    q: 'Is it a video course or a written guide?',
+    a: 'It’s a written, step-by-step guide you download and keep: short instructions with a screenshot of every click. You also get a short intro video and a live Q&A call. For a click-by-click setup, a guide beats video. You see the exact screen, make the click, and move on, instead of dragging a scrubber back and forth. And you keep it as a reference for the next time you want to add something.',
   },
   {
     q: 'Is my information private?',
@@ -120,14 +123,15 @@ export default function AIBrainPage() {
                 Build an AI That Knows You, Your Business, and How You Think
               </h1>
               <p className="text-lead text-ink-muted mb-10">
-                In one on-demand workshop, you’ll set up a version of Claude that stops handing you
+                Follow one self-paced workshop and set up a version of Claude that stops handing you
                 generic answers and starts working like a partner who’s known you for years. No tech
                 skills required.
               </p>
-              <WaitlistForm buttonLabel="Join the Waitlist" />
+              <Button href={GET_ACCESS_URL} external variant="primary">
+                Get Access Now
+              </Button>
               <p className="text-small text-ink-faint mt-3">
-                Founder’s pricing for the first cohort. No payment now — we’ll email you when
-                enrollment opens.
+                Founders’ pricing for the first cohort. Instant access the moment you join.
               </p>
             </div>
             <div className="hidden md:flex items-start justify-center">
@@ -277,21 +281,29 @@ export default function AIBrainPage() {
             <div>
               <div className="eyebrow mb-4">How the workshop works</div>
               <h2 className="text-h1 font-semibold tracking-tight text-ink">
-                You watch it happen first. Then you do it yourself.
+                See exactly what to click. Go at your own pace.
               </h2>
             </div>
             <div className="space-y-5 text-body text-ink-soft">
               <p>
-                It’s on-demand — pre-recorded, so every AI demo is clean and vetted, not a live
-                screen-share that hangs at the worst moment. You go at your own pace, on your own
-                schedule, and pause whenever you need.
+                I built this as a written guide on purpose. Short instructions, and a screenshot of
+                every click.
               </p>
               <p>
-                We go step by step. The guided tools do the heavy lifting — they pre-fill from what
-                Claude already knows about you, and you can point them at things you’ve already
-                written. By the end, your AI Brain is live, and you’ve tested it on your own real work.
+                Here’s why. The technical part, connecting a folder and installing the tools, is where
+                people get stuck. Do that from a video and you’re dragging the scrubber back to catch
+                the step you missed, then skipping ahead through the parts you already know. The video
+                doesn’t wait for you.
               </p>
-              <p>The Q&amp;A is a live call, so you get real answers without the risk of a buggy live build.</p>
+              <p>
+                A guide does. You see the exact screen, make the click, and move on. Skim what you
+                know. Slow down where it’s new. Six months from now, when you want to add something,
+                you open the guide to the right page instead of scrubbing a two-hour recording.
+              </p>
+              <p>
+                You also get a short intro video and a live Q&amp;A call. The video shows you the
+                finished setup before you build it. The call is where you bring your own questions.
+              </p>
             </div>
           </div>
         </Section>
@@ -389,15 +401,18 @@ export default function AIBrainPage() {
               <div className="eyebrow mb-4">AI Brain Workshop</div>
               <h3 className="text-h2 font-semibold text-ink mb-2">Founders’ Cohort</h3>
               <div className="text-display font-semibold text-ink mb-1">$49</div>
-              <div className="text-small text-ink-muted mb-8">one-time — going up to $199 soon</div>
+              <div className="text-small text-ink-muted mb-8">one-time — going up to $99 soon</div>
               <p className="text-body text-ink-soft mb-8 flex-1">
                 Founders’ cohort pricing is early-access and based on current capacity. This price is
-                going up to $199 soon — if you leave and come back later, it will likely be higher.
+                going up to $99 soon — if you leave and come back later, it will likely be higher.
                 Claude Pro ($20/month) is a separate prerequisite, not part of this price.
               </p>
-              <WaitlistForm buttonLabel="Join the Waitlist" />
+              <Button href={GET_ACCESS_URL} external variant="primary">
+                Get Access Now
+              </Button>
               <p className="text-small text-ink-faint mt-3">
-                Free to join. No payment now — we’ll email you the moment enrollment opens.
+                Instant access the moment you join. Your order is processed by Stripe via a
+                secure MailerLite checkout.
               </p>
             </div>
           </div>
@@ -432,10 +447,11 @@ export default function AIBrainPage() {
               In a few quick hours, you can fix that for good. Teach it who you are — once — and it
               gets sharper every time you use it.
             </p>
-            <WaitlistForm buttonLabel="Join the Waitlist" />
+            <Button href={GET_ACCESS_URL} external variant="primary">
+              Get Access Now
+            </Button>
             <p className="text-small text-ink-faint mt-3">
-              On-demand and self-paced. Live Q&amp;A call. Join the waitlist now &mdash; no
-              payment until enrollment opens.
+              Self-paced guide. Live Q&amp;A call. Instant access the moment you join.
             </p>
           </div>
         </Section>
