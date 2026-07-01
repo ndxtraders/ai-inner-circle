@@ -242,13 +242,20 @@ export default function HomePage() {
                 </Link>
               </div>
             </div>
-            <div className="hidden md:flex items-start justify-center pt-8">
+            <div className="hidden md:flex flex-col items-center gap-4 pt-8">
               <Image
                 src="/AI-Inner-Circle-Logo-940.jpg"
                 alt="AI Inner Circle"
                 width={220}
                 height={220}
                 className="opacity-90"
+              />
+              <Image
+                src="/claude-partner-network.png"
+                alt="Claude Partner Network"
+                width={279}
+                height={30}
+                className="h-auto max-w-full"
               />
             </div>
           </div>
