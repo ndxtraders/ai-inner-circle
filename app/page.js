@@ -327,7 +327,7 @@ export default function HomePage() {
           </div>
         </Section>
 
-        {/* 4. WHY IT EXISTS */}
+        {/* 4. WHY CHOOSE AI INNER CIRCLE MEMBERSHIP */}
         <Section bg="paper" width="content">
           <div className="grid md:grid-cols-2 gap-12 items-start">
             <div>
