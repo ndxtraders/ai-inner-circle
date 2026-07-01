@@ -5,7 +5,7 @@ import Section from '../components/Section'
 import Button from '../components/Button'
 
 // Placeholder checkout — Rev swaps this MailerLite product before launch.
-const GET_ACCESS_URL = 'https://checkout.mailerlite.com/checkout/18357'
+const GET_ACCESS_URL = 'https://checkout.mailerlite.com/checkout/31455'
 
 export const metadata = {
   title: 'AI Brain Workshop — Rev Vaughn',
