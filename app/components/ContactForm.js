@@ -45,8 +45,8 @@ export default function ContactForm() {
       <input type="checkbox" name="botcheck" className="hidden" style={{ display: 'none' }} />
 
       {/* Email subject + from name for nicer inbox formatting */}
-      <input type="hidden" name="subject" value="New contact form submission — revvaughn.com" />
-      <input type="hidden" name="from_name" value="revvaughn.com Contact Form" />
+      <input type="hidden" name="subject" value="New contact form submission — aiinnercircle.com" />
+      <input type="hidden" name="from_name" value="AI Inner Circle Contact Form" />
 
       <div>
         <label htmlFor="name" className={labelClass}>

@@ -652,10 +652,10 @@ export default function PrivacyTermsPage() {
                 for details. COMPANY&rsquo;s Copyright Agent for notice of claims of copyright
                 infringement or counter notices can be reached at{' '}
                 <a
-                  href="https://revvaughn.com/contact"
+                  href="/contact"
                   className="text-ink underline hover:text-accent transition-colors"
                 >
-                  https://revvaughn.com/contact
+                  aiinnercircle.com/contact
                 </a>
                 .
               </p>
