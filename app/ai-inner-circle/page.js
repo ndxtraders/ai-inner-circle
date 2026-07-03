@@ -230,7 +230,7 @@ export default function AIInnerCirclePage() {
                 Your human voice sells it. AI Assistants scale it.
               </h1>
               <p className="text-lead text-ink-muted mb-10">
-                A membership for founder-led B2B brands. Every week you install a new AI Assistant that attracts, engages, and converts buyers — in your voice, not AI slop.
+                A membership for founder-led B2B brands. Every week you install a new AI Assistant that attracts, engages, and converts buyers. In your voice. Real work, not AI slop.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Button href="/membership" variant="primary">
@@ -278,8 +278,8 @@ export default function AIInnerCirclePage() {
                 using AI and creating &ldquo;AI Slop&rdquo; their audience ignores.
               </p>
               <p>
-                AI Inner Circle fixes both. You don&rsquo;t learn AI &mdash; you hire AI Assistants that know your voice,
-                offer, and market. One new Assistant drops every week, each one solving a real problem, until they add up
+                AI Inner Circle fixes both. You hire AI Assistants that know your voice, offer, and market.
+                One new Assistant drops every week. Each one solves a real problem. Over six months they add up
                 to a system that runs your growth without living in your head.
               </p>
             </div>

@@ -7,9 +7,9 @@ import Button from '../components/Button'
 import WaitlistForm from '../components/WaitlistForm'
 
 export const metadata = {
-  title: 'Join AI Inner Circle — Membership | Rev Vaughn',
+  title: 'AI Inner Circle Membership | Rev Vaughn',
   description:
-    'Install AI Assistants that attract, engage, and convert buyers — in your voice, not AI slop. One new Assistant every week. Founder-led B2B membership from Rev Vaughn.',
+    'AI Assistants that attract and convert buyers for you. One new Assistant every week, built in your voice. Founder-led B2B membership from Rev Vaughn.',
 }
 
 // ---------------------------------------------------------------------------
@@ -22,13 +22,13 @@ const CLIENTS = [
   'Heather Rae Essentials', 'SpaSurge',
 ]
 
-// The reader self-selects here — pulled from the AI Priority Map breaking points.
+// The reader self-selects here, pulled from the AI Priority Map breaking points.
 const PAINS = [
-  'You’re the bottleneck. Every decision routes through you.',
-  'Leads go cold because you couldn’t reply fast enough.',
-  'Your best thinking is trapped in your head — nothing’s written down.',
-  'You post, but it sounds like everyone else. Or like a robot.',
-  'You know AI should help. You just don’t know where to start.',
+  'You reply late. The deal goes cold.',
+  'Your best process lives in your head.',
+  'You post, and it sounds like everyone else.',
+  'Leads come in. Most never hear back.',
+  'You know AI should help. You don’t know where to start.',
 ]
 
 // Onboarding happens in Week 0, before the clock starts. Orchestrator first.
@@ -41,7 +41,7 @@ const ONBOARDING = [
   {
     n: '02',
     title: 'Activate Your AI Brain',
-    body: 'Comes pre-loaded. You personalize it with your voice, offer, market, and ideal buyer — so every Assistant sounds like you.',
+    body: 'Comes pre-loaded. You add your voice, offer, and market. Then every Assistant sounds like you.',
   },
 ]
 
@@ -49,48 +49,48 @@ const WORKSHOPS = [
   {
     n: '01',
     title: 'Your First 10 Conversations',
-    promise: 'Real buyer conversations on your calendar in week one — no cold email, no ad spend.',
+    promise: 'Real buyer conversations on your calendar in week one, without cold email or ad spend.',
     anchor: 'LinkedIn Signal Scraper',
   },
   {
     n: '02',
     title: 'The Offer They Can’t Ignore',
-    promise: 'Rebuild your offer so the right buyers feel dumb saying no — and price stops being the objection.',
+    promise: 'Rebuild your offer so the right buyers feel dumb saying no. Price stops being the objection.',
     anchor: 'Offer & Pricing Architect',
   },
   {
     n: '03',
     title: '30 Minutes to a Month of Content',
-    promise: 'Record 30 minutes a week and show up everywhere in your voice — and get cited by AI search.',
+    promise: 'Record 30 minutes a week. Show up everywhere in your voice, and get cited by AI search.',
     anchor: 'Recording → Content Engine',
   },
   {
     n: '04',
     title: 'Turn Replies Into Revenue',
-    promise: 'Every reply becomes a booked call, every call gets a proposal — before the buyer cools off.',
+    promise: 'Every reply becomes a booked call. Every call gets a proposal, before the buyer cools off.',
     anchor: 'Proposal & Quote Generator',
   },
   {
     n: '05',
     title: 'Get Out of the Bottleneck',
-    promise: 'Pull the business out of your head into AI Assistants that run the routine, so you stop being the ceiling.',
+    promise: 'Move the routine out of your head into AI Assistants, so you stop being the ceiling.',
     anchor: 'Transcription → SOP',
   },
   {
     n: '06',
     title: 'Run Like a Full Team',
-    promise: 'Spot churn before it hits, get paid on time, and deliver like you’ve got a full ops team behind you.',
+    promise: 'Spot churn before it hits, get paid on time, and deliver like you have a full ops team.',
     anchor: 'Client Health Monitor',
   },
 ]
 
 const INCLUDED = [
-  ['One new AI Assistant every week', '24+ over six months. Each fixes a specific problem — dropped Tuesday, used that same day.'],
+  ['One new AI Assistant every week', '24 over six months. Each one fixes a real problem. It drops Tuesday. You use it that day.'],
   ['1–2 live workshops every month', 'The month’s big move, walked through step by step. Live or pre-recorded.'],
   ['Friday Q&A with Rev', 'Bring what you’re stuck on. Get unstuck before the weekend.'],
-  ['Daily access inside the community', 'Direct line to Rev and the room, every day.'],
-  ['Your Command Center, set up with you', 'The orchestrator and memory that make the whole system compound instead of scatter.'],
-  ['Templates and prompts you keep', 'They live in your own folder. Leave anytime and the system is still yours.'],
+  ['Daily access inside the community', 'A direct line to Rev and the room, every day.'],
+  ['Your Command Center, set up with you', 'The orchestrator and memory that keep the whole system stacking up.'],
+  ['Templates and prompts you keep', 'They live in your own folder. Leave anytime and the system stays yours.'],
 ]
 
 const WINS = [
@@ -118,9 +118,9 @@ const TESTIMONIALS = [
 const FAQ = [
   ['Do I need to be technical?', 'No. You answer a few dropdown questions and the Assistant does the work. If you can send an email, you can run this.'],
   ['Which AI do I need?', 'Claude. That’s the only subscription required. The Assistants are built to run there.'],
-  ['How much time per week?', 'Plan on an hour to install and use the week’s Assistant. That’s the whole point — less time, not more.'],
-  ['Will this work for my B2B service?', 'Yes. It’s built for the general founder-led B2B service business — coaches, consultants, agencies, done-for-you services.'],
-  ['Anything cost extra beyond the $49?', 'Only two small, optional things for the outreach month: a paid LinkedIn plan, and a few dollars of pay-as-you-go Apify. No expensive CRM, no cold-email tools.'],
+  ['How much time per week?', 'Plan on about an hour to install and use the week’s Assistant. That hour buys back far more.'],
+  ['Will this work for my B2B service?', 'Yes. It fits founder-led B2B service businesses: coaches, consultants, agencies, done-for-you services.'],
+  ['Anything cost extra beyond the $49?', 'Two small, optional things for the outreach month: a paid LinkedIn plan, and a few dollars of pay-as-you-go Apify. No expensive CRM, no cold-email tools.'],
   ['Do I keep the Assistants if I cancel?', 'Yes. They live in your own folder on your own machine. What you build is yours to keep.'],
 ]
 
@@ -140,17 +140,17 @@ export default function MembershipPage() {
             <div className="md:col-span-2">
               <div className="eyebrow mb-6">AI Inner Circle Membership</div>
               <h1 className="text-display font-semibold tracking-tight text-ink mb-6">
-                AI Assistants that attract, engage, and convert buyers for you.
+                AI Assistants that attract and convert buyers for you.
               </h1>
               <p className="text-lead text-ink-muted mb-4">
-                Not a course on AI. The actual skills — one new Assistant every week — that run your growth in your voice, not AI slop.
+                You get the actual skills. One new Assistant drops every week. Each one does real work in your voice.
               </p>
               <p className="text-body text-ink-soft mb-8">
-                The difference is simple: <span className="text-ink font-medium">the AI knows you now.</span>
+                The difference is simple. <span className="text-ink font-medium">The AI knows you now.</span>
               </p>
               <WaitlistForm buttonLabel="Join the Waitlist" />
               <p className="text-small text-ink-muted mt-4">
-                Founding cohort · enrollment closes <span className="text-ink font-medium">August 1</span> · $49/mo founding price.{' '}
+                Founding cohort. Enrollment closes <span className="text-ink font-medium">August 1</span>. Founding price is $49 a month.{' '}
                 <Link href="/map" className="text-accent underline underline-offset-2 hover:no-underline">
                   Not sure yet? Take the 5-minute assessment →
                 </Link>
@@ -174,7 +174,7 @@ export default function MembershipPage() {
         {/* Clients strip */}
         <section className="bg-paper-grey border-y border-rule py-10">
           <div className="max-w-wide mx-auto px-6">
-            <p className="text-small text-ink-muted mb-5 text-center uppercase tracking-wide">Trusted by the teams behind</p>
+            <p className="text-small text-ink-muted mb-5 text-center uppercase tracking-wide">Behind campaigns for</p>
             <div className="flex flex-wrap justify-center gap-x-8 gap-y-3 text-body text-ink-soft">
               {CLIENTS.map((c) => (
                 <span key={c} className="whitespace-nowrap">{c}</span>
@@ -189,7 +189,7 @@ export default function MembershipPage() {
             <div>
               <div className="eyebrow mb-4">Is this you?</div>
               <h2 className="text-h1 font-semibold tracking-tight text-ink">
-                You’re busy, you’re the bottleneck, and everything depends on you.
+                You’re the bottleneck. Everything waits on you.
               </h2>
             </div>
             <ul className="space-y-4 text-body text-ink-soft">
@@ -198,7 +198,7 @@ export default function MembershipPage() {
                   <span className="text-accent mt-1">–</span>{p}
                 </li>
               ))}
-              <li className="pt-2 text-ink font-medium">If you nodded, keep reading.</li>
+              <li className="pt-2 text-ink font-medium">Sound familiar? Keep reading.</li>
             </ul>
           </div>
         </Section>
@@ -207,37 +207,37 @@ export default function MembershipPage() {
         <Section bg="grey" width="content">
           <div className="eyebrow mb-4">The real cost</div>
           <h2 className="text-h1 font-semibold tracking-tight text-ink mb-6 max-w-prose">
-            Right now you don’t own a business. You own a stressful job that can’t run without you.
+            You built a job, not an asset.
           </h2>
           <p className="text-lead text-ink-muted max-w-prose">
-            Deals slip because you replied late. Your brand is invisible because there’s no time to show up.
-            Your best process lives in your head, so nothing scales past you. That’s not a marketing problem — it’s a
-            systems problem. And it compounds every week you leave it alone.
+            The business runs on you. You step away and it stops. Deals slip when you reply late. Your brand stays
+            quiet because you have no time to show up. Good processes never leave your head, so nothing scales past
+            you. While you wait, competitors are building the systems that do this work for them.
           </p>
         </Section>
 
         {/* 5. WHY THE USUAL FIXES FAIL */}
         <Section bg="paper" width="content">
-          <div className="eyebrow mb-4">You’ve probably tried</div>
+          <div className="eyebrow mb-4">You’ve tried the usual fixes</div>
           <h2 className="text-h1 font-semibold tracking-tight text-ink mb-10 max-w-prose">
-            The usual fixes all fail the same way.
+            They all break the same way.
           </h2>
           <div className="grid md:grid-cols-2 gap-8 text-body text-ink-soft">
             <div>
               <p className="text-ink font-medium mb-1">Generic ChatGPT</p>
-              <p>You type the same “I’m a B2B coach, keep it short, sound like me” prompt every time — then rewrite what comes back. Every. Single. Time.</p>
+              <p>You type the same long prompt every time. Then you rewrite what comes back. Every session starts from zero.</p>
             </div>
             <div>
               <p className="text-ink font-medium mb-1">Courses</p>
-              <p>You get information and a certificate. What you needed was the thing built and running.</p>
+              <p>You finish with notes and a certificate. The work still isn’t built.</p>
             </div>
             <div>
               <p className="text-ink font-medium mb-1">Hiring or agencies</p>
-              <p>Expensive, slow, and now you’re managing people instead of doing the work.</p>
+              <p>Expensive and slow. Now you manage people instead of doing the work.</p>
             </div>
             <div>
               <p className="text-ink font-medium mb-1">Enterprise stacks (Apollo, HubSpot)</p>
-              <p>Big monthly bills, and cold email that quietly burns your domain reputation.</p>
+              <p>Big monthly bills. Cold email that burns your domain.</p>
             </div>
           </div>
         </Section>
@@ -246,23 +246,23 @@ export default function MembershipPage() {
         <Section bg="greyDark" width="content">
           <div className="eyebrow mb-4">The idea</div>
           <h2 className="text-display font-semibold tracking-tight text-ink mb-6 max-w-prose">
-            You don’t learn AI. You hire AI Assistants that know you.
+            Hire AI Assistants that already know you.
           </h2>
           <p className="text-lead text-ink-muted max-w-prose mb-4">
-            Problem first, AI second. Every week you add one Assistant that fixes one real problem — and each one
-            plugs into the same Command Center.
+            Start with the problem. Add the Assistant that solves it. One a week. Each one plugs into the same
+            Command Center.
           </p>
           <p className="text-lead text-ink-muted max-w-prose">
-            Six months in, they’re not a pile of tools. They’re a system that attracts, converts, delivers, and
-            retains — without living in your head.
+            Six months in, they work together. They attract buyers, convert them, deliver, and keep them. The system
+            runs without living in your head.
           </p>
         </Section>
 
-        {/* 7. HOW IT WORKS — before/after */}
+        {/* 7. HOW IT WORKS: before/after */}
         <Section bg="paper" width="content">
-          <div className="eyebrow mb-4">How it actually works</div>
+          <div className="eyebrow mb-4">How it works</div>
           <h2 className="text-h1 font-semibold tracking-tight text-ink mb-10 max-w-prose">
-            What happens when your AI knows you.
+            What changes when the AI knows you.
           </h2>
           <div className="grid md:grid-cols-2 gap-8 mb-12">
             <div className="border border-rule bg-paper-grey p-6">
@@ -272,30 +272,30 @@ export default function MembershipPage() {
                 “I’m a B2B coach. My clients are founders. Keep it short. No bullet points. Casual, not formal.
                 Make it sound like me, not a robot… yada yada.”
               </p>
-              <p className="text-body text-ink-soft mt-3">Then you rewrite what comes back. Over and over.</p>
+              <p className="text-body text-ink-soft mt-3">Then you rewrite what comes back. Again and again.</p>
             </div>
             <div className="border-2 border-accent bg-paper p-6">
               <p className="eyebrow mb-3">After</p>
               <p className="text-body text-ink-soft mb-3">You type:</p>
               <p className="text-h3 font-semibold text-ink">/site-content</p>
               <p className="text-body text-ink-soft mt-3">
-                Answer a few dropdown questions. It comes back in your voice, built for your market and offer.
-                Read it, make a couple of tweaks, post.
+                You answer a few dropdown questions. The draft comes back in your voice, built for your market. You
+                tweak a line or two. You post.
               </p>
             </div>
           </div>
           <div className="grid md:grid-cols-3 gap-6 text-body text-ink-soft">
             <div>
               <p className="text-ink font-medium mb-1">1. Command Center first</p>
-              <p>Your Assistants learn your voice, offer, and market once — up front.</p>
+              <p>Your Assistants learn your voice, offer, and market once, up front.</p>
             </div>
             <div>
               <p className="text-ink font-medium mb-1">2. One Assistant every Tuesday</p>
-              <p>A new skill drops each week. Use it that same day.</p>
+              <p>A new skill drops each week. You use it that same day.</p>
             </div>
             <div>
-              <p className="text-ink font-medium mb-1">3. It compounds</p>
-              <p>Each one plugs into the Center, so nothing gets forgotten.</p>
+              <p className="text-ink font-medium mb-1">3. It stacks up</p>
+              <p>Each one plugs into the Center. Nothing gets forgotten.</p>
             </div>
           </div>
         </Section>
@@ -308,7 +308,7 @@ export default function MembershipPage() {
               A quick win in week one. A full system by month six.
             </h2>
             <p className="text-lead text-ink-muted mb-12 max-w-prose">
-              First, we set up your Command Center. Then six months, each with one workshop and the Assistants that make it real.
+              First you set up your Command Center. Then six months, each with one workshop and the Assistants that make it real.
             </p>
 
             {/* Onboarding */}
@@ -352,19 +352,19 @@ export default function MembershipPage() {
             <div className="border border-rule bg-paper-grey p-8">
               <p className="eyebrow mb-4">Today</p>
               <ul className="space-y-3 text-body text-ink-soft">
-                <li>Generic, average AI output you have to fix.</li>
+                <li>Generic AI output you fix by hand.</li>
                 <li>Leads slip through the cracks.</li>
-                <li>You’re the ceiling on everything.</li>
-                <li>The business can’t run without you in the room.</li>
+                <li>You cap everything the business does.</li>
+                <li>The work stops when you step away.</li>
               </ul>
             </div>
             <div className="border-2 border-accent bg-paper p-8">
               <p className="eyebrow mb-4">Six months in</p>
               <ul className="space-y-3 text-body text-ink-soft">
-                <li>Posts that read like your business mentor wrote them.</li>
+                <li>Posts that read like your mentor wrote them.</li>
                 <li>Every lead gets a fast, personal reply.</li>
-                <li>The routine runs on Assistants, not on you.</li>
-                <li>A transferable asset — not a job you can’t leave.</li>
+                <li>The routine runs on Assistants.</li>
+                <li>An asset you could sell or step away from.</li>
               </ul>
             </div>
           </div>
@@ -393,7 +393,7 @@ export default function MembershipPage() {
         <Section bg="paper" width="content">
           <div className="eyebrow mb-4">Proof</div>
           <h2 className="text-h1 font-semibold tracking-tight text-ink mb-10">
-            The systems behind these numbers are what you’re getting.
+            These numbers came from these systems.
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-14">
             {WINS.map((w) => (
@@ -428,12 +428,12 @@ export default function MembershipPage() {
                 I build these systems for a living. Now I’m handing you mine.
               </h2>
               <p className="text-body text-ink-soft mb-4">
-                I’m Rev Vaughn — a GTM strategist and revenue systems architect. I’ve built control campaigns for
-                Grant Cardone, launches that sold out in 48 hours, and pipelines that raised booked calls 144%.
+                I’m Rev Vaughn, a GTM strategist and revenue systems architect. I built the control campaign for
+                Grant Cardone’s 10X Business Coach, launches that sold out in 48 hours, and pipelines that lifted
+                booked calls 144%.
               </p>
               <p className="text-body text-ink-soft">
-                This isn’t a guru selling AI theory. It’s the exact Assistants I use every day, packaged so a busy
-                founder can install them without a tech team.
+                You get the exact Assistants I use every day, packaged so a busy founder can run them without a tech team.
               </p>
             </div>
           </div>
@@ -460,7 +460,7 @@ export default function MembershipPage() {
             </ul>
             <WaitlistForm buttonLabel="Join the Waitlist" />
             <p className="text-small text-ink-muted mt-4">
-              Enrollment closes August 1. 1:1 coaching upgrade available soon.
+              Enrollment closes August 1. A 1:1 coaching upgrade opens soon.
             </p>
           </div>
         </Section>
@@ -469,15 +469,14 @@ export default function MembershipPage() {
         <Section bg="grey" width="content">
           <div className="eyebrow mb-4">No games</div>
           <h2 className="text-h1 font-semibold tracking-tight text-ink mb-6 max-w-prose">
-            Cancel anytime, and you keep what you built.
+            Cancel anytime. Keep what you built.
           </h2>
           <p className="text-lead text-ink-muted max-w-prose mb-4">
-            Your Assistants live in your own folder on your own machine. Walk away whenever you want — the system is
-            still yours.
+            Your Assistants live in your own folder, on your own machine. Walk away whenever you want. The system stays yours.
           </p>
           <p className="text-body text-ink-soft max-w-prose">
-            Straight about costs: you’ll need a Claude subscription. For the outreach month, a paid LinkedIn plan and
-            a few dollars of pay-as-you-go Apify. That’s it — no expensive CRM, no cold-email tools.
+            Straight talk on costs. You need a Claude subscription. For the outreach month, add a paid LinkedIn plan
+            and a few dollars of Apify. No expensive CRM, no cold-email tools.
           </p>
         </Section>
 
@@ -499,10 +498,10 @@ export default function MembershipPage() {
         <Section bg="greyDark" width="content">
           <div className="text-center">
             <h2 className="text-display font-semibold tracking-tight text-ink mb-6 max-w-prose mx-auto">
-              The AI knows you now. Let’s put it to work.
+              The AI knows you now. Put it to work.
             </h2>
             <p className="text-lead text-ink-muted mb-8 max-w-prose mx-auto">
-              Join the founding cohort before enrollment closes August 1 and lock in $49/mo.
+              Join the founding cohort before enrollment closes August 1. Lock in $49 a month.
             </p>
             <div className="flex justify-center mb-6">
               <WaitlistForm buttonLabel="Join the Waitlist" />
