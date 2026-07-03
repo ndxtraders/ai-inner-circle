@@ -181,7 +181,7 @@ function PricingCards() {
       <div className="border border-rule bg-paper p-8 flex flex-col">
         <div className="eyebrow mb-4">Community</div>
         <h3 className="text-h2 font-semibold text-ink mb-2">AI Inner Circle</h3>
-        <div className="text-display font-semibold text-ink mb-1">$47</div>
+        <div className="text-display font-semibold text-ink mb-1">$49</div>
         <div className="text-small text-ink-muted mb-8">per month</div>
         <ul className="space-y-3 text-body text-ink-soft mb-10 flex-1">
           <li className="flex gap-3"><span className="text-accent mt-1">–</span>Full 6-month curriculum (one skill per week)</li>
@@ -227,13 +227,13 @@ export default function AIInnerCirclePage() {
             <div className="md:col-span-2">
               <div className="eyebrow mb-6">AI Inner Circle</div>
               <h1 className="text-display font-semibold tracking-tight text-ink mb-8">
-                Your human voice sells it. AI scales it.
+                Your human voice sells it. AI Assistants scale it.
               </h1>
               <p className="text-lead text-ink-muted mb-10">
-                A private Skool community and 1:1 coaching for founder-led brands building GTM and revenue growth systems with AI
+                A membership for founder-led B2B brands. Every week you install a new AI Assistant that attracts, engages, and converts buyers — in your voice, not AI slop.
               </p>
               <div className="flex flex-wrap gap-4">
-                <Button href="/contact" variant="primary">
+                <Button href="/membership" variant="primary">
                   Join AI Inner Circle
                 </Button>
               </div>
@@ -278,7 +278,9 @@ export default function AIInnerCirclePage() {
                 using AI and creating &ldquo;AI Slop&rdquo; their audience ignores.
               </p>
               <p>
-                AI Inner Circle fixes both. You keep the voice your audience trusts. AI handles the execution that was slowing you down.
+                AI Inner Circle fixes both. You don&rsquo;t learn AI &mdash; you hire AI Assistants that know your voice,
+                offer, and market. One new Assistant drops every week, each one solving a real problem, until they add up
+                to a system that runs your growth without living in your head.
               </p>
             </div>
           </div>
