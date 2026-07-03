@@ -17,15 +17,27 @@ export default function Header() {
         </Link>
 
         {/* Desktop nav */}
-        <nav className="hidden md:flex items-center gap-8 text-small">
+        <nav className="hidden md:flex items-center gap-6 text-small">
+          <Link href="/workshops" className="text-ink-muted hover:text-ink transition-colors">
+            Workshops
+          </Link>
+          <Link href="/membership" className="text-ink-muted hover:text-ink transition-colors">
+            Membership
+          </Link>
           <Link href="/map" className="text-ink-muted hover:text-ink transition-colors">
             AI Assessment
           </Link>
           <Link href="/resources" className="text-ink-muted hover:text-ink transition-colors">
             Resources
           </Link>
-          <Link href="/contact" className="text-ink hover:text-accent transition-colors font-medium">
+          <Link href="/contact" className="text-ink-muted hover:text-ink transition-colors">
             Contact
+          </Link>
+          <Link
+            href="/membership"
+            className="bg-accent text-paper border border-accent px-4 py-2 font-medium hover:bg-accent-hover hover:border-accent-hover transition-colors"
+          >
+            Join the Waitlist
           </Link>
         </nav>
 
@@ -42,14 +54,27 @@ export default function Header() {
       {/* Mobile panel */}
       {open && (
         <nav className="md:hidden border-t border-rule bg-paper px-6 py-4 flex flex-col gap-4 text-small">
+          <Link href="/workshops" className="text-ink-muted hover:text-ink transition-colors" onClick={() => setOpen(false)}>
+            Workshops
+          </Link>
+          <Link href="/membership" className="text-ink-muted hover:text-ink transition-colors" onClick={() => setOpen(false)}>
+            Membership
+          </Link>
           <Link href="/map" className="text-ink-muted hover:text-ink transition-colors" onClick={() => setOpen(false)}>
             AI Assessment
           </Link>
           <Link href="/resources" className="text-ink-muted hover:text-ink transition-colors" onClick={() => setOpen(false)}>
             Resources
           </Link>
-          <Link href="/contact" className="text-ink hover:text-accent transition-colors font-medium" onClick={() => setOpen(false)}>
+          <Link href="/contact" className="text-ink-muted hover:text-ink transition-colors" onClick={() => setOpen(false)}>
             Contact
+          </Link>
+          <Link
+            href="/membership"
+            className="bg-accent text-paper border border-accent px-4 py-2 font-medium text-center hover:bg-accent-hover hover:border-accent-hover transition-colors"
+            onClick={() => setOpen(false)}
+          >
+            Join the Waitlist
           </Link>
         </nav>
       )}
