@@ -111,21 +111,21 @@ const TESTIMONIALS = [
 const PILLARS = [
   {
     n: '01',
-    title: 'Strategic Foundations',
+    title: 'Fill Your Pipeline',
     body:
-      'Lock in your category, positioning, and offer first. If the foundation is wrong, everything you build on top of it breaks faster.',
+      'AI Assistants find real buyers and start real conversations. No cold email. No ad spend. Just booked calls on your calendar.',
   },
   {
     n: '02',
-    title: 'Messaging Systems',
+    title: 'Become the Authority',
     body:
-      'Turn what you know into words that sell. ICP clarity, hooks, proof stacks, and objection handling that works in every channel.',
+      'Record 30 minutes a week. Your voice shows up everywhere, in your words, and gets cited by AI search.',
   },
   {
     n: '03',
-    title: 'GTM Execution',
+    title: 'Run Without You',
     body:
-      'Build the complete GTM Revenue Growth system.',
+      'Move the routine into Assistants. The business keeps working when you step away. You stop being the ceiling.',
   },
 ]
 
@@ -138,39 +138,39 @@ const CADENCE = [
 const MONTHS = [
   {
     n: '01',
-    theme: 'Strategic Foundations',
-    body: 'You set the foundation. Voice, offer, and market locked in before you build a single piece of content.',
-    skills: ['Brand Voice Architect', 'Market Intelligence Research', 'Idea Pressure Tester', 'Sell Before You Build'],
+    theme: 'Your First 10 Conversations',
+    body: 'Real buyer conversations on your calendar in week one, without cold email or ad spend.',
+    skills: ['LinkedIn Signal Scraper', 'ICP Match & Prioritizer', 'Surgical DM Writer', 'AI Slop Killer'],
   },
   {
     n: '02',
-    theme: 'Messaging Systems',
-    body: 'You write copy that converts. Offer design, sales pages, and messaging that does the selling for you.',
-    skills: ['Offer Creation', 'AI Writing Clone', 'Copy Editing', 'AI Check to avoid AI slop'],
+    theme: 'The Offer They Can’t Ignore',
+    body: 'Rebuild your offer so the right buyers feel dumb saying no. Price stops being the objection.',
+    skills: ['Sales Council', 'Unique Mechanism Builder', 'Offer & Pricing Architect', 'Objection Tester'],
   },
   {
     n: '03',
-    theme: 'Content Engine',
-    body: 'You show up consistently. LinkedIn profile optimized, posts ghostwritten, content repurposed across channels.',
-    skills: ['LinkedIn Profile Architect', 'LinkedIn Ghostwriter', 'Content Repurposing', 'Hook Creator'],
+    theme: '30 Minutes to a Month of Content',
+    body: 'Record 30 minutes a week. Show up everywhere in your voice, and get cited by AI search.',
+    skills: ['Recording to Content Engine', 'SEO / GEO Citation Optimizer', 'LinkedIn Ghostwriter', 'Content Repurposer'],
   },
   {
     n: '04',
-    theme: 'Email & Lead Generation',
-    body: 'Your pipeline runs without you. Lead magnet, email sequence, and LinkedIn outreach all connected.',
-    skills: ['Lead Magnet Designer', 'Email Sequence', 'LinkedIn Content Engine', 'LinkedIn Carousel Builder'],
+    theme: 'Turn Replies Into Revenue',
+    body: 'Every reply becomes a booked call. Every call gets a proposal, before the buyer cools off.',
+    skills: ['Reply Classifier', 'Follow-up & Reactivation', 'Discovery Call-Prep', 'Proposal & Quote Generator'],
   },
   {
     n: '05',
-    theme: 'Research & Conversion',
-    body: 'You grow with data. Market research, pricing, cold outreach, and page fixes that move revenue.',
-    skills: ['Deep Market Research', 'Pricing Strategy', 'Email Outreach', 'Conversion Rate Optimization'],
+    theme: 'Get Out of the Bottleneck',
+    body: 'Move the routine out of your head into AI Assistants that run it, so you stop being the ceiling.',
+    skills: ['Transcription to SOP', 'Inbox Triage', 'Decision & Delegation Memo', 'Team Knowledge Base'],
   },
   {
     n: '06',
-    theme: 'Advanced Operations',
-    body: 'You operate like a full team. Advanced prompts, Go-To-Market teardowns, and a complete rebuild.',
-    skills: ['Engineer Any Prompt', 'Go-To-Market Teardown', 'Go-To-Market Rebuild', 'AI Business Coach'],
+    theme: 'Run Like a Full Team',
+    body: 'Spot churn before it hits, get paid on time, and deliver like you have a full ops team.',
+    skills: ['Client Health Monitor', 'Client Reporting Dashboard', 'Invoice & Payment Chaser', 'GTM Teardown & Rebuild'],
   },
 ]
 
@@ -392,10 +392,10 @@ export default function HomePage() {
           <div className="max-w-prose mb-12">
             <div className="eyebrow mb-4">Inside the membership</div>
             <h2 className="text-h1 font-semibold tracking-tight text-ink">
-              One tool a week. A full system by month six.
+              One Assistant a week. A full system by month six.
             </h2>
             <p className="text-lead text-ink-muted mt-4">
-              A new skill drops every Tuesday. Use it that same day.
+              First you set up your Command Center. Then a new AI Assistant drops every Tuesday. You use it that day.
             </p>
           </div>
           <div className="grid grid-cols-3 gap-8 mb-20">
