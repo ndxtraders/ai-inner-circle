@@ -17,9 +17,28 @@ export const metadata = {
 // ---------------------------------------------------------------------------
 
 const CLIENTS = [
-  'Grant Cardone', '10X Health', 'Cardone Ventures', 'SquadUp Summit',
-  'CardoMax', 'Copy Chief', 'Email Copy Academy', 'VestRight', 'REVIVX',
-  'Heather Rae Essentials', 'SpaSurge',
+  'Grant Cardone',
+  '10X Health',
+  'Cardone Ventures',
+  'SquadUp Summit',
+  '10X Business Coach',
+  'Heather Rae Essentials',
+  'CardoMax',
+  'Copy Chief',
+  'Email Copy Academy',
+  'VestRight',
+  'Allied Development',
+  'Remix Your Business',
+  'REVIVX',
+  'Get More Math',
+  'SpaSurge',
+  'Zenpreneurs',
+  '10X GrowthCon',
+  '10X Health UK',
+  'IV Academy',
+  '10X Roofing',
+  '10X Home Services',
+  '10X DECODE',
 ]
 
 // The reader self-selects here, pulled from the AI Priority Map breaking points.
@@ -172,9 +191,9 @@ export default function MembershipPage() {
         </Section>
 
         {/* Clients strip */}
-        <section className="bg-paper-grey border-y border-rule py-10">
+        <section className="bg-paper-grey border-y border-rule py-12">
           <div className="max-w-wide mx-auto px-6">
-            <p className="text-small text-ink-muted mb-5 text-center uppercase tracking-wide">Behind campaigns for</p>
+            <p className="text-h3 font-semibold text-ink mb-6 text-center">Clients &amp; Campaigns</p>
             <div className="flex flex-wrap justify-center gap-x-8 gap-y-3 text-body text-ink-soft">
               {CLIENTS.map((c) => (
                 <span key={c} className="whitespace-nowrap">{c}</span>
