@@ -55,7 +55,7 @@ const ONBOARDING = [
   {
     n: '01',
     title: 'Install Your Command Center',
-    body: 'Your AI team leader plus memory. Everything you build plugs into it, so you never lose track of a skill again.',
+    body: 'Meet Maestro, your AI Chief of Staff, plus memory. Every Assistant you hire plugs into it. You never lose track of a skill again.',
   },
   {
     n: '02',
@@ -67,48 +67,112 @@ const ONBOARDING = [
 const WORKSHOPS = [
   {
     n: '01',
-    title: 'Your First 10 Conversations',
-    promise: 'Real buyer conversations on your calendar in week one, without cold email or ad spend.',
-    anchor: 'LinkedIn Signal Scraper',
+    dept: 'The Offer Desk',
+    title: 'The Offer They Can’t Ignore',
+    promise: 'Rebuild the offer first. The right buyers feel dumb saying no. Price stops being the objection.',
+    skills: [
+      ['Sales Council', 'your advisory board'],
+      ['Unique Mechanism Builder', 'names what only you do'],
+      ['Offer & Pricing Architect', 'rebuilds your packages'],
+      ['Objection Tester', 'your toughest prospect'],
+    ],
   },
   {
     n: '02',
-    title: 'The Offer They Can’t Ignore',
-    promise: 'Rebuild your offer so the right buyers feel dumb saying no. Price stops being the objection.',
-    anchor: 'Offer & Pricing Architect',
+    dept: 'The Sales Floor',
+    title: 'Your First 10 Conversations',
+    promise: 'Real buyer conversations on your calendar. No cold email. No ad spend.',
+    skills: [
+      ['LinkedIn Signal Scraper', 'your scout'],
+      ['ICP Match & Prioritizer', 'your list builder'],
+      ['Surgical DM Writer', 'your opener'],
+      ['AI Slop Killer', 'your editor'],
+    ],
   },
   {
     n: '03',
+    dept: 'The Media Team',
     title: '30 Minutes to a Month of Content',
-    promise: 'Record 30 minutes a week. Show up everywhere in your voice, and get cited by AI search.',
-    anchor: 'Recording → Content Engine',
+    promise: 'Record 30 minutes a week. Show up everywhere in your voice. Get cited by AI search.',
+    skills: [
+      ['Recording to Content Engine', 'your production studio'],
+      ['SEO / GEO Citation Optimizer', 'gets you found and cited'],
+      ['LinkedIn Ghostwriter', 'your ghostwriter'],
+      ['Content Repurposer', 'your distribution desk'],
+    ],
   },
   {
     n: '04',
+    dept: 'The Deal Desk',
     title: 'Turn Replies Into Revenue',
     promise: 'Every reply becomes a booked call. Every call gets a proposal, before the buyer cools off.',
-    anchor: 'Proposal & Quote Generator',
+    skills: [
+      ['Reply Classifier', 'your front desk'],
+      ['Follow-up & Reactivation', 'your follow-up rep'],
+      ['Discovery Call-Prep', 'your research analyst'],
+      ['Proposal & Quote Generator', 'your proposal writer'],
+    ],
   },
   {
     n: '05',
+    dept: 'The Operations Team',
     title: 'Get Out of the Bottleneck',
-    promise: 'Move the routine out of your head into AI Assistants, so you stop being the ceiling.',
-    anchor: 'Transcription → SOP',
+    promise: 'Move the routine out of your head. AI Assistants run it. You stop being the ceiling.',
+    skills: [
+      ['Transcription to SOP', 'your process writer'],
+      ['Inbox Triage', 'your gatekeeper'],
+      ['Decision & Delegation Memo', 'your delegation officer'],
+      ['Team Knowledge Base', 'your company librarian'],
+    ],
   },
   {
     n: '06',
+    dept: 'Client Success',
     title: 'Run Like a Full Team',
-    promise: 'Spot churn before it hits, get paid on time, and deliver like you have a full ops team.',
-    anchor: 'Client Health Monitor',
+    promise: 'Spot churn before it hits. Get paid on time. Deliver like you have a full ops team.',
+    skills: [
+      ['Client Health Monitor', 'your account manager'],
+      ['Client Reporting Dashboard', 'your reporting analyst'],
+      ['Invoice & Payment Chaser', 'your collections desk'],
+      ['GTM Teardown & Rebuild', 'your strategy consultant'],
+    ],
   },
 ]
+
+const ORG_CHART = `YOU
+ │
+ MAESTRO · your Chief of Staff
+ │
+ ├── 1 · OFFER DESK
+ │      Sales Council · Unique Mechanism Builder
+ │      Offer & Pricing Architect · Objection Tester
+ │
+ ├── 2 · SALES FLOOR
+ │      LinkedIn Signal Scraper · ICP Match & Prioritizer
+ │      Surgical DM Writer · AI Slop Killer
+ │
+ ├── 3 · MEDIA TEAM
+ │      Recording to Content · SEO/GEO Optimizer
+ │      LinkedIn Ghostwriter · Content Repurposer
+ │
+ ├── 4 · DEAL DESK
+ │      Reply Classifier · Follow-up & Reactivation
+ │      Discovery Call-Prep · Proposal & Quote Generator
+ │
+ ├── 5 · OPERATIONS
+ │      Transcription to SOP · Inbox Triage
+ │      Decision & Delegation Memo · Team Knowledge Base
+ │
+ └── 6 · CLIENT SUCCESS
+        Client Health Monitor · Client Reporting Dashboard
+        Invoice & Payment Chaser · GTM Teardown & Rebuild`
 
 const INCLUDED = [
   ['One new AI Assistant every week', '24 over six months. Each one fixes a real problem. It drops Tuesday. You use it that day.'],
   ['1–2 live workshops every month', 'The month’s big move, walked through step by step. Live or pre-recorded.'],
   ['Friday Q&A with Rev', 'Bring what you’re stuck on. Get unstuck before the weekend.'],
   ['Daily access inside the community', 'A direct line to Rev and the room, every day.'],
-  ['Your Command Center, set up with you', 'The orchestrator and memory that keep the whole system stacking up.'],
+  ['Maestro, your Command Center, set up with you', 'Your AI Chief of Staff and the memory that keep every Assistant stacking up.'],
   ['Templates and prompts you keep', 'They live in your own folder. Leave anytime and the system stays yours.'],
 ]
 
@@ -139,7 +203,7 @@ const FAQ = [
   ['Which AI do I need?', 'Claude. That’s the only subscription required. The Assistants are built to run there.'],
   ['How much time per week?', 'Plan on about an hour to install and use the week’s Assistant. That hour buys back far more.'],
   ['Will this work for my B2B service?', 'Yes. It fits founder-led B2B service businesses: coaches, consultants, agencies, done-for-you services.'],
-  ['Anything cost extra beyond the $49?', 'Two small, optional things for the outreach month: a paid LinkedIn plan, and a few dollars of pay-as-you-go Apify. No expensive CRM, no cold-email tools.'],
+  ['Anything cost extra beyond the $149?', 'Two small, optional things for the outreach month: a paid LinkedIn plan, and a few dollars of pay-as-you-go Apify. No expensive CRM, no cold-email tools.'],
   ['Do I keep the Assistants if I cancel?', 'Yes. They live in your own folder on your own machine. What you build is yours to keep.'],
 ]
 
@@ -169,7 +233,7 @@ export default function MembershipPage() {
               </p>
               <WaitlistForm buttonLabel="Join the Waitlist" />
               <p className="text-small text-ink-muted mt-4">
-                Founding cohort. Enrollment closes <span className="text-ink font-medium">August 1</span>. Founding price is $49 a month.{' '}
+                Founding cohort. Enrollment closes <span className="text-ink font-medium">August 1</span>. Founding price is $149 a month. Regular price is $199.{' '}
                 <Link href="/map" className="text-accent underline underline-offset-2 hover:no-underline">
                   Not sure yet? Take the 5-minute assessment →
                 </Link>
@@ -345,18 +409,33 @@ export default function MembershipPage() {
             </div>
 
             {/* Monthly workshops */}
-            <p className="text-small text-ink-muted uppercase tracking-wide mb-4">The 6-month curriculum</p>
+            <p className="text-small text-ink-muted uppercase tracking-wide mb-4">The 6-month hiring plan</p>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {WORKSHOPS.map((w) => (
                 <div key={w.n} className="border border-rule bg-paper p-6 flex flex-col">
-                  <div className="text-small text-ink-muted mb-2">Month {w.n}</div>
+                  <div className="text-small text-ink-muted mb-1">Month {w.n} · {w.dept}</div>
                   <h3 className="text-h3 font-semibold text-ink mb-2">{w.title}</h3>
                   <p className="text-body text-ink-soft flex-1">{w.promise}</p>
-                  <p className="text-small text-ink-muted mt-4 pt-4 border-t border-rule">
-                    Anchor Assistant: <span className="text-ink">{w.anchor}</span>
-                  </p>
+                  <ul className="mt-4 pt-4 border-t border-rule space-y-1">
+                    {w.skills.map(([name, gloss]) => (
+                      <li key={name} className="text-small text-ink-muted">
+                        <span className="text-ink">{name}</span> · {gloss}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               ))}
+            </div>
+
+            {/* Org chart payoff */}
+            <div className="mt-14">
+              <p className="text-small text-ink-muted uppercase tracking-wide mb-4">Your org chart by month six</p>
+              <div className="overflow-x-auto border border-rule bg-paper p-6">
+                <pre className="text-small text-ink-soft leading-relaxed whitespace-pre font-mono">{ORG_CHART}</pre>
+              </div>
+              <p className="text-body text-ink-muted mt-4 max-w-prose">
+                Twenty-four Assistants. Six departments. All reporting to Maestro. Cancel anytime and the team stays yours.
+              </p>
             </div>
           </div>
         </Section>
@@ -468,8 +547,8 @@ export default function MembershipPage() {
           </div>
           <div className="max-w-md mx-auto border-2 border-accent bg-paper p-8">
             <div className="eyebrow mb-4">AI Inner Circle</div>
-            <div className="text-display font-semibold text-ink mb-1">$49</div>
-            <div className="text-small text-ink-muted mb-8">per month · founding price</div>
+            <div className="text-display font-semibold text-ink mb-1">$149</div>
+            <div className="text-small text-ink-muted mb-8">per month · founding price (regular $199)</div>
             <ul className="space-y-3 text-body text-ink-soft mb-8">
               <li className="flex gap-3"><span className="text-accent mt-1">–</span>A new AI Assistant every week</li>
               <li className="flex gap-3"><span className="text-accent mt-1">–</span>1–2 live workshops per month</li>
@@ -479,7 +558,7 @@ export default function MembershipPage() {
             </ul>
             <WaitlistForm buttonLabel="Join the Waitlist" />
             <p className="text-small text-ink-muted mt-4">
-              Enrollment closes August 1. A 1:1 coaching upgrade opens soon.
+              Enrollment closes August 1. A 1:1 coaching tier opens soon at $999 a month.
             </p>
           </div>
         </Section>
@@ -520,7 +599,7 @@ export default function MembershipPage() {
               The AI knows you now. Put it to work.
             </h2>
             <p className="text-lead text-ink-muted mb-8 max-w-prose mx-auto">
-              Join the founding cohort before enrollment closes August 1. Lock in $49 a month.
+              Join the founding cohort before enrollment closes August 1. Lock in $149 a month.
             </p>
             <div className="flex justify-center mb-6">
               <WaitlistForm buttonLabel="Join the Waitlist" />

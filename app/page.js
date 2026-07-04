@@ -138,41 +138,105 @@ const CADENCE = [
 const MONTHS = [
   {
     n: '01',
-    theme: 'Your First 10 Conversations',
-    body: 'Real buyer conversations on your calendar in week one, without cold email or ad spend.',
-    skills: ['LinkedIn Signal Scraper', 'ICP Match & Prioritizer', 'Surgical DM Writer', 'AI Slop Killer'],
+    dept: 'The Offer Desk',
+    theme: 'The Offer They Can’t Ignore',
+    body: 'Rebuild the offer first. The right buyers feel dumb saying no. Price stops being the objection.',
+    skills: [
+      ['Sales Council', 'your advisory board'],
+      ['Unique Mechanism Builder', 'names what only you do'],
+      ['Offer & Pricing Architect', 'rebuilds your packages'],
+      ['Objection Tester', 'your toughest prospect'],
+    ],
   },
   {
     n: '02',
-    theme: 'The Offer They Can’t Ignore',
-    body: 'Rebuild your offer so the right buyers feel dumb saying no. Price stops being the objection.',
-    skills: ['Sales Council', 'Unique Mechanism Builder', 'Offer & Pricing Architect', 'Objection Tester'],
+    dept: 'The Sales Floor',
+    theme: 'Your First 10 Conversations',
+    body: 'Real buyer conversations on your calendar. No cold email. No ad spend.',
+    skills: [
+      ['LinkedIn Signal Scraper', 'your scout'],
+      ['ICP Match & Prioritizer', 'your list builder'],
+      ['Surgical DM Writer', 'your opener'],
+      ['AI Slop Killer', 'your editor'],
+    ],
   },
   {
     n: '03',
+    dept: 'The Media Team',
     theme: '30 Minutes to a Month of Content',
-    body: 'Record 30 minutes a week. Show up everywhere in your voice, and get cited by AI search.',
-    skills: ['Recording to Content Engine', 'SEO / GEO Citation Optimizer', 'LinkedIn Ghostwriter', 'Content Repurposer'],
+    body: 'Record 30 minutes a week. Show up everywhere in your voice. Get cited by AI search.',
+    skills: [
+      ['Recording to Content Engine', 'your production studio'],
+      ['SEO / GEO Citation Optimizer', 'gets you found and cited'],
+      ['LinkedIn Ghostwriter', 'your ghostwriter'],
+      ['Content Repurposer', 'your distribution desk'],
+    ],
   },
   {
     n: '04',
+    dept: 'The Deal Desk',
     theme: 'Turn Replies Into Revenue',
     body: 'Every reply becomes a booked call. Every call gets a proposal, before the buyer cools off.',
-    skills: ['Reply Classifier', 'Follow-up & Reactivation', 'Discovery Call-Prep', 'Proposal & Quote Generator'],
+    skills: [
+      ['Reply Classifier', 'your front desk'],
+      ['Follow-up & Reactivation', 'your follow-up rep'],
+      ['Discovery Call-Prep', 'your research analyst'],
+      ['Proposal & Quote Generator', 'your proposal writer'],
+    ],
   },
   {
     n: '05',
+    dept: 'The Operations Team',
     theme: 'Get Out of the Bottleneck',
-    body: 'Move the routine out of your head into AI Assistants that run it, so you stop being the ceiling.',
-    skills: ['Transcription to SOP', 'Inbox Triage', 'Decision & Delegation Memo', 'Team Knowledge Base'],
+    body: 'Move the routine out of your head. AI Assistants run it. You stop being the ceiling.',
+    skills: [
+      ['Transcription to SOP', 'your process writer'],
+      ['Inbox Triage', 'your gatekeeper'],
+      ['Decision & Delegation Memo', 'your delegation officer'],
+      ['Team Knowledge Base', 'your company librarian'],
+    ],
   },
   {
     n: '06',
+    dept: 'Client Success',
     theme: 'Run Like a Full Team',
-    body: 'Spot churn before it hits, get paid on time, and deliver like you have a full ops team.',
-    skills: ['Client Health Monitor', 'Client Reporting Dashboard', 'Invoice & Payment Chaser', 'GTM Teardown & Rebuild'],
+    body: 'Spot churn before it hits. Get paid on time. Deliver like you have a full ops team.',
+    skills: [
+      ['Client Health Monitor', 'your account manager'],
+      ['Client Reporting Dashboard', 'your reporting analyst'],
+      ['Invoice & Payment Chaser', 'your collections desk'],
+      ['GTM Teardown & Rebuild', 'your strategy consultant'],
+    ],
   },
 ]
+
+const ORG_CHART = `YOU
+ │
+ MAESTRO · your Chief of Staff
+ │
+ ├── 1 · OFFER DESK
+ │      Sales Council · Unique Mechanism Builder
+ │      Offer & Pricing Architect · Objection Tester
+ │
+ ├── 2 · SALES FLOOR
+ │      LinkedIn Signal Scraper · ICP Match & Prioritizer
+ │      Surgical DM Writer · AI Slop Killer
+ │
+ ├── 3 · MEDIA TEAM
+ │      Recording to Content · SEO/GEO Optimizer
+ │      LinkedIn Ghostwriter · Content Repurposer
+ │
+ ├── 4 · DEAL DESK
+ │      Reply Classifier · Follow-up & Reactivation
+ │      Discovery Call-Prep · Proposal & Quote Generator
+ │
+ ├── 5 · OPERATIONS
+ │      Transcription to SOP · Inbox Triage
+ │      Decision & Delegation Memo · Team Knowledge Base
+ │
+ └── 6 · CLIENT SUCCESS
+        Client Health Monitor · Client Reporting Dashboard
+        Invoice & Payment Chaser · GTM Teardown & Rebuild`
 
 function PricingCards() {
   return (
@@ -182,10 +246,10 @@ function PricingCards() {
       <div className="border border-rule bg-paper p-8 flex flex-col">
         <div className="eyebrow mb-4">Community</div>
         <h3 className="text-h2 font-semibold text-ink mb-2">AI Inner Circle</h3>
-        <div className="text-display font-semibold text-ink mb-1">$49</div>
-        <div className="text-small text-ink-muted mb-8">per month</div>
+        <div className="text-display font-semibold text-ink mb-1">$149</div>
+        <div className="text-small text-ink-muted mb-8">per month · founding price (regular $199)</div>
         <ul className="space-y-3 text-body text-ink-soft mb-10 flex-1">
-          <li className="flex gap-3"><span className="text-accent mt-1">–</span>Full 6-month curriculum (one skill per week)</li>
+          <li className="flex gap-3"><span className="text-accent mt-1">–</span>24 AI Assistants over six months (one a week)</li>
           <li className="flex gap-3"><span className="text-accent mt-1">–</span>1-2 live workshops per month</li>
           <li className="flex gap-3"><span className="text-accent mt-1">–</span>Friday Q&amp;A with Rev</li>
           <li className="flex gap-3"><span className="text-accent mt-1">–</span>Answers to your questions inside the community</li>
@@ -199,7 +263,7 @@ function PricingCards() {
       <div className="border-2 border-accent bg-paper p-8 flex flex-col">
         <div className="eyebrow mb-4">Community + Coaching</div>
         <h3 className="text-h2 font-semibold text-ink mb-2">AI Inner Circle + 1:1</h3>
-        <div className="text-display font-semibold text-ink mb-1">$800</div>
+        <div className="text-display font-semibold text-ink mb-1">$999</div>
         <div className="text-small text-ink-muted mb-8">per month</div>
         <ul className="space-y-3 text-body text-ink-soft mb-10 flex-1">
           <li className="flex gap-3"><span className="text-accent mt-1">–</span>Everything in Community</li>
@@ -395,7 +459,7 @@ export default function HomePage() {
               One Assistant a week. A full system by month six.
             </h2>
             <p className="text-lead text-ink-muted mt-4">
-              First you set up your Command Center. Then a new AI Assistant drops every Tuesday. You use it that day.
+              First you set up your Command Center, led by Maestro. Then a new AI Assistant drops every Tuesday. You use it that day.
             </p>
           </div>
           <div className="grid grid-cols-3 gap-8 mb-20">
@@ -406,22 +470,34 @@ export default function HomePage() {
               </div>
             ))}
           </div>
-          <div className="eyebrow mb-8">The 6-month curriculum</div>
+          <div className="eyebrow mb-8">The 6-month hiring plan</div>
           <div className="grid md:grid-cols-3 gap-10">
             {MONTHS.map((m) => (
               <div key={m.n} className="border-t border-ink pt-6">
-                <div className="text-small font-medium text-accent mb-3">{m.n}</div>
+                <div className="text-small font-medium text-accent mb-2">{m.n} · {m.dept}</div>
                 <h3 className="text-h3 font-semibold text-ink mb-3">{m.theme}</h3>
                 <p className="text-body text-ink-muted mb-4">{m.body}</p>
                 <ul className="space-y-1">
-                  {m.skills.map((s) => (
-                    <li key={s} className="text-small text-ink-faint">
-                      <span className="text-accent mr-2">&ndash;</span>{s}
+                  {m.skills.map(([name, gloss]) => (
+                    <li key={name} className="text-small text-ink-faint">
+                      <span className="text-accent mr-2">&ndash;</span>
+                      <span className="text-ink-soft">{name}</span> · {gloss}
                     </li>
                   ))}
                 </ul>
               </div>
             ))}
+          </div>
+
+          {/* Org chart payoff */}
+          <div className="mt-20">
+            <div className="eyebrow mb-4">Your org chart by month six</div>
+            <div className="overflow-x-auto border border-rule bg-paper-grey p-6">
+              <pre className="text-small text-ink-soft leading-relaxed whitespace-pre font-mono">{ORG_CHART}</pre>
+            </div>
+            <p className="text-body text-ink-muted mt-4 max-w-prose">
+              Twenty-four Assistants. Six departments. All reporting to Maestro. Cancel anytime and the team stays yours.
+            </p>
           </div>
         </Section>
 
