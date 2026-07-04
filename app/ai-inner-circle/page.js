@@ -181,10 +181,10 @@ function PricingCards() {
       <div className="border border-rule bg-paper p-8 flex flex-col">
         <div className="eyebrow mb-4">Community</div>
         <h3 className="text-h2 font-semibold text-ink mb-2">AI Inner Circle</h3>
-        <div className="text-display font-semibold text-ink mb-1">$49</div>
-        <div className="text-small text-ink-muted mb-8">per month</div>
+        <div className="text-display font-semibold text-ink mb-1">$149</div>
+        <div className="text-small text-ink-muted mb-8">per month · founding price (regular $199)</div>
         <ul className="space-y-3 text-body text-ink-soft mb-10 flex-1">
-          <li className="flex gap-3"><span className="text-accent mt-1">–</span>Full 6-month curriculum (one skill per week)</li>
+          <li className="flex gap-3"><span className="text-accent mt-1">–</span>24 AI Assistants over six months (one a week)</li>
           <li className="flex gap-3"><span className="text-accent mt-1">–</span>1-2 live workshops per month</li>
           <li className="flex gap-3"><span className="text-accent mt-1">–</span>Friday Q&amp;A with Rev</li>
           <li className="flex gap-3"><span className="text-accent mt-1">–</span>Answers to your questions inside the community</li>
@@ -198,7 +198,7 @@ function PricingCards() {
       <div className="border-2 border-accent bg-paper p-8 flex flex-col">
         <div className="eyebrow mb-4">Community + Coaching</div>
         <h3 className="text-h2 font-semibold text-ink mb-2">AI Inner Circle + 1:1</h3>
-        <div className="text-display font-semibold text-ink mb-1">$800</div>
+        <div className="text-display font-semibold text-ink mb-1">$999</div>
         <div className="text-small text-ink-muted mb-8">per month</div>
         <ul className="space-y-3 text-body text-ink-soft mb-10 flex-1">
           <li className="flex gap-3"><span className="text-accent mt-1">–</span>Everything in Community</li>
