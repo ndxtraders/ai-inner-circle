@@ -36,7 +36,7 @@ const QUESTIONS = [
     categoryIndex: 0,
     label: 'Content Grind',
     symptom:
-      "Does creating content eat time you don't have, so you end up going quiet?",
+      "Does creating content eat time you don't have, so you end up not publishing?",
     pain:
       "You disappear from the feed. Out of sight, you fall out of the buying conversation.",
     solution:
@@ -49,7 +49,7 @@ const QUESTIONS = [
     categoryIndex: 0,
     label: 'Invisible Online',
     symptom:
-      "When people search for what you offer (search, social media, AI), are you virtually invisible?",
+      "When people search for what you offer (on search, social media, AI, etc.), are you virtually invisible?",
     pain:
       "Buyers find your competitors instead of you. You're absent where decisions start.",
     solution:
@@ -76,7 +76,7 @@ const QUESTIONS = [
     categoryIndex: 1,
     label: 'Ignored Outreach',
     symptom:
-      "Do your cold DMs or emails get ignored because they sound generic?",
+      "Do your DMs or emails get ignored because they sound generic or like spam?",
     pain:
       "Wasted outreach. Your message reads like everyone else's, so it starts no conversations.",
     solution:
@@ -103,7 +103,7 @@ const QUESTIONS = [
     categoryIndex: 2,
     label: 'Price Objection',
     symptom:
-      "Do prospects tell you you're too expensive, or go quiet after you send a quote?",
+      "Do prospects go quiet after you send a quote or tell you you're too expensive?",
     pain:
       "Price becomes the objection. You lose deals you should win, or discount to save them.",
     solution:
@@ -116,7 +116,7 @@ const QUESTIONS = [
     categoryIndex: 2,
     label: 'Cold Fast',
     symptom:
-      "Do leads reply and then go cold because follow-up is slow or inconsistent?",
+      "Do leads go cold fast because follow-up is slow or inconsistent?",
     pain:
       "Interested buyers slip away through neglect. You sit on revenue you already earned.",
     solution:
@@ -129,7 +129,7 @@ const QUESTIONS = [
     categoryIndex: 2,
     label: 'Slow Quotes',
     symptom:
-      "Do proposals and quotes take so long that buyers go with whoever answers first?",
+      "Do proposals and quotes take too long and buyers go with someone else?",
     pain:
       "The #1 deal killer in B2B. Speed loses to slower, and you were slower.",
     solution:
