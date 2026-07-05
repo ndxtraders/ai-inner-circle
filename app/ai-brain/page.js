@@ -466,11 +466,11 @@ export default function AIBrainPage() {
           <div className="max-w-prose">
             <div className="eyebrow mb-4">After the workshop</div>
             <h2 className="text-h1 font-semibold tracking-tight text-ink mb-6">
-              Get a new AI Assistant every week.
+              Get a whole department of AI Assistants each month.
             </h2>
             <p className="text-lead text-ink-muted mb-8">
-              The AI Brain is where members start. Inside AI Inner Circle, a fresh Assistant drops every
-              Tuesday and adds up to a full growth system by month six.
+              The AI Brain is where members start. Inside AI Inner Circle, a new department of Assistants
+              arrives each month and adds up to a full growth system by month six.
             </p>
             <div className="flex flex-wrap gap-4 items-center">
               <Button href="/membership" variant="accent">Join the Waitlist</Button>

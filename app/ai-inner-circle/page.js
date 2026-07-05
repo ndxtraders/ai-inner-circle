@@ -181,10 +181,10 @@ function PricingCards() {
       <div className="border border-rule bg-paper p-8 flex flex-col">
         <div className="eyebrow mb-4">Community</div>
         <h3 className="text-h2 font-semibold text-ink mb-2">AI Inner Circle</h3>
-        <div className="text-display font-semibold text-ink mb-1">$149</div>
-        <div className="text-small text-ink-muted mb-8">per month · founding price (regular $199)</div>
+        <div className="text-display font-semibold text-ink mb-1">$199</div>
+        <div className="text-small text-ink-muted mb-8">per month · rises to $249 · or $995 once</div>
         <ul className="space-y-3 text-body text-ink-soft mb-10 flex-1">
-          <li className="flex gap-3"><span className="text-accent mt-1">–</span>24 AI Assistants over six months (one a week)</li>
+          <li className="flex gap-3"><span className="text-accent mt-1">–</span>24 AI Assistants over six months (a department a month)</li>
           <li className="flex gap-3"><span className="text-accent mt-1">–</span>1-2 live workshops per month</li>
           <li className="flex gap-3"><span className="text-accent mt-1">–</span>Friday Q&amp;A with Rev</li>
           <li className="flex gap-3"><span className="text-accent mt-1">–</span>Answers to your questions inside the community</li>
@@ -279,7 +279,7 @@ export default function AIInnerCirclePage() {
               </p>
               <p>
                 AI Inner Circle fixes both. You hire AI Assistants that know your voice, offer, and market.
-                One new Assistant drops every week. Each one solves a real problem. Over six months they add up
+                A new department of Assistants arrives each month. Each one solves a real problem. Over six months they add up
                 to a system that runs your growth without living in your head.
               </p>
             </div>
@@ -310,10 +310,10 @@ export default function AIInnerCirclePage() {
           <div className="max-w-prose mb-12">
             <div className="eyebrow mb-4">Inside the membership</div>
             <h2 className="text-h1 font-semibold tracking-tight text-ink">
-              One tool a week. A full system by month six.
+              A department a month. A full system by month six.
             </h2>
             <p className="text-lead text-ink-muted mt-4">
-              A new skill drops every Tuesday. Use it that same day.
+              A new department arrives each month. Rev demos one Assistant a week, so you use each with confidence.
             </p>
           </div>
           <div className="grid grid-cols-3 gap-8 mb-20">

@@ -74,8 +74,8 @@ export default function WorkshopsPage() {
               A workshop is a quick win. The membership is the whole system.
             </h2>
             <p className="text-lead text-ink-muted mb-8">
-              Start with a workshop. When you want the full build, the membership drops a new AI Assistant every
-              Tuesday and adds up to a working system by month six.
+              Start with a workshop. When you want the full build, the membership adds a new department of AI Assistants
+              each month and adds up to a working system by month six.
             </p>
             <div className="flex flex-wrap gap-4 items-center">
               <Button href="/membership" variant="accent">Join the Waitlist</Button>

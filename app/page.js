@@ -246,10 +246,10 @@ function PricingCards() {
       <div className="border border-rule bg-paper p-8 flex flex-col">
         <div className="eyebrow mb-4">Community</div>
         <h3 className="text-h2 font-semibold text-ink mb-2">AI Inner Circle</h3>
-        <div className="text-display font-semibold text-ink mb-1">$149</div>
-        <div className="text-small text-ink-muted mb-8">per month · founding price (regular $199)</div>
+        <div className="text-display font-semibold text-ink mb-1">$199</div>
+        <div className="text-small text-ink-muted mb-8">per month · rises to $249 · or $995 once</div>
         <ul className="space-y-3 text-body text-ink-soft mb-10 flex-1">
-          <li className="flex gap-3"><span className="text-accent mt-1">–</span>24 AI Assistants over six months (one a week)</li>
+          <li className="flex gap-3"><span className="text-accent mt-1">–</span>24 AI Assistants over six months (a department a month)</li>
           <li className="flex gap-3"><span className="text-accent mt-1">–</span>1-2 live workshops per month</li>
           <li className="flex gap-3"><span className="text-accent mt-1">–</span>Friday Q&amp;A with Rev</li>
           <li className="flex gap-3"><span className="text-accent mt-1">–</span>Answers to your questions inside the community</li>
@@ -459,7 +459,7 @@ export default function HomePage() {
               One Assistant a week. A full system by month six.
             </h2>
             <p className="text-lead text-ink-muted mt-4">
-              First you set up your Command Center, led by Maestro. Then a new AI Assistant drops every Tuesday. You use it that day.
+              First you set up your Command Center, led by Maestro. Then a new department of Assistants arrives each month, and Rev demos one a week so you use each with confidence.
             </p>
           </div>
           <div className="grid grid-cols-3 gap-8 mb-20">
