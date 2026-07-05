@@ -11,7 +11,7 @@ import Footer from '../components/Footer'
 const OUTCOMES = [
   {
     heading: 'See where your business is at a breaking point',
-    body: 'Find exactly where AI will move your business forward. Answer 15 questions across 5 business pillars.',
+    body: 'Find exactly where AI will move your business forward. Answer 12 questions across 4 business pillars.',
   },
   {
     heading: 'Get a specific AI fix for every bottleneck you flag',
@@ -74,7 +74,7 @@ export default function AIPriorityMapPage() {
                   Win Back 5 to 10 Hours A Week
                 </h1>
                 <p className="text-lead text-ink-muted mb-10">
-                  Answer 15 questions across 5 pillars. You get a live heatmap, specific AI fixes for every
+                  Answer 12 questions across 4 pillars. You get a live heatmap, specific AI fixes for every
                   breaking point, plus a downloadable report.
                 </p>
 

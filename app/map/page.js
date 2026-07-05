@@ -16,23 +16,10 @@ import {
 // ─── Data ────────────────────────────────────────────────────────────────────
 
 const QUESTIONS = [
-  // Pillar 1: The Offer (Month 1) \u2014 3 questions
+  // Pillar 1: Authority Engine (get noticed and trusted) - 3 questions
   {
     id: 1,
-    category: 'The Offer',
-    categoryIndex: 0,
-    label: 'Price Objection',
-    symptom:
-      "Do prospects tell you you're too expensive, or go quiet after you send a quote?",
-    pain:
-      "Price becomes the objection. You lose deals you should win, or discount to save them.",
-    solution:
-      "Hire your Offer & Pricing Architect and Objection Tester. They rebuild your offer and pricing so the right buyers stop flinching at the number. Both start in Month 1.",
-    fieldKey: 'price_objection',
-  },
-  {
-    id: 2,
-    category: 'The Offer',
+    category: 'Authority Engine',
     categoryIndex: 0,
     label: 'The Lookalike',
     symptom:
@@ -44,19 +31,32 @@ const QUESTIONS = [
     fieldKey: 'lookalike',
   },
   {
-    id: 3,
-    category: 'The Offer',
+    id: 2,
+    category: 'Authority Engine',
     categoryIndex: 0,
-    label: 'Discount Reflex',
+    label: 'Content Grind',
     symptom:
-      "Do you cut your price or throw in extras just to close a deal?",
+      "Does creating content eat time you don't have, so you end up going quiet?",
     pain:
-      "Your margins pay for every close. Discounting becomes the habit that trains buyers to push.",
+      "You disappear from the feed. Out of sight, you fall out of the buying conversation.",
     solution:
-      "Hire your Offer & Pricing Architect and Objection Tester. They build an offer you can hold the line on. Both start in Month 1.",
-    fieldKey: 'discount_reflex',
+      "Hire your Recording to Content Engine and Content Repurposer. Record 30 minutes and they turn it into a month of content. Both start in Month 3.",
+    fieldKey: 'content_grind',
   },
-  // Pillar 2: Pipeline Engine (Month 2) \u2014 3 questions
+  {
+    id: 3,
+    category: 'Authority Engine',
+    categoryIndex: 0,
+    label: 'Invisible Online',
+    symptom:
+      "When people search for what you offer (search, social media, AI), are you virtually invisible?",
+    pain:
+      "Buyers find your competitors instead of you. You're absent where decisions start.",
+    solution:
+      "Hire your SEO / GEO Citation Optimizer and LinkedIn Ghostwriter. They get you found by Google and cited by AI. Both start in Month 3.",
+    fieldKey: 'invisible_online',
+  },
+  // Pillar 2: Pipeline Engine (fill the calendar) - 3 questions
   {
     id: 4,
     category: 'Pipeline Engine',
@@ -96,38 +96,24 @@ const QUESTIONS = [
       "Hire your LinkedIn Signal Scraper and ICP Match & Prioritizer. They turn lead-gen into a repeatable weekly engine. Both start in Month 2.",
     fieldKey: 'feast_or_famine',
   },
-  // Pillar 3: Content Engine (Month 3) \u2014 2 questions
+  // Pillar 3: Conversion Engine (turn interest into revenue) - 3 questions
   {
     id: 7,
-    category: 'Content Engine',
+    category: 'Conversion Engine',
     categoryIndex: 2,
-    label: 'Content Grind',
+    label: 'Price Objection',
     symptom:
-      "Does creating content eat time you don't have, so you end up going quiet?",
+      "Do prospects tell you you're too expensive, or go quiet after you send a quote?",
     pain:
-      "You disappear from the feed. Out of sight, you fall out of the buying conversation.",
+      "Price becomes the objection. You lose deals you should win, or discount to save them.",
     solution:
-      "Hire your Recording to Content Engine and Content Repurposer. Record 30 minutes and they turn it into a month of content. Both start in Month 3.",
-    fieldKey: 'content_grind',
+      "Hire your Offer & Pricing Architect and Objection Tester. They rebuild your offer and pricing so the right buyers stop flinching at the number. Both start in Month 1.",
+    fieldKey: 'price_objection',
   },
   {
     id: 8,
-    category: 'Content Engine',
-    categoryIndex: 2,
-    label: 'Invisible to Search',
-    symptom:
-      "When people or AI like ChatGPT search your space, do you fail to show up?",
-    pain:
-      "Buyers find your competitors instead of you. You're invisible where decisions start.",
-    solution:
-      "Hire your SEO / GEO Citation Optimizer and LinkedIn Ghostwriter. They get you found by Google and cited by AI. Both start in Month 3.",
-    fieldKey: 'invisible_search',
-  },
-  // Pillar 4: Conversion Engine (Month 4) \u2014 2 questions
-  {
-    id: 9,
     category: 'Conversion Engine',
-    categoryIndex: 3,
+    categoryIndex: 2,
     label: 'Cold Fast',
     symptom:
       "Do leads reply and then go cold because follow-up is slow or inconsistent?",
@@ -138,9 +124,9 @@ const QUESTIONS = [
     fieldKey: 'cold_fast',
   },
   {
-    id: 10,
+    id: 9,
     category: 'Conversion Engine',
-    categoryIndex: 3,
+    categoryIndex: 2,
     label: 'Slow Quotes',
     symptom:
       "Do proposals and quotes take so long that buyers go with whoever answers first?",
@@ -150,14 +136,14 @@ const QUESTIONS = [
       "Hire your Proposal & Quote Generator and Discovery Call-Prep. They put a branded proposal in front of the buyer while the deal is warm. Both start in Month 4.",
     fieldKey: 'slow_quotes',
   },
-  // Pillar 5: Founder Freedom (Month 5) \u2014 2 questions
+  // Pillar 4: Founder Freedom (stop being the bottleneck) - 3 questions
   {
-    id: 11,
+    id: 10,
     category: 'Founder Freedom',
-    categoryIndex: 4,
+    categoryIndex: 3,
     label: 'The Vacation Test',
     symptom:
-      "If you step away for two weeks, does the business stall?",
+      "If you leave for 2 weeks, does revenue drop or operations slow down?",
     pain:
       "You own a job, not an asset. You are the ceiling everything waits on.",
     solution:
@@ -165,24 +151,36 @@ const QUESTIONS = [
     fieldKey: 'vacation_test',
   },
   {
-    id: 12,
+    id: 11,
     category: 'Founder Freedom',
-    categoryIndex: 4,
+    categoryIndex: 3,
     label: 'The Brain Trap',
     symptom:
-      "Do your core processes live only in your head because there's no time to write them down?",
+      "Do your core processes live only in your head because you \u201cdon\u2019t have time\u201d to write them down?",
     pain:
       "Key-person risk. Nothing can be delegated, so everything routes back to you.",
     solution:
       "Hire your Transcription to SOP and Team Knowledge Base. They pull the process out of your head into something your team can run. Both start in Month 5.",
     fieldKey: 'brain_trap',
   },
+  {
+    id: 12,
+    category: 'Founder Freedom',
+    categoryIndex: 3,
+    label: 'The Bottleneck',
+    symptom:
+      "Does every important decision have to run through you before anything moves?",
+    pain:
+      "You are the single point of failure. The business only moves as fast as your attention.",
+    solution:
+      "Hire Maestro, your Command Center, and your Decision & Delegation Memo. Maestro routes the routine and turns your calls into briefs the team runs without you. Your Command Center is where the whole system starts.",
+    fieldKey: 'bottleneck',
+  },
 ]
 
 const CATEGORIES = [
-  'The Offer',
+  'Authority Engine',
   'Pipeline Engine',
-  'Content Engine',
   'Conversion Engine',
   'Founder Freedom',
 ]
@@ -206,7 +204,7 @@ const MAX_TOTAL = QUESTIONS.length * 5 // 12 questions × 5 max each
 
 // ─── Helpers ─────────────────────────────────────────────────────────────────
 
-// Pillars have variable question counts (3/3/2/2/2), so the denominator is per-category.
+// Denominator is per-category so pillar friction stays correct if counts ever differ.
 function getCategoryMax(categoryIndex) {
   return QUESTIONS.filter((q) => q.categoryIndex === categoryIndex).length * 5
 }

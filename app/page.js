@@ -346,7 +346,7 @@ export default function HomePage() {
                 Find out exactly where AI fits in your business &mdash; and what to do first.
               </h2>
               <p className="text-body text-ink-muted mb-8">
-                If you know you need to use AI in your business but are not sure where to start. Answer 15 questions across 5 business pillars. At the end, you get a color-coded breakdown of exactly where your business is leaking time and money &mdash; and the AI system that fixes each one.
+                If you know you need to use AI in your business but are not sure where to start. Answer 12 questions across 4 business pillars. At the end, you get a color-coded breakdown of exactly where your business is leaking time and money &mdash; and the AI Assistant that fixes each one.
               </p>
               <Button href="/map" variant="primary">
                 Take the AI Assessment

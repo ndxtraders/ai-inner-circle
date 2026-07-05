@@ -25,7 +25,7 @@ const OFFERS = [
     eyebrow: 'Start here · Free assessment',
     title: 'Find out where AI gives you the biggest win',
     body:
-      'Take a free 5-minute assessment. Fifteen questions across five pillars of your business surface a live heatmap of your bottlenecks — plus a specific AI fix for each one and a downloadable report you can hand to your team.',
+      'Take a free 5-minute assessment. Twelve questions across four pillars of your business surface a live heatmap of your bottlenecks — plus a specific AI fix for each one and a downloadable report you can hand to your team.',
     cta: 'Start the Free Assessment',
     href: '/ai',
     note: 'Free · 5 minutes · PDF results included',
