@@ -9,7 +9,7 @@ import WaitlistForm from '../components/WaitlistForm'
 export const metadata = {
   title: 'AI Inner Circle Membership | Rev Vaughn',
   description:
-    'AI Assistants that attract and convert buyers for you. A full team of 24, built in your voice, run by Maestro. Founder-led B2B membership from Rev Vaughn.',
+    'AI Assistants that attract, engage, and convert buyers for you. A full team of 24, built in your voice, run by Maestro. Founder-led B2B membership from Rev Vaughn.',
 }
 
 // ---------------------------------------------------------------------------
@@ -228,10 +228,10 @@ export default function MembershipPage() {
             <div className="md:col-span-2">
               <div className="eyebrow mb-6">AI Inner Circle Membership</div>
               <h1 className="text-display font-semibold tracking-tight text-ink mb-6">
-                AI Assistants that attract and convert buyers for you.
+                AI Assistants that attract, engage, and convert buyers for you.
               </h1>
               <p className="text-lead text-ink-muted mb-4">
-                You get the actual skills — a full team of 24, built in your voice, run by a Chief of Staff who reviews their work before it reaches you.
+                You get the actual skills — a full team of 24 — built in your voice, run by a Chief of Staff who reviews their work before it reaches you.
               </p>
               <p className="text-body text-ink-soft mb-8">
                 The difference is simple. <span className="text-ink font-medium">The AI knows you now.</span>
