@@ -1,8 +1,9 @@
 'use client'
 import { useState } from 'react'
-// AI Inner Circle waitlist form. Posts to /api/waitlist-inner-circle, which
-// adds the subscriber to the AI Inner Circle MailerLite group.
-export default function WaitlistFormInnerCircle({ buttonLabel = 'Join the Waitlist', className = '' }) {
+// Inline AI Brain waitlist form. Posts to /api/waitlist, which adds the
+// subscriber to the MailerLite waitlist group (triggering the automation).
+// First name is optional; email is required.
+export default function WaitlistForm({ buttonLabel = 'Join the Waitlist', className = '' }) {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [status, setStatus] = useState('idle') // idle | loading | success | error
@@ -13,7 +14,7 @@ export default function WaitlistFormInnerCircle({ buttonLabel = 'Join the Waitli
     setStatus('loading')
     setError('')
     try {
-      const res = await fetch('/api/waitlist-inner-circle', {
+      const res = await fetch('/api/waitlist', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, name }),
