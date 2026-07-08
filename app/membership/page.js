@@ -236,7 +236,7 @@ export default function MembershipPage() {
               <p className="text-body text-ink-soft mb-8">
                 The difference is simple. <span className="text-ink font-medium">The AI knows you now.</span>
               </p>
-              <WaitlistForm buttonLabel="Join the Waitlist" groupId="190408259495003725" />
+              <Link   href="/contact"   className="inline-flex items-center justify-center px-6 py-3 text-small font-medium tracking-wide transition-all duration-200 bg-ink text-paper border border-ink hover:bg-accent hover:border-accent" >   Join the Waitlist </Link>
               <p className="text-small text-ink-muted mt-4">
                 Founding cohort. Enrollment closes <span className="text-ink font-medium">August 1</span>. Founding price is $199 a month before it rises to $249 — or own the whole team once for $995.{' '}
                 <Link href="/map" className="text-accent underline underline-offset-2 hover:no-underline">
@@ -590,7 +590,7 @@ export default function MembershipPage() {
                 <li className="flex gap-3"><span className="text-accent mt-1">–</span>Live workshops &amp; weekly demos as they’re released</li>
                 <li className="flex gap-3"><span className="text-accent mt-1">–</span>Friday Q&amp;A and daily community access</li>
               </ul>
-              <WaitlistForm buttonLabel="Join the Waitlist" groupId="190408259495003725" />
+              <Link   href="/contact"   className="inline-flex items-center justify-center px-6 py-3 text-small font-medium tracking-wide transition-all duration-200 bg-ink text-paper border border-ink hover:bg-accent hover:border-accent" >   Join the Waitlist </Link>
             </div>
 
             {/* Monthly — the secondary */}
@@ -608,7 +608,7 @@ export default function MembershipPage() {
                 <li className="flex gap-3"><span className="text-accent mt-1">–</span>Daily community access</li>
                 <li className="flex gap-3"><span className="text-accent mt-1">–</span>Your Command Center, set up with you</li>
               </ul>
-              <WaitlistForm buttonLabel="Join the Waitlist" groupId="190408259495003725" />
+              <Link   href="/contact"   className="inline-flex items-center justify-center px-6 py-3 text-small font-medium tracking-wide transition-all duration-200 bg-ink text-paper border border-ink hover:bg-accent hover:border-accent" >   Join the Waitlist </Link>
             </div>
           </div>
           <p className="text-small text-ink-muted mt-6 text-center">
@@ -655,7 +655,7 @@ export default function MembershipPage() {
               Join the founding cohort before enrollment closes August 1. Lock in $199 a month before it rises to $249 — or own the whole team once for $995.
             </p>
             <div className="flex justify-center mb-6">
-              <WaitlistForm buttonLabel="Join the Waitlist" groupId="190408259495003725" />
+              <Link   href="/contact"   className="inline-flex items-center justify-center px-6 py-3 text-small font-medium tracking-wide transition-all duration-200 bg-ink text-paper border border-ink hover:bg-accent hover:border-accent" >   Join the Waitlist </Link>
             </div>
             <p className="text-small text-ink-muted">
               Still deciding?{' '}
