@@ -394,7 +394,7 @@ export default function MembershipPage() {
 
         {/* 7b. YOU APPROVE, YOU DON'T OPERATE */}
         <Section bg="grey" width="content">
-          <div className="eyebrow mb-4">Meet Your New AI Chief of Staff.</div>
+          <div className="eyebrow mb-4">Meet Maestro, Your New AI Chief of Staff.</div>
           <h2 className="text-h1 font-semibold tracking-tight text-ink mb-6 max-w-prose">
             Maestro runs the team so you don’t have to.
           </h2>
