@@ -405,8 +405,7 @@ export default function MembershipPage() {
 
           </p>
           <p className="text-body text-ink-soft max-w-prose">
-            Your job shrinks to two words: approve, or “change this.” The chasing,
-            the QA, the “did that ever get done” — that’s his.
+            Your review job shrinks to two words: approve, or “change this.”
           </p>
         </Section>
 
