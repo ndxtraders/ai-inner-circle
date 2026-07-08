@@ -394,15 +394,15 @@ export default function MembershipPage() {
 
         {/* 7b. YOU APPROVE, YOU DON'T OPERATE */}
         <Section bg="grey" width="content">
-          <div className="eyebrow mb-4">You approve. You don’t operate.</div>
+          <div className="eyebrow mb-4">Meet Your New AI Chief of Staff.</div>
           <h2 className="text-h1 font-semibold tracking-tight text-ink mb-6 max-w-prose">
             Maestro runs the team so you don’t have to.
           </h2>
           <p className="text-body text-ink-soft max-w-prose mb-4">
-            You don’t manage 24 Assistants. You manage one. Maestro assigns the
-            work, checks it against your voice and your standards, and quietly
-            sends the weak stuff back for a rewrite. What lands on your board is
-            already good.
+            Maestro manages the entire team. He routes the work, hires specialists 
+            when needed, checks quality, tracks every project, and keeps everything 
+            moving, so you can spend less time managing and more time making decisions.
+
           </p>
           <p className="text-body text-ink-soft max-w-prose">
             Your job shrinks to two words: approve, or “change this.” The chasing,
