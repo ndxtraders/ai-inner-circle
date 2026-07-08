@@ -1,11 +1,8 @@
 'use client'
-
 import { useState } from 'react'
-
-// Inline AI Brain waitlist form. Posts to /api/waitlist, which adds the
-// subscriber to the MailerLite waitlist group (triggering the automation).
-// First name is optional; email is required.
-export default function WaitlistForm({ buttonLabel = 'Join the Waitlist', className = '', groupId }) {
+// AI Inner Circle waitlist form. Posts to /api/waitlist-inner-circle, which
+// adds the subscriber to the AI Inner Circle MailerLite group.
+export default function WaitlistFormInnerCircle({ buttonLabel = 'Join the Waitlist', className = '' }) {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [status, setStatus] = useState('idle') // idle | loading | success | error
@@ -16,12 +13,11 @@ export default function WaitlistForm({ buttonLabel = 'Join the Waitlist', classN
     setStatus('loading')
     setError('')
     try {
-      const res = await fetch('/api/waitlist', {
+      const res = await fetch('/api/waitlist-inner-circle', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, name, groupId }),
+        body: JSON.stringify({ email, name }),
       })
-
       if (res.ok) {
         setStatus('success')
       } else {
@@ -34,7 +30,6 @@ export default function WaitlistForm({ buttonLabel = 'Join the Waitlist', classN
       setStatus('error')
     }
   }
-
   if (status === 'success') {
     return (
       <div className={`border border-accent bg-accent-soft p-5 max-w-md ${className}`}>
@@ -46,10 +41,8 @@ export default function WaitlistForm({ buttonLabel = 'Join the Waitlist', classN
       </div>
     )
   }
-
   const inputClass =
     'px-5 py-3 bg-paper border border-rule text-ink placeholder:text-ink-faint focus:border-ink focus:outline-none transition-colors disabled:opacity-50'
-
   return (
     <form onSubmit={handleSubmit} className={`max-w-md ${className}`}>
       <div className="flex flex-col gap-3">
