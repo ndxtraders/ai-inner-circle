@@ -231,7 +231,7 @@ export default function MembershipPage() {
                 AI Assistants that attract, engage, and convert buyers for you.
               </h1>
               <p className="text-lead text-ink-muted mb-4">
-                You get the actual skills — a full team of 24 — built in your voice, run by a Chief of Staff who reviews their work before it reaches you.
+                You get the actual skills — a full team of 24 — built in your voice, run by Maestro, your new AI Chief of Staff who reviews their work before it reaches you.
               </p>
               <p className="text-body text-ink-soft mb-8">
                 The difference is simple. <span className="text-ink font-medium">The AI knows you now.</span>
