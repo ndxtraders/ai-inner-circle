@@ -638,9 +638,15 @@ export default function CoachesMembershipPage() {
             <p className="text-lead text-ink-muted mb-8 max-w-prose mx-auto">
               Join the founding cohort before enrollment closes [DATE]. Lock in $199 a month — or own the whole team once for $796.
             </p>
-            <div className="flex justify-center">
+            <div className="flex justify-center mb-6">
               <Link   href="/contact"   className="inline-flex items-center justify-center px-6 py-3 text-small font-medium tracking-wide transition-all duration-200 bg-ink text-paper border border-ink hover:bg-accent hover:border-accent" >   Join the Waitlist </Link>
             </div>
+            <p className="text-small text-ink-muted">
+              Not sure yet?{' '}
+              <Link href="/coaches/assessment" className="text-accent underline underline-offset-2 hover:no-underline">
+                Take the 5-minute assessment →
+              </Link>
+            </p>
           </div>
         </Section>
 

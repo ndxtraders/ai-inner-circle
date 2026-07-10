@@ -18,7 +18,7 @@ export default function Header() {
 
         {/* Desktop nav */}
         <nav className="hidden md:flex items-center gap-6 text-small">
-          <Link href="/map" className="text-ink-muted hover:text-ink transition-colors">
+          <Link href="/assessment" className="text-ink-muted hover:text-ink transition-colors">
             AI Assessment
           </Link>
           <Link href="/consultants" className="text-ink-muted hover:text-ink transition-colors">
@@ -51,7 +51,7 @@ export default function Header() {
       {/* Mobile panel */}
       {open && (
         <nav className="md:hidden border-t border-rule bg-paper px-6 py-4 flex flex-col gap-4 text-small">
-          <Link href="/map" className="text-ink-muted hover:text-ink transition-colors" onClick={() => setOpen(false)}>
+          <Link href="/assessment" className="text-ink-muted hover:text-ink transition-colors" onClick={() => setOpen(false)}>
             AI Assessment
           </Link>
           <Link href="/consultants" className="text-ink-muted hover:text-ink transition-colors" onClick={() => setOpen(false)}>
