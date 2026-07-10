@@ -565,7 +565,7 @@ export default function MapPage() {
       pdf.setFont('helvetica', 'normal')
       pdf.setFontSize(8)
       pdf.setTextColor(...muted)
-      pdf.text('Next step: Hire your first Assistant. Start at aiinnercircle.com/membership', margin, y)
+      pdf.text('Next step: Hire your first Assistant. Start at aiinnercircle.com/consultants', margin, y)
 
       return pdf
   }, [])
@@ -938,7 +938,7 @@ export default function MapPage() {
                     <p className="text-body text-ink-muted mb-8 flex-1">
                       Set up your Command Center, then hire one AI Assistant a week. A full system in six months, starting with the department this map flagged reddest.
                     </p>
-                    <Link href="/membership" className="inline-flex items-center gap-2 px-5 py-3 text-small font-medium tracking-wide transition-all duration-200 bg-ink text-paper border border-ink hover:bg-accent hover:border-accent">
+                    <Link href="/consultants" className="inline-flex items-center gap-2 px-5 py-3 text-small font-medium tracking-wide transition-all duration-200 bg-ink text-paper border border-ink hover:bg-accent hover:border-accent">
                       See the Membership <ArrowRight className="w-4 h-4" />
                     </Link>
                   </div>

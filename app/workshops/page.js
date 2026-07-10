@@ -78,8 +78,8 @@ export default function WorkshopsPage() {
               each month and adds up to a working system by month six.
             </p>
             <div className="flex flex-wrap gap-4 items-center">
-              <Button href="/membership" variant="accent">Join the Waitlist</Button>
-              <Button href="/membership" variant="ghost">See the membership →</Button>
+              <Button href="/consultants" variant="accent">Join the Waitlist</Button>
+              <Button href="/consultants" variant="ghost">See the membership →</Button>
             </div>
           </div>
         </Section>

@@ -233,7 +233,7 @@ export default function AIInnerCirclePage() {
                 A membership for founder-led B2B brands. Every week you install a new AI Assistant that attracts, engages, and converts buyers. In your voice. Real work, not AI slop.
               </p>
               <div className="flex flex-wrap gap-4">
-                <Button href="/membership" variant="primary">
+                <Button href="/consultants" variant="primary">
                   Join AI Inner Circle
                 </Button>
               </div>
