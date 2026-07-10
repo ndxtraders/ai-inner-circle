@@ -194,7 +194,6 @@ const FAQ = [
   ['How much time per week?', 'Plan on about an hour to install and use the week’s Assistant. That hour buys back far more.'],
   ['Will this work for my kind of coaching?', 'Yes. It fits coaches who sell through content, conversations, and calls: business coaches, executive coaches, health and life coaches with real programs. If your clients find you online and enroll on a call, this is built for you.'],
   ['Does anything cost extra?', 'No. Everything runs on your Claude subscription. Two optional power-ups exist for members who want automation — a free-tier Apify account and Google Calendar connectors — and both have built-in manual paths that work without them.'],
-  ['I took the Build Your AI Writing Twin workshop. Does that count for anything?', 'Yes, twice. Your $97 is credited toward the membership, and Maestro uses the Voice Guide you built there at setup, so your onboarding is already half done.'],
   ['What if I’ve never developed a strong writing voice?', 'There’s a second door built for exactly you. Maestro helps you choose a voice deliberately, and it becomes yours from day one. When your writing catches up, say “rebuild my voice” and the whole team upgrades overnight.'],
   ['Do I keep the Assistants if I cancel?', 'Yes. They live in your own folder on your own machine. What you build is yours to keep.'],
   ['What’s the difference between the monthly plan and the one-time option?', 'Same team, same community. Monthly is $199 and unlocks one department a month. The one-time $796 is five months for the price of four — Maestro and all 20 Assistants unlocked today, no recurring charge, price locked, yours to keep. Workshops and weekly demos are still released on schedule for everyone.'],
@@ -598,9 +597,6 @@ export default function CoachesMembershipPage() {
               <Link   href="/contact"   className="inline-flex items-center justify-center px-6 py-3 text-small font-medium tracking-wide transition-all duration-200 bg-ink text-paper border border-ink hover:bg-accent hover:border-accent" >   Join the Waitlist </Link>
             </div>
           </div>
-          <p className="text-small text-ink-muted mt-6 text-center">
-            Took the $97 Build Your AI Writing Twin workshop? It’s credited toward either option.
-          </p>
         </Section>
 
         {/* 14. RISK REVERSAL */}
@@ -642,15 +638,9 @@ export default function CoachesMembershipPage() {
             <p className="text-lead text-ink-muted mb-8 max-w-prose mx-auto">
               Join the founding cohort before enrollment closes [DATE]. Lock in $199 a month — or own the whole team once for $796.
             </p>
-            <div className="flex justify-center mb-6">
+            <div className="flex justify-center">
               <Link   href="/contact"   className="inline-flex items-center justify-center px-6 py-3 text-small font-medium tracking-wide transition-all duration-200 bg-ink text-paper border border-ink hover:bg-accent hover:border-accent" >   Join the Waitlist </Link>
             </div>
-            <p className="text-small text-ink-muted">
-              Not sure your voice survives AI?{' '}
-              <Link href="/writing-twin" className="text-accent underline underline-offset-2 hover:no-underline">
-                Start with the $97 Writing Twin workshop → it’s credited when you join.
-              </Link>
-            </p>
           </div>
         </Section>
 

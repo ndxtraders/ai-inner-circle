@@ -89,7 +89,7 @@ const QUESTIONS = [
     categoryIndex: 1,
     label: 'The Free Coaching Trap',
     symptom:
-      "Do your discovery calls turn into 45 minutes of free coaching that rarely converts?",
+      "Do your discovery calls turn into free coaching sessions that rarely convert?",
     pain:
       "You give the transformation away on the call, so there's nothing left to enroll in. Generous, and broke.",
     solution:
@@ -103,7 +103,7 @@ const QUESTIONS = [
     categoryIndex: 2,
     label: 'The Content Grind',
     symptom:
-      "Does creating content eat time you don't have, so you post sporadically or go quiet for weeks?",
+      "Does creating content eat too much time, so you post sporadically or go quiet for days or weeks?",
     pain:
       "You disappear from the feed. Out of sight, you fall out of the buying conversation entirely.",
     solution:
@@ -129,7 +129,7 @@ const QUESTIONS = [
     categoryIndex: 2,
     label: 'The Invisible Coach',
     symptom:
-      "When someone looks you up \u2014 your profile, your posts, or asks AI to recommend a coach \u2014 are you basically invisible?",
+      "When someone searches for what you do (on search, social, or AI), are you basically invisible?",
     pain:
       "Prospects find other coaches instead of you. You're absent right where the decision starts.",
     solution:
@@ -143,7 +143,7 @@ const QUESTIONS = [
     categoryIndex: 3,
     label: 'Renting Your Audience',
     symptom:
-      "If your main platform shut your account down tomorrow, would you lose your whole audience overnight?",
+      "If your main platform shut your account down tomorrow, would you lose all or most of your audience overnight?",
     pain:
       "You're building on rented land. With no list of your own, one algorithm change can erase your reach.",
     solution:
@@ -937,12 +937,12 @@ export default function CoachAssessmentPage() {
                       You&rsquo;ve avoided the critical breaking points.
                     </h3>
                     <p className="text-lead text-paper opacity-80 mb-12">
-                      You have scale risks, not fires. Two ways to stay ahead — pick the one that fits where you are.
+                      You have scale risks, not fires. The membership keeps you ahead of them, a new desk of AI Assistants each month.
                     </p>
                   </>
                 )}
-                <div className="grid md:grid-cols-2 gap-6 max-w-2xl">
-                  {/* Option 1 — Membership */}
+                <div className="max-w-md">
+                  {/* Membership CTA */}
                   <div className="bg-paper p-8 flex flex-col">
                     <p className="text-eyebrow uppercase font-semibold tracking-widest text-ink-faint mb-3">Your First Hire</p>
                     <h4 className="font-sans font-semibold text-h3 text-ink mb-3">Join AI Inner Circle for Coaches</h4>
@@ -950,18 +950,7 @@ export default function CoachAssessmentPage() {
                       Set up your Command Center, then hire one AI Assistant a week. A full team in five months, starting with the desk this map flagged reddest.
                     </p>
                     <Link href="/coaches" className="inline-flex items-center gap-2 px-5 py-3 text-small font-medium tracking-wide transition-all duration-200 bg-ink text-paper border border-ink hover:bg-accent hover:border-accent">
-                      See the Membership <ArrowRight className="w-4 h-4" />
-                    </Link>
-                  </div>
-                  {/* Option 2 — $97 Writing Twin tripwire */}
-                  <div className="bg-paper p-8 flex flex-col">
-                    <p className="text-eyebrow uppercase font-semibold tracking-widest text-ink-faint mb-3">Start Smaller</p>
-                    <h4 className="font-sans font-semibold text-h3 text-ink mb-3">Build Your AI Writing Twin</h4>
-                    <p className="text-body text-ink-muted mb-8 flex-1">
-                      Not ready for the full team? Start with the $97 workshop and build the voice file at the heart of the membership. Your $97 is credited when you join.
-                    </p>
-                    <Link href="/writing-twin" className="inline-flex items-center gap-2 px-5 py-3 text-small font-medium tracking-wide transition-all duration-200 bg-ink text-paper border border-ink hover:bg-accent hover:border-accent">
-                      Start the $97 Workshop <ArrowRight className="w-4 h-4" />
+                      Join the Waitlist <ArrowRight className="w-4 h-4" />
                     </Link>
                   </div>
                 </div>
