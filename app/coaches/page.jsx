@@ -227,7 +227,7 @@ export default function CoachesMembershipPage() {
               </p>
               <Link   href="/contact"   className="inline-flex items-center justify-center px-6 py-3 text-small font-medium tracking-wide transition-all duration-200 bg-ink text-paper border border-ink hover:bg-accent hover:border-accent" >   Join the Waitlist </Link>
               <p className="text-small text-ink-muted mt-4">
-                Founding cohort. Enrollment closes <span className="text-ink font-medium">[DATE]</span>. Founding price is $199 a month — or own the whole team once for $796, five months for the price of four.
+                Founding cohort. Enrollment closes <span className="text-ink font-medium">August 15</span>. Founding price is $199 a month — or own the whole team once for $796, five months for the price of four.
               </p>
             </div>
             <div className="hidden md:block pt-4">
@@ -636,7 +636,7 @@ export default function CoachesMembershipPage() {
               The AI knows you now. Put it to work.
             </h2>
             <p className="text-lead text-ink-muted mb-8 max-w-prose mx-auto">
-              Join the founding cohort before enrollment closes [DATE]. Lock in $199 a month — or own the whole team once for $796.
+              Join the founding cohort before enrollment closes August 15. Lock in $199 a month — or own the whole team once for $796.
             </p>
             <div className="flex justify-center mb-6">
               <Link   href="/contact"   className="inline-flex items-center justify-center px-6 py-3 text-small font-medium tracking-wide transition-all duration-200 bg-ink text-paper border border-ink hover:bg-accent hover:border-accent" >   Join the Waitlist </Link>

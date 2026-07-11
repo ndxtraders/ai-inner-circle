@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import Section from '../components/Section'
@@ -16,7 +17,7 @@ const TRACKS = [
     title: 'For Consultants & Agencies',
     blurb:
       'You win clients through outreach, referrals, and proposals. B2B service providers, done-for-you, and agencies.',
-    href: '/map',
+    href: '/consultants/assessment',
     cta: 'Take the B2B Assessment',
   },
   {
@@ -38,23 +39,34 @@ export default function AssessmentHubPage() {
       <main>
         {/* Hero — sell the assessment */}
         <Section bg="paper" width="content">
-          <div className="max-w-prose">
-            <p className="eyebrow mb-6">Free 5-Minute Assessment</p>
-            <h1 className="text-display font-semibold tracking-tight text-ink mb-6">
-              Find the exact AI Assistant your business is missing.
-            </h1>
-            <p className="text-lead text-ink-muted mb-8">
-              Answer 12 quick questions and get your personalized AI Priority Map — the
-              breaking points costing you time, clients, and revenue, and the specific AI
-              Assistant that fixes each one.
-            </p>
-            <div className="flex flex-wrap gap-x-6 gap-y-2">
-              {REASSURE.map((r) => (
-                <span key={r} className="text-small font-medium text-ink flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-accent" />
-                  {r}
-                </span>
-              ))}
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <p className="eyebrow mb-6">Free 5-Minute Assessment</p>
+              <h1 className="text-display font-semibold tracking-tight text-ink mb-6">
+                Find the exact AI Assistant your business is missing.
+              </h1>
+              <p className="text-lead text-ink-muted mb-8">
+                Answer 12 quick questions and get your personalized AI Priority Map — the
+                breaking points costing you time, clients, and revenue, and the specific AI
+                Assistant that fixes each one.
+              </p>
+              <div className="flex flex-wrap gap-x-6 gap-y-2">
+                {REASSURE.map((r) => (
+                  <span key={r} className="text-small font-medium text-ink flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-accent" />
+                    {r}
+                  </span>
+                ))}
+              </div>
+            </div>
+            <div className="flex items-center justify-center">
+              <Image
+                src="/ai-priority-map-preview-v2.png"
+                alt="AI Priority Map preview"
+                width={480}
+                height={360}
+                className="w-full max-w-md"
+              />
             </div>
           </div>
         </Section>

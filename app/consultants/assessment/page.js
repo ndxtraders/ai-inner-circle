@@ -16,178 +16,174 @@ import {
 // ─── Data ────────────────────────────────────────────────────────────────────
 
 const QUESTIONS = [
-  // Pillar 1: Signature Offer (stand out and charge your worth) \u2014 Month 1 \u2014 3 questions
+  // Pillar 1: Authority Engine (get noticed and trusted) - 3 questions
   {
     id: 1,
-    category: 'Signature Offer',
+    category: 'Authority Engine',
     categoryIndex: 0,
-    label: 'The Commodity Coach',
+    label: 'The Lookalike',
     symptom:
-      "When a prospect compares you to other coaches, do you sound basically the same?",
+      "When a buyer compares you to your competitors, do you sound basically the same?",
     pain:
-      "Nothing makes you the obvious choice, so you compete on price or get ghosted after the call.",
+      "Nothing makes you the obvious choice, so you end up competing on price.",
     solution:
-      "Hire your Signature Method Builder and Sales Council. They name the method only you use and pressure-test the pitch until it's undeniable. Both start in Month 1.",
-    fieldKey: 'commodity_coach',
+      "Hire your Unique Mechanism Builder and Sales Council. They name what only you do and pressure-test the pitch. Both start in Month 1.",
+    fieldKey: 'lookalike',
   },
   {
     id: 2,
-    category: 'Signature Offer',
+    category: 'Authority Engine',
     categoryIndex: 0,
-    label: 'Priced to Please',
+    label: 'Content Grind',
     symptom:
-      "Do you keep your rates low because raising them feels risky, or discount the moment someone hesitates?",
+      "Does creating content eat time you don't have, so you end up not publishing?",
     pain:
-      "You undercharge for the transformation you deliver, so your income caps out no matter how hard you work.",
+      "You disappear from the feed. Out of sight, you fall out of the buying conversation.",
     solution:
-      "Hire your Offer & Pricing Architect. It rebuilds your offer and price so the right clients stop flinching at the number. Starts in Month 1.",
-    fieldKey: 'priced_to_please',
-  },
-  {
-    id: 3,
-    category: 'Signature Offer',
-    categoryIndex: 0,
-    label: 'Let Me Think About It',
-    symptom:
-      "Do enrollment conversations end in \u201clet me think about it\u201d and then silence?",
-    pain:
-      "Enrollments die at the finish line. You did all the work to earn the call, then lose it to objections you never got to answer.",
-    solution:
-      "Hire your Objection Tester. It surfaces the real objection and hands you language that resolves it before it kills the enrollment. Starts in Month 1.",
-    fieldKey: 'think_about_it',
-  },
-  // Pillar 2: Warm Conversations (turn audience into booked calls) \u2014 Month 2 \u2014 3 questions
-  {
-    id: 4,
-    category: 'Warm Conversations',
-    categoryIndex: 1,
-    label: 'The Silent Audience',
-    symptom:
-      "Do you have followers and likes but no reliable way to turn them into booked calls?",
-    pain:
-      "You built an audience, not a pipeline. Attention that never becomes a conversation is just applause.",
-    solution:
-      "Hire your Warm Signal Spotter. It finds the people already showing buying signals and hands you a warm list to reach out to every week. Starts in Month 2.",
-    fieldKey: 'silent_audience',
-  },
-  {
-    id: 5,
-    category: 'Warm Conversations',
-    categoryIndex: 1,
-    label: 'Ignored DMs',
-    symptom:
-      "Do your DMs go unanswered because they feel salesy or like a copy-paste template?",
-    pain:
-      "Wasted outreach. Your message reads like every other coach sliding into the inbox, so it starts no conversations.",
-    solution:
-      "Hire your Conversation Starter. It writes one-to-one messages in your voice that open real conversations instead of pitching. Starts in Month 2.",
-    fieldKey: 'ignored_dms',
-  },
-  {
-    id: 6,
-    category: 'Warm Conversations',
-    categoryIndex: 1,
-    label: 'The Free Coaching Trap',
-    symptom:
-      "Do your discovery calls turn into free coaching sessions that rarely convert?",
-    pain:
-      "You give the transformation away on the call, so there's nothing left to enroll in. Generous, and broke.",
-    solution:
-      "Hire your Discovery Call Closer and Follow-Up & Reactivation Engine. One gives the call an arc that leads to a decision; the other keeps the not-yet's warm. Both start in Month 2.",
-    fieldKey: 'free_coaching_trap',
-  },
-  // Pillar 3: Content Engine (be visible, in your real voice) \u2014 Month 3 \u2014 3 questions
-  {
-    id: 7,
-    category: 'Content Engine',
-    categoryIndex: 2,
-    label: 'The Content Grind',
-    symptom:
-      "Does creating content eat too much time, so you post sporadically or go quiet for days or weeks?",
-    pain:
-      "You disappear from the feed. Out of sight, you fall out of the buying conversation entirely.",
-    solution:
-      "Hire your Content Strategist and Content Repurposer. They turn one idea into a month of content mapped to your method. Both start in Month 3.",
+      "Hire your Recording to Content Engine and Content Repurposer. Record 30 minutes and they turn it into a month of content. Both start in Month 3.",
     fieldKey: 'content_grind',
   },
   {
-    id: 8,
-    category: 'Content Engine',
-    categoryIndex: 2,
-    label: 'Sounds Like a Robot',
+    id: 3,
+    category: 'Authority Engine',
+    categoryIndex: 0,
+    label: 'Invisible Online',
     symptom:
-      "When you use AI to write, does it come out generic or \u201cnot you,\u201d so you rewrite the whole thing anyway?",
+      "When people search for what you offer (on search, social media, AI, etc.), are you virtually invisible?",
     pain:
-      "You either post soulless AI content that quietly erodes trust, or you burn the time AI was supposed to save.",
+      "Buyers find your competitors instead of you. You're absent where decisions start.",
     solution:
-      "Hire your Voice-True Ghostwriter and AI Check. They write in your actual voice and catch anything that smells like AI before it posts. Both start in Month 3.",
-    fieldKey: 'sounds_like_robot',
+      "Hire your SEO / GEO Citation Optimizer and LinkedIn Ghostwriter. They get you found by Google and cited by AI. Both start in Month 3.",
+    fieldKey: 'invisible_online',
+  },
+  // Pillar 2: Pipeline Engine (fill the calendar) - 3 questions
+  {
+    id: 4,
+    category: 'Pipeline Engine',
+    categoryIndex: 1,
+    label: 'Empty Calendar',
+    symptom:
+      "Do you lack a reliable way to find new qualified buyers every week?",
+    pain:
+      "Pipeline runs on referrals and luck. When they dry up, so does revenue.",
+    solution:
+      "Hire your LinkedIn Signal Scraper and ICP Match & Prioritizer. They surface real buyers showing intent and score them for you. Both start in Month 2.",
+    fieldKey: 'empty_calendar',
+  },
+  {
+    id: 5,
+    category: 'Pipeline Engine',
+    categoryIndex: 1,
+    label: 'Ignored Outreach',
+    symptom:
+      "Do your DMs or emails get ignored because they sound generic or like spam?",
+    pain:
+      "Wasted outreach. Your message reads like everyone else's, so it starts no conversations.",
+    solution:
+      "Hire your Surgical DM Writer and AI Slop Killer. They write one-to-one messages in your voice that actually get replies. Both start in Month 2.",
+    fieldKey: 'ignored_outreach',
+  },
+  {
+    id: 6,
+    category: 'Pipeline Engine',
+    categoryIndex: 1,
+    label: 'Feast or Famine',
+    symptom:
+      "Does your lead flow swing between slammed and dead, with no system you can switch on?",
+    pain:
+      "Unpredictable revenue. You can't plan, hire, or grow on a pipeline you can't control.",
+    solution:
+      "Hire your LinkedIn Signal Scraper and ICP Match & Prioritizer. They turn lead-gen into a repeatable weekly engine. Both start in Month 2.",
+    fieldKey: 'feast_or_famine',
+  },
+  // Pillar 3: Conversion Engine (turn interest into revenue) - 3 questions
+  {
+    id: 7,
+    category: 'Conversion Engine',
+    categoryIndex: 2,
+    label: 'Price Objection',
+    symptom:
+      "Do prospects go quiet after you send a quote or tell you you're too expensive?",
+    pain:
+      "Price becomes the objection. You lose deals you should win, or discount to save them.",
+    solution:
+      "Hire your Offer & Pricing Architect and Objection Tester. They rebuild your offer and pricing so the right buyers stop flinching at the number. Both start in Month 1.",
+    fieldKey: 'price_objection',
+  },
+  {
+    id: 8,
+    category: 'Conversion Engine',
+    categoryIndex: 2,
+    label: 'Cold Fast',
+    symptom:
+      "Do leads go cold fast because follow-up is slow or inconsistent?",
+    pain:
+      "Interested buyers slip away through neglect. You sit on revenue you already earned.",
+    solution:
+      "Hire your Reply Classifier and Follow-up & Reactivation. They sort hot replies and keep every lead warm. Both start in Month 4.",
+    fieldKey: 'cold_fast',
   },
   {
     id: 9,
-    category: 'Content Engine',
+    category: 'Conversion Engine',
     categoryIndex: 2,
-    label: 'The Invisible Coach',
+    label: 'Slow Quotes',
     symptom:
-      "When someone searches for what you do (on search, social, or AI), are you basically invisible?",
+      "Do proposals and quotes take too long and buyers go with someone else?",
     pain:
-      "Prospects find other coaches instead of you. You're absent right where the decision starts.",
+      "The #1 deal killer in B2B. Speed loses to slower, and you were slower.",
     solution:
-      "Hire your LinkedIn Profile Architect and Carousel Builder. They turn your profile into a client magnet and your ideas into scroll-stopping visuals. Yours from Week 0 and Month 3.",
-    fieldKey: 'invisible_coach',
+      "Hire your Proposal & Quote Generator and Discovery Call-Prep. They put a branded proposal in front of the buyer while the deal is warm. Both start in Month 4.",
+    fieldKey: 'slow_quotes',
   },
-  // Pillar 4: Audience & Proof (own your list, turn wins into growth) \u2014 Months 4\u20135 \u2014 3 questions
+  // Pillar 4: Founder Freedom (stop being the bottleneck) - 3 questions
   {
     id: 10,
-    category: 'Audience & Proof',
+    category: 'Founder Freedom',
     categoryIndex: 3,
-    label: 'Renting Your Audience',
+    label: 'The Vacation Test',
     symptom:
-      "If your main platform shut your account down tomorrow, would you lose all or most of your audience overnight?",
+      "If you leave for 2 weeks, does revenue drop or operations slow down?",
     pain:
-      "You're building on rented land. With no list of your own, one algorithm change can erase your reach.",
+      "You own a job, not an asset. You are the ceiling everything waits on.",
     solution:
-      "Hire your Lead Magnet Builder and Audience-to-List Converter. They turn scrolling followers into an email list you actually own. Both start in Month 4.",
-    fieldKey: 'renting_audience',
+      "Hire your Inbox Triage and Decision & Delegation Memo. They handle the routine so the business runs without you in the loop. Both start in Month 5.",
+    fieldKey: 'vacation_test',
   },
   {
     id: 11,
-    category: 'Audience & Proof',
+    category: 'Founder Freedom',
     categoryIndex: 3,
-    label: 'The Launch That Fizzles',
+    label: 'The Brain Trap',
     symptom:
-      "When you open enrollment or launch something, does it land with silence instead of sales?",
+      "Do your core processes live only in your head because you \u201cdon\u2019t have time\u201d to write them down?",
     pain:
-      "You get one real shot at a launch and it fizzles, taking your revenue and your confidence with it.",
+      "Key-person risk. Nothing can be delegated, so everything routes back to you.",
     solution:
-      "Hire your Launch & Promo Planner and Email Nurture Writer. They build the runway and the sequence so your offer lands warm, not cold. Both start in Month 4.",
-    fieldKey: 'launch_fizzles',
+      "Hire your Transcription to SOP and Team Knowledge Base. They pull the process out of your head into something your team can run. Both start in Month 5.",
+    fieldKey: 'brain_trap',
   },
   {
     id: 12,
-    category: 'Audience & Proof',
+    category: 'Founder Freedom',
     categoryIndex: 3,
-    label: 'Wins That Vanish',
+    label: 'The Bottleneck',
     symptom:
-      "Do your clients get real results that never turn into testimonials, case studies, or referrals?",
+      "Does every important decision have to run through you before anything moves?",
     pain:
-      "Your best marketing asset evaporates unrecorded \u2014 while coaches with weaker results out-market you.",
+      "You are the single point of failure. The business only moves as fast as your attention.",
     solution:
-      "Hire your Win Capture Engine, Referral Engine, and Client Health Monitor. They turn client results into proof and referrals, and flag anyone slipping away before they churn. All start in Month 5.",
-    fieldKey: 'wins_vanish',
+      "Hire Maestro, your Command Center, and your Decision & Delegation Memo. Maestro routes the routine and turns your calls into briefs the team runs without you. Your Command Center is where the whole system starts.",
+    fieldKey: 'bottleneck',
   },
 ]
 
 const CATEGORIES = [
-  'Signature Offer',
-  'Warm Conversations',
-  'Content Engine',
-  'Audience & Proof',
+  'Authority Engine',
+  'Pipeline Engine',
+  'Conversion Engine',
+  'Founder Freedom',
 ]
-
-// Coach leads route to their OWN MailerLite group, kept separate from the
-// B2B list. Rev: create the coach group in MailerLite and paste its ID here.
-const COACH_MAILERLITE_GROUP_ID = 'REPLACE_WITH_COACH_GROUP_ID'
 
 // ─── Constants ───────────────────────────────────────────────────────────────
 
@@ -325,7 +321,7 @@ function FrictionBar({ percentage, status }) {
 
 // ─── Page Component ──────────────────────────────────────────────────────────
 
-export default function CoachAssessmentPage() {
+export default function ConsultantsAssessmentPage() {
   const [answers, setAnswers] = useState(Array(12).fill(null))
   const [currentQuestion, setCurrentQuestion] = useState(0)
   const [revealed, setRevealed] = useState(false)
@@ -387,7 +383,7 @@ export default function CoachAssessmentPage() {
       y += 6
       pdf.setTextColor(...muted)
       pdf.setFontSize(8)
-      pdf.text('aiinnercircle.com/coaches/assessment', margin, y)
+      pdf.text('aiinnercircle.com/consultants/assessment', margin, y)
       y += 4
       pdf.setDrawColor(...faint)
       pdf.line(margin, y, pageWidth - margin, y)
@@ -569,7 +565,7 @@ export default function CoachAssessmentPage() {
       pdf.setFont('helvetica', 'normal')
       pdf.setFontSize(8)
       pdf.setTextColor(...muted)
-      pdf.text('Next step: Hire your first Assistant. Start at aiinnercircle.com/coaches', margin, y)
+      pdf.text('Next step: Hire your first Assistant. Start at aiinnercircle.com/consultants', margin, y)
 
       return pdf
   }, [])
@@ -578,7 +574,7 @@ export default function CoachAssessmentPage() {
   const handleDownload = useCallback(async () => {
     try {
       const pdf = await buildPdf(answers)
-      pdf.save('coach-ai-priority-map-results.pdf')
+      pdf.save('ai-priority-map-results.pdf')
     } catch (err) {
       console.error('Download failed:', err)
     }
@@ -624,9 +620,7 @@ export default function CoachAssessmentPage() {
 
       let email = null
       try {
-        // Coach-specific key so coach leads never mix with the B2B /map flow.
-        // The coach email-gate (front-end funnel entry) should set this.
-        email = sessionStorage.getItem('coach_map_email')
+        email = sessionStorage.getItem('map_email')
       } catch (e) {
         // sessionStorage might not be available
       }
@@ -642,8 +636,6 @@ export default function CoachAssessmentPage() {
             email,
             answers: final,
             totalFriction: friction,
-            source: 'coaches',
-            groupId: COACH_MAILERLITE_GROUP_ID,
           }),
         }).catch(() => {})
 
@@ -655,8 +647,6 @@ export default function CoachAssessmentPage() {
             fd.append('email', email)
             fd.append('answers', JSON.stringify(final))
             fd.append('totalFriction', String(friction))
-            fd.append('source', 'coaches')
-            fd.append('groupId', COACH_MAILERLITE_GROUP_ID)
             fd.append('pdf', pdf.output('blob'), 'results.pdf')
             return fetch('/api/save-pdf', { method: 'POST', body: fd })
           })
@@ -709,14 +699,13 @@ export default function CoachAssessmentPage() {
             <div className="max-w-content mx-auto px-6">
               <div className="grid md:grid-cols-3 gap-10 items-start">
                 <div className="md:col-span-2">
-                  <p className="eyebrow mb-6">5-Minute Assessment · For Coaches</p>
+                  <p className="eyebrow mb-6">5-Minute Assessment</p>
                   <h1 className="font-sans font-semibold text-display text-ink mb-6">
-                    The Coach&rsquo;s AI Assessment
+                    AI Assessment
                   </h1>
                   <p className="text-lead text-ink-muted">
-                    Find what&rsquo;s really costing you clients. See exactly where your coaching
-                    business leaks time, attention, and enrollments, and the exact AI Assistant
-                    that fixes each one.
+                    Find the real bottleneck. See exactly where your business is leaking time
+                    and money, and the exact AI Assistant that fixes each one.
                   </p>
                 </div>
                 <div className="hidden md:flex items-start justify-center pt-4">
@@ -928,7 +917,7 @@ export default function CoachAssessmentPage() {
                       Your biggest breaking point is your {worstPillar}.
                     </h3>
                     <p className="text-lead text-paper opacity-80 mb-12">
-                      Good news: the membership starts you exactly here. Hire the AI Assistants that fix it, a new desk each month.
+                      Good news: the membership starts you exactly here. Hire the AI Assistants that fix it, a department a month.
                     </p>
                   </>
                 ) : (
@@ -937,20 +926,31 @@ export default function CoachAssessmentPage() {
                       You&rsquo;ve avoided the critical breaking points.
                     </h3>
                     <p className="text-lead text-paper opacity-80 mb-12">
-                      You have scale risks, not fires. The membership keeps you ahead of them, a new desk of AI Assistants each month.
+                      You have scale risks, not fires. Two ways to stay ahead — pick the one that fits where you are.
                     </p>
                   </>
                 )}
-                <div className="max-w-md">
-                  {/* Membership CTA */}
+                <div className="grid md:grid-cols-2 gap-6 max-w-2xl">
+                  {/* Option 1 — Membership */}
                   <div className="bg-paper p-8 flex flex-col">
                     <p className="text-eyebrow uppercase font-semibold tracking-widest text-ink-faint mb-3">Your First Hire</p>
-                    <h4 className="font-sans font-semibold text-h3 text-ink mb-3">Join AI Inner Circle for Coaches</h4>
+                    <h4 className="font-sans font-semibold text-h3 text-ink mb-3">Join AI Inner Circle</h4>
                     <p className="text-body text-ink-muted mb-8 flex-1">
-                      Set up your Command Center, then hire one AI Assistant a week. A full team in five months, starting with the desk this map flagged reddest.
+                      Set up your Command Center, then hire one AI Assistant a week. A full system in six months, starting with the department this map flagged reddest.
                     </p>
-                    <Link href="/coaches" className="inline-flex items-center gap-2 px-5 py-3 text-small font-medium tracking-wide transition-all duration-200 bg-ink text-paper border border-ink hover:bg-accent hover:border-accent">
-                      Join the Waitlist <ArrowRight className="w-4 h-4" />
+                    <Link href="/consultants" className="inline-flex items-center gap-2 px-5 py-3 text-small font-medium tracking-wide transition-all duration-200 bg-ink text-paper border border-ink hover:bg-accent hover:border-accent">
+                      See the Membership <ArrowRight className="w-4 h-4" />
+                    </Link>
+                  </div>
+                  {/* Option 2 — AI Audit */}
+                  <div className="bg-paper p-8 flex flex-col">
+                    <p className="text-eyebrow uppercase font-semibold tracking-widest text-ink-faint mb-3">Done With You</p>
+                    <h4 className="font-sans font-semibold text-h3 text-ink mb-3">Full AI Implementation Roadmap</h4>
+                    <p className="text-body text-ink-muted mb-8 flex-1">
+                      A complete diagnostic of your business. Every system audited, every bottleneck mapped, and a full AI roadmap built for your specific operation.
+                    </p>
+                    <Link href="/ai-audit" className="inline-flex items-center gap-2 px-5 py-3 text-small font-medium tracking-wide transition-all duration-200 bg-ink text-paper border border-ink hover:bg-accent hover:border-accent">
+                      Book Your AI Audit <ArrowRight className="w-4 h-4" />
                     </Link>
                   </div>
                 </div>

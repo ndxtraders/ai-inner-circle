@@ -1,0 +1,17 @@
+export const metadata = {
+  title: 'AI Priority Map — Rev Vaughn',
+  description:
+    'A 5-minute diagnostic for founder-led brands. Identify where AI gives you leverage and where you have a systems problem first.',
+  openGraph: {
+    title: 'AI Priority Map — Rev Vaughn',
+    description:
+      'A 5-minute diagnostic for founder-led brands. Identify where AI gives you leverage and where you have a systems problem first.',
+    url: 'https://aiinnercircle.com/consultants/assessment',
+    siteName: 'Rev Vaughn',
+    type: 'website',
+  },
+}
+
+export default function MapLayout({ children }) {
+  return children
+}

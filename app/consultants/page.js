@@ -239,7 +239,7 @@ export default function MembershipPage() {
               <Link   href="/contact"   className="inline-flex items-center justify-center px-6 py-3 text-small font-medium tracking-wide transition-all duration-200 bg-ink text-paper border border-ink hover:bg-accent hover:border-accent" >   Join the Waitlist </Link>
               <p className="text-small text-ink-muted mt-4">
                 Founding cohort. Enrollment closes <span className="text-ink font-medium">August 1</span>. Founding price is $199 a month before it rises to $249 — or own the whole team once for $995.{' '}
-                <Link href="/map" className="text-accent underline underline-offset-2 hover:no-underline">
+                <Link href="/consultants/assessment" className="text-accent underline underline-offset-2 hover:no-underline">
                   Not sure yet? Take the 5-minute assessment →
                 </Link>
               </p>
@@ -659,7 +659,7 @@ export default function MembershipPage() {
             </div>
             <p className="text-small text-ink-muted">
               Still deciding?{' '}
-              <Link href="/map" className="text-accent underline underline-offset-2 hover:no-underline">
+              <Link href="/consultants/assessment" className="text-accent underline underline-offset-2 hover:no-underline">
                 Take the 5-minute assessment →
               </Link>
             </p>

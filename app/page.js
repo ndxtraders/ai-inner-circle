@@ -301,7 +301,7 @@ export default function HomePage() {
                 <Button href="/consultants" variant="primary">
                   Join AI Inner Circle
                 </Button>
-                <Link href="/map" className="text-body text-ink-muted hover:text-ink transition-colors">
+                <Link href="/consultants/assessment" className="text-body text-ink-muted hover:text-ink transition-colors">
                   Not sure where to start? Take the 5-Minute AI Assessment &rarr;
                 </Link>
               </div>
@@ -348,7 +348,7 @@ export default function HomePage() {
               <p className="text-body text-ink-muted mb-8">
                 If you know you need to use AI in your business but are not sure where to start. Answer 12 questions across 4 business pillars. At the end, you get a color-coded breakdown of exactly where your business is leaking time and money &mdash; and the AI Assistant that fixes each one.
               </p>
-              <Button href="/map" variant="primary">
+              <Button href="/consultants/assessment" variant="primary">
                 Take the AI Assessment
               </Button>
             </div>
