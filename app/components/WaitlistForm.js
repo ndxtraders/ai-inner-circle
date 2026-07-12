@@ -1,9 +1,12 @@
 'use client'
 import { useState } from 'react'
-// Inline AI Brain waitlist form. Posts to /api/waitlist, which adds the
-// subscriber to the MailerLite waitlist group (triggering the automation).
+// Inline waitlist form. Posts to /api/waitlist, which adds the subscriber to
+// the MailerLite waitlist group for their audience (triggering the automation).
 // First name is optional; email is required.
-export default function WaitlistForm({ buttonLabel = 'Join the Waitlist', className = '' }) {
+//
+// `audience` ('consultants' | 'coaches') keeps the two lists separate. The route
+// resolves the group ID from it server-side, so no group ID ships to the client.
+export default function WaitlistForm({ audience, buttonLabel = 'Join the Waitlist', className = '' }) {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [status, setStatus] = useState('idle') // idle | loading | success | error
@@ -17,7 +20,7 @@ export default function WaitlistForm({ buttonLabel = 'Join the Waitlist', classN
       const res = await fetch('/api/waitlist', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, name }),
+        body: JSON.stringify({ email, name, audience }),
       })
       if (res.ok) {
         setStatus('success')
