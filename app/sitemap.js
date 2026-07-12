@@ -3,7 +3,6 @@ const BASE = 'https://aiinnercircle.com'
 // Indexable routes only. Deliberately excluded:
 //   /ai-inner-circle, /map, /membership, /expert  — 301s (see next.config.js)
 //   /thank-you, /voice-thank-you, /ai-brain/access — post-conversion pages
-//   /awakened-mind/privacy-terms                   — a different brand
 const ROUTES = [
   ['/', 1.0, 'weekly'],
   ['/consultants', 0.9, 'weekly'],
