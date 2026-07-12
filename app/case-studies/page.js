@@ -5,6 +5,7 @@ import Section from '../components/Section'
 import Button from '../components/Button'
 
 export const metadata = {
+  alternates: { canonical: '/case-studies' },
   title: 'Case Studies | Rev Vaughn',
   description:
     'Real campaigns I built for founder-led brands. The problem, the system, and what it produced.',

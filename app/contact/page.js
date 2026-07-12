@@ -4,6 +4,7 @@ import Section from '../components/Section'
 import ContactForm from '../components/ContactForm'
 
 export const metadata = {
+  alternates: { canonical: '/contact' },
   title: 'Contact — Rev Vaughn',
   description: 'Get in touch with Rev Vaughn about GTM strategy and revenue growth systems for founder-led brands.',
 }

@@ -16,8 +16,11 @@ export const metadata = {
   metadataBase: new URL('https://aiinnercircle.com'),
   title: 'AI Inner Circle | Rev Vaughn',
   description: DESCRIPTION,
-  // Apex is canonical. www 301s to it at the platform level.
-  alternates: { canonical: '/' },
+  // No `alternates` here on purpose. App Router metadata is inherited, so a
+  // canonical set at the root is emitted by every child route that does not
+  // override it — which tells Google every page is a duplicate of the homepage.
+  // Canonicals are declared per route instead. A route with none is
+  // self-canonicalizing, which is safe; an inherited wrong one is not.
   openGraph: {
     title: 'AI Inner Circle | Rev Vaughn',
     description: DESCRIPTION,

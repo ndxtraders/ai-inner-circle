@@ -27,9 +27,10 @@ const AI_CRAWLERS = [
   'CCBot',
 ]
 
-// Post-conversion and orphaned pages. Not in the sitemap either; disallowing
-// them keeps crawl budget on the pages that can actually rank or get cited.
-const DISALLOW = ['/thank-you', '/voice-thank-you', '/ai-brain/access', '/ai', '/api/']
+// Post-conversion pages. Not in the sitemap either; disallowing them keeps crawl
+// budget on the pages that can actually rank or get cited.
+// /ai used to be listed here. The page is deleted, so it 404s on its own now.
+const DISALLOW = ['/thank-you', '/voice-thank-you', '/ai-brain/access', '/api/']
 
 export default function robots() {
   return {

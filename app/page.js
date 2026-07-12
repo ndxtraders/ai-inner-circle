@@ -6,6 +6,7 @@ import Section from './components/Section'
 import Button from './components/Button'
 
 export const metadata = {
+  alternates: { canonical: '/' },
   title: 'AI Inner Circle | Rev Vaughn',
   description:
     'Revenue Growth Systems for B2B Service Providers. Get access to the AI systems Rev Vaughn uses every day to attract, engage, and convert buyers.',

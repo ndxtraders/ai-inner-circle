@@ -8,6 +8,7 @@ import Button from '../components/Button'
 const GET_ACCESS_URL = 'https://checkout.mailerlite.com/checkout/31455'
 
 export const metadata = {
+  alternates: { canonical: '/ai-brain' },
   title: 'AI Brain Workshop — Rev Vaughn',
   description:
     'Build an AI that knows your business, your voice, and how you think — in one self-paced workshop. For founder-led brand owners who use AI every day.',

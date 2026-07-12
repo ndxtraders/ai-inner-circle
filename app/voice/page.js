@@ -4,6 +4,7 @@ import Footer from '../components/Footer'
 import Section from '../components/Section'
 
 export const metadata = {
+  alternates: { canonical: '/voice' },
   title: 'DISC Voice — AI Writing That Sounds Human | Rev Vaughn',
   description:
     'Stop sending AI sludge. Get the DISC Voice to scale your AI content while protecting human trust.',

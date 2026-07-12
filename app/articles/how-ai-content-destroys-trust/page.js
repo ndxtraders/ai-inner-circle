@@ -5,14 +5,47 @@ import Button from '../../components/Button'
 import Image from 'next/image'
 
 export const metadata = {
+  alternates: { canonical: '/articles/how-ai-content-destroys-trust' },
   title: 'How AI-Generated Content Is Destroying Trust | Rev Vaughn',
   description:
     'Three measurable patterns are eroding your credibility below the threshold of conscious detection. The fix isn\'t better prompting — it\'s a quality gate that counts.',
 }
 
+// BlogPosting, not TechArticle. author/publisher point at the Person and
+// Organization nodes already declared in the root layout.
+const ARTICLE_SCHEMA = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "@id": "https://aiinnercircle.com/articles/how-ai-content-destroys-trust#article",
+    "headline": "How AI-Generated Content Is Destroying Trust",
+    "description": "Three measurable patterns are eroding your credibility below the threshold of conscious detection. The fix is a quality gate that counts, not better prompting.",
+    "image": "https://aiinnercircle.com/Make-this-sound-more-human.webp",
+    "url": "https://aiinnercircle.com/articles/how-ai-content-destroys-trust",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://aiinnercircle.com/articles/how-ai-content-destroys-trust"
+    },
+    "datePublished": "2026-04-02",
+    "dateModified": "2026-04-02",
+    "author": {
+      "@id": "https://aiinnercircle.com/#person"
+    },
+    "publisher": {
+      "@id": "https://aiinnercircle.com/#organization"
+    },
+    "inLanguage": "en-US",
+    "isAccessibleForFree": true,
+    "wordCount": 1600,
+    "alternativeHeadline": "And The Mathematical Solution No One’s Talking About"
+  }
+
 export default function Article() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(ARTICLE_SCHEMA) }}
+      />
       <Header />
       <main>
         {/* Article header */}
