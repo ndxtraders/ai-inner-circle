@@ -9,16 +9,39 @@ const poppins = Poppins({
   variable: '--font-poppins',
 })
 
+const DESCRIPTION =
+  'Where founder-led brands build revenue systems that actually scale. Your voice. AI doing the work.'
+
 export const metadata = {
   metadataBase: new URL('https://aiinnercircle.com'),
   title: 'AI Inner Circle | Rev Vaughn',
-  description: 'Where founder-led brands build revenue systems that actually scale. Your voice. AI doing the work.',
+  description: DESCRIPTION,
+  // Apex is canonical. www 301s to it at the platform level.
+  alternates: { canonical: '/' },
   openGraph: {
     title: 'AI Inner Circle | Rev Vaughn',
-    description: 'Where founder-led brands build revenue systems that actually scale. Your voice. AI doing the work.',
+    description: DESCRIPTION,
     url: 'https://aiinnercircle.com',
     siteName: 'AI Inner Circle',
     type: 'website',
+    locale: 'en_US',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'AI Inner Circle | Rev Vaughn',
+    description: DESCRIPTION,
+    creator: '@RaulRevVaughn',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-snippet': -1,
+      'max-image-preview': 'large',
+      'max-video-preview': -1,
+    },
   },
 }
 
@@ -56,7 +79,23 @@ const ORGANIZATION_SCHEMA = {
   description:
     'A private community and coaching program for founder-led brands building GTM and revenue growth systems with AI.',
   url: 'https://aiinnercircle.com',
+  logo: {
+    '@type': 'ImageObject',
+    url: 'https://aiinnercircle.com/AI-Inner-Circle-Logo-940.jpg',
+  },
+  image: 'https://aiinnercircle.com/AI-Inner-Circle-Logo-940.jpg',
   founder: { '@id': 'https://aiinnercircle.com/#person' },
+  sameAs: [
+    'https://revvaughn.com',
+    'https://www.linkedin.com/in/revvaughn/',
+    'https://x.com/RaulRevVaughn',
+  ],
+  contactPoint: {
+    '@type': 'ContactPoint',
+    contactType: 'sales',
+    url: 'https://aiinnercircle.com/contact',
+    availableLanguage: 'English',
+  },
 }
 
 const WEBSITE_SCHEMA = {
