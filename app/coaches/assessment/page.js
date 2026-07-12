@@ -185,10 +185,6 @@ const CATEGORIES = [
   'Audience & Proof',
 ]
 
-// Coach leads route to their OWN MailerLite group, kept separate from the
-// B2B list. Rev: create the coach group in MailerLite and paste its ID here.
-const COACH_MAILERLITE_GROUP_ID = 'REPLACE_WITH_COACH_GROUP_ID'
-
 // ─── Constants ───────────────────────────────────────────────────────────────
 
 const STATUS_HEX = {
@@ -617,51 +613,14 @@ export default function CoachAssessmentPage() {
     }
   }
 
+  // The assessment is deliberately ungated: no email is collected, so the
+  // `coach_map_email` this used to read was never set and the /api/save-results
+  // and /api/save-pdf calls never fired. Neither route exists on this site.
+  // Capture happens at the results CTA (the waitlist), not here.
   const handleReveal = () => {
     const final = commitAnswer()
     if (final && final.every((a) => a !== null)) {
       setRevealed(true)
-
-      let email = null
-      try {
-        // Coach-specific key so coach leads never mix with the B2B /map flow.
-        // The coach email-gate (front-end funnel entry) should set this.
-        email = sessionStorage.getItem('coach_map_email')
-      } catch (e) {
-        // sessionStorage might not be available
-      }
-
-      if (email) {
-        const friction = getTotalFriction(final)
-
-        // Send structured results to MailerLite (existing behavior)
-        fetch('/api/save-results', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            email,
-            answers: final,
-            totalFriction: friction,
-            source: 'coaches',
-            groupId: COACH_MAILERLITE_GROUP_ID,
-          }),
-        }).catch(() => {})
-
-        // Archive the generated PDF to Supabase Storage so results are never lost
-        // if the visitor leaves without downloading.
-        buildPdf(final)
-          .then((pdf) => {
-            const fd = new FormData()
-            fd.append('email', email)
-            fd.append('answers', JSON.stringify(final))
-            fd.append('totalFriction', String(friction))
-            fd.append('source', 'coaches')
-            fd.append('groupId', COACH_MAILERLITE_GROUP_ID)
-            fd.append('pdf', pdf.output('blob'), 'results.pdf')
-            return fetch('/api/save-pdf', { method: 'POST', body: fd })
-          })
-          .catch(() => {})
-      }
     }
   }
 

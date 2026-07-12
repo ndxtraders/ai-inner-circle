@@ -1,4 +1,5 @@
 export const metadata = {
+  alternates: { canonical: '/consultants/assessment' },
   title: 'AI Priority Map — Rev Vaughn',
   description:
     'A 5-minute diagnostic for founder-led brands. Identify where AI gives you leverage and where you have a systems problem first.',

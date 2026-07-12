@@ -613,45 +613,14 @@ export default function ConsultantsAssessmentPage() {
     }
   }
 
+  // The assessment is deliberately ungated: no email is collected, so the
+  // `map_email` this used to read was never set and the /api/save-results and
+  // /api/save-pdf calls never fired. Neither route exists on this site.
+  // Capture happens at the results CTA (the waitlist), not here.
   const handleReveal = () => {
     const final = commitAnswer()
     if (final && final.every((a) => a !== null)) {
       setRevealed(true)
-
-      let email = null
-      try {
-        email = sessionStorage.getItem('map_email')
-      } catch (e) {
-        // sessionStorage might not be available
-      }
-
-      if (email) {
-        const friction = getTotalFriction(final)
-
-        // Send structured results to MailerLite (existing behavior)
-        fetch('/api/save-results', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            email,
-            answers: final,
-            totalFriction: friction,
-          }),
-        }).catch(() => {})
-
-        // Archive the generated PDF to Supabase Storage so results are never lost
-        // if the visitor leaves without downloading.
-        buildPdf(final)
-          .then((pdf) => {
-            const fd = new FormData()
-            fd.append('email', email)
-            fd.append('answers', JSON.stringify(final))
-            fd.append('totalFriction', String(friction))
-            fd.append('pdf', pdf.output('blob'), 'results.pdf')
-            return fetch('/api/save-pdf', { method: 'POST', body: fd })
-          })
-          .catch(() => {})
-      }
     }
   }
 

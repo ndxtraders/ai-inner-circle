@@ -4,6 +4,7 @@ import Section from '../components/Section'
 import Button from '../components/Button'
 
 export const metadata = {
+  alternates: { canonical: '/workshops' },
   title: 'Workshops | Rev Vaughn',
   description:
     'Low-cost, self-paced AI workshops for founder-led brands. Install one working AI system in an afternoon. The fastest way into the AI Inner Circle membership.',

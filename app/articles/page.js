@@ -4,6 +4,7 @@ import Section from '../components/Section'
 import Button from '../components/Button'
 
 export const metadata = {
+  alternates: { canonical: '/articles' },
   title: 'Articles | Rev Vaughn',
   description:
     'Thought leadership from Rev Vaughn on AI writing, revenue systems, and marketing strategy for founder-led brands.',

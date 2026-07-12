@@ -4,6 +4,7 @@ import Section from '../components/Section'
 import Button from '../components/Button'
 
 export const metadata = {
+  alternates: { canonical: '/mentor' },
   title: 'Mentor Program — Rev Vaughn',
   description:
     '1:1 mentorship for founder-operators building the revenue system themselves. Direct access, sharp feedback, compounding reps.',

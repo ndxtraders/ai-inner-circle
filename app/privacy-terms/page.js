@@ -3,6 +3,7 @@ import Footer from '../components/Footer'
 import Section from '../components/Section'
 
 export const metadata = {
+  alternates: { canonical: '/privacy-terms' },
   title: 'Privacy & Terms — Rev Vaughn',
   description: 'Privacy policy and terms of service for revvaughn.com.',
 }

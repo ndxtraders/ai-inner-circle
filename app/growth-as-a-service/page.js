@@ -4,6 +4,7 @@ import Section from '../components/Section'
 import Button from '../components/Button'
 
 export const metadata = {
+  alternates: { canonical: '/growth-as-a-service' },
   title: 'Growth-As-A-Service — Rev Vaughn',
   description:
     'A fractional GTM partnership for founder-led brands. We architect and operate the revenue system with you — not just advise on it.',

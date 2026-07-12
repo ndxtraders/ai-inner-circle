@@ -5,6 +5,7 @@ import Section from '../components/Section'
 import Button from '../components/Button'
 
 export const metadata = {
+  alternates: { canonical: '/ai-audit' },
   title: 'AI Audit — Rev Vaughn',
   description:
     'A customized AI implementation roadmap for founder-led brands. 6-8 hours of deep-work synthesis to find the exact tools, sequence, and integrations that fit your business.',

@@ -7,6 +7,7 @@ import Button from '../components/Button'
 import WaitlistForm from '../components/WaitlistForm'
 
 export const metadata = {
+  alternates: { canonical: '/consultants' },
   title: 'AI Inner Circle Membership | Rev Vaughn',
   description:
     'AI Assistants that attract, engage, and convert clients for you. A full team of 24, built in your voice, run by Maestro. Founder-led B2B membership from Rev Vaughn.',
@@ -212,6 +213,70 @@ const FAQ = [
   ['Do I have to check all the AI’s work myself?', 'No. Maestro reviews each deliverable first, against your voice and your standards, and sends anything weak back for a rewrite before you see it. You just approve what’s ready or ask for a change.'],
 ]
 
+// Both prices are published on this page, so they are marked up. Unlike FAQPage,
+// Product/Offer still produces rich results, and it is what LLMs read back when
+// someone asks what AI Inner Circle costs.
+//
+// availability is PreOrder, not InStock: the only action on this page is joining
+// the waitlist. Enrollment is not open yet.
+const PRODUCT_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'Product',
+  '@id': 'https://aiinnercircle.com/consultants#product',
+  name: 'AI Inner Circle — B2B Consultants',
+  description:
+    'A membership for founder-led B2B consultants and agencies. Build a team of 24 domain-specific AI Assistants across 6 departments, coordinated by an orchestrator called Maestro, running in your own folder on your own machine.',
+  url: 'https://aiinnercircle.com/consultants',
+  image: 'https://aiinnercircle.com/AI-Inner-Circle-Logo-940.jpg',
+  brand: { '@id': 'https://aiinnercircle.com/#organization' },
+  category: 'Business coaching and AI implementation membership',
+  offers: [
+    {
+      '@type': 'Offer',
+      name: 'One-time — the whole team, today',
+      description:
+        'Six months for the price of five. Maestro and all 24 Assistants unlocked immediately. No recurring charge, price locked, yours to keep.',
+      price: '995',
+      priceCurrency: 'USD',
+      availability: 'https://schema.org/PreOrder',
+      priceValidUntil: '2026-08-01',
+      url: 'https://aiinnercircle.com/consultants#waitlist',
+      seller: { '@id': 'https://aiinnercircle.com/#organization' },
+    },
+    {
+      '@type': 'Offer',
+      name: 'Monthly — founding price',
+      description:
+        'Unlock one department a month across six months. Founding price of $199 a month, rising to $249.',
+      price: '199',
+      priceCurrency: 'USD',
+      availability: 'https://schema.org/PreOrder',
+      priceValidUntil: '2026-08-01',
+      url: 'https://aiinnercircle.com/consultants#waitlist',
+      seller: { '@id': 'https://aiinnercircle.com/#organization' },
+      priceSpecification: {
+        '@type': 'UnitPriceSpecification',
+        price: '199',
+        priceCurrency: 'USD',
+        billingIncrement: 1,
+        unitCode: 'MON',
+        unitText: 'month',
+      },
+    },
+  ],
+}
+
+const FAQ_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  '@id': 'https://aiinnercircle.com/consultants#faq',
+  mainEntity: FAQ.map(([q, a]) => ({
+    '@type': 'Question',
+    name: q,
+    acceptedAnswer: { '@type': 'Answer', text: a },
+  })),
+}
+
 // ---------------------------------------------------------------------------
 // Page
 // ---------------------------------------------------------------------------
@@ -219,6 +284,14 @@ const FAQ = [
 export default function MembershipPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(PRODUCT_SCHEMA) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }}
+      />
       <Header />
       <main>
 

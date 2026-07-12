@@ -5,6 +5,7 @@ import Section from '../components/Section'
 import Button from '../components/Button'
 
 export const metadata = {
+  alternates: { canonical: '/assessment' },
   title: 'Free AI Assessment | Rev Vaughn',
   description:
     'Find the biggest breaking points costing your business time, clients, and revenue — and the exact AI Assistant that fixes each. Free, instant results, no email required.',

@@ -5,6 +5,7 @@ import Section from '../components/Section'
 import Button from '../components/Button'
 
 export const metadata = {
+  alternates: { canonical: '/ai-leverage' },
   title: 'AI Leverage — Rev Vaughn',
   description:
     'Four ways to turn AI into real leverage for your founder-led business — from a free 5-minute assessment to a custom roadmap, an ongoing membership, and an AI that thinks like you.',

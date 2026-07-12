@@ -4,14 +4,46 @@ import Section from '../../components/Section'
 import Button from '../../components/Button'
 
 export const metadata = {
+  alternates: { canonical: '/articles/why-ai-writing-sucks' },
   title: 'Why AI Writing Sucks And What To Do About It | Rev Vaughn',
   description:
     'AI writing doesn\'t fail because it\'s artificial. It fails because it lets you settle. Here\'s the fix.',
 }
 
+// BlogPosting, not TechArticle. author/publisher point at the Person and
+// Organization nodes already declared in the root layout.
+const ARTICLE_SCHEMA = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "@id": "https://aiinnercircle.com/articles/why-ai-writing-sucks#article",
+    "headline": "Why AI Writing Sucks And What To Do About It",
+    "description": "AI writing does not fail because it is artificial. It fails because it lets you settle. Here is the fix.",
+    "image": "https://aiinnercircle.com/opengraph-image",
+    "url": "https://aiinnercircle.com/articles/why-ai-writing-sucks",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://aiinnercircle.com/articles/why-ai-writing-sucks"
+    },
+    "datePublished": "2025-05-26",
+    "dateModified": "2025-05-26",
+    "author": {
+      "@id": "https://aiinnercircle.com/#person"
+    },
+    "publisher": {
+      "@id": "https://aiinnercircle.com/#organization"
+    },
+    "inLanguage": "en-US",
+    "isAccessibleForFree": true,
+    "wordCount": 800
+  }
+
 export default function Article() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(ARTICLE_SCHEMA) }}
+      />
       <Header />
       <main>
         {/* Article header */}
