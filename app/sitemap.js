@@ -4,8 +4,6 @@ const BASE = 'https://aiinnercircle.com'
 //   /ai-inner-circle, /map, /membership, /expert  — 301s (see next.config.js)
 //   /thank-you, /voice-thank-you, /ai-brain/access — post-conversion pages
 //   /awakened-mind/privacy-terms                   — a different brand
-//   /ai                                            — orphaned; its email gate posts
-//                                                    to /api/subscribe, which does not exist
 const ROUTES = [
   ['/', 1.0, 'weekly'],
   ['/consultants', 0.9, 'weekly'],
