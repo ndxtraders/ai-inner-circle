@@ -225,7 +225,7 @@ export default function CoachesMembershipPage() {
               <p className="text-body text-ink-soft mb-8">
                 The difference is simple. <span className="text-ink font-medium">The AI knows you now.</span>
               </p>
-              <Link   href="/contact"   className="inline-flex items-center justify-center px-6 py-3 text-small font-medium tracking-wide transition-all duration-200 bg-ink text-paper border border-ink hover:bg-accent hover:border-accent" >   Join the Waitlist </Link>
+              <a href="#waitlist"   className="inline-flex items-center justify-center px-6 py-3 text-small font-medium tracking-wide transition-all duration-200 bg-ink text-paper border border-ink hover:bg-accent hover:border-accent" >Join the Waitlist</a>
               <p className="text-small text-ink-muted mt-4">
                 Founding cohort. Enrollment closes <span className="text-ink font-medium">August 15</span>. Founding price is $199 a month — or own the whole team once for $796, five months for the price of four.
               </p>
@@ -576,7 +576,7 @@ export default function CoachesMembershipPage() {
                 <li className="flex gap-3"><span className="text-accent mt-1">–</span>No recurring charge. Price locked. Yours to keep</li>
                 <li className="flex gap-3"><span className="text-accent mt-1">–</span>Live workshops, weekly demos, Friday Q&amp;A, community</li>
               </ul>
-              <Link   href="/contact"   className="inline-flex items-center justify-center px-6 py-3 text-small font-medium tracking-wide transition-all duration-200 bg-ink text-paper border border-ink hover:bg-accent hover:border-accent" >   Join the Waitlist </Link>
+              <a href="#waitlist"   className="inline-flex items-center justify-center px-6 py-3 text-small font-medium tracking-wide transition-all duration-200 bg-ink text-paper border border-ink hover:bg-accent hover:border-accent" >Join the Waitlist</a>
             </div>
 
             {/* Monthly — the secondary */}
@@ -594,8 +594,22 @@ export default function CoachesMembershipPage() {
                 <li className="flex gap-3"><span className="text-accent mt-1">–</span>Friday Q&amp;A with Rev, daily community access</li>
                 <li className="flex gap-3"><span className="text-accent mt-1">–</span>Your Command Center and voice, set up with you</li>
               </ul>
-              <Link   href="/contact"   className="inline-flex items-center justify-center px-6 py-3 text-small font-medium tracking-wide transition-all duration-200 bg-ink text-paper border border-ink hover:bg-accent hover:border-accent" >   Join the Waitlist </Link>
+              <a href="#waitlist"   className="inline-flex items-center justify-center px-6 py-3 text-small font-medium tracking-wide transition-all duration-200 bg-ink text-paper border border-ink hover:bg-accent hover:border-accent" >Join the Waitlist</a>
             </div>
+          </div>
+        </Section>
+
+        {/* 13b. WAITLIST CAPTURE — every "Join the Waitlist" CTA anchors here */}
+        <Section bg="paper" width="content">
+          <div id="waitlist" className="scroll-mt-24 max-w-xl mx-auto text-center">
+            <div className="eyebrow mb-4">Join the waitlist</div>
+            <h2 className="text-h1 font-semibold tracking-tight text-ink mb-4">
+              Get first access when enrollment opens.
+            </h2>
+            <p className="text-body text-ink-muted mb-8">
+              We&rsquo;ll email you the moment doors open, plus how to lock in founding pricing.
+            </p>
+            <WaitlistForm audience="coaches" className="mx-auto" />
           </div>
         </Section>
 
@@ -639,7 +653,7 @@ export default function CoachesMembershipPage() {
               Join the founding cohort before enrollment closes August 15. Lock in $199 a month — or own the whole team once for $796.
             </p>
             <div className="flex justify-center mb-6">
-              <Link   href="/contact"   className="inline-flex items-center justify-center px-6 py-3 text-small font-medium tracking-wide transition-all duration-200 bg-ink text-paper border border-ink hover:bg-accent hover:border-accent" >   Join the Waitlist </Link>
+              <a href="#waitlist"   className="inline-flex items-center justify-center px-6 py-3 text-small font-medium tracking-wide transition-all duration-200 bg-ink text-paper border border-ink hover:bg-accent hover:border-accent" >Join the Waitlist</a>
             </div>
             <p className="text-small text-ink-muted">
               Not sure yet?{' '}
