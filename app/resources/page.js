@@ -2,15 +2,23 @@ import Header from '../components/Header'
 import Footer from '../components/Footer'
 import Section from '../components/Section'
 import Button from '../components/Button'
+import { HUB_ARTICLE } from '../content/articles'
 
 export const metadata = {
   alternates: { canonical: '/resources' },
-  title: 'Resources — Free Tools and Frameworks | Rev Vaughn',
+  title: 'Resources — Free Tools for B2B Consultants & Coaches | AI Inner Circle',
   description:
-    'Free frameworks, AI skills, and playbooks Rev Vaughn uses with founder-led brands. Take what is useful.',
+    'Free assessments, frameworks, and AI skills for B2B consultants and founder-led brands who want an AI team, not another AI tool.',
 }
 
 const RESOURCES = [
+  {
+    name: 'AI Brain Workshop',
+    tagline: 'Build an AI that knows your business, your voice, and how you think.',
+    desc: 'A self-paced workshop that sets up a business brain folder your AI reads before every task, so nothing it produces sounds generic.',
+    cta: 'Start the AI Brain Workshop',
+    href: '/ai-brain',
+  },
   {
     name: 'DISC Voice',
     tagline: 'AI writing that sounds like a human. Not a robot.',
@@ -29,23 +37,53 @@ export default function ResourcesPage() {
         <Section bg="paper" width="prose" className="pt-20 md:pt-28">
           <div className="eyebrow mb-6">Founder's Resources</div>
           <h1 className="text-display font-semibold tracking-tight text-ink mb-8">
-            Tools Built for Founders.
+            Tools Built for the AI Team, Not the AI Tool.
           </h1>
           <p className="text-lead text-ink-muted leading-relaxed">
-            Ethically steal the frameworks, AI skills, and playbooks I use with clients.
+            Free assessments, frameworks, and AI skills I use with consultants, coaches, and founder-led brands.
           </p>
+        </Section>
+
+        {/* Free Assessment */}
+        <Section bg="paper" width="content">
+          <div className="border border-accent bg-paper-grey p-8 md:p-10">
+            <p className="eyebrow mb-4">Free, 5 Minutes, No Email Required</p>
+            <h2 className="text-h2 font-semibold text-ink leading-snug mb-4">
+              The AI Priority Map
+            </h2>
+            <p className="text-body text-ink-muted leading-relaxed mb-6">
+              Find the biggest breaking points costing your business time, clients, and revenue, and the exact AI Assistant that fixes each one. Instant results.
+            </p>
+            <Button href="/assessment" variant="primary">
+              Take the Free Assessment &rarr;
+            </Button>
+          </div>
         </Section>
 
         {/* Articles */}
         <Section bg="grey" width="prose">
           <div className="eyebrow mb-6">Articles</div>
           <h2 className="text-h1 font-semibold tracking-tight text-ink mb-6">
-            The thinking behind the work.
+            Start with the thesis.
           </h2>
           <p className="text-lead text-ink-muted leading-relaxed mb-10">
-            Thought leadership on AI writing, revenue systems, and marketing strategy. Written when I have something worth saying.
+            Why one AI assistant always breaks down, and what a real AI team looks like.
           </p>
-          <Button href="/articles" variant="primary">Browse Articles &rarr;</Button>
+
+          <div className="border border-accent bg-paper p-8 mb-10">
+            <p className="eyebrow mb-4">Featured Article</p>
+            <h3 className="text-h2 font-semibold text-ink leading-snug mb-3">
+              {HUB_ARTICLE.title}
+            </h3>
+            <p className="text-body text-ink-muted leading-relaxed mb-6">
+              {HUB_ARTICLE.excerpt}
+            </p>
+            <Button href={`/articles/${HUB_ARTICLE.slug}`} variant="primary">
+              Read Article &rarr;
+            </Button>
+          </div>
+
+          <Button href="/articles" variant="secondary">Browse All Articles &rarr;</Button>
         </Section>
 
         {/* Case Studies */}
@@ -55,7 +93,7 @@ export default function ResourcesPage() {
             See the work in action.
           </h2>
           <p className="text-lead text-ink-muted leading-relaxed mb-10">
-            Real campaigns, real numbers. Eight case studies from founder-led brands across direct response, lifecycle, and launch.
+            Real campaigns, real numbers. Case studies from founder-led brands across direct response, lifecycle, and launch.
           </p>
           <Button href="/case-studies" variant="primary">View Case Studies &rarr;</Button>
         </Section>
@@ -64,7 +102,7 @@ export default function ResourcesPage() {
         <Section bg="grey" width="content">
           <div className="eyebrow mb-4">The AI Library</div>
           <h2 className="text-h1 font-semibold tracking-tight text-ink mb-12">
-            Featured Skill.
+            Featured Skills.
           </h2>
           <div className="space-y-10">
             {RESOURCES.map((item, i) => (
@@ -88,62 +126,8 @@ export default function ResourcesPage() {
             ))}
           </div>
           <p className="text-body text-ink-faint mt-14 italic">
-            New resources added regularly. Check back or grab a briefing to get notified.
+            New resources added regularly. Check back or take the free assessment to get matched to your first move.
           </p>
-        </Section>
-
-        {/* The Invisible Founder Research */}
-        <Section bg="paper" width="content">
-          <div className="max-w-prose">
-            <p className="eyebrow mb-6">New Research · Founder-led Brands</p>
-            <h2 className="text-h1 font-semibold mb-4 leading-tight">
-              The Invisible Founder
-            </h2>
-            <p className="text-lead text-ink mb-10">
-              Over the past few days, I&rsquo;ve shared research on the three ways founders are being systematically erased.
-            </p>
-
-            <div className="space-y-8 mb-10">
-              <div>
-                <div className="text-small font-semibold mb-2">Post 1 — Organic Reach Collapse</div>
-                <p className="text-body text-ink-muted">
-                  Instagram went from 10–15% reach in 2020 to 2–3% today. Facebook pages with 10K followers reach 137 people per post.
-                </p>
-              </div>
-              <div>
-                <div className="text-small font-semibold mb-2">Post 2 — The Paid Media Trap</div>
-                <p className="text-body text-ink-muted">
-                  iOS 14 broke targeting. ROAS dropped 38% overnight. Costs doubled or tripled. Can&rsquo;t stop paying because organic is dead. Can&rsquo;t sustain paying because costs keep rising.
-                </p>
-              </div>
-              <div>
-                <div className="text-small font-semibold mb-2">Post 3 — The Attribution Crisis</div>
-                <p className="text-body text-ink-muted">
-                  AI Overviews appear in 80% of search queries. Only 47% of top-10 pages get cited. Your ideas spread everywhere. Your name appears nowhere.
-                </p>
-              </div>
-            </div>
-
-            <p className="text-body text-ink mb-8">
-              I&rsquo;ve received more requests from Founders for early access than I could have guessed.
-            </p>
-            <p className="text-body text-ink mb-4 font-medium">Part 1 of the complete research is now live.</p>
-
-            <p className="text-body text-ink-muted mb-4">Inside Part 1:</p>
-            <ul className="space-y-2 mb-10 text-body text-ink-muted">
-              <li>→ The visibility collapse timeline (2018–2027)</li>
-              <li>→ When each structural break happened and why</li>
-              <li>→ The data proving this is systematic, not accidental</li>
-              <li>→ The turning point and what happens next</li>
-              <li>→ What happens if you do nothing (+ the nightmare scenario)</li>
-            </ul>
-
-            <p className="text-body text-ink-muted mb-10">
-              This connects everything from the last few days with the complete big picture.
-            </p>
-
-            <Button href="https://www.linkedin.com/pulse/part-1-invisible-founder-leadsandclients-9g2gc" external variant="accent">Read Part 1 →</Button>
-          </div>
         </Section>
       </main>
       <Footer />
