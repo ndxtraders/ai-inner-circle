@@ -2,43 +2,14 @@ import Header from '../components/Header'
 import Footer from '../components/Footer'
 import Section from '../components/Section'
 import Button from '../components/Button'
+import { HUB_ARTICLE, SPOKE_ARTICLES } from '../content/articles'
 
 export const metadata = {
   alternates: { canonical: '/articles' },
-  title: 'Articles | Rev Vaughn',
+  title: 'Articles — AI Teams for Consultants & Founders | AI Inner Circle',
   description:
-    'Thought leadership from Rev Vaughn on AI writing, revenue systems, and marketing strategy for founder-led brands.',
+    'Why one AI assistant always breaks down, and what a real AI team looks like for B2B consultants and founder-led brands. Start with the thesis, then the track on AI writing.',
 }
-
-const ARTICLES = [
-  {
-    slug: 'how-ai-content-destroys-trust',
-    title: 'How AI-Generated Content Is Destroying Trust',
-    subtitle: 'And The Mathematical Solution No One\'s Talking About',
-    date: 'Apr 2, 2026',
-    readTime: '8 min read',
-    excerpt:
-      'AI writing has a redundancy problem. Three measurable patterns — antithesis density, copula saturation, fragment clustering — are eroding your credibility below the threshold of conscious detection. The fix isn\'t better prompting. It\'s a quality gate that counts.',
-  },
-  {
-    slug: 'why-chatgpt-sounds-robotic',
-    title: 'Why ChatGPT Writing Will Always Sound Robotic',
-    subtitle: 'And Why There\'s Not a Damn Thing You Can Do About It',
-    date: 'Feb 4, 2026',
-    readTime: '4 min read',
-    excerpt:
-      'ChatGPT isn\'t optimized to sound human. It\'s optimized to sound finished. That distinction explains why every fix you\'ve tried has worn off within two paragraphs — and why this is a structural problem, not a prompting problem.',
-  },
-  {
-    slug: 'why-ai-writing-sucks',
-    title: 'Why AI Writing Sucks And What To Do About It',
-    subtitle: null,
-    date: 'May 26, 2025',
-    readTime: '4 min read',
-    excerpt:
-      'AI writing doesn\'t fail because it\'s artificial. It fails because it lets you settle. A single AI tool playing every role produces average output. Here\'s what it looks like when you stop prompting and start commanding a team.',
-  },
-]
 
 export default function ArticlesPage() {
   return (
@@ -49,17 +20,37 @@ export default function ArticlesPage() {
         <Section bg="paper" width="prose">
           <div className="eyebrow mb-6">Articles</div>
           <h1 className="text-display font-semibold tracking-tight text-ink mb-8">
-            The thinking behind the work.
+            Start with the thesis.
           </h1>
           <p className="text-lead text-ink-muted leading-relaxed">
-            AI writing, revenue systems, and marketing strategy for founder-led brands. Written when I have something worth saying.
+            One idea drives everything here: stop bolting skills onto one AI assistant and start composing a team. Read the thesis first, then the track on why AI writing fails without one.
           </p>
         </Section>
 
-        {/* Article list */}
+        {/* Featured / hub article */}
         <Section bg="grey" width="content">
+          <div className="border border-accent bg-paper p-8 md:p-10">
+            <p className="eyebrow mb-4">Start Here</p>
+            <div className="text-small text-ink-muted mb-3">
+              {HUB_ARTICLE.date} &middot; {HUB_ARTICLE.readTime}
+            </div>
+            <h2 className="text-h2 font-semibold text-ink leading-snug mb-4">
+              {HUB_ARTICLE.title}
+            </h2>
+            <p className="text-body text-ink-muted leading-relaxed mb-6">
+              {HUB_ARTICLE.excerpt}
+            </p>
+            <Button href={`/articles/${HUB_ARTICLE.slug}`} variant="primary">
+              Read Article &rarr;
+            </Button>
+          </div>
+        </Section>
+
+        {/* Spoke track */}
+        <Section bg="grey" width="content">
+          <div className="eyebrow mb-8">The AI Writing Track</div>
           <div className="space-y-12">
-            {ARTICLES.map((article) => (
+            {SPOKE_ARTICLES.map((article) => (
               <div key={article.slug} className="border-l-2 border-accent pl-6 md:pl-8">
                 <div className="text-small text-ink-muted mb-3">
                   {article.date} &middot; {article.readTime}

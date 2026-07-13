@@ -11,6 +11,7 @@ const ROUTES = [
   ['/consultants/assessment', 0.8, 'monthly'],
   ['/coaches/assessment', 0.8, 'monthly'],
   ['/articles', 0.8, 'weekly'],
+  ['/articles/future-of-ai-agents-in-business', 0.8, 'monthly'],
   ['/articles/how-ai-content-destroys-trust', 0.7, 'monthly'],
   ['/articles/why-chatgpt-sounds-robotic', 0.7, 'monthly'],
   ['/articles/why-ai-writing-sucks', 0.7, 'monthly'],
