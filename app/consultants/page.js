@@ -4,13 +4,12 @@ import Header from '../components/Header'
 import Footer from '../components/Footer'
 import Section from '../components/Section'
 import Button from '../components/Button'
-import WaitlistForm from '../components/WaitlistForm'
 
 export const metadata = {
   alternates: { canonical: '/consultants' },
   title: 'AI Inner Circle Membership | Rev Vaughn',
   description:
-    'AI Assistants that attract, engage, and convert clients for you. A full team of 24, built in your voice, run by Maestro. Founder-led B2B membership from Rev Vaughn.',
+    'A self-staffing AI team that runs without you. Maestro hires each specialist just in time, checks the work in your voice, and runs the team so you approve instead of operate. Founder-led B2B membership from Rev Vaughn.',
 }
 
 // ---------------------------------------------------------------------------
@@ -168,15 +167,16 @@ const ORG_CHART = `YOU
         Client Health Monitor · Client Reporting Dashboard
         Invoice & Payment Chaser · GTM Teardown & Rebuild`
 
+// Each item kills a specific reason to hesitate. From brain/offer-v2.md deliverable stack.
 const INCLUDED = [
-  ['A new department of Assistants every month', 'All 24 across six months, built in your voice. A full department lands each month; Rev demos one a week so you always know how to use it.'],
-  ['A live command board of everything in flight', 'One screen shows every task your team touches — queued, in progress, waiting on you, done. You always know where things stand without asking a soul.'],
-  ['Maestro reviews the work before you ever see it', 'Your Chief of Staff checks every deliverable against your standards, sends weak drafts back for a rewrite on his own, and only surfaces what’s ready. You approve or ask for changes. You stop being the one who chases.'],
-  ['1–2 live workshops every month', 'The month’s big move, walked through step by step. Live or pre-recorded.'],
-  ['Friday Q&A with Rev', 'Bring what you’re stuck on. Get unstuck before the weekend.'],
-  ['Daily access inside the community', 'A direct line to Rev and the room, every day.'],
-  ['Maestro, your Command Center, set up with you', 'Your AI Chief of Staff and the memory that keep every Assistant stacking up.'],
-  ['Templates and prompts you keep', 'They live in your own folder. Leave anytime and the system stays yours.'],
+  ['Maestro, your AI Chief of Staff', 'You talk to one coordinator, not 24 tools. He checks every draft in your voice before you see it, so nothing generic goes out under your name.'],
+  ['24 Assistants across 6 departments, one a month', 'Offer Desk, Sales Floor, Media Team, Deal Desk, Operations, Client Success. The routine moves off your plate one function at a time. The monthly pace keeps it from becoming overwhelming.'],
+  ['Just-in-time hiring', 'When a skill isn’t on staff, Maestro builds the specialist that same session. Your team never stalls waiting on a hire.'],
+  ['The AI Brain', 'Your voice, offer, and market captured once, read by every hire. The work sounds like you, not a template.'],
+  ['Files are the memory', 'Nothing resets between sessions. Each specialist’s output becomes the next one’s raw material.'],
+  ['The first-afternoon standup', 'Stand up the Command Center, hire your first department, run your first job start to finish, and approve it. You feel it work on day one.'],
+  ['Monthly workshop, Friday Q&A, and the community', 'Where you get unstuck, and where the guarantee gets delivered.'],
+  ['You keep it if you cancel', 'The Assistants live in your own folder, on your own machine. Yours to keep.'],
 ]
 
 const WINS = [
@@ -204,28 +204,29 @@ const TESTIMONIALS = [
 const FAQ = [
   ['Do I need to be technical?', 'No. You answer a few dropdown questions and the Assistant does the work. If you can send an email, you can run this.'],
   ['Which AI do I need?', 'Claude. That’s the only subscription required. The Assistants are built to run there.'],
-  ['How much time per week?', 'Plan on about an hour to install and use the week’s Assistant. That hour buys back far more.'],
+  ['How much time per week?', 'Plan on 2-3 hours to install your Command Center and run that week’s Assistant. That time buys back far more in time savings than it costs.'],
   ['Will this work for my B2B service?', 'Yes. It fits founder-led B2B service businesses: coaches, consultants, agencies, done-for-you services.'],
+  ['Is this just another AI course?', 'No. Courses hand you more to figure out on your own. That’s the bottleneck you already have. This is a team that staffs itself and runs the work, with Maestro checking it before you see it. Courses hand you prompts. This hands you a team that runs them.'],
+  ['Won’t the AI sound generic, with my name on it?', 'Most AI does. That’s why Maestro checks every draft against your AI Brain first, in your voice. A draft that could have been anyone’s goes back for a rewrite before it reaches you.'],
   ['Anything cost extra beyond the price?', 'Two small, optional things for the outreach month: a paid LinkedIn plan, and a few dollars of pay-as-you-go Apify. No expensive CRM, no cold-email tools.'],
   ['Do I keep the Assistants if I cancel?', 'Yes. They live in your own folder on your own machine. What you build is yours to keep.'],
-  ['What’s the difference between the monthly plan and the one-time option?', 'Same team, same community. Monthly is $199 and unlocks one department a month. The one-time $995 is six months for the price of five — Maestro and all 24 Assistants unlocked today, no recurring charge, price locked, yours to keep. Workshops and weekly demos are still released on schedule for everyone. Most members take the one-time.'],
-  ['How do I keep track of what the team is doing?', 'A live command board. Every task the Assistants touch moves across it — queued, in progress, waiting on your review, done. Open it any morning and the whole picture is there, already up to date.'],
+  ['How do I keep track of what the team is doing?', 'A live command board. Every task the Assistants touch moves across it: queued, in progress, waiting on your review, done. Open it any morning and the whole picture is there, already up to date.'],
   ['Do I have to check all the AI’s work myself?', 'No. Maestro reviews each deliverable first, against your voice and your standards, and sends anything weak back for a rewrite before you see it. You just approve what’s ready or ask for a change.'],
 ]
 
-// Both prices are published on this page, so they are marked up. Unlike FAQPage,
-// Product/Offer still produces rich results, and it is what LLMs read back when
+// One published price on this page: the $199/mo founding membership. Marked up as
+// a single Offer so it produces rich results and is what LLMs read back when
 // someone asks what AI Inner Circle costs.
 //
-// availability is PreOrder, not InStock: the only action on this page is joining
-// the waitlist. Enrollment is not open yet.
+// availability is InStock: enrollment is open and the primary action is joining
+// on Skool.
 const PRODUCT_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'Product',
   '@id': 'https://aiinnercircle.com/consultants#product',
-  name: 'AI Inner Circle — B2B Consultants',
+  name: 'AI Inner Circle: B2B Consultants',
   description:
-    'A membership for founder-led B2B consultants and agencies. Build a team of 24 domain-specific AI Assistants across 6 departments, coordinated by an orchestrator called Maestro, running in your own folder on your own machine.',
+    'A membership for founder-led B2B consultants and agencies. A self-staffing AI team of 24 domain-specific Assistants across 6 departments, coordinated by Maestro, who hires each specialist just in time and checks the work in your voice before you see it. Runs in your own folder on your own machine.',
   url: 'https://aiinnercircle.com/consultants',
   image: 'https://aiinnercircle.com/AI-Inner-Circle-Logo-940.jpg',
   brand: { '@id': 'https://aiinnercircle.com/#organization' },
@@ -233,26 +234,14 @@ const PRODUCT_SCHEMA = {
   offers: [
     {
       '@type': 'Offer',
-      name: 'One-time — the whole team, today',
-      description:
-        'Six months for the price of five. Maestro and all 24 Assistants unlocked immediately. No recurring charge, price locked, yours to keep.',
-      price: '995',
-      priceCurrency: 'USD',
-      availability: 'https://schema.org/PreOrder',
-      priceValidUntil: '2026-08-01',
-      url: 'https://aiinnercircle.com/consultants#waitlist',
-      seller: { '@id': 'https://aiinnercircle.com/#organization' },
-    },
-    {
-      '@type': 'Offer',
-      name: 'Monthly — founding price',
+      name: 'Monthly founding price',
       description:
         'Unlock one department a month across six months. Founding price of $199 a month, rising to $249.',
       price: '199',
       priceCurrency: 'USD',
-      availability: 'https://schema.org/PreOrder',
+      availability: 'https://schema.org/InStock',
       priceValidUntil: '2026-08-01',
-      url: 'https://aiinnercircle.com/consultants#waitlist',
+      url: 'https://www.skool.com/ai-inner-circle-3875/about',
       seller: { '@id': 'https://aiinnercircle.com/#organization' },
       priceSpecification: {
         '@type': 'UnitPriceSpecification',
@@ -295,23 +284,23 @@ export default function MembershipPage() {
       <Header />
       <main>
 
-        {/* 1–2. HERO */}
+        {/* 1. HERO */}
         <Section bg="paper" width="content" className="pt-20 md:pt-28">
           <div className="grid md:grid-cols-3 gap-10 items-start">
             <div className="md:col-span-2">
               <div className="eyebrow mb-6">AI Inner Circle Membership</div>
               <h1 className="text-display font-semibold tracking-tight text-ink mb-6">
-                AI Assistants that attract, engage, and convert clients for you.
+                Build a self-staffing AI team that runs without you.
               </h1>
               <p className="text-lead text-ink-muted mb-4">
-                You get the actual skills — a full team of 24 — built in your voice, run by Maestro, your new AI Chief of Staff who reviews their work before it reaches you.
+                You stop being the bottleneck. A staffed AI team runs your pipeline, your authority, and your routine. You approve the work. You don’t operate.
               </p>
               <p className="text-body text-ink-soft mb-8">
-                The difference is simple. <span className="text-ink font-medium">The AI knows you now.</span>
+                Maestro, your AI Chief of Staff, hires each specialist the day you need one and checks the work in your voice before you see it. Your first real deliverable is done the same afternoon. <span className="text-ink font-medium">Not six months from now.</span>
               </p>
-              <a href="#waitlist"   className="inline-flex items-center justify-center px-6 py-3 text-small font-medium tracking-wide transition-all duration-200 bg-ink text-paper border border-ink hover:bg-accent hover:border-accent" >Join the Waitlist</a>
+              <a href="https://www.skool.com/ai-inner-circle-3875/about" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center px-6 py-3 text-small font-medium tracking-wide transition-all duration-200 bg-ink text-paper border border-ink hover:bg-accent hover:border-accent">Join Now</a>
               <p className="text-small text-ink-muted mt-4">
-                Founding cohort. Enrollment closes <span className="text-ink font-medium">August 1</span>. Founding price is $199 a month before it rises to $249 — or own the whole team once for $995.{' '}
+                Founding cohort. Enrollment closes <span className="text-ink font-medium">August 1</span>. Lock in $199 a month before it rises to $249.{' '}
                 <Link href="/consultants/assessment" className="text-accent underline underline-offset-2 hover:no-underline">
                   Not sure yet? Take the 5-minute assessment →
                 </Link>
@@ -332,20 +321,8 @@ export default function MembershipPage() {
           </div>
         </Section>
 
-        {/* Clients strip */}
-        <section className="bg-paper-grey border-y border-rule py-12">
-          <div className="max-w-wide mx-auto px-6">
-            <p className="text-h3 font-semibold text-ink mb-6 text-center">Clients &amp; Campaigns</p>
-            <div className="flex flex-wrap justify-center gap-x-8 gap-y-3 text-body text-ink-soft">
-              {CLIENTS.map((c) => (
-                <span key={c} className="whitespace-nowrap">{c}</span>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* 3. QUALIFIER */}
-        <Section bg="paper" width="content">
+        {/* 2. QUALIFIER */}
+        <Section bg="grey" width="content">
           <div className="grid md:grid-cols-2 gap-12 items-start">
             <div>
               <div className="eyebrow mb-4">Is this you?</div>
@@ -364,8 +341,8 @@ export default function MembershipPage() {
           </div>
         </Section>
 
-        {/* 4. STAKES */}
-        <Section bg="grey" width="content">
+        {/* 3. STAKES */}
+        <Section bg="paper" width="content">
           <div className="eyebrow mb-4">The real cost</div>
           <h2 className="text-h1 font-semibold tracking-tight text-ink mb-6 max-w-prose">
             You built a job, not an asset.
@@ -377,8 +354,8 @@ export default function MembershipPage() {
           </p>
         </Section>
 
-        {/* 5. WHY THE USUAL FIXES FAIL */}
-        <Section bg="paper" width="content">
+        {/* 4. WHY THE USUAL FIXES FAIL */}
+        <Section bg="grey" width="content">
           <div className="eyebrow mb-4">You’ve tried the usual fixes</div>
           <h2 className="text-h1 font-semibold tracking-tight text-ink mb-10 max-w-prose">
             They all break the same way.
@@ -390,7 +367,7 @@ export default function MembershipPage() {
             </div>
             <div>
               <p className="text-ink font-medium mb-1">Courses</p>
-              <p>You finish with notes and a certificate. The work still isn’t built.</p>
+              <p>You finish with notes and a certificate. The work still isn’t built. So it sits on your drive with the last three.</p>
             </div>
             <div>
               <p className="text-ink font-medium mb-1">Hiring or agencies</p>
@@ -403,24 +380,33 @@ export default function MembershipPage() {
           </div>
         </Section>
 
-        {/* 6. THE BIG IDEA */}
+        {/* 5. THE MECHANISM */}
         <Section bg="greyDark" width="content">
-          <div className="eyebrow mb-4">The idea</div>
+          <div className="eyebrow mb-4">The mechanism</div>
           <h2 className="text-display font-semibold tracking-tight text-ink mb-6 max-w-prose">
-            Hire AI Assistants that already know you.
+            The Self-Staffing AI Team.
           </h2>
           <p className="text-lead text-ink-muted max-w-prose mb-4">
-            Start with the problem. Add the Assistant that solves it. One a week. Each one plugs into the same
-            Command Center.
+            AI Inner Circle runs like a real business. Maestro, your Chief of Staff, coordinates work for you. Specialists each do one job well. When a skill isn’t on staff, Maestro hires the specialist and puts it to work. The team staffs itself. You never build a hundred agents you’ll never use, and you never wait for one you do.
           </p>
           <p className="text-lead text-ink-muted max-w-prose">
-            Six months in, they work together. They attract buyers, convert them, deliver, and keep them. The system
-            runs without living in your head.
+            Maestro checks every draft against your voice before it reaches you. Weak work goes back for a rewrite. You approve. You don’t operate.
+          </p>
+        </Section>
+
+        {/* 6. YOUR FIRST AFTERNOON */}
+        <Section bg="paper" width="content">
+          <div className="eyebrow mb-4">Your first afternoon</div>
+          <h2 className="text-h1 font-semibold tracking-tight text-ink mb-6 max-w-prose">
+            You feel it work on day one.
+          </h2>
+          <p className="text-lead text-ink-muted max-w-prose">
+            The first afternoon, you stand up your Command Center, hire your first department, run one real job start to finish, and approve it. One real deliverable, done, day one.
           </p>
         </Section>
 
         {/* 7. HOW IT WORKS: before/after */}
-        <Section bg="paper" width="content">
+        <Section bg="grey" width="content">
           <div className="eyebrow mb-4">How it works</div>
           <h2 className="text-h1 font-semibold tracking-tight text-ink mb-10 max-w-prose">
             What changes when the AI knows you.
@@ -465,24 +451,27 @@ export default function MembershipPage() {
           </div>
         </Section>
 
-        {/* 7b. YOU APPROVE, YOU DON'T OPERATE */}
-        <Section bg="grey" width="content">
+        {/* 8. MEET MAESTRO */}
+        <Section bg="paper" width="content">
           <div className="eyebrow mb-4">Meet Maestro, Your New AI Chief of Staff.</div>
           <h2 className="text-h1 font-semibold tracking-tight text-ink mb-6 max-w-prose">
             Maestro runs the team so you don’t have to.
           </h2>
           <p className="text-body text-ink-soft max-w-prose mb-4">
-            Maestro manages the entire team. He routes the work, hires specialists 
-            when needed, checks quality, tracks every project, and keeps everything 
-            moving, so you can spend less time managing and more time making decisions.
-
+            Maestro manages the entire team. He routes the work, hires specialists when needed, checks quality,
+            tracks every project, and keeps everything moving, so you can spend less time managing and more time
+            making decisions.
+          </p>
+          <p className="text-body text-ink-soft max-w-prose mb-4">
+            And Maestro checks every draft against your AI Brain before you see it. A draft that could have been
+            written for anyone goes back for a rewrite. What reaches you already sounds like you.
           </p>
           <p className="text-body text-ink-soft max-w-prose">
             Your review job shrinks to two words: approve, or “change this.”
           </p>
         </Section>
 
-        {/* 8. THE 6-MONTH JOURNEY */}
+        {/* 9. THE 6-MONTH JOURNEY */}
         <Section bg="grey" width="wide">
           <div className="max-w-content mx-auto">
             <div className="eyebrow mb-4">The path</div>
@@ -533,13 +522,13 @@ export default function MembershipPage() {
                 <pre className="text-small text-ink-soft leading-relaxed whitespace-pre font-mono">{ORG_CHART}</pre>
               </div>
               <p className="text-body text-ink-muted mt-4 max-w-prose">
-                Twenty-four Assistants. Six departments. All reporting to Maestro — who assigns the work, reviews it, and sends it back for changes before it ever reaches you. You approve the finished work. Cancel anytime and the team stays yours.
+                Twenty-four Assistants. Six departments. All reporting to Maestro, who assigns the work, reviews it, and sends it back for changes before it ever reaches you. You approve the finished work. Cancel anytime and the team stays yours.
               </p>
             </div>
           </div>
         </Section>
 
-        {/* 9. BEFORE / AFTER DREAM OUTCOME */}
+        {/* 10. BEFORE / AFTER DREAM OUTCOME */}
         <Section bg="paper" width="content">
           <div className="eyebrow mb-4">Where this goes</div>
           <h2 className="text-h1 font-semibold tracking-tight text-ink mb-10">
@@ -558,16 +547,16 @@ export default function MembershipPage() {
             <div className="border-2 border-accent bg-paper p-8">
               <p className="eyebrow mb-4">Six months in</p>
               <ul className="space-y-3 text-body text-ink-soft">
-                <li>Posts that read like your mentor wrote them.</li>
+                <li>Posts that read like your business partner wrote them.</li>
                 <li>Every lead gets a fast, personal reply.</li>
                 <li>The routine runs on Assistants.</li>
-                <li>An asset you could sell or step away from.</li>
+                <li>An Asset that gets work done for you.</li>
               </ul>
             </div>
           </div>
         </Section>
 
-        {/* 10. WHAT'S INCLUDED */}
+        {/* 11. WHAT'S INCLUDED */}
         <Section bg="grey" width="content">
           <div className="eyebrow mb-4">What you get</div>
           <h2 className="text-h1 font-semibold tracking-tight text-ink mb-10">
@@ -586,9 +575,17 @@ export default function MembershipPage() {
           </div>
         </Section>
 
-        {/* 11. PROOF */}
+        {/* 12. PROOF — two blocks: clients (breadth), then results (depth) */}
         <Section bg="paper" width="content">
           <div className="eyebrow mb-4">Proof</div>
+
+          <p className="text-h3 font-semibold text-ink mb-6">Clients &amp; Campaigns</p>
+          <div className="flex flex-wrap gap-x-8 gap-y-3 text-body text-ink-soft mb-14">
+            {CLIENTS.map((c) => (
+              <span key={c} className="whitespace-nowrap">{c}</span>
+            ))}
+          </div>
+
           <h2 className="text-h1 font-semibold tracking-tight text-ink mb-10">
             These numbers came from these systems.
           </h2>
@@ -611,7 +608,7 @@ export default function MembershipPage() {
           </div>
         </Section>
 
-        {/* 12. ABOUT REV */}
+        {/* 13. ABOUT REV */}
         <Section bg="greyDark" width="content">
           <div className="grid md:grid-cols-3 gap-10 items-center">
             <div className="hidden md:block">
@@ -625,100 +622,121 @@ export default function MembershipPage() {
                 I build these systems for a living. Now I’m handing you mine.
               </h2>
               <p className="text-body text-ink-soft mb-4">
-                I’m Rev Vaughn, a GTM strategist and revenue systems architect. I built the control campaign for
-                Grant Cardone’s 10X Business Coach, launches that sold out in 48 hours, and pipelines that lifted
-                booked calls 144%.
+                I’m Raul “Rev” Vaughn, a GTM strategist and revenue systems architect. I’ve built winning campaigns for Grant Cardone, 10X Health, Cardone Ventures, SquadUp Summit, Copy Chief (and many more).
               </p>
               <p className="text-body text-ink-soft">
-                You get the exact Assistants I use every day, packaged so a busy founder can run them without a tech team.
+                You get the exact AI Assistants I use every day, packaged so a busy founder can run them on the same day.
               </p>
             </div>
           </div>
         </Section>
 
-        {/* 13. PRICING */}
+        {/* 14. COST OF WAITING */}
+        <Section bg="grey" width="content">
+          <div className="eyebrow mb-4">The real math</div>
+          <h2 className="text-h1 font-semibold tracking-tight text-ink mb-6 max-w-prose">
+            What the bottleneck costs you every quarter.
+          </h2>
+          <p className="text-lead text-ink-muted max-w-prose mb-4">
+            Look at what staying the bottleneck already costs.
+          </p>
+          <p className="text-body text-ink-soft max-w-prose mb-4">
+            Say the routine only you can do eats 10 hours a week. Outreach, follow-up, content, proposals. Value
+            your time at $250 an hour, conservative for where you are. That’s about $32,500 a quarter, spent on
+            work a staffed team could run.
+          </p>
+          <p className="text-body text-ink-soft max-w-prose">
+            The membership is $199 a month. About $600 a quarter. The bottleneck costs you more than fifty times
+            that. Every quarter. And you keep the team.
+          </p>
+        </Section>
+
+        {/* 15. PRICING */}
         <Section bg="paper" width="content">
           <div className="text-center mb-10">
-            <div className="eyebrow mb-4">Choose your way in</div>
+            <div className="eyebrow mb-4">The founding price</div>
             <h2 className="text-h1 font-semibold tracking-tight text-ink">
               Less than one lost deal. Less than one agency invoice.
             </h2>
           </div>
-          <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto items-start">
-
-            {/* One-time — the hero */}
-            <div className="border-2 border-accent bg-paper p-8 relative md:-mt-2">
-              <div className="inline-block bg-accent text-paper text-eyebrow uppercase tracking-widest px-3 py-1 mb-4">
-                Best value · own it outright
-              </div>
-              <div className="text-display font-semibold text-ink mb-1">$995</div>
-              <div className="text-small text-ink-muted mb-6">one time · the whole team is yours today</div>
-              <p className="text-body text-ink font-medium mb-6">
-                Six months for the price of five. Every Assistant unlocked today, not six months from now.
-              </p>
-              <ul className="space-y-3 text-body text-ink-soft mb-8">
-                <li className="flex gap-3"><span className="text-accent mt-1">–</span>Maestro and all 24 Assistants, unlocked immediately</li>
-                <li className="flex gap-3"><span className="text-accent mt-1">–</span>A full month free — $199 &times; 5 covers all six</li>
-                <li className="flex gap-3"><span className="text-accent mt-1">–</span>No recurring charge. Price locked. Yours to keep</li>
-                <li className="flex gap-3"><span className="text-accent mt-1">–</span>Live workshops &amp; weekly demos as they’re released</li>
-                <li className="flex gap-3"><span className="text-accent mt-1">–</span>Friday Q&amp;A and daily community access</li>
-              </ul>
-              <a href="#waitlist"   className="inline-flex items-center justify-center px-6 py-3 text-small font-medium tracking-wide transition-all duration-200 bg-ink text-paper border border-ink hover:bg-accent hover:border-accent" >Join the Waitlist</a>
-            </div>
-
-            {/* Monthly — the secondary */}
-            <div className="border border-rule bg-paper p-8">
-              <div className="eyebrow mb-4">Or pay monthly</div>
+          <div className="max-w-md mx-auto">
+            <div className="border-2 border-accent bg-paper p-8">
               <div className="text-display font-semibold text-ink mb-1">$199</div>
               <div className="text-small text-ink-muted mb-6">per month · founding price, rises to $249</div>
-              <p className="text-body text-ink-soft mb-6">
-                Unlock one department a month as we go. What you build stays yours.
+              <p className="text-body text-ink font-medium mb-6">
+                A new department every month. All 24 Assistants and Maestro over six months. Cancel anytime, keep what you built.
               </p>
               <ul className="space-y-3 text-body text-ink-soft mb-8">
                 <li className="flex gap-3"><span className="text-accent mt-1">–</span>A new department every month</li>
-                <li className="flex gap-3"><span className="text-accent mt-1">–</span>1–2 live workshops per month</li>
+                <li className="flex gap-3"><span className="text-accent mt-1">–</span>1–2 live workshops a month</li>
                 <li className="flex gap-3"><span className="text-accent mt-1">–</span>Friday Q&amp;A with Rev</li>
                 <li className="flex gap-3"><span className="text-accent mt-1">–</span>Daily community access</li>
                 <li className="flex gap-3"><span className="text-accent mt-1">–</span>Your Command Center, set up with you</li>
+                <li className="flex gap-3"><span className="text-accent mt-1">–</span>The It Works Guarantee</li>
               </ul>
-              <a href="#waitlist"   className="inline-flex items-center justify-center px-6 py-3 text-small font-medium tracking-wide transition-all duration-200 bg-ink text-paper border border-ink hover:bg-accent hover:border-accent" >Join the Waitlist</a>
+              <a href="https://www.skool.com/ai-inner-circle-3875/about" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center px-6 py-3 text-small font-medium tracking-wide transition-all duration-200 bg-ink text-paper border border-ink hover:bg-accent hover:border-accent">Join Now</a>
             </div>
           </div>
           <p className="text-small text-ink-muted mt-6 text-center">
-            Enrollment closes August 1. A 1:1 coaching tier opens soon at $999 a month.
+            Enrollment closes August 1.
           </p>
         </Section>
 
-        {/* 13b. WAITLIST CAPTURE — every "Join the Waitlist" CTA anchors here */}
+        {/* 15b. JOIN NOW BAND */}
         <Section bg="paper" width="content">
-          <div id="waitlist" className="scroll-mt-24 max-w-xl mx-auto text-center">
-            <div className="eyebrow mb-4">Join the waitlist</div>
+          <div className="max-w-xl mx-auto text-center">
+            <div className="eyebrow mb-4">Enrollment is open</div>
             <h2 className="text-h1 font-semibold tracking-tight text-ink mb-4">
-              Get first access when enrollment opens.
+              Join the founding cohort.
             </h2>
             <p className="text-body text-ink-muted mb-8">
-              We&rsquo;ll email you the moment doors open, plus how to lock in founding pricing.
+              Lock in $199 a month before it rises to $249. Enrollment closes August 1.
             </p>
-            <WaitlistForm audience="consultants" className="mx-auto" />
+            <div className="flex justify-center">
+              <a href="https://www.skool.com/ai-inner-circle-3875/about" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center px-6 py-3 text-small font-medium tracking-wide transition-all duration-200 bg-ink text-paper border border-ink hover:bg-accent hover:border-accent">Join Now</a>
+            </div>
           </div>
         </Section>
 
-        {/* 14. RISK REVERSAL */}
+        {/* 16. IT WORKS GUARANTEE */}
         <Section bg="grey" width="content">
-          <div className="eyebrow mb-4">No games</div>
+          <div className="eyebrow mb-4">The guarantee</div>
           <h2 className="text-h1 font-semibold tracking-tight text-ink mb-6 max-w-prose">
-            Cancel anytime. Keep what you built.
+            The It Works Guarantee.
           </h2>
           <p className="text-lead text-ink-muted max-w-prose mb-4">
-            Your Assistants live in your own folder, on your own machine. Walk away whenever you want. The system stays yours.
+            No money-back, and I’ll tell you why. These are the systems I run every day. They work when you work them.
           </p>
-          <p className="text-body text-ink-soft max-w-prose">
-            Straight talk on costs. You need a Claude subscription. For the outreach month, add a paid LinkedIn plan
-            and a few dollars of Apify. No expensive CRM, no cold-email tools.
+          <p className="text-body text-ink-soft max-w-prose mb-4">
+            So here’s the deal. Install each department. Run the assignments. Show up to the monthly workshop. If
+            your department isn’t up and running and doing real work for you, I keep working with you, in the
+            community and the Friday Q&amp;A, until it is.
           </p>
+          <p className="text-body text-ink font-medium max-w-prose mb-10">
+            The system works when you work it.
+          </p>
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="border border-rule bg-paper p-6">
+              <p className="eyebrow mb-3">This isn’t for everyone</p>
+              <ul className="space-y-3 text-body text-ink-soft">
+                <li className="flex gap-3"><span className="text-accent mt-1">–</span>You want it done for you. That’s my consulting lane, not this.</li>
+                <li className="flex gap-3"><span className="text-accent mt-1">–</span>You won’t put in a couple hours a week. The guarantee only holds if you work it.</li>
+                <li className="flex gap-3"><span className="text-accent mt-1">–</span>You’re not a founder-led B2B service business.</li>
+              </ul>
+            </div>
+            <div className="border border-rule bg-paper p-6">
+              <p className="eyebrow mb-3">Straight talk on costs</p>
+              <p className="text-body text-ink-soft mb-3">
+                You need a Claude subscription. For the outreach month, add a paid LinkedIn plan and a few dollars of Apify. No expensive CRM, no cold-email tools.
+              </p>
+              <p className="text-body text-ink-soft">
+                Cancel anytime. Your Assistants live in your own folder, on your own machine. What you build is yours to keep.
+              </p>
+            </div>
+          </div>
         </Section>
 
-        {/* 15. FAQ */}
+        {/* 17. FAQ */}
         <Section bg="paper" width="content">
           <div className="eyebrow mb-4">Questions</div>
           <h2 className="text-h1 font-semibold tracking-tight text-ink mb-10">Before you join.</h2>
@@ -732,17 +750,17 @@ export default function MembershipPage() {
           </div>
         </Section>
 
-        {/* 16. FINAL CTA */}
+        {/* 18. FINAL CTA */}
         <Section bg="greyDark" width="content">
           <div className="text-center">
             <h2 className="text-display font-semibold tracking-tight text-ink mb-6 max-w-prose mx-auto">
-              The AI knows you now. Put it to work.
+              Stop being the bottleneck.
             </h2>
             <p className="text-lead text-ink-muted mb-8 max-w-prose mx-auto">
-              Join the founding cohort before enrollment closes August 1. Lock in $199 a month before it rises to $249 — or own the whole team once for $995.
+              Join the founding cohort before enrollment closes August 1. Lock in $199 a month before it rises to $249.
             </p>
             <div className="flex justify-center mb-6">
-              <a href="#waitlist"   className="inline-flex items-center justify-center px-6 py-3 text-small font-medium tracking-wide transition-all duration-200 bg-ink text-paper border border-ink hover:bg-accent hover:border-accent" >Join the Waitlist</a>
+              <a href="https://www.skool.com/ai-inner-circle-3875/about" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center px-6 py-3 text-small font-medium tracking-wide transition-all duration-200 bg-ink text-paper border border-ink hover:bg-accent hover:border-accent">Join Now</a>
             </div>
             <p className="text-small text-ink-muted">
               Still deciding?{' '}
