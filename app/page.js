@@ -296,7 +296,7 @@ export default function HomePage() {
                 Revenue Growth Systems for B2B Service Providers
               </h1>
               <p className="text-lead text-ink-muted mb-10">
-                Get access to the AI systems I use every day to attract, engage, and convert clients.
+                Build a self-staffing AI team that runs without you. Get the AI systems I use every day to attract, engage, and convert clients.
               </p>
               <div className="flex flex-wrap gap-4 items-center">
                 <Button href="/consultants" variant="primary">
