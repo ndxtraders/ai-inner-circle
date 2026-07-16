@@ -296,7 +296,7 @@ export default function MembershipPage() {
                 You stop being the bottleneck. A staffed AI team runs your pipeline, your authority, and your routine. You approve the work. You don’t operate.
               </p>
               <p className="text-body text-ink-soft mb-8">
-                Maestro, your AI Chief of Staff, hires each specialist the day you need one and checks the work in your voice before you see it. Your first real deliverable is done the same afternoon. <span className="text-ink font-medium">Not six months from now.</span>
+                Maestro, your AI Chief of Staff, hires each specialist the day you need one and checks the work in your voice before you see it. Your Command Center and first team are running in only 2-3 hours. 
               </p>
               <a href="https://www.skool.com/ai-inner-circle-3875/about" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center px-6 py-3 text-small font-medium tracking-wide transition-all duration-200 bg-ink text-paper border border-ink hover:bg-accent hover:border-accent">Join Now</a>
               <p className="text-small text-ink-muted mt-4">
