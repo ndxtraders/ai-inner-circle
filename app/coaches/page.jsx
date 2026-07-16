@@ -4,7 +4,6 @@ import Header from '../components/Header'
 import Footer from '../components/Footer'
 import Section from '../components/Section'
 import Button from '../components/Button'
-import WaitlistForm from '../components/WaitlistForm'
 
 export const metadata = {
   alternates: { canonical: '/coaches' },
@@ -197,24 +196,23 @@ const FAQ = [
   ['Does anything cost extra?', 'No. Everything runs on your Claude subscription. Two optional power-ups exist for members who want automation — a free-tier Apify account and Google Calendar connectors — and both have built-in manual paths that work without them.'],
   ['What if I’ve never developed a strong writing voice?', 'There’s a second door built for exactly you. Maestro helps you choose a voice deliberately, and it becomes yours from day one. When your writing catches up, say “rebuild my voice” and the whole team upgrades overnight.'],
   ['Do I keep the Assistants if I cancel?', 'Yes. They live in your own folder on your own machine. What you build is yours to keep.'],
-  ['What’s the difference between the monthly plan and the one-time option?', 'Same team, same community. Monthly is $199 and unlocks one department a month. The one-time $796 is five months for the price of four — Maestro and all 20 Assistants unlocked today, no recurring charge, price locked, yours to keep. Workshops and weekly demos are still released on schedule for everyone.'],
   ['How do I keep track of what the team is doing?', 'A live command board. Every task the Assistants touch moves across it — queued, in progress, waiting on your review, done. Open it any morning and the whole picture is there, already up to date.'],
   ['Do I have to check all the AI’s work myself?', 'No. Maestro reviews each deliverable first, against your voice and your standards, and sends anything weak back for a rewrite before you see it. Everything outward-facing also passes AI Check, so nothing that sounds like a robot ships under your name.'],
 ]
 
-// Both prices are published on this page, so they are marked up. Unlike FAQPage,
-// Product/Offer still produces rich results, and it is what LLMs read back when
-// someone asks what AI Inner Circle costs.
+// One published price on this page: the $199/mo founding membership. The
+// $796 pay-in-full tier is hidden for now — archived in
+// brain/archive/coaches-796-payinfull-2026-07-15.md for a fast rebuild.
 //
-// availability is PreOrder, not InStock: the only action on this page is joining
-// the waitlist. Enrollment is not open yet.
+// availability is InStock: enrollment is open and the primary action is
+// joining on Skool.
 const PRODUCT_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'Product',
   '@id': 'https://aiinnercircle.com/coaches#product',
-  name: 'AI Inner Circle — Coaches',
+  name: 'AI Inner Circle: Coaches',
   description:
-    'A membership for coaches. Build a team of 20 domain-specific AI Assistants across 5 departments, plus 3 bonus hires, coordinated by an orchestrator called Maestro, running in your own folder on your own machine.',
+    'A membership for coaches. A team of 20 domain-specific AI Assistants across 5 departments, plus 3 bonus hires, coordinated by Maestro, who hires each specialist just in time and checks the work in your voice before you see it. Runs in your own folder on your own machine.',
   url: 'https://aiinnercircle.com/coaches',
   image: 'https://aiinnercircle.com/AI-Inner-Circle-Logo-940.jpg',
   brand: { '@id': 'https://aiinnercircle.com/#organization' },
@@ -222,26 +220,14 @@ const PRODUCT_SCHEMA = {
   offers: [
     {
       '@type': 'Offer',
-      name: 'One-time — the whole team, today',
-      description:
-        'Five months for the price of four. Maestro, all 20 Assistants, and all 3 bonus hires unlocked immediately. No recurring charge, price locked, yours to keep.',
-      price: '796',
-      priceCurrency: 'USD',
-      availability: 'https://schema.org/PreOrder',
-      priceValidUntil: '2026-08-15',
-      url: 'https://aiinnercircle.com/coaches#waitlist',
-      seller: { '@id': 'https://aiinnercircle.com/#organization' },
-    },
-    {
-      '@type': 'Offer',
-      name: 'Monthly — founding price',
+      name: 'Monthly founding price',
       description:
         'Unlock one department a month across five months, at the founding price of $199 a month.',
       price: '199',
       priceCurrency: 'USD',
-      availability: 'https://schema.org/PreOrder',
+      availability: 'https://schema.org/InStock',
       priceValidUntil: '2026-08-15',
-      url: 'https://aiinnercircle.com/coaches#waitlist',
+      url: 'https://www.skool.com/ai-inner-circle-3875/about',
       seller: { '@id': 'https://aiinnercircle.com/#organization' },
       priceSpecification: {
         '@type': 'UnitPriceSpecification',
@@ -298,9 +284,9 @@ export default function CoachesMembershipPage() {
               <p className="text-body text-ink-soft mb-8">
                 The difference is simple. <span className="text-ink font-medium">The AI knows you now.</span>
               </p>
-              <a href="https://www.skool.com/ai-inner-circle-3875/about"   className="inline-flex items-center justify-center px-6 py-3 text-small font-medium tracking-wide transition-all duration-200 bg-ink text-paper border border-ink hover:bg-accent hover:border-accent" >Join Now</a>
+              <a href="https://www.skool.com/ai-inner-circle-3875/about" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center px-6 py-3 text-small font-medium tracking-wide transition-all duration-200 bg-ink text-paper border border-ink hover:bg-accent hover:border-accent">Join Now</a>
               <p className="text-small text-ink-muted mt-4">
-                Founding cohort. Enrollment closes <span className="text-ink font-medium">August 15</span>. Founding price is $199 a month — or own the whole team once for $796, five months for the price of four.
+                Founding cohort. Enrollment closes <span className="text-ink font-medium">August 15</span>. Founding price is $199 a month.
               </p>
             </div>
             <div className="hidden md:block pt-4">
@@ -519,7 +505,7 @@ export default function CoachesMembershipPage() {
                 <pre className="text-small text-ink-soft leading-relaxed whitespace-pre font-mono">{ORG_CHART}</pre>
               </div>
               <p className="text-body text-ink-muted mt-4 max-w-prose">
-                Twenty Assistants, five desks, three bonus hires. All reporting to Maestro — who assigns the work, reviews it, and sends it back for changes before it ever reaches you. You approve the finished work. Cancel anytime and the team stays yours.
+                Twenty Assistants, five desks, three bonus hires. All reporting to Maestro, who assigns the work, reviews it, and sends it back for changes before it ever reaches you. You approve the finished work. Cancel anytime and the team stays yours.
               </p>
             </div>
           </div>
@@ -622,42 +608,20 @@ export default function CoachesMembershipPage() {
           </div>
         </Section>
 
-        {/* 13. PRICING */}
+        {/* 13. PRICING — single $199/mo offer. $796 pay-in-full hidden;
+             archived in brain/archive/coaches-796-payinfull-2026-07-15.md */}
         <Section bg="paper" width="content">
           <div className="text-center mb-10">
-            <div className="eyebrow mb-4">Choose your way in</div>
+            <div className="eyebrow mb-4">The founding price</div>
             <h2 className="text-h1 font-semibold tracking-tight text-ink">
               Less than one client. Less than one month of a VA.
             </h2>
           </div>
-          <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto items-start">
-
-            {/* One-time — the hero */}
-            <div className="border-2 border-accent bg-paper p-8 relative md:-mt-2">
-              <div className="inline-block bg-accent text-paper text-eyebrow uppercase tracking-widest px-3 py-1 mb-4">
-                Best value · own it outright
-              </div>
-              <div className="text-display font-semibold text-ink mb-1">$796</div>
-              <div className="text-small text-ink-muted mb-6">one time · the whole team is yours today</div>
-              <p className="text-body text-ink font-medium mb-6">
-                Five months for the price of four. Every Assistant unlocked today, not five months from now.
-              </p>
-              <ul className="space-y-3 text-body text-ink-soft mb-8">
-                <li className="flex gap-3"><span className="text-accent mt-1">–</span>Maestro and all 20 Assistants, unlocked immediately</li>
-                <li className="flex gap-3"><span className="text-accent mt-1">–</span>All 3 bonus hires included</li>
-                <li className="flex gap-3"><span className="text-accent mt-1">–</span>A full month free — $199 &times; 4 covers all five</li>
-                <li className="flex gap-3"><span className="text-accent mt-1">–</span>No recurring charge. Price locked. Yours to keep</li>
-                <li className="flex gap-3"><span className="text-accent mt-1">–</span>Live workshops, weekly demos, Friday Q&amp;A, community</li>
-              </ul>
-              <a href="#waitlist"   className="inline-flex items-center justify-center px-6 py-3 text-small font-medium tracking-wide transition-all duration-200 bg-ink text-paper border border-ink hover:bg-accent hover:border-accent" >Join the Waitlist</a>
-            </div>
-
-            {/* Monthly — the secondary */}
-            <div className="border border-rule bg-paper p-8">
-              <div className="eyebrow mb-4">Or pay monthly</div>
+          <div className="max-w-md mx-auto">
+            <div className="border-2 border-accent bg-paper p-8">
               <div className="text-display font-semibold text-ink mb-1">$199</div>
               <div className="text-small text-ink-muted mb-6">per month · five months · founding price</div>
-              <p className="text-body text-ink-soft mb-6">
+              <p className="text-body text-ink font-medium mb-6">
                 Unlock one department a month as we go. What you build stays yours.
               </p>
               <ul className="space-y-3 text-body text-ink-soft mb-8">
@@ -667,23 +631,12 @@ export default function CoachesMembershipPage() {
                 <li className="flex gap-3"><span className="text-accent mt-1">–</span>Friday Q&amp;A with Rev, daily community access</li>
                 <li className="flex gap-3"><span className="text-accent mt-1">–</span>Your Command Center and voice, set up with you</li>
               </ul>
-              <a href="https://www.skool.com/ai-inner-circle-3875/about"   className="inline-flex items-center justify-center px-6 py-3 text-small font-medium tracking-wide transition-all duration-200 bg-ink text-paper border border-ink hover:bg-accent hover:border-accent" >Join Now</a>
+              <a href="https://www.skool.com/ai-inner-circle-3875/about" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center px-6 py-3 text-small font-medium tracking-wide transition-all duration-200 bg-ink text-paper border border-ink hover:bg-accent hover:border-accent">Join Now</a>
             </div>
           </div>
-        </Section>
-
-        {/* 13b. WAITLIST CAPTURE — every "Join the Waitlist" CTA anchors here */}
-        <Section bg="paper" width="content">
-          <div id="waitlist" className="scroll-mt-24 max-w-xl mx-auto text-center">
-            <div className="eyebrow mb-4">Join the waitlist</div>
-            <h2 className="text-h1 font-semibold tracking-tight text-ink mb-4">
-              Get first access when enrollment opens.
-            </h2>
-            <p className="text-body text-ink-muted mb-8">
-              We&rsquo;ll email you the moment doors open, plus how to lock in founding pricing.
-            </p>
-            <WaitlistForm audience="coaches" className="mx-auto" />
-          </div>
+          <p className="text-small text-ink-muted mt-6 text-center">
+            Enrollment closes August 15.
+          </p>
         </Section>
 
         {/* 14. RISK REVERSAL */}
@@ -723,10 +676,10 @@ export default function CoachesMembershipPage() {
               The AI knows you now. Put it to work.
             </h2>
             <p className="text-lead text-ink-muted mb-8 max-w-prose mx-auto">
-              Join the founding cohort before enrollment closes August 15. Lock in $199 a month — or own the whole team once for $796.
+              Join the founding cohort before enrollment closes August 15. Lock in $199 a month.
             </p>
             <div className="flex justify-center mb-6">
-              <a href="https://www.skool.com/ai-inner-circle-3875/about"   className="inline-flex items-center justify-center px-6 py-3 text-small font-medium tracking-wide transition-all duration-200 bg-ink text-paper border border-ink hover:bg-accent hover:border-accent" >Join Now</a>
+              <a href="https://www.skool.com/ai-inner-circle-3875/about" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center px-6 py-3 text-small font-medium tracking-wide transition-all duration-200 bg-ink text-paper border border-ink hover:bg-accent hover:border-accent">Join Now</a>
             </div>
             <p className="text-small text-ink-muted">
               Not sure yet?{' '}
