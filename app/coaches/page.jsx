@@ -298,7 +298,7 @@ export default function CoachesMembershipPage() {
               <p className="text-body text-ink-soft mb-8">
                 The difference is simple. <span className="text-ink font-medium">The AI knows you now.</span>
               </p>
-              <a href="#waitlist"   className="inline-flex items-center justify-center px-6 py-3 text-small font-medium tracking-wide transition-all duration-200 bg-ink text-paper border border-ink hover:bg-accent hover:border-accent" >Join the Waitlist</a>
+              <a href="https://www.skool.com/ai-inner-circle-3875/about"   className="inline-flex items-center justify-center px-6 py-3 text-small font-medium tracking-wide transition-all duration-200 bg-ink text-paper border border-ink hover:bg-accent hover:border-accent" >Join Now</a>
               <p className="text-small text-ink-muted mt-4">
                 Founding cohort. Enrollment closes <span className="text-ink font-medium">August 15</span>. Founding price is $199 a month — or own the whole team once for $796, five months for the price of four.
               </p>
@@ -667,7 +667,7 @@ export default function CoachesMembershipPage() {
                 <li className="flex gap-3"><span className="text-accent mt-1">–</span>Friday Q&amp;A with Rev, daily community access</li>
                 <li className="flex gap-3"><span className="text-accent mt-1">–</span>Your Command Center and voice, set up with you</li>
               </ul>
-              <a href="#waitlist"   className="inline-flex items-center justify-center px-6 py-3 text-small font-medium tracking-wide transition-all duration-200 bg-ink text-paper border border-ink hover:bg-accent hover:border-accent" >Join the Waitlist</a>
+              <a href="https://www.skool.com/ai-inner-circle-3875/about"   className="inline-flex items-center justify-center px-6 py-3 text-small font-medium tracking-wide transition-all duration-200 bg-ink text-paper border border-ink hover:bg-accent hover:border-accent" >Join Now</a>
             </div>
           </div>
         </Section>
@@ -726,7 +726,7 @@ export default function CoachesMembershipPage() {
               Join the founding cohort before enrollment closes August 15. Lock in $199 a month — or own the whole team once for $796.
             </p>
             <div className="flex justify-center mb-6">
-              <a href="#waitlist"   className="inline-flex items-center justify-center px-6 py-3 text-small font-medium tracking-wide transition-all duration-200 bg-ink text-paper border border-ink hover:bg-accent hover:border-accent" >Join the Waitlist</a>
+              <a href="https://www.skool.com/ai-inner-circle-3875/about"   className="inline-flex items-center justify-center px-6 py-3 text-small font-medium tracking-wide transition-all duration-200 bg-ink text-paper border border-ink hover:bg-accent hover:border-accent" >Join Now</a>
             </div>
             <p className="text-small text-ink-muted">
               Not sure yet?{' '}
