@@ -293,7 +293,7 @@ export default function MembershipPage() {
                 Build a self-staffing AI team that runs without you.
               </h1>
               <p className="text-lead text-ink-muted mb-4">
-                You stop being the bottleneck. A staffed AI team runs your pipeline, your authority, and your routine. You approve the work.
+                You stop being the bottleneck. A staffed AI team runs your pipeline, your authority, and your routine. You approve the work. You don’t operate.
               </p>
               <p className="text-body text-ink-soft mb-8">
                 Maestro, your AI Chief of Staff, hires each specialist the day you need one and checks the work in your voice before you see it. Your first real deliverable is done the same afternoon. <span className="text-ink font-medium">Not six months from now.</span>
@@ -680,22 +680,6 @@ export default function MembershipPage() {
           <p className="text-small text-ink-muted mt-6 text-center">
             Enrollment closes August 1.
           </p>
-        </Section>
-
-        {/* 15b. JOIN NOW BAND */}
-        <Section bg="paper" width="content">
-          <div className="max-w-xl mx-auto text-center">
-            <div className="eyebrow mb-4">Enrollment is open</div>
-            <h2 className="text-h1 font-semibold tracking-tight text-ink mb-4">
-              Join the founding cohort.
-            </h2>
-            <p className="text-body text-ink-muted mb-8">
-              Lock in $199 a month before it rises to $249. Enrollment closes August 1.
-            </p>
-            <div className="flex justify-center">
-              <a href="https://www.skool.com/ai-inner-circle-3875/about" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center px-6 py-3 text-small font-medium tracking-wide transition-all duration-200 bg-ink text-paper border border-ink hover:bg-accent hover:border-accent">Join Now</a>
-            </div>
-          </div>
         </Section>
 
         {/* 16. IT WORKS GUARANTEE */}
