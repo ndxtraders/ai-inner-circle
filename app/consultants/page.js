@@ -293,7 +293,7 @@ export default function MembershipPage() {
                 Build a self-staffing AI team that runs without you.
               </h1>
               <p className="text-lead text-ink-muted mb-4">
-                You stop being the bottleneck. A staffed AI team runs your pipeline, your authority, and your routine. You approve the work. You don’t operate.
+                You stop being the bottleneck. A staffed AI team runs your pipeline, your authority, and your routine. You approve the work.
               </p>
               <p className="text-body text-ink-soft mb-8">
                 Maestro, your AI Chief of Staff, hires each specialist the day you need one and checks the work in your voice before you see it. Your first real deliverable is done the same afternoon. <span className="text-ink font-medium">Not six months from now.</span>
