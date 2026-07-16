@@ -276,7 +276,7 @@ export default function CoachesMembershipPage() {
             <div className="md:col-span-2">
               <div className="eyebrow mb-6">AI Inner Circle for Coaches</div>
               <h1 className="text-display font-semibold tracking-tight text-ink mb-6">
-                A full AI team that turns your audience into clients. In your voice.
+                A full AI team that turns your audience into clients.
               </h1>
               <p className="text-lead text-ink-muted mb-4">
                 You get the actual skills — 20 Assistants plus 3 bonus hires — trained on your voice, your method, and your people, run by Maestro, your new AI Chief of Staff who reviews their work before it reaches you.
