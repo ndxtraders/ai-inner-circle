@@ -476,7 +476,7 @@ export default function MembershipPage() {
           <div className="max-w-content mx-auto">
             <div className="eyebrow mb-4">The path</div>
             <h2 className="text-h1 font-semibold tracking-tight text-ink mb-3">
-              A quick win in week one. A full system by month six.
+              A quick win on Day One. A full system by Month Six.
             </h2>
             <p className="text-lead text-ink-muted mb-12 max-w-prose">
               First you set up your Command Center. Then six months, each with one workshop and the Assistants that make it real.
