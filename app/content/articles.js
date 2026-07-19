@@ -16,11 +16,16 @@
 //   subtitle    optional deck. Emitted as JSON-LD alternativeHeadline.
 //   image       absolute URL used for og:image and JSON-LD image.
 //   dateISO     machine date for datePublished/dateModified and the sitemap.
+//   track       which track the article groups under on the /articles index
+//               (Start Here, Authority Engine, Pipeline Engine, Conversion
+//               Engine, Founder Freedom). null means it is not listed in a
+//               track (ai-priority-map is the featured strip instead).
 
 export const ARTICLES = [
   {
     slug: 'future-of-ai-agents-in-business',
     hub: true,
+    track: 'Authority Engine',
     title: 'The Future of AI Agents in Business',
     metaTitle: 'The Future of AI Agents in Business | AI Inner Circle',
     subtitle: null,
@@ -36,6 +41,7 @@ export const ARTICLES = [
   },
   {
     slug: 'why-ai-writing-sucks',
+    track: 'Authority Engine',
     title: 'Why AI Writing Sucks And What To Do About It',
     metaTitle: 'Why AI Writing Sucks And What To Do About It | Rev Vaughn',
     subtitle: null,
@@ -51,6 +57,7 @@ export const ARTICLES = [
   },
   {
     slug: 'why-chatgpt-sounds-robotic',
+    track: 'Authority Engine',
     title: 'Why ChatGPT Writing Will Always Sound Robotic',
     metaTitle: 'Why ChatGPT Writing Will Always Sound Robotic | Rev Vaughn',
     subtitle: 'And Why There’s Not a Damn Thing You Can Do About It',
@@ -66,6 +73,7 @@ export const ARTICLES = [
   },
   {
     slug: 'how-ai-content-destroys-trust',
+    track: 'Authority Engine',
     title: 'How AI-Generated Content Is Destroying Trust',
     metaTitle: 'How AI-Generated Content Is Destroying Trust | Rev Vaughn',
     subtitle: 'And The Mathematical Solution No One’s Talking About',
@@ -81,6 +89,9 @@ export const ARTICLES = [
   },
   {
     slug: 'ai-priority-map',
+    // Not in a track. Rendered as the featured "Start with the map" strip
+    // between the hero and the tracks on /articles.
+    track: null,
     title: 'The AI Priority Map: What to Automate First in Your Business',
     metaTitle:
       'The AI Priority Map: What to Automate First in Your Business | AI Inner Circle',
@@ -123,6 +134,7 @@ export const ARTICLES = [
   },
   {
     slug: 'vacation-test',
+    track: 'Founder Freedom',
     title: 'The Vacation Test: Can Your Business Run Without You?',
     metaTitle:
       'The Vacation Test: Can Your Business Run Without You? | AI Inner Circle',
@@ -157,6 +169,7 @@ export const ARTICLES = [
   },
   {
     slug: 'what-is-an-ai-agent',
+    track: 'Start Here',
     title: 'What Is an AI Agent? A Plain-English Definition for Founders',
     metaTitle:
       'What Is an AI Agent? A Plain-English Definition for Founders | AI Inner Circle',
@@ -195,6 +208,7 @@ export const ARTICLES = [
   },
   {
     slug: 'ai-agent-vs-chatbot-vs-automation',
+    track: 'Start Here',
     title:
       'AI Agent vs. Chatbot vs. Automation vs. ChatGPT: Which One Do You Need?',
     metaTitle:
