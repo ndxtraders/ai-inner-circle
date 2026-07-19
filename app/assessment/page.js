@@ -9,6 +9,12 @@ export const metadata = {
   title: 'Free AI Assessment | Rev Vaughn',
   description:
     'Find the biggest breaking points costing your business time, clients, and revenue — and the exact AI Assistant that fixes each. Free, instant results, no email required.',
+  openGraph: {
+    title: 'Free AI Assessment | Rev Vaughn',
+    description:
+      'Find the biggest breaking points costing your business time, clients, and revenue — and the exact AI Assistant that fixes each. Free, instant results, no email required.',
+    url: 'https://aiinnercircle.com/assessment',
+  },
 }
 
 // Two tracks, routed by how you actually win clients (motion), labeled by title.

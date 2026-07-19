@@ -6,6 +6,11 @@ export const metadata = {
   alternates: { canonical: '/privacy-terms' },
   title: 'Privacy & Terms — Rev Vaughn',
   description: 'Privacy policy and terms of service for revvaughn.com.',
+  openGraph: {
+    title: 'Privacy & Terms — Rev Vaughn',
+    description: 'Privacy policy and terms of service for revvaughn.com.',
+    url: 'https://aiinnercircle.com/privacy-terms',
+  },
 }
 
 export default function PrivacyTermsPage() {

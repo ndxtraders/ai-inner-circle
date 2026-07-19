@@ -9,6 +9,12 @@ export const metadata = {
   title: 'Articles — AI Teams for Consultants & Founders | AI Inner Circle',
   description:
     'Why one AI assistant always breaks down, and what a real AI team looks like for B2B consultants and founder-led brands. Start with the thesis, then the track on AI writing.',
+  openGraph: {
+    title: 'Articles — AI Teams for Consultants & Founders | AI Inner Circle',
+    description:
+      'Why one AI assistant always breaks down, and what a real AI team looks like for B2B consultants and founder-led brands. Start with the thesis, then the track on AI writing.',
+    url: 'https://aiinnercircle.com/articles',
+  },
 }
 
 export default function ArticlesPage() {

@@ -11,6 +11,12 @@ export const metadata = {
   title: 'AI Inner Circle for Coaches | Rev Vaughn',
   description:
     'A full AI team that turns your audience into clients, in your voice. 20 Assistants plus 3 bonus hires, run by Maestro. For coaches, from Rev Vaughn.',
+  openGraph: {
+    title: 'AI Inner Circle for Coaches | Rev Vaughn',
+    description:
+      'A full AI team that turns your audience into clients, in your voice. 20 Assistants plus 3 bonus hires, run by Maestro. For coaches, from Rev Vaughn.',
+    url: 'https://aiinnercircle.com/coaches',
+  },
 }
 
 // ---------------------------------------------------------------------------

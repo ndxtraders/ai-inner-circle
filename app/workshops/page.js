@@ -8,6 +8,12 @@ export const metadata = {
   title: 'Workshops | Rev Vaughn',
   description:
     'Low-cost, self-paced AI workshops for founder-led brands. Install one working AI system in an afternoon. The fastest way into the AI Inner Circle membership.',
+  openGraph: {
+    title: 'Workshops | Rev Vaughn',
+    description:
+      'Low-cost, self-paced AI workshops for founder-led brands. Install one working AI system in an afternoon. The fastest way into the AI Inner Circle membership.',
+    url: 'https://aiinnercircle.com/workshops',
+  },
 }
 
 const WORKSHOPS = [

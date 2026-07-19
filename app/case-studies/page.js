@@ -9,6 +9,12 @@ export const metadata = {
   title: 'Case Studies | Rev Vaughn',
   description:
     'Real campaigns I built for founder-led brands. The problem, the system, and what it produced.',
+  openGraph: {
+    title: 'Case Studies | Rev Vaughn',
+    description:
+      'Real campaigns I built for founder-led brands. The problem, the system, and what it produced.',
+    url: 'https://aiinnercircle.com/case-studies',
+  },
 }
 
 const CLIENTS = [

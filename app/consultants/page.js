@@ -10,6 +10,12 @@ export const metadata = {
   title: 'AI Inner Circle Membership | Rev Vaughn',
   description:
     'A self-staffing AI team that runs without you. Maestro hires each specialist just in time, checks the work in your voice, and runs the team so you approve instead of operate. Founder-led B2B membership from Rev Vaughn.',
+  openGraph: {
+    title: 'AI Inner Circle Membership | Rev Vaughn',
+    description:
+      'A self-staffing AI team that runs without you. Maestro hires each specialist just in time, checks the work in your voice, and runs the team so you approve instead of operate. Founder-led B2B membership from Rev Vaughn.',
+    url: 'https://aiinnercircle.com/consultants',
+  },
 }
 
 // ---------------------------------------------------------------------------

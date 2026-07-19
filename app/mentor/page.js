@@ -8,6 +8,12 @@ export const metadata = {
   title: 'Mentor Program — Rev Vaughn',
   description:
     '1:1 mentorship for founder-operators building the revenue system themselves. Direct access, sharp feedback, compounding reps.',
+  openGraph: {
+    title: 'Mentor Program — Rev Vaughn',
+    description:
+      '1:1 mentorship for founder-operators building the revenue system themselves. Direct access, sharp feedback, compounding reps.',
+    url: 'https://aiinnercircle.com/mentor',
+  },
 }
 
 export default function MentorPage() {

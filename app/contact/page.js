@@ -7,6 +7,11 @@ export const metadata = {
   alternates: { canonical: '/contact' },
   title: 'Contact — Rev Vaughn',
   description: 'Get in touch with Rev Vaughn about GTM strategy and revenue growth systems for founder-led brands.',
+  openGraph: {
+    title: 'Contact — Rev Vaughn',
+    description: 'Get in touch with Rev Vaughn about GTM strategy and revenue growth systems for founder-led brands.',
+    url: 'https://aiinnercircle.com/contact',
+  },
 }
 
 export default function ContactPage() {

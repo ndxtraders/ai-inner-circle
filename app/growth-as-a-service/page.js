@@ -8,6 +8,12 @@ export const metadata = {
   title: 'Growth-As-A-Service — Rev Vaughn',
   description:
     'A fractional GTM partnership for founder-led brands. We architect and operate the revenue system with you — not just advise on it.',
+  openGraph: {
+    title: 'Growth-As-A-Service — Rev Vaughn',
+    description:
+      'A fractional GTM partnership for founder-led brands. We architect and operate the revenue system with you — not just advise on it.',
+    url: 'https://aiinnercircle.com/growth-as-a-service',
+  },
 }
 
 const FAQS = [

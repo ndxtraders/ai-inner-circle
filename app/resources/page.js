@@ -9,6 +9,12 @@ export const metadata = {
   title: 'Resources — Free Tools for B2B Consultants & Coaches | AI Inner Circle',
   description:
     'Free assessments, frameworks, and AI skills for B2B consultants and founder-led brands who want an AI team, not another AI tool.',
+  openGraph: {
+    title: 'Resources — Free Tools for B2B Consultants & Coaches | AI Inner Circle',
+    description:
+      'Free assessments, frameworks, and AI skills for B2B consultants and founder-led brands who want an AI team, not another AI tool.',
+    url: 'https://aiinnercircle.com/resources',
+  },
 }
 
 const RESOURCES = [

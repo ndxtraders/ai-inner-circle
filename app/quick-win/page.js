@@ -8,6 +8,12 @@ export const metadata = {
   title: 'Quick Win — Rev Vaughn',
   description:
     'A focused diagnostic sprint for founder-led brands. Find the leak in your revenue system and fix the highest-leverage point.',
+  openGraph: {
+    title: 'Quick Win — Rev Vaughn',
+    description:
+      'A focused diagnostic sprint for founder-led brands. Find the leak in your revenue system and fix the highest-leverage point.',
+    url: 'https://aiinnercircle.com/quick-win',
+  },
 }
 
 export default function QuickWinPage() {
