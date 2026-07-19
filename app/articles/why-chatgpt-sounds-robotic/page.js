@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
 import Section from '../../components/Section'
@@ -170,7 +171,7 @@ export default function Article() {
               <li>Quadruple parallels</li>
               <li>Over-polished headers</li>
               <li>Standalone wisdom statements</li>
-              <li>Antithesis and thesis structures</li>
+              <li><Link href="/articles/how-ai-content-destroys-trust" className="text-accent underline underline-offset-2 hover:no-underline">Antithesis and thesis structures</Link></li>
             </ul>
             <p>Each one is valid. Used once. Together, they turn writing into sludge.</p>
 
@@ -203,6 +204,9 @@ export default function Article() {
               Not because people lost their voice. But because they outsourced it. And one day, people are going to
               look at the output and feel that same cold realization. Not that the tool failed. But that it worked
               exactly as designed. That we did this to ourselves.
+            </p>
+            <p className="text-ink-muted">
+              If prompting can&rsquo;t fix it, the fix is architectural &mdash; a team of specialists with a separate quality gate, not one assistant doing every job. That&rsquo;s the argument in <Link href="/articles/future-of-ai-agents-in-business" className="text-accent underline underline-offset-2 hover:no-underline">The Future of AI Agents in Business</Link>.
             </p>
 
           </div>

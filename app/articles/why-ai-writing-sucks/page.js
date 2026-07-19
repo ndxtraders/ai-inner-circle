@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
 import Section from '../../components/Section'
@@ -96,7 +97,7 @@ export default function Article() {
             <p>
               If you&rsquo;re using AI to crank out soulless, half-baked marketing copy&hellip; you&rsquo;re failing yourself.
               If you&rsquo;re delivering that work to clients&hellip; you&rsquo;re failing them. And if you&rsquo;re putting
-              that out into the world with your name on it&hellip; you&rsquo;re destroying your reputation one lazy line at a time.
+              that out into the world with your name on it&hellip; you&rsquo;re <Link href="/articles/how-ai-content-destroys-trust" className="text-accent underline underline-offset-2 hover:no-underline">destroying your reputation one lazy line at a time</Link>.
             </p>
             <p>
               You feel it every time you reread what you already rewrote. You&rsquo;re pretending output is momentum.
@@ -118,7 +119,7 @@ export default function Article() {
             <p>One system. One direction. No friction. Not a tool. A team. Structured. Trained. Delegated.</p>
             <p>Prompts don&rsquo;t build power. Roles do.</p>
             <p>
-              You need to stop letting one AI do all the roles of a team and start acting like the architect of a writing system.
+              You need to stop letting one AI do all the roles of a team and start acting like <Link href="/articles/future-of-ai-agents-in-business" className="text-accent underline underline-offset-2 hover:no-underline">the architect of a writing system</Link>.
             </p>
 
             <h2 className="text-h2 font-semibold text-ink mt-10 pt-10 border-t border-rule">
@@ -155,7 +156,7 @@ export default function Article() {
             </h2>
             <p>You&rsquo;re not overwhelmed. You&rsquo;re under-supported.</p>
             <p>
-              Build the AI Copy Team. Train them like real team members. Use them to replace the noise, the friction, the chaos.
+              <Link href="/consultants" className="text-accent underline underline-offset-2 hover:no-underline">Build the AI Copy Team</Link>. Train them like real team members. Use them to replace the noise, the friction, the chaos.
             </p>
             <p>If you are fed up with AI making your writing sound stupid&hellip; this is where it begins.</p>
 

@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
 import Section from '../../components/Section'
@@ -62,7 +63,7 @@ export default function Article() {
 
             <p>We&rsquo;ve all done it. You sign up for the AI tool everyone&rsquo;s talking about. You add the Chrome extension. You save a folder of prompts that promised to change your business. You wire up an automation at 11 pm, feeling like a genius.</p>
             <p>But does it get real work done? If you&rsquo;re like most service business owners, the sad answer is, &ldquo;Not really.&rdquo;</p>
-            <p>You&rsquo;ve got a folder full of tools and a business that still depends on you. Either that or accept generic AI output. The AI didn&rsquo;t take work off your plate. It gave you more open tabs.</p>
+            <p>You&rsquo;ve got a folder full of tools and a business that still depends on you. Either that or accept <Link href="/articles/why-ai-writing-sucks" className="text-accent underline underline-offset-2 hover:no-underline">generic AI output</Link>. The AI didn&rsquo;t take work off your plate. It gave you more open tabs.</p>
             <p>Here&rsquo;s what I found after building with these tools for years: the real problem isn&rsquo;t necessarily the tool. It&rsquo;s not your prompts either. It&rsquo;s the shape of the thing you&rsquo;re building.</p>
             <p>Let me show you what I mean.</p>
 
@@ -141,14 +142,14 @@ export default function Article() {
 
             <h2 className="text-h2 font-semibold text-ink mt-10 pt-10 border-t border-rule">The shift</h2>
             <p>Here&rsquo;s the bottom line.</p>
-            <p>The winners in this next stretch won&rsquo;t be the people collecting AI tools like they are Infinity Stones. They&rsquo;ll be the people who started building a team they own.</p>
+            <p>The winners in this next stretch won&rsquo;t be the people collecting AI tools like they are Infinity Stones. They&rsquo;ll be the people who started building <Link href="/consultants" className="text-accent underline underline-offset-2 hover:no-underline">a team they own</Link>.</p>
             <p>Stop bolting skills onto one exhausted assistant until it collapses. Stop renting scattered pieces from a dozen vendors. Be the architect. Hire the general contractor. Let the specialists do what they&rsquo;re great at, and keep your hand on the one thing that was always yours: the approval, the judgment, the final yes.</p>
 
             <p className="font-semibold text-ink mt-8">Your next moves:</p>
             <ul className="space-y-3">
               <li><strong>Audit your stack:</strong> List every AI tool you&rsquo;re paying for right now. Circle the ones that actually take work off your plate, rather than just adding yet another open tab. Be honest.</li>
               <li><strong>Name your functions, not your tasks:</strong> Write down the five functions your business runs on: offer, marketing, sales, operations, client care. That&rsquo;s your org chart. That&rsquo;s who you&rsquo;re about to hire.</li>
-              <li><strong>Pick your first specialist:</strong> Choose the one function that&rsquo;s leaking the most money or time right now. That&rsquo;s your first hire. Not all of them, just the one that hurts most today.</li>
+              <li><strong>Pick your first specialist:</strong> Choose <Link href="/assessment" className="text-accent underline underline-offset-2 hover:no-underline">the one function that&rsquo;s leaking the most money or time right now</Link>. That&rsquo;s your first hire. Not all of them, just the one that hurts most today.</li>
               <li><strong>Draw the line between architect and technician:</strong> For one week, notice every time you&rsquo;re doing work a specialist should own. That list is your blueprint.</li>
             </ul>
 

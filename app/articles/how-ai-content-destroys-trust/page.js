@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
 import Section from '../../components/Section'
@@ -147,7 +148,7 @@ export default function Article() {
               I collected samples: AI-generated marketing emails, blog posts, and LinkedIn content. I compared them
               against human-written copy &mdash; mine and other professional copywriters&rsquo; content before AI took hold.
             </p>
-            <p>I found over 20 distinct patterns that AI overuses. A few of them account for 80% of the effect readers describe as &ldquo;robotic&rdquo; or &ldquo;off,&rdquo; but they can&rsquo;t say exactly why.</p>
+            <p>I found over 20 distinct patterns that AI overuses. A few of them account for 80% of the effect readers describe as <Link href="/articles/why-chatgpt-sounds-robotic" className="text-accent underline underline-offset-2 hover:no-underline">&ldquo;robotic&rdquo;</Link> or &ldquo;off,&rdquo; but they can&rsquo;t say exactly why.</p>
             <p>The problem is never the presence of a pattern. It is the density.</p>
             <p>
               You already have the three numbers. What the numbers do not show is how they interact. Antithesis
@@ -291,6 +292,9 @@ export default function Article() {
               AI-generated piece in the reader&rsquo;s inbox. Trust erodes. You never see the moment it happened.
             </p>
             <p>Build it as an afterthought, and you ship defective product.</p>
+            <p className="text-ink-muted">
+              This is the same principle at the scale of your whole business: stop asking one assistant to do every job, and <Link href="/articles/future-of-ai-agents-in-business" className="text-accent underline underline-offset-2 hover:no-underline">compose a team of specialists under a coordinator</Link> instead.
+            </p>
             <p className="text-ink-muted italic">
               Warm regards &mdash; and always, better words and bigger returns,<br />
               Rev
