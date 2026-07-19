@@ -13,12 +13,20 @@ import futureBody from '../content/future-of-ai-agents-in-business'
 import whyWritingBody from '../content/why-ai-writing-sucks'
 import whyRoboticBody from '../content/why-chatgpt-sounds-robotic'
 import destroysTrustBody from '../content/how-ai-content-destroys-trust'
+import priorityMapBody from '../content/ai-priority-map'
+import vacationTestBody from '../content/vacation-test'
+import whatIsAgentBody from '../content/what-is-an-ai-agent'
+import agentVsChatbotBody from '../content/ai-agent-vs-chatbot-vs-automation'
 
 const BODIES = {
   'future-of-ai-agents-in-business': futureBody,
   'why-ai-writing-sucks': whyWritingBody,
   'why-chatgpt-sounds-robotic': whyRoboticBody,
   'how-ai-content-destroys-trust': destroysTrustBody,
+  'ai-priority-map': priorityMapBody,
+  'vacation-test': vacationTestBody,
+  'what-is-an-ai-agent': whatIsAgentBody,
+  'ai-agent-vs-chatbot-vs-automation': agentVsChatbotBody,
 }
 
 const BASE = 'https://aiinnercircle.com'
@@ -67,6 +75,19 @@ function articleSchema(article, url) {
   }
 }
 
+function faqSchema(article, url) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    '@id': `${url}#faq`,
+    mainEntity: article.faq.map((item) => ({
+      '@type': 'Question',
+      name: item.q,
+      acceptedAnswer: { '@type': 'Answer', text: item.a },
+    })),
+  }
+}
+
 function breadcrumbSchema(article, url) {
   return {
     '@context': 'https://schema.org',
@@ -99,9 +120,35 @@ export default function ArticlePage({ params }) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema(article, url)) }}
       />
+      {article.faq && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema(article, url)) }}
+        />
+      )}
       <Header />
       <main>
         <Body />
+
+        {/* FAQ (rendered from articles.js so the visible copy and the
+            FAQPage JSON-LD above can never drift apart) */}
+        {article.faq && (
+          <Section bg="paper" width="prose">
+            <div className="border-t border-rule pt-10">
+              <div className="eyebrow mb-8">FAQ</div>
+              <div className="space-y-8">
+                {article.faq.map((item) => (
+                  <div key={item.q}>
+                    <h2 className="text-h3 font-semibold text-ink leading-snug mb-2">
+                      {item.q}
+                    </h2>
+                    <p className="text-body text-ink-muted leading-relaxed">{item.a}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </Section>
+        )}
 
         {/* Related articles */}
         <Section bg="paper" width="prose">

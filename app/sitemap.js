@@ -46,7 +46,7 @@ export default function sitemap() {
     url: `${BASE}/articles/${article.slug}`,
     lastModified: new Date(article.dateISO),
     changeFrequency: 'monthly',
-    priority: article.hub ? 0.8 : 0.7,
+    priority: article.sitemapPriority ?? (article.hub ? 0.8 : 0.7),
   }))
 
   // Keep article URLs grouped right after the /articles hub page.
