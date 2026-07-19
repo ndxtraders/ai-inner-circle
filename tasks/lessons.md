@@ -60,3 +60,27 @@ submission lands in the destination before calling it fixed.
 
 **Rule:** the server resolves the group from a semantic `audience` value it
 validates against an allow-list. The client never names a destination.
+
+---
+
+## Planning docs are stale; the code is the source of truth
+
+**What happened (2026-07-19):** SEO articles about the AI Priority Map were
+drafted from `planning docs/AI-Inner-Circle-Master-Brief.md`, which describes
+a 15-question / 5-pillar assessment. The live assessment
+(`app/consultants/assessment/page.js`, QUESTIONS array) is 12 questions across
+4 engines (Authority, Pipeline, Conversion, Founder Freedom) with different
+breaking-point names. Rev caught it in review.
+
+**Rules:**
+- Any claim about the product (question counts, pillar/engine names, pricing,
+  skill names, month numbers) is verified against **origin/main on GitHub**
+  (after `git fetch`) or the live site before it goes in a draft. Planning
+  docs give intent and voice, never facts.
+- **The GitHub repo is authoritative; the local clone is presumed stale**
+  (Rev, 2026-07-19). Fetch and diff against origin before reading anything
+  as fact. This extends the earlier "check the remote" lesson from analysis
+  to all content work.
+- The membership curriculum in the brief also drifts (Rev's WIP renames skills,
+  reorders months). Quote skill names from the repo's current state, or keep
+  them generic in public copy.
