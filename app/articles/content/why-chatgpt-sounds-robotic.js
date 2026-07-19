@@ -1,54 +1,14 @@
-import Link from 'next/link'
-import Header from '../../components/Header'
-import Footer from '../../components/Footer'
-import Section from '../../components/Section'
-import Button from '../../components/Button'
-import Image from 'next/image'
+import Link from "next/link"
+import Section from "../../components/Section"
+import Image from "next/image"
 
-export const metadata = {
-  alternates: { canonical: '/articles/why-chatgpt-sounds-robotic' },
-  title: 'Why ChatGPT Writing Will Always Sound Robotic | Rev Vaughn',
-  description:
-    'ChatGPT isn\'t optimized to sound human. It\'s optimized to sound finished. And that\'s a structural problem no amount of prompting can fix.',
-}
-
-// BlogPosting, not TechArticle. author/publisher point at the Person and
-// Organization nodes already declared in the root layout.
-const ARTICLE_SCHEMA = {
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    "@id": "https://aiinnercircle.com/articles/why-chatgpt-sounds-robotic#article",
-    "headline": "Why ChatGPT Writing Will Always Sound Robotic",
-    "description": "ChatGPT is not optimized to sound human. It is optimized to sound finished. That is a structural problem no amount of prompting can fix.",
-    "image": "https://aiinnercircle.com/Why-Chat-GPT-will-always-sound-robotic.webp",
-    "url": "https://aiinnercircle.com/articles/why-chatgpt-sounds-robotic",
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": "https://aiinnercircle.com/articles/why-chatgpt-sounds-robotic"
-    },
-    "datePublished": "2026-02-04",
-    "dateModified": "2026-02-04",
-    "author": {
-      "@id": "https://aiinnercircle.com/#person"
-    },
-    "publisher": {
-      "@id": "https://aiinnercircle.com/#organization"
-    },
-    "inLanguage": "en-US",
-    "isAccessibleForFree": true,
-    "wordCount": 800,
-    "alternativeHeadline": "And Why There’s Not a Damn Thing You Can Do About It"
-  }
-
-export default function Article() {
+// Article body for /articles/why-chatgpt-sounds-robotic. Rendered by the dynamic route at
+// app/articles/[slug]/page.js, which supplies <Header>, JSON-LD, the
+// related-articles block, the CTA, and <Footer>. Metadata for this article
+// lives in app/content/articles.js — do not hand-copy it here.
+export default function ArticleBody() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(ARTICLE_SCHEMA) }}
-      />
-      <Header />
-      <main>
         {/* Article header */}
         <Section bg="paper" width="prose">
           <div className="eyebrow mb-6">Articles</div>
@@ -211,21 +171,6 @@ export default function Article() {
 
           </div>
         </Section>
-
-        {/* CTA */}
-        <Section bg="grey" width="content">
-          <p className="eyebrow mb-6">Work with me</p>
-          <h2 className="text-h1 font-semibold leading-tight mb-6">Find your hidden bottleneck.</h2>
-          <p className="text-body text-ink-muted max-w-prose mb-10">
-            A 60-minute Quick Win Consult to pinpoint what is blocking growth and remove it fast.
-          </p>
-          <Button href="/quick-win" variant="primary">
-            Book a Quick Win Consult &rarr;
-          </Button>
-        </Section>
-
-      </main>
-      <Footer />
     </>
   )
 }

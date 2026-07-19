@@ -1,52 +1,13 @@
-import Link from 'next/link'
-import Header from '../../components/Header'
-import Footer from '../../components/Footer'
-import Section from '../../components/Section'
-import Button from '../../components/Button'
+import Link from "next/link"
+import Section from "../../components/Section"
 
-export const metadata = {
-  alternates: { canonical: '/articles/why-ai-writing-sucks' },
-  title: 'Why AI Writing Sucks And What To Do About It | Rev Vaughn',
-  description:
-    'AI writing doesn\'t fail because it\'s artificial. It fails because it lets you settle. Here\'s the fix.',
-}
-
-// BlogPosting, not TechArticle. author/publisher point at the Person and
-// Organization nodes already declared in the root layout.
-const ARTICLE_SCHEMA = {
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    "@id": "https://aiinnercircle.com/articles/why-ai-writing-sucks#article",
-    "headline": "Why AI Writing Sucks And What To Do About It",
-    "description": "AI writing does not fail because it is artificial. It fails because it lets you settle. Here is the fix.",
-    "image": "https://aiinnercircle.com/opengraph-image",
-    "url": "https://aiinnercircle.com/articles/why-ai-writing-sucks",
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": "https://aiinnercircle.com/articles/why-ai-writing-sucks"
-    },
-    "datePublished": "2025-05-26",
-    "dateModified": "2025-05-26",
-    "author": {
-      "@id": "https://aiinnercircle.com/#person"
-    },
-    "publisher": {
-      "@id": "https://aiinnercircle.com/#organization"
-    },
-    "inLanguage": "en-US",
-    "isAccessibleForFree": true,
-    "wordCount": 800
-  }
-
-export default function Article() {
+// Article body for /articles/why-ai-writing-sucks. Rendered by the dynamic route at
+// app/articles/[slug]/page.js, which supplies <Header>, JSON-LD, the
+// related-articles block, the CTA, and <Footer>. Metadata for this article
+// lives in app/content/articles.js — do not hand-copy it here.
+export default function ArticleBody() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(ARTICLE_SCHEMA) }}
-      />
-      <Header />
-      <main>
         {/* Article header */}
         <Section bg="paper" width="prose">
           <div className="eyebrow mb-6">Articles</div>
@@ -162,21 +123,6 @@ export default function Article() {
 
           </div>
         </Section>
-
-        {/* CTA */}
-        <Section bg="grey" width="content">
-          <p className="eyebrow mb-6">Work with me</p>
-          <h2 className="text-h1 font-semibold leading-tight mb-6">Find your hidden bottleneck.</h2>
-          <p className="text-body text-ink-muted max-w-prose mb-10">
-            A 60-minute Quick Win Consult to pinpoint what is blocking growth and remove it fast.
-          </p>
-          <Button href="/quick-win" variant="primary">
-            Book a Quick Win Consult &rarr;
-          </Button>
-        </Section>
-
-      </main>
-      <Footer />
     </>
   )
 }

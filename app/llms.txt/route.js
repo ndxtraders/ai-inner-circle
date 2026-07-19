@@ -1,4 +1,21 @@
-# AI Inner Circle
+import { ARTICLES } from '../content/articles'
+
+// Generated /llms.txt. Replaces the hand-maintained public/llms.txt, whose
+// Articles section had drifted — it was missing the hub article
+// (future-of-ai-agents-in-business). The Articles list is now generated from
+// app/content/articles.js so every published article appears automatically.
+// The surrounding prose is preserved verbatim from the previous static file.
+
+const BASE = 'https://aiinnercircle.com'
+
+export const dynamic = 'force-static'
+
+export function GET() {
+  const articleLines = ARTICLES.map(
+    (a) => `- [${a.title}](${BASE}/articles/${a.slug})`
+  ).join('\n')
+
+  const body = `# AI Inner Circle
 
 > A membership for founder-led B2B service businesses that want AI Assistants doing the operational work while the founder stays the strategist. Built and run by Rev Vaughn, a GTM strategist and revenue systems architect.
 
@@ -8,18 +25,16 @@ The core argument: one general-purpose chatbot loaded with more and more skills 
 
 ## Core pages
 
-- [Home](https://aiinnercircle.com/): Revenue growth systems for B2B service providers.
-- [For B2B Consultants](https://aiinnercircle.com/consultants): The membership. 24 AI Assistants across 6 departments, built over 6 months.
-- [For Coaches](https://aiinnercircle.com/coaches): The coach track. 20 Assistants across 5 departments, plus 3 bonus hires.
-- [AI Assessment](https://aiinnercircle.com/assessment): A free 12-question diagnostic that finds where AI fits in your business and what to do first. No email required.
-- [Case Studies](https://aiinnercircle.com/case-studies): Client results.
-- [Articles](https://aiinnercircle.com/articles): Writing on AI, voice, and revenue systems.
+- [Home](${BASE}/): Revenue growth systems for B2B service providers.
+- [For B2B Consultants](${BASE}/consultants): The membership. 24 AI Assistants across 6 departments, built over 6 months.
+- [For Coaches](${BASE}/coaches): The coach track. 20 Assistants across 5 departments, plus 3 bonus hires.
+- [AI Assessment](${BASE}/assessment): A free 12-question diagnostic that finds where AI fits in your business and what to do first. No email required.
+- [Case Studies](${BASE}/case-studies): Client results.
+- [Articles](${BASE}/articles): Writing on AI, voice, and revenue systems.
 
 ## Articles
 
-- [How AI Content Destroys Trust](https://aiinnercircle.com/articles/how-ai-content-destroys-trust)
-- [Why ChatGPT Sounds Robotic](https://aiinnercircle.com/articles/why-chatgpt-sounds-robotic)
-- [Why AI Writing Sucks](https://aiinnercircle.com/articles/why-ai-writing-sucks)
+${articleLines}
 
 ## About Rev Vaughn
 
@@ -39,4 +54,10 @@ This project says "AI Assistants" for the specialized agents inside the program.
 
 ## Contact
 
-- [Contact](https://aiinnercircle.com/contact)
+- [Contact](${BASE}/contact)
+`
+
+  return new Response(body, {
+    headers: { 'Content-Type': 'text/plain; charset=utf-8' },
+  })
+}

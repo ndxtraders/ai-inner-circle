@@ -1,54 +1,14 @@
-import Link from 'next/link'
-import Header from '../../components/Header'
-import Footer from '../../components/Footer'
-import Section from '../../components/Section'
-import Button from '../../components/Button'
-import Image from 'next/image'
+import Link from "next/link"
+import Section from "../../components/Section"
+import Image from "next/image"
 
-export const metadata = {
-  alternates: { canonical: '/articles/how-ai-content-destroys-trust' },
-  title: 'How AI-Generated Content Is Destroying Trust | Rev Vaughn',
-  description:
-    'Three measurable patterns are eroding your credibility below the threshold of conscious detection. The fix isn\'t better prompting — it\'s a quality gate that counts.',
-}
-
-// BlogPosting, not TechArticle. author/publisher point at the Person and
-// Organization nodes already declared in the root layout.
-const ARTICLE_SCHEMA = {
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    "@id": "https://aiinnercircle.com/articles/how-ai-content-destroys-trust#article",
-    "headline": "How AI-Generated Content Is Destroying Trust",
-    "description": "Three measurable patterns are eroding your credibility below the threshold of conscious detection. The fix is a quality gate that counts, not better prompting.",
-    "image": "https://aiinnercircle.com/Make-this-sound-more-human.webp",
-    "url": "https://aiinnercircle.com/articles/how-ai-content-destroys-trust",
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": "https://aiinnercircle.com/articles/how-ai-content-destroys-trust"
-    },
-    "datePublished": "2026-04-02",
-    "dateModified": "2026-04-02",
-    "author": {
-      "@id": "https://aiinnercircle.com/#person"
-    },
-    "publisher": {
-      "@id": "https://aiinnercircle.com/#organization"
-    },
-    "inLanguage": "en-US",
-    "isAccessibleForFree": true,
-    "wordCount": 1600,
-    "alternativeHeadline": "And The Mathematical Solution No One’s Talking About"
-  }
-
-export default function Article() {
+// Article body for /articles/how-ai-content-destroys-trust. Rendered by the dynamic route at
+// app/articles/[slug]/page.js, which supplies <Header>, JSON-LD, the
+// related-articles block, the CTA, and <Footer>. Metadata for this article
+// lives in app/content/articles.js — do not hand-copy it here.
+export default function ArticleBody() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(ARTICLE_SCHEMA) }}
-      />
-      <Header />
-      <main>
         {/* Article header */}
         <Section bg="paper" width="prose">
           <div className="eyebrow mb-6">Articles</div>
@@ -302,21 +262,6 @@ export default function Article() {
 
           </div>
         </Section>
-
-        {/* CTA */}
-        <Section bg="grey" width="content">
-          <p className="eyebrow mb-6">Work with me</p>
-          <h2 className="text-h1 font-semibold leading-tight mb-6">Find your hidden bottleneck.</h2>
-          <p className="text-body text-ink-muted max-w-prose mb-10">
-            A 60-minute Quick Win Consult to pinpoint what is blocking growth and remove it fast.
-          </p>
-          <Button href="/quick-win" variant="primary">
-            Book a Quick Win Consult &rarr;
-          </Button>
-        </Section>
-
-      </main>
-      <Footer />
     </>
   )
 }
