@@ -19,6 +19,7 @@ import whatIsAgentBody from '../content/what-is-an-ai-agent'
 import agentVsChatbotBody from '../content/ai-agent-vs-chatbot-vs-automation'
 import agentCostBody from '../content/ai-agent-cost'
 import aiVsVaBody from '../content/ai-assistant-vs-virtual-assistant'
+import leadsGoColdBody from '../content/why-leads-go-cold'
 
 const BODIES = {
   'future-of-ai-agents-in-business': futureBody,
@@ -31,6 +32,7 @@ const BODIES = {
   'ai-agent-vs-chatbot-vs-automation': agentVsChatbotBody,
   'ai-agent-cost': agentCostBody,
   'ai-assistant-vs-virtual-assistant': aiVsVaBody,
+  'why-leads-go-cold': leadsGoColdBody,
 }
 
 const BASE = 'https://aiinnercircle.com'

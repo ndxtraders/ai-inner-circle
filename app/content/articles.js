@@ -298,6 +298,41 @@ export const ARTICLES = [
       },
     ],
   },
+  {
+    slug: 'why-leads-go-cold',
+    track: 'Conversion Engine',
+    title: 'Why Your Leads Go Cold (and How AI Follow-Up Fixes Speed-to-Lead)',
+    metaTitle:
+      'Why Your Leads Go Cold (and How AI Follow-Up Fixes Speed-to-Lead) | AI Inner Circle',
+    subtitle: null,
+    date: 'Jul 19, 2026',
+    dateISO: '2026-07-19',
+    readTime: '4 min read',
+    description:
+      'Your leads aren’t going cold because your service is wrong. They’re going cold because you’re the follow-up system and you’re busy. The founder-led fix for speed-to-lead, honestly explained.',
+    excerpt:
+      'Your leads aren’t going cold because your service is wrong. They’re going cold because you are the follow-up queue, and you’re billable all day. The founder-led fix for speed-to-lead, without the discipline lecture.',
+    image: 'https://aiinnercircle.com/opengraph-image',
+    wordCount: 700,
+    faq: [
+      {
+        q: 'Why do my leads go cold?',
+        a: 'In founder-led firms, leads go cold because the founder personally handles first response while being billable all day. Interest decays within hours; replies happen in days. It’s a structural queue problem, not a discipline problem, and it worsens in busy weeks.',
+      },
+      {
+        q: 'How fast should I respond to a new lead?',
+        a: 'Within minutes when possible, and inside the first hour at worst. Harvard Business Review research found responding within an hour made firms roughly seven times likelier to qualify the lead than waiting longer. Buyer patience has only shrunk since.',
+      },
+      {
+        q: 'Can AI follow up with my leads without sounding robotic?',
+        a: 'Yes, if it’s built on your voice and your qualification rules rather than templates. A well-set-up AI Assistant writes a specific reply to what the buyer asked and books qualified calls. A draft-first mode lets you approve each reply until you trust it.',
+      },
+      {
+        q: 'What’s the difference between an autoresponder and AI lead follow-up?',
+        a: 'An autoresponder acknowledges receipt with a template; buyers read it as a queue notice. AI follow-up answers the inquiry itself, qualifies the buyer against your criteria, and offers a booking link, in your voice, within minutes.',
+      },
+    ],
+  },
 ]
 
 export const HUB_ARTICLE = ARTICLES.find((a) => a.hub)
