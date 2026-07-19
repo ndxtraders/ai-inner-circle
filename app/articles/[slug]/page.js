@@ -18,6 +18,7 @@ import vacationTestBody from '../content/vacation-test'
 import whatIsAgentBody from '../content/what-is-an-ai-agent'
 import agentVsChatbotBody from '../content/ai-agent-vs-chatbot-vs-automation'
 import agentCostBody from '../content/ai-agent-cost'
+import aiVsVaBody from '../content/ai-assistant-vs-virtual-assistant'
 
 const BODIES = {
   'future-of-ai-agents-in-business': futureBody,
@@ -29,6 +30,7 @@ const BODIES = {
   'what-is-an-ai-agent': whatIsAgentBody,
   'ai-agent-vs-chatbot-vs-automation': agentVsChatbotBody,
   'ai-agent-cost': agentCostBody,
+  'ai-assistant-vs-virtual-assistant': aiVsVaBody,
 }
 
 const BASE = 'https://aiinnercircle.com'

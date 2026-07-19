@@ -263,6 +263,41 @@ export const ARTICLES = [
       },
     ],
   },
+  {
+    slug: 'ai-assistant-vs-virtual-assistant',
+    track: 'Start Here',
+    title: 'AI Assistant vs. Virtual Assistant: Which Should a Founder Hire First?',
+    metaTitle:
+      'AI Assistant vs. Virtual Assistant: Which Should a Founder Hire First? | AI Inner Circle',
+    subtitle: null,
+    date: 'Jul 19, 2026',
+    dateISO: '2026-07-19',
+    readTime: '4 min read',
+    description:
+      'The VA industry says hire a human. The AI vendors say buy an agent. Both are selling. Here’s the honest split for founder-led firms: what each wins, what each can’t do, and the sequence that works.',
+    excerpt:
+      'The VA agencies say hire a human; the AI vendors say buy an agent. Both are talking their book. The honest split for founder-led firms, and why the sequence is almost always AI first, human second.',
+    image: 'https://aiinnercircle.com/opengraph-image',
+    wordCount: 790,
+    faq: [
+      {
+        q: 'Should I hire a virtual assistant or use AI first?',
+        a: 'AI first, for most founder-led firms. An AI Assistant takes the rule-based routine (follow-ups, triage, reports), and running it clarifies exactly what human role to hire next. Hire the human first only when your drowning work is judgment-heavy.',
+      },
+      {
+        q: 'Can AI replace a virtual assistant?',
+        a: 'On rule-based routine work, yes, at a fraction of the cost. On judgment, relationships, and exceptions, no. Most firms end up with both: an agent on volume, a human on the work that needs a person.',
+      },
+      {
+        q: 'How much cheaper is an AI assistant than a VA?',
+        a: 'Routine-layer agents run roughly $20 to $100 per month. Dedicated human VAs run about $2,000 to $3,000 per month offshore and $3,000 to $7,000 US-based. That’s one to two orders of magnitude, but only on work you can write rules for.',
+      },
+      {
+        q: 'What should I delegate to AI vs a human assistant?',
+        a: 'Give AI the recurring, rule-based loop: lead follow-up, inbox triage, report drafts, invoice chasing. Give humans judgment calls, client relationships, and exceptions. If you can write the job description as rules, it’s agent work.',
+      },
+    ],
+  },
 ]
 
 export const HUB_ARTICLE = ARTICLES.find((a) => a.hub)
