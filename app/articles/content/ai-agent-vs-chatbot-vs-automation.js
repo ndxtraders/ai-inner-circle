@@ -75,7 +75,7 @@ export default function ArticleBody() {
                 </tbody>
               </table>
             </div>
-            <p>Full cost breakdown with real numbers is coming in its own article. The short version: the agent layer costs less than most founders assume and more than the ads imply.</p>
+            <p>Full cost breakdown with real numbers lives in its own article: <Link href="/articles/ai-agent-cost" className="text-accent underline underline-offset-2 hover:no-underline">How Much Does an AI Agent Cost?</Link> The short version: the agent layer costs less than most founders assume and more than the ads imply.</p>
 
             <h2 className="text-h2 font-semibold text-ink mt-10 pt-10 border-t border-rule">The one-sentence test for each layer</h2>
             <ul className="space-y-2">

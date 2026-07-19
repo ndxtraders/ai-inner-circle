@@ -17,6 +17,12 @@ import priorityMapBody from '../content/ai-priority-map'
 import vacationTestBody from '../content/vacation-test'
 import whatIsAgentBody from '../content/what-is-an-ai-agent'
 import agentVsChatbotBody from '../content/ai-agent-vs-chatbot-vs-automation'
+import agentCostBody from '../content/ai-agent-cost'
+import aiVsVaBody from '../content/ai-assistant-vs-virtual-assistant'
+import leadsGoColdBody from '../content/why-leads-go-cold'
+import clientEmailsBody from '../content/can-ai-answer-client-emails'
+import slowQuotesBody from '../content/why-slow-quotes-lose-deals'
+import whatNotToAutomateBody from '../content/what-not-to-automate-with-ai'
 
 const BODIES = {
   'future-of-ai-agents-in-business': futureBody,
@@ -27,6 +33,12 @@ const BODIES = {
   'vacation-test': vacationTestBody,
   'what-is-an-ai-agent': whatIsAgentBody,
   'ai-agent-vs-chatbot-vs-automation': agentVsChatbotBody,
+  'ai-agent-cost': agentCostBody,
+  'ai-assistant-vs-virtual-assistant': aiVsVaBody,
+  'why-leads-go-cold': leadsGoColdBody,
+  'can-ai-answer-client-emails': clientEmailsBody,
+  'why-slow-quotes-lose-deals': slowQuotesBody,
+  'what-not-to-automate-with-ai': whatNotToAutomateBody,
 }
 
 const BASE = 'https://aiinnercircle.com'
