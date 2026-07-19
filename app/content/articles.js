@@ -333,6 +333,41 @@ export const ARTICLES = [
       },
     ],
   },
+  {
+    slug: 'can-ai-answer-client-emails',
+    track: 'Founder Freedom',
+    title: 'Can AI Answer My Client Emails? What’s Safe, What Isn’t',
+    metaTitle:
+      'Can AI Answer My Client Emails? What’s Safe, What Isn’t | AI Inner Circle',
+    subtitle: null,
+    date: 'Jul 19, 2026',
+    dateISO: '2026-07-19',
+    readTime: '4 min read',
+    description:
+      'Yes, AI can answer your email. Whether it should depends on which email. The trust ladder founder-led firms actually use: what to automate, what to draft-first, and what should never be auto-sent.',
+    excerpt:
+      'Yes, AI can answer your email. Whether it should depends on which email. The trust ladder founder-led firms actually use: sort everything, draft-first the client mail, auto-send only the routine, and never let it touch bad news.',
+    image: 'https://aiinnercircle.com/opengraph-image',
+    wordCount: 720,
+    faq: [
+      {
+        q: 'Is it safe to let AI answer client emails?',
+        a: 'Safe when staged: let AI sort everything, draft replies for your approval, and auto-send only routine messages like scheduling and confirmations. Bad news, money conversations, and emotional messages stay human-written. Draft-first mode carries most of the benefit with none of the send risk.',
+      },
+      {
+        q: 'Can AI write emails that sound like me?',
+        a: 'Eventually, yes. It requires your real sent mail as a corpus, explicit voice rules, and a few weeks of corrections in draft-first mode. Expect early drafts to need edits; if you’re still editing heavily after tuning, keep approval in the loop.',
+      },
+      {
+        q: 'What emails should never be automated?',
+        a: 'Bad news, negotiations and money disputes, emotionally loaded messages, and anything containing commitment or legal language. These are a small share of volume but most of the relationship value. Automate the routine 80%; keep the meaningful 20% yours.',
+      },
+      {
+        q: 'How much time does AI email triage save a founder?',
+        a: 'Sorting, summarizing, and flagging alone typically cuts inbox time roughly in half. Draft-first replies add more on top, since approving a draft takes seconds while writing one takes minutes. The exact number depends on your volume mix.',
+      },
+    ],
+  },
 ]
 
 export const HUB_ARTICLE = ARTICLES.find((a) => a.hub)
