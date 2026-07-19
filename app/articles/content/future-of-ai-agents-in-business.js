@@ -1,5 +1,6 @@
 import Link from "next/link"
 import Section from "../../components/Section"
+import Image from "next/image"
 
 // Article body for /articles/future-of-ai-agents-in-business. Rendered by the dynamic route at
 // app/articles/[slug]/page.js, which supplies <Header>, JSON-LD, the
@@ -26,6 +27,16 @@ export default function ArticleBody() {
             <p>You&rsquo;ve got a folder full of tools and a business that still depends on you. Either that or accept <Link href="/articles/why-ai-writing-sucks" className="text-accent underline underline-offset-2 hover:no-underline">generic AI output</Link>. The AI didn&rsquo;t take work off your plate. It gave you more open tabs.</p>
             <p>Here&rsquo;s what I found after building with these tools for years: the real problem isn&rsquo;t necessarily the tool. It&rsquo;s not your prompts either. It&rsquo;s the shape of the thing you&rsquo;re building.</p>
             <p>Let me show you what I mean.</p>
+
+            <div className="my-6">
+              <Image
+                src="/ai-super-agent-vs-ai-team.jpg"
+                alt="Diagram: one overloaded super AI agent versus a coordinated team of specialist AI agents"
+                width={1200}
+                height={630}
+                className="w-full h-auto"
+              />
+            </div>
 
             <h2 className="text-h2 font-semibold text-ink mt-10 pt-10 border-t border-rule">Why one super AI assistant always breaks down</h2>
             <p>Most people build the same thing. One big assistant. Then they pile stuff onto it. A skill for writing emails. A plugin for your calendar. A connector for your CRM. Another skill. Another plugin. The theory is simple: the more you bolt on, the more it can do.</p>

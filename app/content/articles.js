@@ -36,7 +36,7 @@ export const ARTICLES = [
       'One big AI assistant always breaks down. Here’s why composing a team of small specialists under a coordinator — not bolting more skills onto one assistant — is how founders actually get work off their plate.',
     excerpt:
       'One big AI assistant always breaks down. The fix is not a better prompt. It is composition over inheritance: a coordinator running a team of small specialists, the same shift the whole AI industry is converging on.',
-    image: 'https://aiinnercircle.com/opengraph-image',
+    image: '/ai-super-agent-vs-ai-team.jpg',
     wordCount: 1800,
   },
   {
