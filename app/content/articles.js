@@ -368,6 +368,41 @@ export const ARTICLES = [
       },
     ],
   },
+  {
+    slug: 'why-slow-quotes-lose-deals',
+    track: 'Conversion Engine',
+    title: 'Why Slow Quotes Lose Deals (and How to Send Proposals in Hours, Not Weeks)',
+    metaTitle:
+      'Why Slow Quotes Lose Deals (and How to Send Proposals in Hours, Not Weeks) | AI Inner Circle',
+    subtitle: null,
+    date: 'Jul 19, 2026',
+    dateISO: '2026-07-19',
+    readTime: '4 min read',
+    description:
+      'Your proposal didn’t lose on price or quality. It lost on Tuesday, when a competitor’s arrived first. Why founder-led firms quote slowly, the scope-creep tax hiding inside it, and the same-day proposal system.',
+    excerpt:
+      'Your proposal didn’t lose on price or quality. It lost on Tuesday, when a competitor’s arrived first. Why founder-led firms quote slowly, the scope-creep tax inside it, and the same-day proposal system.',
+    image: 'https://aiinnercircle.com/opengraph-image',
+    wordCount: 760,
+    faq: [
+      {
+        q: 'How fast should I send a proposal after a sales call?',
+        a: 'Same day when possible, within 24 hours at worst. Buyer conviction peaks during the call and decays daily afterward, and your response speed sets their expectation of what working with you will feel like. Days-later proposals arrive to a colder buyer, often behind a competitor’s.',
+      },
+      {
+        q: 'Why do proposals take so long in small firms?',
+        a: 'The bottleneck is deciding, not writing. Pricing logic usually lives only in the founder’s head, so every quote is priced from scratch during the founder’s scarce focus time. Writing pricing rules down once removes most of the delay.',
+      },
+      {
+        q: 'Can AI write my proposals?',
+        a: 'AI can assemble them: call transcript in, your written pricing rules applied, your format out, same day. The founder still reviews and adjusts judgment calls before sending. Without written pricing rules, though, AI just formats guesswork faster.',
+      },
+      {
+        q: 'How do I stop scope creep on client projects?',
+        a: 'Define boundaries in the proposal itself: what’s included, what’s extra, what changes cost. Scope creep survives on improvised proposals with unwritten edges. Rules-based proposals put the boundary in a document the client signed before the work began.',
+      },
+    ],
+  },
 ]
 
 export const HUB_ARTICLE = ARTICLES.find((a) => a.hub)

@@ -21,6 +21,7 @@ import agentCostBody from '../content/ai-agent-cost'
 import aiVsVaBody from '../content/ai-assistant-vs-virtual-assistant'
 import leadsGoColdBody from '../content/why-leads-go-cold'
 import clientEmailsBody from '../content/can-ai-answer-client-emails'
+import slowQuotesBody from '../content/why-slow-quotes-lose-deals'
 
 const BODIES = {
   'future-of-ai-agents-in-business': futureBody,
@@ -35,6 +36,7 @@ const BODIES = {
   'ai-assistant-vs-virtual-assistant': aiVsVaBody,
   'why-leads-go-cold': leadsGoColdBody,
   'can-ai-answer-client-emails': clientEmailsBody,
+  'why-slow-quotes-lose-deals': slowQuotesBody,
 }
 
 const BASE = 'https://aiinnercircle.com'
