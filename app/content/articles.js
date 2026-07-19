@@ -403,6 +403,40 @@ export const ARTICLES = [
       },
     ],
   },
+  {
+    slug: 'what-not-to-automate-with-ai',
+    track: 'Start Here',
+    title: '5 Things You Should NOT Automate With AI (Yet)',
+    metaTitle: '5 Things You Should NOT Automate With AI (Yet) | AI Inner Circle',
+    subtitle: null,
+    date: 'Jul 19, 2026',
+    dateISO: '2026-07-19',
+    readTime: '5 min read',
+    description:
+      'From someone who builds AI systems for a living: five places automation burns money or trust in a founder-led firm, what to do instead of automating each, and the test that tells you when "yet" arrives.',
+    excerpt:
+      'From someone who builds AI systems for a living: five places automation burns money or trust in a founder-led firm, the cheaper fix for each, and the test that tells you when “yet” finally arrives.',
+    image: 'https://aiinnercircle.com/opengraph-image',
+    wordCount: 850,
+    faq: [
+      {
+        q: 'What should you not automate with AI?',
+        a: 'Five things in a service business: sales conversations with qualified buyers, pricing and strategy decisions, emotionally loaded client messages, processes you haven’t systematized, and publishing content without a human pass. Each contains judgment or relationship value that automation degrades.',
+      },
+      {
+        q: 'When is an AI agent a waste of money?',
+        a: 'When the underlying process is undocumented, when the task repeats less than weekly, or when the real problem is a decision (pricing, positioning) rather than a task. In each case the fix costs less than the agent: systematize, use chat tools, or decide first.',
+      },
+      {
+        q: 'Should I automate my sales calls?',
+        a: 'No. Buyers of high-value services are buying your judgment and can tell when it’s synthetic. Automate the speed around the call instead: follow-up, qualification, scheduling, and the same-day proposal afterward. Keep the conversation human.',
+      },
+      {
+        q: 'Can I automate a process that isn’t documented?',
+        a: 'Not usefully. Agents need a trigger, rules, and a done-state. Automating an undocumented process imitates chaos faster. Run it manually while recording, extract the rules, then automate the stable version.',
+      },
+    ],
+  },
 ]
 
 export const HUB_ARTICLE = ARTICLES.find((a) => a.hub)
