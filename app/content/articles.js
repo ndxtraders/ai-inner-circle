@@ -228,6 +228,41 @@ export const ARTICLES = [
       },
     ],
   },
+  {
+    slug: 'ai-agent-cost',
+    track: 'Start Here',
+    title: 'How Much Does an AI Agent Cost? Real Numbers for a Service Business',
+    metaTitle:
+      'How Much Does an AI Agent Cost? Real Numbers for a Service Business | AI Inner Circle',
+    subtitle: null,
+    date: 'Jul 19, 2026',
+    dateISO: '2026-07-19',
+    readTime: '5 min read',
+    description:
+      'AI agent pricing runs from $20 a month to $300K builds, and most guides hedge. Real 2026 numbers for a founder-led service firm: three tiers, a hybrid the guides don’t list, the hidden costs vendors skip, and when an agent is a waste of money.',
+    excerpt:
+      'Quotes for an AI agent run from $21 a month to $300K, and both are real. The honest 2026 numbers for a founder-led service firm: three tiers priced, a fourth hybrid the guides skip, and when an agent is simply a waste of money.',
+    image: 'https://aiinnercircle.com/opengraph-image',
+    wordCount: 940,
+    faq: [
+      {
+        q: 'How much does an AI agent cost per month?',
+        a: 'Self-built agents on a chat platform run $20 to $100 per month. Off-the-shelf agent platforms run $100 to $500 per month per job. Custom builds start around $3,000 to $15,000 up front. Add 30 to 50% to any sticker price for usage, integrations, and upkeep.',
+      },
+      {
+        q: 'Are AI agents worth it for a small service business?',
+        a: 'Worth it when a rule-based job repeats weekly and bleeds revenue: lead follow-up, quotes, inbox triage, reporting. Not worth it for occasional tasks, undefined processes, or problems that are really pricing and positioning decisions.',
+      },
+      {
+        q: 'Is an AI agent cheaper than a virtual assistant?',
+        a: 'On routine work, dramatically: an agent runs tens of dollars a month against $2,000 to $7,000 for a dedicated human VA. But agents only cover rule-based work. Most firms sequence agent first for routine volume, human second for judgment and relationships.',
+      },
+      {
+        q: 'What are the hidden costs of AI agents?',
+        a: 'Usage-based API and token fees, integration maintenance when connected tools change, performance drift without monthly tuning, and your own setup hours. Industry analyses put the real total at 1.3x to 1.5x the advertised price.',
+      },
+    ],
+  },
 ]
 
 export const HUB_ARTICLE = ARTICLES.find((a) => a.hub)

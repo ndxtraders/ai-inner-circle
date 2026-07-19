@@ -17,6 +17,7 @@ import priorityMapBody from '../content/ai-priority-map'
 import vacationTestBody from '../content/vacation-test'
 import whatIsAgentBody from '../content/what-is-an-ai-agent'
 import agentVsChatbotBody from '../content/ai-agent-vs-chatbot-vs-automation'
+import agentCostBody from '../content/ai-agent-cost'
 
 const BODIES = {
   'future-of-ai-agents-in-business': futureBody,
@@ -27,6 +28,7 @@ const BODIES = {
   'vacation-test': vacationTestBody,
   'what-is-an-ai-agent': whatIsAgentBody,
   'ai-agent-vs-chatbot-vs-automation': agentVsChatbotBody,
+  'ai-agent-cost': agentCostBody,
 }
 
 const BASE = 'https://aiinnercircle.com'
