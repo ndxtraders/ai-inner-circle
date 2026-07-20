@@ -23,6 +23,7 @@ import leadsGoColdBody from '../content/why-leads-go-cold'
 import clientEmailsBody from '../content/can-ai-answer-client-emails'
 import slowQuotesBody from '../content/why-slow-quotes-lose-deals'
 import whatNotToAutomateBody from '../content/what-not-to-automate-with-ai'
+import getClientsBody from '../content/get-clients-without-cold-email'
 
 const BODIES = {
   'future-of-ai-agents-in-business': futureBody,
@@ -39,6 +40,7 @@ const BODIES = {
   'can-ai-answer-client-emails': clientEmailsBody,
   'why-slow-quotes-lose-deals': slowQuotesBody,
   'what-not-to-automate-with-ai': whatNotToAutomateBody,
+  'get-clients-without-cold-email': getClientsBody,
 }
 
 const BASE = 'https://aiinnercircle.com'

@@ -133,6 +133,42 @@ export const ARTICLES = [
     ],
   },
   {
+    slug: 'get-clients-without-cold-email',
+    track: 'Pipeline Engine',
+    title:
+      'How to Get Consulting Clients Without Cold Email (or Ads, or Praying for Referrals)',
+    metaTitle:
+      'How to Get Consulting Clients Without Cold Email | AI Inner Circle',
+    subtitle: null,
+    date: 'Jul 19, 2026',
+    dateISO: '2026-07-19',
+    readTime: '7 min read',
+    description:
+      'Cold email burns the domain you invoice from and gets 3 to 5 replies per 100 sends. Here’s the signal-based system founder-led firms use to fill the calendar instead, and where an AI assistant fits.',
+    excerpt:
+      'Cold email burns the domain you invoice from and converts at low single digits. Here’s the signal-based system founder-led firms use to fill the calendar instead, and exactly where an AI assistant helps and where it must not.',
+    image: 'https://aiinnercircle.com/opengraph-image',
+    wordCount: 1500,
+    faq: [
+      {
+        q: 'Is cold email dead for consultants in 2026?',
+        a: 'No, but it’s mispriced for small firms. Reply rates run 3 to 5% and falling, and the volume required to make that convert puts your one business domain at deliverability risk under the 2024 Google and Yahoo bulk-sender rules. Cold email still works for productized offers with large markets and dedicated sending infrastructure.',
+      },
+      {
+        q: 'Can AI do my LinkedIn outreach for me?',
+        a: 'Mostly no. An AI assistant should watch for buying signals, score your warm list, and draft messages in your voice. It should not send. Automated DMs at scale read as spam, breach LinkedIn’s roughly 100-connection-requests-per-week limit, and risk the professional profile your pipeline depends on.',
+      },
+      {
+        q: 'How much time does signal-based lead generation take per day?',
+        a: 'About 30 minutes once an AI assistant handles the watching, scoring, and drafting. The founder reviews the day’s signals, personalizes and sends a handful of openers, and takes the conversations. Without the assistant, budget more like 90 minutes. That gap is why most founders quit by week three.',
+      },
+      {
+        q: 'Do I need a big LinkedIn audience for this to work?',
+        a: 'No. You need proof and signals, not followers. A weekly post that shows how you think gives buyers something to find, and the system runs on watching who engages with your niche, not on broadcast reach. Twenty real conversations a month sustain a founder-led firm. You don’t need 20,000 followers to get twenty conversations.',
+      },
+    ],
+  },
+  {
     slug: 'vacation-test',
     track: 'Founder Freedom',
     title: 'The Vacation Test: Can Your Business Run Without You?',
