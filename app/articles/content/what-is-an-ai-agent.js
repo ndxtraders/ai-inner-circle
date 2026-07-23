@@ -15,7 +15,7 @@ export default function ArticleBody() {
           <h1 className="text-display font-semibold leading-tight mb-6">
             What Is an AI Agent? A Plain-English Definition for Founders
           </h1>
-          <p className="text-small text-ink-muted">Jan 09,  &middot; 5 min read</p>
+          <p className="text-small text-ink-muted">Jan 09,2026  &middot; 5 min read</p>
         </Section>
 
         {/* Article body */}
