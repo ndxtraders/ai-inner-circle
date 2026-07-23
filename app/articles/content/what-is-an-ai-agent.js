@@ -15,7 +15,7 @@ export default function ArticleBody() {
           <h1 className="text-display font-semibold leading-tight mb-6">
             What Is an AI Agent? A Plain-English Definition for Founders
           </h1>
-          <p className="text-small text-ink-muted">Jul 19, 2026 &middot; 5 min read</p>
+          <p className="text-small text-ink-muted">Jan 09,  &middot; 5 min read</p>
         </Section>
 
         {/* Article body */}
@@ -42,7 +42,7 @@ export default function ArticleBody() {
             </ul>
             <p>If you can&rsquo;t write the job description (the trigger, the steps, the done-state), you don&rsquo;t have an agent use case yet. You have a task you haven&rsquo;t systematized. That&rsquo;s not an insult; it&rsquo;s a diagnosis. It&rsquo;s also the most common reason founders&rsquo; first agents fail. More on that in <Link href="/articles/ai-priority-map" className="text-accent underline underline-offset-2 hover:no-underline">the Priority Map</Link>.</p>
 
-            <h2 className="text-h2 font-semibold text-ink mt-10 pt-10 border-t border-rule">What agents do well in a small firm in 2026, honestly</h2>
+            <h2 className="text-h2 font-semibold text-ink mt-10 pt-10 border-t border-rule">What agents do well in a small firm in , honestly</h2>
             <div className="overflow-x-auto my-6">
               <table className="w-full text-body text-left border-collapse">
                 <thead>
