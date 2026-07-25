@@ -15,7 +15,7 @@ export default function ArticleBody() {
           <h1 className="text-display font-semibold leading-tight mb-6">
             The Future of AI Agents in Business
           </h1>
-          <p className="text-small text-ink-muted">Jan 2, 2026 &middot; 9 min read</p>
+          <p className="text-small text-ink-muted">Dec 19, 2025 &middot; 9 min read</p>
         </Section>
 
         {/* Article body */}

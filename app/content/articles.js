@@ -29,8 +29,8 @@ export const ARTICLES = [
     title: 'The Future of AI Agents in Business',
     metaTitle: 'The Future of AI Agents in Business | AI Inner Circle',
     subtitle: null,
-    date: 'Jan 2, 2026',
-    dateISO: '2026-01-02',
+    date: 'Dec 19, 2025',
+    dateISO: '2025-12-19',
     readTime: '9 min read',
     description:
       'One big AI assistant always breaks down. Here’s why composing a team of small specialists under a coordinator — not bolting more skills onto one assistant — is how founders actually get work off their plate.',
@@ -96,8 +96,8 @@ export const ARTICLES = [
     metaTitle:
       'The AI Priority Map: What to Automate First in Your Business | AI Inner Circle',
     subtitle: null,
-    date: 'Jul 19, 2026',
-    dateISO: '2026-07-19',
+    date: 'Jan 2, 2026',
+    dateISO: '2026-01-02',
     readTime: '6 min read',
     // New flagship hub for the SEO cluster. Not marked hub:true because the
     // /articles index assumes a single content hub (future-of-ai-agents); the
@@ -124,7 +124,7 @@ export const ARTICLES = [
       },
       {
         q: 'Why not just buy the best AI tools?',
-        a: 'Tools without a diagnosis automate whatever the demo shows, not what is bleeding. Founders who lead with tools accumulate subscriptions. Founders who lead with the breaking point remove a bottleneck, and the difference compounds every month.',
+        a: 'A tool bought without a diagnosis just automates whatever the demo shows best. Founders who lead with tools accumulate subscriptions. Founders who lead with the breaking point remove a bottleneck, and the difference compounds every month.',
       },
       {
         q: 'How is this different from an AI audit?',
@@ -175,8 +175,8 @@ export const ARTICLES = [
     metaTitle:
       'The Vacation Test: Can Your Business Run Without You? | AI Inner Circle',
     subtitle: null,
-    date: 'Jul 19, 2026',
-    dateISO: '2026-07-19',
+    date: 'Jan 9, 2026',
+    dateISO: '2026-01-09',
     readTime: '5 min read',
     description:
       'Two weeks, no laptop, no check-ins. What breaks first? The Vacation Test scores how dependent your business is on you, and shows which AI Assistants take over the routine so you stop being the ceiling.',
@@ -187,11 +187,11 @@ export const ARTICLES = [
     faq: [
       {
         q: 'What is the Vacation Test for business owners?',
-        a: 'A diagnostic question: if you were unreachable for two weeks, what would break first? It measures how dependent your business is on you personally. Failing it means operations, knowledge, or decisions stop moving without you. Those are the three marks of a founder bottleneck.',
+        a: 'A diagnostic question: if you were unreachable for two weeks, what would break first? It measures how dependent your business is on you personally. Failing it means operations, knowledge, or decisions stop moving without you. Those are the marks of a founder bottleneck.',
       },
       {
         q: 'How do I know if I am the bottleneck in my business?',
-        a: 'Three signs: work only moves when you push it, replies and decisions queue behind your attention, and key processes exist only in your head. If your team’s most common question is “what should I do here?”, you are the bottleneck.',
+        a: 'The signs: work only moves when you push it, replies and decisions queue behind your attention, and key processes exist only in your head. If your team’s most common question is “what should I do here?”, you are the bottleneck.',
       },
       {
         q: 'Can AI really run my business while I am away?',
@@ -210,8 +210,8 @@ export const ARTICLES = [
     metaTitle:
       'What Is an AI Agent? A Plain-English Definition for Founders | AI Inner Circle',
     subtitle: null,
-    date: 'Jul 19, 2026',
-    dateISO: '2026-07-19',
+    date: 'Jan 16, 2026',
+    dateISO: '2026-01-16',
     readTime: '5 min read',
     description:
       'Every definition of "AI agent" online was written for enterprises or engineers. Here is the plain-English version for a founder-led service business: what an agent is, what it isn’t, and whether you need one or just ChatGPT.',
@@ -222,7 +222,7 @@ export const ARTICLES = [
     faq: [
       {
         q: 'What is an AI agent in simple terms?',
-        a: 'Software that completes a whole job with AI instead of answering one question. You define the goal and rules; it handles the trigger, the steps, and the follow-through, like an assistant with a job description rather than a chatbot with answers.',
+        a: 'Software that completes a whole job with AI instead of answering one question. You define the goal and rules; it handles the trigger, the steps, and the follow-through, like an assistant with a job description.',
       },
       {
         q: 'What is the difference between an AI agent and ChatGPT?',
@@ -250,8 +250,8 @@ export const ARTICLES = [
     metaTitle:
       'AI Agent vs. Chatbot vs. Automation vs. ChatGPT: What a Founder Needs | AI Inner Circle',
     subtitle: null,
-    date: 'Jul 19, 2026',
-    dateISO: '2026-07-19',
+    date: 'Jan 23, 2026',
+    dateISO: '2026-01-23',
     readTime: '5 min read',
     description:
       'Four different tools get called "AI" and vendors blur them on purpose. A plain comparison for service-business founders: what each one does, what it costs, when it is enough, and when it breaks.',
@@ -270,7 +270,7 @@ export const ARTICLES = [
       },
       {
         q: 'Do I need a chatbot for my consulting business?',
-        a: 'Usually no. Chatbots earn their keep on high-traffic sites with repetitive pre-sale questions. Buyers of five-figure services want a fast, personal reply from you, which is a job for an AI agent working your inbox, not a widget on your homepage.',
+        a: 'Usually no. Chatbots earn their keep on high-traffic sites with repetitive pre-sale questions. Buyers of five-figure services want a fast, personal reply from you, which is a job for an AI agent working your inbox.',
       },
       {
         q: 'Can ChatGPT do what an AI agent does?',
@@ -285,8 +285,8 @@ export const ARTICLES = [
     metaTitle:
       'How Much Does an AI Agent Cost? Real Numbers for a Service Business | AI Inner Circle',
     subtitle: null,
-    date: 'Jul 19, 2026',
-    dateISO: '2026-07-19',
+    date: 'Jan 30, 2026',
+    dateISO: '2026-01-30',
     readTime: '5 min read',
     description:
       'AI agent pricing runs from $20 a month to $300K builds, and most guides hedge. Real 2026 numbers for a founder-led service firm: three tiers, a hybrid the guides don’t list, the hidden costs vendors skip, and when an agent is a waste of money.',
@@ -320,8 +320,8 @@ export const ARTICLES = [
     metaTitle:
       'AI Assistant vs. Virtual Assistant: Which Should a Founder Hire First? | AI Inner Circle',
     subtitle: null,
-    date: 'Jul 19, 2026',
-    dateISO: '2026-07-19',
+    date: 'Feb 6, 2026',
+    dateISO: '2026-02-06',
     readTime: '4 min read',
     description:
       'The VA industry says hire a human. The AI vendors say buy an agent. Both are selling. Here’s the honest split for founder-led firms: what each wins, what each can’t do, and the sequence that works.',
@@ -355,8 +355,8 @@ export const ARTICLES = [
     metaTitle:
       'Why Your Leads Go Cold (and How AI Follow-Up Fixes Speed-to-Lead) | AI Inner Circle',
     subtitle: null,
-    date: 'Jul 19, 2026',
-    dateISO: '2026-07-19',
+    date: 'Feb 13, 2026',
+    dateISO: '2026-02-13',
     readTime: '4 min read',
     description:
       'Your leads aren’t going cold because your service is wrong. They’re going cold because you’re the follow-up system and you’re busy. The founder-led fix for speed-to-lead, honestly explained.',
@@ -367,7 +367,7 @@ export const ARTICLES = [
     faq: [
       {
         q: 'Why do my leads go cold?',
-        a: 'In founder-led firms, leads go cold because the founder personally handles first response while being billable all day. Interest decays within hours; replies happen in days. It’s a structural queue problem, not a discipline problem, and it worsens in busy weeks.',
+        a: 'In founder-led firms, leads go cold because the founder personally handles first response while being billable all day. Interest decays within hours; replies happen in days. It’s a structural queue problem that gets worse in busy weeks, no matter how disciplined you are.',
       },
       {
         q: 'How fast should I respond to a new lead?',
@@ -390,8 +390,8 @@ export const ARTICLES = [
     metaTitle:
       'Can AI Answer My Client Emails? What’s Safe, What Isn’t | AI Inner Circle',
     subtitle: null,
-    date: 'Jul 19, 2026',
-    dateISO: '2026-07-19',
+    date: 'Feb 20, 2026',
+    dateISO: '2026-02-20',
     readTime: '4 min read',
     description:
       'Yes, AI can answer your email. Whether it should depends on which email. The trust ladder founder-led firms actually use: what to automate, what to draft-first, and what should never be auto-sent.',
@@ -425,8 +425,8 @@ export const ARTICLES = [
     metaTitle:
       'Why Slow Quotes Lose Deals (and How to Send Proposals in Hours, Not Weeks) | AI Inner Circle',
     subtitle: null,
-    date: 'Jul 19, 2026',
-    dateISO: '2026-07-19',
+    date: 'Feb 27, 2026',
+    dateISO: '2026-02-27',
     readTime: '4 min read',
     description:
       'Your proposal didn’t lose on price or quality. It lost on Tuesday, when a competitor’s arrived first. Why founder-led firms quote slowly, the scope-creep tax hiding inside it, and the same-day proposal system.',
@@ -441,7 +441,7 @@ export const ARTICLES = [
       },
       {
         q: 'Why do proposals take so long in small firms?',
-        a: 'The bottleneck is deciding, not writing. Pricing logic usually lives only in the founder’s head, so every quote is priced from scratch during the founder’s scarce focus time. Writing pricing rules down once removes most of the delay.',
+        a: 'The bottleneck is the deciding that happens before anyone writes a word. Pricing logic usually lives only in the founder’s head, so every quote is priced from scratch during the founder’s scarce focus time. Writing pricing rules down once removes most of the delay.',
       },
       {
         q: 'Can AI write my proposals?',
@@ -459,8 +459,8 @@ export const ARTICLES = [
     title: '5 Things You Should NOT Automate With AI (Yet)',
     metaTitle: '5 Things You Should NOT Automate With AI (Yet) | AI Inner Circle',
     subtitle: null,
-    date: 'Jul 19, 2026',
-    dateISO: '2026-07-19',
+    date: 'Mar 6, 2026',
+    dateISO: '2026-03-06',
     readTime: '5 min read',
     description:
       'From someone who builds AI systems for a living: five places automation burns money or trust in a founder-led firm, what to do instead of automating each, and the test that tells you when "yet" arrives.',
