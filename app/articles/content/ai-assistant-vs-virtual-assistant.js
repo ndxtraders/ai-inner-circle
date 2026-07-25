@@ -16,7 +16,7 @@ export default function ArticleBody() {
           <h1 className="text-display font-semibold leading-tight mb-6">
             AI Assistant vs. Virtual Assistant: Which Should a Founder Hire First?
           </h1>
-          <p className="text-small text-ink-muted">Jul 19, 2026 &middot; 4 min read</p>
+          <p className="text-small text-ink-muted">Feb 6, 2026 &middot; 4 min read</p>
         </Section>
 
         {/* Article body */}
@@ -87,7 +87,7 @@ export default function ArticleBody() {
             <p>Read the table twice and the pattern shows: the two columns barely compete. The agent owns repeatable volume. The human owns everything you can&rsquo;t write a rule for. The founders who get this wrong aren&rsquo;t choosing the wrong column. They&rsquo;re buying one column and expecting both.</p>
 
             <h2 className="text-h2 font-semibold text-ink mt-10 pt-10 border-t border-rule">Why AI-first is usually the right sequence</h2>
-            <p>Three reasons, in order of weight:</p>
+            <p>In order of weight:</p>
             <p><strong>1. The agent clarifies the human job description.</strong> Run an AI Assistant on your routine layer for two months and you learn exactly which work remains: the judgment calls, the client care, the exceptions. Now you hire a human for <em>that</em> job, at the right level, instead of a generalist to &ldquo;handle my chaos.&rdquo; Better hire, better retention.</p>
             <p><strong>2. The math is lopsided for routine work.</strong> Roughly $50 a month against $2,000-plus. If most of what&rsquo;s drowning you is follow-ups, triage, and reports, paying a human rate for it burns runway a founder-led firm rarely has. (Full cost breakdown, including the hidden costs vendors skip: <Link href="/articles/ai-agent-cost" className="text-accent underline underline-offset-2 hover:no-underline">How Much Does an AI Agent Cost? &rarr;</Link>)</p>
             <p><strong>3. Delegation to a human fails without documentation anyway.</strong> The classic reason VAs disappoint isn&rsquo;t the VA. It&rsquo;s that the founder&rsquo;s processes live in their head, so the VA queues behind their attention for every answer. That&rsquo;s the Brain Trap, and building your agent forces you to fix it first, because an agent literally cannot run without the rules written down. Document once, and both your agent and your eventual hire inherit it. (<Link href="/articles/vacation-test" className="text-accent underline underline-offset-2 hover:no-underline">The Vacation Test &rarr;</Link> covers this failure mode in full.)</p>
@@ -99,7 +99,7 @@ export default function ArticleBody() {
               <li><strong>Your buyers expect white-glove.</strong> A $50K engagement can justify a human touch at every step, and an agent behind the scenes instead of in front.</li>
               <li><strong>You have zero hours for setup.</strong> An agent costs a weekend you may not have. A managed VA service starts sooner, at human prices.</li>
             </ul>
-            <p>And one thing that should never go to either: sales conversations with qualified buyers. That&rsquo;s the founder&rsquo;s job until it&rsquo;s a closer&rsquo;s job. Anyone selling you an &ldquo;AI closer&rdquo; is selling to you, not for you.</p>
+            <p>And one thing that should never go to either: sales conversations with qualified buyers. That&rsquo;s the founder&rsquo;s job until it&rsquo;s a closer&rsquo;s job. Anyone selling you an &ldquo;AI closer&rdquo; is selling to you. That&rsquo;s the tell.</p>
 
             <h2 className="text-h2 font-semibold text-ink mt-10 pt-10 border-t border-rule">Decide from the bleed, not the trend</h2>
             <p>Which routine is actually drowning you decides the whole question, and most founders guess wrong about their own bottleneck. The <Link href="/articles/ai-priority-map" className="text-accent underline underline-offset-2 hover:no-underline">AI Priority Map &rarr;</Link> scores 12 breaking points across four engines in about 5 minutes and shows whether your worst one is agent work, human work, or a decision only you can make.</p>

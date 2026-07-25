@@ -16,7 +16,7 @@ export default function ArticleBody() {
           <h1 className="text-display font-semibold leading-tight mb-6">
             Can AI Answer My Client Emails? What&rsquo;s Safe, What Isn&rsquo;t
           </h1>
-          <p className="text-small text-ink-muted">Jul 19, 2026 &middot; 4 min read</p>
+          <p className="text-small text-ink-muted">Feb 20, 2026 &middot; 4 min read</p>
         </Section>
 
         {/* Article body */}
@@ -28,7 +28,7 @@ export default function ArticleBody() {
 
             <h2 className="text-h2 font-semibold text-ink mt-10 pt-10 border-t border-rule">The fear is legitimate. The framing is wrong.</h2>
             <p>Every founder asks this question the same way: &ldquo;What if it sends something wrong to a client?&rdquo; Fair. Your client relationships are the business; one tone-deaf reply to your biggest account costs more than a year of saved inbox hours.</p>
-            <p>But notice the framing assumes one decision: AI answers my email, yes or no. That&rsquo;s not how it works in practice, and the all-or-nothing frame is why founders stay stuck at &ldquo;no&rdquo; while drowning. The real question is <em>which</em> email, at <em>which</em> level of autonomy. That&rsquo;s a ladder, not a switch.</p>
+            <p>But notice the framing assumes one decision: AI answers my email, yes or no. That&rsquo;s not how it works in practice, and the all-or-nothing frame is why founders stay stuck at &ldquo;no&rdquo; while drowning. The real question is <em>which</em> email, at <em>which</em> level of autonomy. That&rsquo;s a ladder you climb one rung at a time.</p>
 
             <h2 className="text-h2 font-semibold text-ink mt-10 pt-10 border-t border-rule">The trust ladder</h2>
             <p><strong>Rung 1: Read and sort. Zero risk.</strong> The assistant reads everything, tags it (lead, client question, admin, noise), summarizes the long ones, and surfaces the three things that need you today. It sends nothing. You&rsquo;ve cut your inbox time roughly in half and taken no risk at all. Every founder should be on this rung by Friday.</p>
@@ -47,7 +47,7 @@ export default function ArticleBody() {
             <p>Notice these are a small minority of volume. That&rsquo;s the entire insight: the 80% that drowns you is routine, and the 20% that matters was never the time problem.</p>
 
             <h2 className="text-h2 font-semibold text-ink mt-10 pt-10 border-t border-rule">&ldquo;But will it sound like me?&rdquo;</h2>
-            <p>Honestly: out of the box, no. Voice-matching is built, not bought. It takes a corpus of your real sent mail, explicit rules about your patterns (how you open, how you say no, what you never say), and a few weeks of rung-2 corrections that get fed back in. After that, the drafts converge on you. Members routinely report the eerie moment a draft reads like they wrote it on a good day.</p>
+            <p>Honestly: out of the box, no. Voice-matching has to be built. It takes a corpus of your real sent mail, explicit rules about your patterns (how you open, how you say no, what you never say), and a few weeks of rung-2 corrections that get fed back in. After that, the drafts converge on you. Members routinely report the eerie moment a draft reads like they wrote it on a good day.</p>
             <p>Two tells that voice-matching isn&rsquo;t there yet: you&rsquo;re editing more than a line or two per draft, or clients start replying differently than they used to. Either one means stay on rung 2 and keep tuning.</p>
 
             <h2 className="text-h2 font-semibold text-ink mt-10 pt-10 border-t border-rule">Where this fits your bigger picture</h2>

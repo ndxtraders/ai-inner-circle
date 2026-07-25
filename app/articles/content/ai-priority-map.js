@@ -15,7 +15,7 @@ export default function ArticleBody() {
           <h1 className="text-display font-semibold leading-tight mb-6">
             The AI Priority Map: What to Automate First in Your Business
           </h1>
-          <p className="text-small text-ink-muted">Jul 19, 2026 &middot; 6 min read</p>
+          <p className="text-small text-ink-muted">Jan 2, 2026 &middot; 6 min read</p>
         </Section>
 
         {/* Article body */}
@@ -25,7 +25,7 @@ export default function ArticleBody() {
             <p className="text-lead text-ink leading-relaxed">The AI Priority Map is a diagnostic framework for founder-led service businesses. Instead of asking &ldquo;which AI tool should I buy?&rdquo;, it scores 12 breaking points across four business engines (Authority Engine, Pipeline Engine, Conversion Engine, Founder Freedom) and tells you which bottleneck is costing you the most right now, plus which AI Assistant fixes it first.</p>
             <p className="text-small text-ink-muted italic">Last updated: July 2026 &middot; By Rev Vaughn, GTM Strategist &amp; Revenue Systems Architect</p>
 
-            <h2 className="text-h2 font-semibold text-ink mt-10 pt-10 border-t border-rule">The problem isn&rsquo;t AI. It&rsquo;s the order you&rsquo;re doing it in.</h2>
+            <h2 className="text-h2 font-semibold text-ink mt-10 pt-10 border-t border-rule">It&rsquo;s a Sequencing Problem, Not an AI Problem</h2>
             <p>Every founder I talk to has the same browser situation: eleven AI tools bookmarked, three subscriptions they forgot they&rsquo;re paying for, and a business that runs exactly the way it did last year.</p>
             <p>That&rsquo;s not a discipline problem. It&rsquo;s a sequencing problem. &ldquo;Learn AI&rdquo; puts the tool first and your business second, so you end up automating whatever the tool demos well instead of whatever is bleeding.</p>
             <p>Problem first. AI second. That&rsquo;s the entire philosophy, and the Priority Map is how you run it.</p>
@@ -56,7 +56,7 @@ export default function ArticleBody() {
 
             <p className="font-semibold text-ink">4. Founder Freedom: can the business run a step without you?</p>
             <ul className="space-y-2">
-              <li><strong>The Vacation Test.</strong> If you leave for two weeks, revenue drops or operations slow down. You own a job, not an asset.</li>
+              <li><strong>The Vacation Test.</strong> If you leave for two weeks, revenue drops or operations slow down. You own a job.</li>
               <li><strong>The Brain Trap.</strong> Core processes live only in your head, so nothing can be delegated and everything routes back to you.</li>
               <li><strong>The Bottleneck.</strong> Every important decision runs through you before anything moves. The business moves at the speed of your attention.</li>
             </ul>
@@ -65,7 +65,7 @@ export default function ArticleBody() {
             <p>Three rules make the priority order obvious.</p>
             <p><strong>Red beats yellow.</strong> A breaking point at 100% friction (the one that made you wince reading the list) outranks five mild annoyances. You&rsquo;re not building a tidy automation portfolio. You&rsquo;re stopping the bleeding.</p>
             <p><strong>Revenue-adjacent beats convenient.</strong> Cold Fast and Slow Quotes convert directly into booked calls and signed proposals. Fix those before the internal stuff. A faster pipeline pays for every automation that comes after it.</p>
-            <p><strong>One at a time.</strong> The fastest way to fail at AI is deploying four agents in a month and maintaining none of them. One breaking point, one AI Assistant, running reliably. Then the next. The compounding comes from the sequence, not the speed.</p>
+            <p><strong>One at a time.</strong> The fastest way to fail at AI is deploying four agents in a month and maintaining none of them. One breaking point, one AI Assistant, running reliably. Then the next. The compounding comes from the sequence.</p>
 
             <h2 className="text-h2 font-semibold text-ink mt-10 pt-10 border-t border-rule">What &ldquo;an AI Assistant fixes it&rdquo; means</h2>
             <p>Not a chatbot bolted to your website. An AI Assistant, the way I mean it here, is an agent set up to run one specific job inside your business: triaging your inbox to draft-ready replies, following up with every lead inside five minutes, turning a scoping call into a sendable proposal, chasing the invoice so you don&rsquo;t have to. (Full plain-English definition in <Link href="/articles/what-is-an-ai-agent" className="text-accent underline underline-offset-2 hover:no-underline">What Is an AI Agent?</Link>, including where the hype ends.)</p>

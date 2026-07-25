@@ -16,7 +16,7 @@ export default function ArticleBody() {
           <h1 className="text-display font-semibold leading-tight mb-6">
             AI Agent vs. Chatbot vs. Automation vs. ChatGPT: Which One Do You Need?
           </h1>
-          <p className="text-small text-ink-muted">Jul 19, 2026 &middot; 5 min read</p>
+          <p className="text-small text-ink-muted">Jan 23, 2026 &middot; 5 min read</p>
         </Section>
 
         {/* Article body */}
@@ -94,7 +94,7 @@ export default function ArticleBody() {
               <li><strong>Automations</strong> doing the plumbing: inquiry form to CRM, signed proposal to invoice draft.</li>
               <li><strong>One agent</strong> on the highest-bleed job: reading every inbound lead, qualifying against their criteria, and getting a reply out inside five minutes with a booking link.</li>
             </ul>
-            <p>Notice the chatbot row. Skipping a layer is a valid answer. The stack is a menu, not a checklist.</p>
+            <p>Notice the chatbot row. Skipping a layer is a valid answer. The stack is a menu.</p>
 
             <h2 className="text-h2 font-semibold text-ink mt-10 pt-10 border-t border-rule">Start with the bleed, not the tool</h2>
             <p>The wrong question is &ldquo;which of these should I buy?&rdquo; The right question is &ldquo;which job is bleeding?&rdquo; A slow-quote problem points to a different layer than a content problem or an inbox problem. That diagnosis is what the <Link href="/articles/ai-priority-map" className="text-accent underline underline-offset-2 hover:no-underline">AI Priority Map</Link> does: 12 breaking points across four engines, scored in about 5 minutes, with the fix matched to each.</p>

@@ -16,7 +16,7 @@ export default function ArticleBody() {
           <h1 className="text-display font-semibold leading-tight mb-6">
             5 Things You Should NOT Automate With AI (Yet)
           </h1>
-          <p className="text-small text-ink-muted">Jul 19, 2026 &middot; 5 min read</p>
+          <p className="text-small text-ink-muted">Mar 6, 2026 &middot; 5 min read</p>
         </Section>
 
         {/* Article body */}

@@ -15,7 +15,7 @@ export default function ArticleBody() {
           <h1 className="text-display font-semibold leading-tight mb-6">
             The Vacation Test: Can Your Business Run Without You?
           </h1>
-          <p className="text-small text-ink-muted">Jul 19, 2026 &middot; 5 min read</p>
+          <p className="text-small text-ink-muted">Jan 9, 2026 &middot; 5 min read</p>
         </Section>
 
         {/* Article body */}
@@ -36,14 +36,14 @@ export default function ArticleBody() {
             <p>Most founder-led service businesses fail by day 3. The team isn&rsquo;t weak. The business was never built to run without its founder, so every process defaults to &ldquo;ask the founder.&rdquo;</p>
 
             <h2 className="text-h2 font-semibold text-ink mt-10 pt-10 border-t border-rule">The three ways founders fail the test</h2>
-            <p>The Vacation Test is the headline symptom of Founder Freedom, one of four engines in the <Link href="/articles/ai-priority-map" className="text-accent underline underline-offset-2 hover:no-underline">AI Priority Map</Link>. The engine breaks down into three specific failure modes:</p>
-            <p><strong>1. The Vacation Test itself.</strong> If you leave for two weeks, revenue drops or operations slow down. Work happens only when you push it, so you own a job, not an asset.</p>
+            <p>The Vacation Test is the headline symptom of Founder Freedom, one of four engines in the <Link href="/articles/ai-priority-map" className="text-accent underline underline-offset-2 hover:no-underline">AI Priority Map</Link>. The engine breaks down into the following failure modes:</p>
+            <p><strong>1. The Vacation Test itself.</strong> If you leave for two weeks, revenue drops or operations slow down. Work happens only when you push it, so you own a job.</p>
             <p><strong>2. The Brain Trap.</strong> Pricing logic, project steps, client quirks, the way you&rsquo;d handle an edge case: none of it is written anywhere. You can&rsquo;t delegate what only exists in your head, so you never really delegate at all.</p>
             <p><strong>3. The Bottleneck.</strong> Every important decision runs through you before anything moves. Delegation may exist on paper, but approval still lives with you, so the business moves at the speed of your attention.</p>
             <p>Score each one honestly: green (handled without me), yellow (limps along), red (stops dead). One red is normal. Three reds means you don&rsquo;t own a business. You&rsquo;re its single point of failure.</p>
 
             <h2 className="text-h2 font-semibold text-ink mt-10 pt-10 border-t border-rule">Why the standard advice hasn&rsquo;t fixed this</h2>
-            <p>The classic prescription is delegation frameworks and SOPs: document everything, hire, hand off. It&rsquo;s not wrong. It&rsquo;s just where most founders get stuck. Writing SOPs is exactly the kind of important-not-urgent work that loses to client deadlines every single week, and hiring ahead of revenue is a bet many founder-led firms can&rsquo;t make.</p>
+            <p>The classic prescription is delegation frameworks and SOPs: document everything, hire, hand off. Most founders get stuck right there. Writing SOPs is exactly the kind of important-not-urgent work that loses to client deadlines every single week, and hiring ahead of revenue is a bet many founder-led firms can&rsquo;t make.</p>
             <p>That gap is where AI Assistants earn their keep, and it&rsquo;s why this is an implementation problem, not a learn-more-about-AI problem:</p>
             <ul className="space-y-2">
               <li><strong>The Vacation Test</strong> &rarr; an <Link href="/articles/can-ai-answer-client-emails" className="text-accent underline underline-offset-2 hover:no-underline">inbox triage assistant</Link> that sorts, drafts replies in your voice, and flags the three things that need you, plus assistants running the routine loop of follow-ups, reports, and chasing. Not zero-you. Routine-without-you.</li>

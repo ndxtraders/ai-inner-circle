@@ -16,7 +16,7 @@ export default function ArticleBody() {
           <h1 className="text-display font-semibold leading-tight mb-6">
             Why Slow Quotes Lose Deals (and How to Send Proposals in Hours, Not Weeks)
           </h1>
-          <p className="text-small text-ink-muted">Jul 19, 2026 &middot; 4 min read</p>
+          <p className="text-small text-ink-muted">Feb 27, 2026 &middot; 4 min read</p>
         </Section>
 
         {/* Article body */}
@@ -37,13 +37,13 @@ export default function ArticleBody() {
             <p>Sound familiar? It&rsquo;s the Brain Trap wearing a sales hat, and it&rsquo;s why &ldquo;just write proposals faster&rdquo; advice fails. Speed isn&rsquo;t a typing problem.</p>
 
             <h2 className="text-h2 font-semibold text-ink mt-10 pt-10 border-t border-rule">The same-day proposal system</h2>
-            <p>Three parts, in build order:</p>
+            <p>In build order:</p>
             <ol className="space-y-2 list-decimal pl-6">
               <li><strong>Write the pricing rules once.</strong> Sit down for an afternoon and extract the logic you already use: your packages or day rates, what triggers a premium, what&rsquo;s always included, what&rsquo;s never included, the discounts you&rsquo;ll actually honor and the ones you regret. This document is the asset; everything else rides on it.</li>
               <li><strong>Run discovery calls knowing they&rsquo;re the input.</strong> Record the call. The scope conversation you&rsquo;re already having contains the proposal: goals, constraints, timeline, budget signals. Good discovery makes the proposal write itself, almost literally.</li>
               <li><strong>Let an AI Assistant assemble the draft.</strong> Transcript in, your pricing rules applied, your proposal format out, the same day. You review it, adjust the judgment calls, and send while the buyer still feels the call. Approval stays with you; assembly stops costing you an evening. (If this sounds like the job-description test in action, it is: <Link href="/articles/what-is-an-ai-agent" className="text-accent underline underline-offset-2 hover:no-underline">What Is an AI Agent? &rarr;</Link>)</li>
             </ol>
-            <p>Founders who make this shift send proposals in hours. Not because they type faster, but because the deciding was done in advance.</p>
+            <p>Founders who make this shift send proposals in hours, because the deciding was done in advance.</p>
 
             <h2 className="text-h2 font-semibold text-ink mt-10 pt-10 border-t border-rule">The scope-creep bonus nobody expects</h2>
             <p>Written pricing rules fix a second bleed you weren&rsquo;t aiming at: scope creep. Projects grow past the quote when boundaries were never written down, and boundaries never got written down because every proposal was improvised under deadline.</p>
@@ -52,7 +52,7 @@ export default function ArticleBody() {
             <h2 className="text-h2 font-semibold text-ink mt-10 pt-10 border-t border-rule">The honest caveats</h2>
             <ul className="space-y-2">
               <li><strong>A fast bad proposal is still bad.</strong> If your close rate is low with slow, careful quotes, speed alone won&rsquo;t rescue it. Price-objection problems are offer problems.</li>
-              <li><strong>Custom work still needs your judgment.</strong> The assistant assembles; the edge cases stay yours. Same-day means same-day reviewed, not unread.</li>
+              <li><strong>Custom work still needs your judgment.</strong> The assistant assembles; the edge cases stay yours. Same-day still means reviewed by you before it goes out.</li>
               <li><strong>The system is only as good as the rules.</strong> If your pricing changes with your mood, write the rules first or the assistant automates the inconsistency.</li>
             </ul>
             <p>Whether Slow Quotes is your worst breaking point, or just the most recent sting, is a diagnosis question. The <Link href="/articles/ai-priority-map" className="text-accent underline underline-offset-2 hover:no-underline">AI Priority Map &rarr;</Link> ranks it against the other 11 in about 5 minutes.</p>

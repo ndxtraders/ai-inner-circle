@@ -1,0 +1,493 @@
+// Single source of truth for article metadata. The articles hub, the
+// resources page, each article's own page metadata, JSON-LD, breadcrumbs,
+// related-articles block, the sitemap, and llms.txt all read from here
+// instead of hand-copying title/date/excerpt and letting them drift.
+//
+// `hub: true` marks the thesis article featured at the top of /articles and
+// /resources. Everything else is a spoke: one argument in the same track,
+// listed oldest-idea-first under the hub.
+//
+// Field notes:
+//   title       headline. Used for the H1, JSON-LD headline, breadcrumb,
+//               related-article cards, and og:title.
+//   metaTitle   full <title> tag, with brand suffix.
+//   description meta description. Also used for og:description and the
+//               BlogPosting JSON-LD description, so all three stay in sync.
+//   subtitle    optional deck. Emitted as JSON-LD alternativeHeadline.
+//   image       absolute URL used for og:image and JSON-LD image.
+//   dateISO     machine date for datePublished/dateModified and the sitemap.
+//   track       which track the article groups under on the /articles index
+//               (Start Here, Authority Engine, Pipeline Engine, Conversion
+//               Engine, Founder Freedom). null means it is not listed in a
+//               track (ai-priority-map is the featured strip instead).
+
+export const ARTICLES = [
+  {
+    slug: 'future-of-ai-agents-in-business',
+    hub: true,
+    track: 'Authority Engine',
+    title: 'The Future of AI Agents in Business',
+    metaTitle: 'The Future of AI Agents in Business | AI Inner Circle',
+    subtitle: null,
+    date: 'Jan 2, 2026',
+    dateISO: '2026-01-02',
+    readTime: '9 min read',
+    description:
+      'One big AI assistant always breaks down. Here’s why composing a team of small specialists under a coordinator — not bolting more skills onto one assistant — is how founders actually get work off their plate.',
+    excerpt:
+      'One big AI assistant always breaks down. The fix is not a better prompt. It is composition over inheritance: a coordinator running a team of small specialists, the same shift the whole AI industry is converging on.',
+    image: '/ai-super-agent-vs-ai-team.jpg',
+    wordCount: 1800,
+  },
+  {
+    slug: 'why-ai-writing-sucks',
+    track: 'Authority Engine',
+    title: 'Why AI Writing Sucks And What To Do About It',
+    metaTitle: 'Why AI Writing Sucks And What To Do About It | Rev Vaughn',
+    subtitle: null,
+    date: 'May 26, 2025',
+    dateISO: '2025-05-26',
+    readTime: '4 min read',
+    description:
+      'AI writing doesn’t fail because it’s artificial. It fails because it lets you settle. Here’s the fix.',
+    excerpt:
+      'AI writing doesn’t fail because it’s artificial. It fails because it lets you settle. A single AI tool playing every role produces average output. Here’s what it looks like when you stop prompting and start commanding a team.',
+    image: 'https://aiinnercircle.com/opengraph-image',
+    wordCount: 800,
+  },
+  {
+    slug: 'why-chatgpt-sounds-robotic',
+    track: 'Authority Engine',
+    title: 'Why ChatGPT Writing Will Always Sound Robotic',
+    metaTitle: 'Why ChatGPT Writing Will Always Sound Robotic | Rev Vaughn',
+    subtitle: 'And Why There’s Not a Damn Thing You Can Do About It',
+    date: 'Feb 4, 2026',
+    dateISO: '2026-02-04',
+    readTime: '4 min read',
+    description:
+      'ChatGPT isn’t optimized to sound human. It’s optimized to sound finished. And that’s a structural problem no amount of prompting can fix.',
+    excerpt:
+      'ChatGPT isn’t optimized to sound human. It’s optimized to sound finished. That distinction explains why every fix you’ve tried has worn off within two paragraphs, and why this is a structural problem, not a prompting problem.',
+    image: 'https://aiinnercircle.com/Why-Chat-GPT-will-always-sound-robotic.webp',
+    wordCount: 700,
+  },
+  {
+    slug: 'how-ai-content-destroys-trust',
+    track: 'Authority Engine',
+    title: 'How AI-Generated Content Is Destroying Trust',
+    metaTitle: 'How AI-Generated Content Is Destroying Trust | Rev Vaughn',
+    subtitle: 'And The Mathematical Solution No One’s Talking About',
+    date: 'Apr 2, 2026',
+    dateISO: '2026-04-02',
+    readTime: '8 min read',
+    description:
+      'Three measurable patterns are eroding your credibility below the threshold of conscious detection. The fix isn’t better prompting — it’s a quality gate that counts.',
+    excerpt:
+      'AI writing has a redundancy problem. Three measurable patterns — antithesis density, copula saturation, fragment clustering — are eroding your credibility below the threshold of conscious detection. The fix isn’t better prompting. It’s a quality gate that counts.',
+    image: 'https://aiinnercircle.com/Make-this-sound-more-human.webp',
+    wordCount: 1400,
+  },
+  {
+    slug: 'ai-priority-map',
+    // Not in a track. Rendered as the featured "Start with the map" strip
+    // between the hero and the tracks on /articles.
+    track: null,
+    title: 'The AI Priority Map: What to Automate First in Your Business',
+    metaTitle:
+      'The AI Priority Map: What to Automate First in Your Business | AI Inner Circle',
+    subtitle: null,
+    date: 'Jan 2, 2026',
+    dateISO: '2026-01-02',
+    readTime: '6 min read',
+    // New flagship hub for the SEO cluster. Not marked hub:true because the
+    // /articles index assumes a single content hub (future-of-ai-agents); the
+    // sitemap weights this at 0.8 via sitemapPriority instead.
+    sitemapPriority: 0.8,
+    description:
+      'Most founders pick AI tools first and problems second. Backwards. The AI Priority Map scores 12 breaking points across 4 business engines to show which bottleneck to fix first, and which AI Assistant fixes it.',
+    excerpt:
+      'Eleven AI tools bookmarked and a business that runs exactly like last year? That is a sequencing problem. The Priority Map scores 12 breaking points across four engines and tells you which bottleneck to fix first, and which AI Assistant fixes it.',
+    image: 'https://aiinnercircle.com/opengraph-image',
+    wordCount: 1100,
+    faq: [
+      {
+        q: 'What should I automate first in my business?',
+        a: 'Automate your worst revenue-adjacent breaking point first, usually lead follow-up or quote speed. Score all 12 breaking points across the four engines, then fix the single red one closest to revenue. One working AI Assistant beats four half-configured tools.',
+      },
+      {
+        q: 'What is the AI Priority Map?',
+        a: 'A 12-question diagnostic for founder-led service businesses. It scores four engines (Authority Engine, Pipeline Engine, Conversion Engine, Founder Freedom) and matches your highest-friction breaking point to the AI Assistant that fixes it.',
+      },
+      {
+        q: 'Do I need to know AI to use it?',
+        a: 'No. The map diagnoses business problems, not technology. You describe how your business runs today, and the output tells you what to fix in what order. The AI implementation comes after. Problem first, AI second.',
+      },
+      {
+        q: 'Why not just buy the best AI tools?',
+        a: 'A tool bought without a diagnosis just automates whatever the demo shows best. Founders who lead with tools accumulate subscriptions. Founders who lead with the breaking point remove a bottleneck, and the difference compounds every month.',
+      },
+      {
+        q: 'How is this different from an AI audit?',
+        a: 'The map is the free, self-serve first step. It tells you where the problem is. An audit goes deeper on how to fix your specific case. Run the map first. It may be all you need.',
+      },
+    ],
+  },
+  {
+    slug: 'get-clients-without-cold-email',
+    track: 'Pipeline Engine',
+    title:
+      'How to Get Consulting Clients Without Cold Email (or Ads, or Praying for Referrals)',
+    metaTitle:
+      'How to Get Consulting Clients Without Cold Email | AI Inner Circle',
+    subtitle: null,
+    date: 'Jul 19, 2026',
+    dateISO: '2026-07-19',
+    readTime: '7 min read',
+    description:
+      'Cold email burns the domain you invoice from and gets 3 to 5 replies per 100 sends. Here’s the signal-based system founder-led firms use to fill the calendar instead, and where an AI assistant fits.',
+    excerpt:
+      'Cold email burns the domain you invoice from and converts at low single digits. Here’s the signal-based system founder-led firms use to fill the calendar instead, and exactly where an AI assistant helps and where it must not.',
+    image: 'https://aiinnercircle.com/opengraph-image',
+    wordCount: 1500,
+    faq: [
+      {
+        q: 'Is cold email dead for consultants in 2026?',
+        a: 'No, but it’s mispriced for small firms. Reply rates run 3 to 5% and falling, and the volume required to make that convert puts your one business domain at deliverability risk under the 2024 Google and Yahoo bulk-sender rules. Cold email still works for productized offers with large markets and dedicated sending infrastructure.',
+      },
+      {
+        q: 'Can AI do my LinkedIn outreach for me?',
+        a: 'Mostly no. An AI assistant should watch for buying signals, score your warm list, and draft messages in your voice. It should not send. Automated DMs at scale read as spam, breach LinkedIn’s roughly 100-connection-requests-per-week limit, and risk the professional profile your pipeline depends on.',
+      },
+      {
+        q: 'How much time does signal-based lead generation take per day?',
+        a: 'About 30 minutes once an AI assistant handles the watching, scoring, and drafting. The founder reviews the day’s signals, personalizes and sends a handful of openers, and takes the conversations. Without the assistant, budget more like 90 minutes. That gap is why most founders quit by week three.',
+      },
+      {
+        q: 'Do I need a big LinkedIn audience for this to work?',
+        a: 'No. You need proof and signals, not followers. A weekly post that shows how you think gives buyers something to find, and the system runs on watching who engages with your niche, not on broadcast reach. Twenty real conversations a month sustain a founder-led firm. You don’t need 20,000 followers to get twenty conversations.',
+      },
+    ],
+  },
+  {
+    slug: 'vacation-test',
+    track: 'Founder Freedom',
+    title: 'The Vacation Test: Can Your Business Run Without You?',
+    metaTitle:
+      'The Vacation Test: Can Your Business Run Without You? | AI Inner Circle',
+    subtitle: null,
+    date: 'Jan 9, 2026',
+    dateISO: '2026-01-09',
+    readTime: '5 min read',
+    description:
+      'Two weeks, no laptop, no check-ins. What breaks first? The Vacation Test scores how dependent your business is on you, and shows which AI Assistants take over the routine so you stop being the ceiling.',
+    excerpt:
+      'If you disappeared for two weeks, what breaks first? The Vacation Test scores how dependent your business is on you, and shows which AI Assistants take over the routine so you stop being the ceiling.',
+    image: 'https://aiinnercircle.com/opengraph-image',
+    wordCount: 1000,
+    faq: [
+      {
+        q: 'What is the Vacation Test for business owners?',
+        a: 'A diagnostic question: if you were unreachable for two weeks, what would break first? It measures how dependent your business is on you personally. Failing it means operations, knowledge, or decisions stop moving without you. Those are the marks of a founder bottleneck.',
+      },
+      {
+        q: 'How do I know if I am the bottleneck in my business?',
+        a: 'The signs: work only moves when you push it, replies and decisions queue behind your attention, and key processes exist only in your head. If your team’s most common question is “what should I do here?”, you are the bottleneck.',
+      },
+      {
+        q: 'Can AI really run my business while I am away?',
+        a: 'Not all of it, and be suspicious of anyone who says otherwise. AI Assistants reliably run the routine layer (lead follow-up, inbox triage, reports, invoice chasing) with judgment calls routed to a human. That is usually enough to pass the two-week test.',
+      },
+      {
+        q: 'Should I hire someone or use AI to stop being the bottleneck?',
+        a: 'Sequence it: systematize the decision, give the routine version to an AI Assistant, and hire humans for judgment and relationships. Most founder-led firms do it backwards. They hire before the process is defined, then wonder why the new hire asks them everything.',
+      },
+    ],
+  },
+  {
+    slug: 'what-is-an-ai-agent',
+    track: 'Start Here',
+    title: 'What Is an AI Agent? A Plain-English Definition for Founders',
+    metaTitle:
+      'What Is an AI Agent? A Plain-English Definition for Founders | AI Inner Circle',
+    subtitle: null,
+    date: 'Jan 16, 2026',
+    dateISO: '2026-01-16',
+    readTime: '5 min read',
+    description:
+      'Every definition of "AI agent" online was written for enterprises or engineers. Here is the plain-English version for a founder-led service business: what an agent is, what it isn’t, and whether you need one or just ChatGPT.',
+    excerpt:
+      'An AI agent completes a whole job, not just answers a question. The plain-English version for a founder-led service business: what an agent is, what it is not, and whether you need one or just ChatGPT.',
+    image: 'https://aiinnercircle.com/opengraph-image',
+    wordCount: 1000,
+    faq: [
+      {
+        q: 'What is an AI agent in simple terms?',
+        a: 'Software that completes a whole job with AI instead of answering one question. You define the goal and rules; it handles the trigger, the steps, and the follow-through, like an assistant with a job description.',
+      },
+      {
+        q: 'What is the difference between an AI agent and ChatGPT?',
+        a: 'ChatGPT responds when you prompt it. You run the process. An agent runs the process itself: it is triggered by events (a lead arrives, an invoice goes overdue), takes multi-step action, and finishes the job without you driving each step.',
+      },
+      {
+        q: 'Do small businesses really need AI agents?',
+        a: 'Not always. If a workflow is occasional, chat tools are enough. Agents pay off on recurring, rule-based work with a clear trigger (lead follow-up, inbox triage, reporting, invoice chasing) where the founder is currently the bottleneck.',
+      },
+      {
+        q: 'What should my first AI agent do?',
+        a: 'Fix your worst revenue-adjacent bottleneck. For most founder-led firms that is lead follow-up speed or quote turnaround. Diagnose before you build: score your breaking points, pick the single worst one, give one agent that one job.',
+      },
+      {
+        q: 'What can’t AI agents do?',
+        a: 'Close deals, repair relationships, or make strategy and pricing decisions. Agents execute decisions you have systematized. If the “rule” for a task lives in your gut, systematize it first or keep it human.',
+      },
+    ],
+  },
+  {
+    slug: 'ai-agent-vs-chatbot-vs-automation',
+    track: 'Start Here',
+    title:
+      'AI Agent vs. Chatbot vs. Automation vs. ChatGPT: Which One Do You Need?',
+    metaTitle:
+      'AI Agent vs. Chatbot vs. Automation vs. ChatGPT: What a Founder Needs | AI Inner Circle',
+    subtitle: null,
+    date: 'Jan 23, 2026',
+    dateISO: '2026-01-23',
+    readTime: '5 min read',
+    description:
+      'Four different tools get called "AI" and vendors blur them on purpose. A plain comparison for service-business founders: what each one does, what it costs, when it is enough, and when it breaks.',
+    excerpt:
+      'ChatGPT, chatbot, automation, AI agent: four tools called "AI" that do different jobs. A plain comparison for founders, with what each costs, when it is enough, and when it breaks.',
+    image: 'https://aiinnercircle.com/opengraph-image',
+    wordCount: 1000,
+    faq: [
+      {
+        q: 'What is the difference between an AI agent and a chatbot?',
+        a: 'A chatbot converses from a script or knowledge base, mostly answering visitor questions. An AI agent completes a job end to end: it is triggered by an event, makes rule-based decisions, drafts in your voice, and follows through. Chatbots talk. Agents work.',
+      },
+      {
+        q: 'Is Zapier an AI agent?',
+        a: 'Classic Zapier-style automation is not an agent: it moves data on triggers without judgment. It becomes agent-like when AI steps are added that read, decide, and write. The dividing line is whether the system makes decisions or just executes rules.',
+      },
+      {
+        q: 'Do I need a chatbot for my consulting business?',
+        a: 'Usually no. Chatbots earn their keep on high-traffic sites with repetitive pre-sale questions. Buyers of five-figure services want a fast, personal reply from you, which is a job for an AI agent working your inbox.',
+      },
+      {
+        q: 'Can ChatGPT do what an AI agent does?',
+        a: 'ChatGPT produces the same quality of thinking, but you supply the trigger, the context, and the follow-through every time. An agent packages that loop so it runs without you. If a workflow repeats three times a week, you have outgrown chat for that job.',
+      },
+    ],
+  },
+  {
+    slug: 'ai-agent-cost',
+    track: 'Start Here',
+    title: 'How Much Does an AI Agent Cost? Real Numbers for a Service Business',
+    metaTitle:
+      'How Much Does an AI Agent Cost? Real Numbers for a Service Business | AI Inner Circle',
+    subtitle: null,
+    date: 'Jan 30, 2026',
+    dateISO: '2026-01-30',
+    readTime: '5 min read',
+    description:
+      'AI agent pricing runs from $20 a month to $300K builds, and most guides hedge. Real 2026 numbers for a founder-led service firm: three tiers, a hybrid the guides don’t list, the hidden costs vendors skip, and when an agent is a waste of money.',
+    excerpt:
+      'Quotes for an AI agent run from $21 a month to $300K, and both are real. The honest 2026 numbers for a founder-led service firm: three tiers priced, a fourth hybrid the guides skip, and when an agent is simply a waste of money.',
+    image: 'https://aiinnercircle.com/opengraph-image',
+    wordCount: 940,
+    faq: [
+      {
+        q: 'How much does an AI agent cost per month?',
+        a: 'Self-built agents on a chat platform run $20 to $100 per month. Off-the-shelf agent platforms run $100 to $500 per month per job. Custom builds start around $3,000 to $15,000 up front. Add 30 to 50% to any sticker price for usage, integrations, and upkeep.',
+      },
+      {
+        q: 'Are AI agents worth it for a small service business?',
+        a: 'Worth it when a rule-based job repeats weekly and bleeds revenue: lead follow-up, quotes, inbox triage, reporting. Not worth it for occasional tasks, undefined processes, or problems that are really pricing and positioning decisions.',
+      },
+      {
+        q: 'Is an AI agent cheaper than a virtual assistant?',
+        a: 'On routine work, dramatically: an agent runs tens of dollars a month against $2,000 to $7,000 for a dedicated human VA. But agents only cover rule-based work. Most firms sequence agent first for routine volume, human second for judgment and relationships.',
+      },
+      {
+        q: 'What are the hidden costs of AI agents?',
+        a: 'Usage-based API and token fees, integration maintenance when connected tools change, performance drift without monthly tuning, and your own setup hours. Industry analyses put the real total at 1.3x to 1.5x the advertised price.',
+      },
+    ],
+  },
+  {
+    slug: 'ai-assistant-vs-virtual-assistant',
+    track: 'Start Here',
+    title: 'AI Assistant vs. Virtual Assistant: Which Should a Founder Hire First?',
+    metaTitle:
+      'AI Assistant vs. Virtual Assistant: Which Should a Founder Hire First? | AI Inner Circle',
+    subtitle: null,
+    date: 'Feb 6, 2026',
+    dateISO: '2026-02-06',
+    readTime: '4 min read',
+    description:
+      'The VA industry says hire a human. The AI vendors say buy an agent. Both are selling. Here’s the honest split for founder-led firms: what each wins, what each can’t do, and the sequence that works.',
+    excerpt:
+      'The VA agencies say hire a human; the AI vendors say buy an agent. Both are talking their book. The honest split for founder-led firms, and why the sequence is almost always AI first, human second.',
+    image: 'https://aiinnercircle.com/opengraph-image',
+    wordCount: 790,
+    faq: [
+      {
+        q: 'Should I hire a virtual assistant or use AI first?',
+        a: 'AI first, for most founder-led firms. An AI Assistant takes the rule-based routine (follow-ups, triage, reports), and running it clarifies exactly what human role to hire next. Hire the human first only when your drowning work is judgment-heavy.',
+      },
+      {
+        q: 'Can AI replace a virtual assistant?',
+        a: 'On rule-based routine work, yes, at a fraction of the cost. On judgment, relationships, and exceptions, no. Most firms end up with both: an agent on volume, a human on the work that needs a person.',
+      },
+      {
+        q: 'How much cheaper is an AI assistant than a VA?',
+        a: 'Routine-layer agents run roughly $20 to $100 per month. Dedicated human VAs run about $2,000 to $3,000 per month offshore and $3,000 to $7,000 US-based. That’s one to two orders of magnitude, but only on work you can write rules for.',
+      },
+      {
+        q: 'What should I delegate to AI vs a human assistant?',
+        a: 'Give AI the recurring, rule-based loop: lead follow-up, inbox triage, report drafts, invoice chasing. Give humans judgment calls, client relationships, and exceptions. If you can write the job description as rules, it’s agent work.',
+      },
+    ],
+  },
+  {
+    slug: 'why-leads-go-cold',
+    track: 'Conversion Engine',
+    title: 'Why Your Leads Go Cold (and How AI Follow-Up Fixes Speed-to-Lead)',
+    metaTitle:
+      'Why Your Leads Go Cold (and How AI Follow-Up Fixes Speed-to-Lead) | AI Inner Circle',
+    subtitle: null,
+    date: 'Feb 13, 2026',
+    dateISO: '2026-02-13',
+    readTime: '4 min read',
+    description:
+      'Your leads aren’t going cold because your service is wrong. They’re going cold because you’re the follow-up system and you’re busy. The founder-led fix for speed-to-lead, honestly explained.',
+    excerpt:
+      'Your leads aren’t going cold because your service is wrong. They’re going cold because you are the follow-up queue, and you’re billable all day. The founder-led fix for speed-to-lead, without the discipline lecture.',
+    image: 'https://aiinnercircle.com/opengraph-image',
+    wordCount: 700,
+    faq: [
+      {
+        q: 'Why do my leads go cold?',
+        a: 'In founder-led firms, leads go cold because the founder personally handles first response while being billable all day. Interest decays within hours; replies happen in days. It’s a structural queue problem that gets worse in busy weeks, no matter how disciplined you are.',
+      },
+      {
+        q: 'How fast should I respond to a new lead?',
+        a: 'Within minutes when possible, and inside the first hour at worst. Harvard Business Review research found responding within an hour made firms roughly seven times likelier to qualify the lead than waiting longer. Buyer patience has only shrunk since.',
+      },
+      {
+        q: 'Can AI follow up with my leads without sounding robotic?',
+        a: 'Yes, if it’s built on your voice and your qualification rules rather than templates. A well-set-up AI Assistant writes a specific reply to what the buyer asked and books qualified calls. A draft-first mode lets you approve each reply until you trust it.',
+      },
+      {
+        q: 'What’s the difference between an autoresponder and AI lead follow-up?',
+        a: 'An autoresponder acknowledges receipt with a template; buyers read it as a queue notice. AI follow-up answers the inquiry itself, qualifies the buyer against your criteria, and offers a booking link, in your voice, within minutes.',
+      },
+    ],
+  },
+  {
+    slug: 'can-ai-answer-client-emails',
+    track: 'Founder Freedom',
+    title: 'Can AI Answer My Client Emails? What’s Safe, What Isn’t',
+    metaTitle:
+      'Can AI Answer My Client Emails? What’s Safe, What Isn’t | AI Inner Circle',
+    subtitle: null,
+    date: 'Feb 20, 2026',
+    dateISO: '2026-02-20',
+    readTime: '4 min read',
+    description:
+      'Yes, AI can answer your email. Whether it should depends on which email. The trust ladder founder-led firms actually use: what to automate, what to draft-first, and what should never be auto-sent.',
+    excerpt:
+      'Yes, AI can answer your email. Whether it should depends on which email. The trust ladder founder-led firms actually use: sort everything, draft-first the client mail, auto-send only the routine, and never let it touch bad news.',
+    image: 'https://aiinnercircle.com/opengraph-image',
+    wordCount: 720,
+    faq: [
+      {
+        q: 'Is it safe to let AI answer client emails?',
+        a: 'Safe when staged: let AI sort everything, draft replies for your approval, and auto-send only routine messages like scheduling and confirmations. Bad news, money conversations, and emotional messages stay human-written. Draft-first mode carries most of the benefit with none of the send risk.',
+      },
+      {
+        q: 'Can AI write emails that sound like me?',
+        a: 'Eventually, yes. It requires your real sent mail as a corpus, explicit voice rules, and a few weeks of corrections in draft-first mode. Expect early drafts to need edits; if you’re still editing heavily after tuning, keep approval in the loop.',
+      },
+      {
+        q: 'What emails should never be automated?',
+        a: 'Bad news, negotiations and money disputes, emotionally loaded messages, and anything containing commitment or legal language. These are a small share of volume but most of the relationship value. Automate the routine 80%; keep the meaningful 20% yours.',
+      },
+      {
+        q: 'How much time does AI email triage save a founder?',
+        a: 'Sorting, summarizing, and flagging alone typically cuts inbox time roughly in half. Draft-first replies add more on top, since approving a draft takes seconds while writing one takes minutes. The exact number depends on your volume mix.',
+      },
+    ],
+  },
+  {
+    slug: 'why-slow-quotes-lose-deals',
+    track: 'Conversion Engine',
+    title: 'Why Slow Quotes Lose Deals (and How to Send Proposals in Hours, Not Weeks)',
+    metaTitle:
+      'Why Slow Quotes Lose Deals (and How to Send Proposals in Hours, Not Weeks) | AI Inner Circle',
+    subtitle: null,
+    date: 'Feb 27, 2026',
+    dateISO: '2026-02-27',
+    readTime: '4 min read',
+    description:
+      'Your proposal didn’t lose on price or quality. It lost on Tuesday, when a competitor’s arrived first. Why founder-led firms quote slowly, the scope-creep tax hiding inside it, and the same-day proposal system.',
+    excerpt:
+      'Your proposal didn’t lose on price or quality. It lost on Tuesday, when a competitor’s arrived first. Why founder-led firms quote slowly, the scope-creep tax inside it, and the same-day proposal system.',
+    image: 'https://aiinnercircle.com/opengraph-image',
+    wordCount: 760,
+    faq: [
+      {
+        q: 'How fast should I send a proposal after a sales call?',
+        a: 'Same day when possible, within 24 hours at worst. Buyer conviction peaks during the call and decays daily afterward, and your response speed sets their expectation of what working with you will feel like. Days-later proposals arrive to a colder buyer, often behind a competitor’s.',
+      },
+      {
+        q: 'Why do proposals take so long in small firms?',
+        a: 'The bottleneck is the deciding that happens before anyone writes a word. Pricing logic usually lives only in the founder’s head, so every quote is priced from scratch during the founder’s scarce focus time. Writing pricing rules down once removes most of the delay.',
+      },
+      {
+        q: 'Can AI write my proposals?',
+        a: 'AI can assemble them: call transcript in, your written pricing rules applied, your format out, same day. The founder still reviews and adjusts judgment calls before sending. Without written pricing rules, though, AI just formats guesswork faster.',
+      },
+      {
+        q: 'How do I stop scope creep on client projects?',
+        a: 'Define boundaries in the proposal itself: what’s included, what’s extra, what changes cost. Scope creep survives on improvised proposals with unwritten edges. Rules-based proposals put the boundary in a document the client signed before the work began.',
+      },
+    ],
+  },
+  {
+    slug: 'what-not-to-automate-with-ai',
+    track: 'Start Here',
+    title: '5 Things You Should NOT Automate With AI (Yet)',
+    metaTitle: '5 Things You Should NOT Automate With AI (Yet) | AI Inner Circle',
+    subtitle: null,
+    date: 'Mar 6, 2026',
+    dateISO: '2026-03-06',
+    readTime: '5 min read',
+    description:
+      'From someone who builds AI systems for a living: five places automation burns money or trust in a founder-led firm, what to do instead of automating each, and the test that tells you when "yet" arrives.',
+    excerpt:
+      'From someone who builds AI systems for a living: five places automation burns money or trust in a founder-led firm, the cheaper fix for each, and the test that tells you when “yet” finally arrives.',
+    image: 'https://aiinnercircle.com/opengraph-image',
+    wordCount: 850,
+    faq: [
+      {
+        q: 'What should you not automate with AI?',
+        a: 'Five things in a service business: sales conversations with qualified buyers, pricing and strategy decisions, emotionally loaded client messages, processes you haven’t systematized, and publishing content without a human pass. Each contains judgment or relationship value that automation degrades.',
+      },
+      {
+        q: 'When is an AI agent a waste of money?',
+        a: 'When the underlying process is undocumented, when the task repeats less than weekly, or when the real problem is a decision (pricing, positioning) rather than a task. In each case the fix costs less than the agent: systematize, use chat tools, or decide first.',
+      },
+      {
+        q: 'Should I automate my sales calls?',
+        a: 'No. Buyers of high-value services are buying your judgment and can tell when it’s synthetic. Automate the speed around the call instead: follow-up, qualification, scheduling, and the same-day proposal afterward. Keep the conversation human.',
+      },
+      {
+        q: 'Can I automate a process that isn’t documented?',
+        a: 'Not usefully. Agents need a trigger, rules, and a done-state. Automating an undocumented process imitates chaos faster. Run it manually while recording, extract the rules, then automate the stable version.',
+      },
+    ],
+  },
+]
+
+export const HUB_ARTICLE = ARTICLES.find((a) => a.hub)
+export const SPOKE_ARTICLES = ARTICLES.filter((a) => !a.hub)

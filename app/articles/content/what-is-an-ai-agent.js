@@ -15,22 +15,22 @@ export default function ArticleBody() {
           <h1 className="text-display font-semibold leading-tight mb-6">
             What Is an AI Agent? A Plain-English Definition for Founders
           </h1>
-          <p className="text-small text-ink-muted">Jan 09,2026  &middot; 5 min read</p>
+          <p className="text-small text-ink-muted">Jan 16, 2026 &middot; 5 min read</p>
         </Section>
 
         {/* Article body */}
         <Section bg="paper" width="prose">
           <div className="space-y-6 text-body text-ink leading-relaxed">
 
-            <p className="text-lead text-ink leading-relaxed">An AI agent is software that uses AI to complete a whole job, not just answer a question. You give it a goal (&ldquo;follow up with every lead,&rdquo; &ldquo;triage my inbox&rdquo;) and it takes the steps itself: reading, deciding, drafting, updating your tools. For a small service business, think of it as an assistant with a job description, not a chatbot with answers.</p>
+            <p className="text-lead text-ink leading-relaxed">An AI agent is software that uses AI to complete a whole job. You give it a goal (&ldquo;follow up with every lead,&rdquo; &ldquo;triage my inbox&rdquo;) and it takes the steps itself: reading, deciding, drafting, updating your tools. For a small service business, think of it as an assistant with a job description.</p>
             <p className="text-small text-ink-muted italic">Last updated: July 2026 &middot; By Rev Vaughn, GTM Strategist &amp; Revenue Systems Architect</p>
 
             <h2 className="text-h2 font-semibold text-ink mt-10 pt-10 border-t border-rule">Why every definition you&rsquo;ve read felt useless</h2>
             <p>Search &ldquo;what is an AI agent&rdquo; and you get two flavors of answer: enterprise vendors explaining customer-support deflection for companies with 40-person service desks, or engineers explaining agent architectures with diagrams. Neither tells a 4-person consultancy what to do Monday morning.</p>
             <p>So here&rsquo;s the founder version, built on the one distinction that matters:</p>
             <p className="font-semibold text-ink">ChatGPT answers when you ask. An agent acts when the trigger fires.</p>
-            <p>When you use ChatGPT, you are the process: you notice the lead, open the tab, paste the context, ask for the draft, copy it back, hit send, remember to follow up Thursday. The AI did the writing. You did the job.</p>
-            <p>An agent owns the job. A lead comes in at 9:40pm. The agent reads the inquiry, checks it against your ideal-client criteria, drafts the reply in your voice, sends it (or stages it for your approval), logs it, and schedules the Thursday follow-up. You were at dinner.</p>
+            <p>When you use ChatGPT, you are the process. You notice the lead, open a tab, paste in context, and ask for a draft. Then you copy it back, hit send, and hope you remember to follow up Thursday. The AI did the writing; you did the job.</p>
+            <p>An agent owns the job instead. A lead comes in at 9:40pm. The agent reads the inquiry and checks it against your ideal-client criteria, then drafts the reply in your voice, sends it (or stages it for your approval), logs it, and schedules the Thursday follow-up. You were at dinner.</p>
             <p>The difference isn&rsquo;t intelligence. It&rsquo;s ownership of a loop.</p>
 
             <h2 className="text-h2 font-semibold text-ink mt-10 pt-10 border-t border-rule">The job-description test</h2>
@@ -42,7 +42,7 @@ export default function ArticleBody() {
             </ul>
             <p>If you can&rsquo;t write the job description (the trigger, the steps, the done-state), you don&rsquo;t have an agent use case yet. You have a task you haven&rsquo;t systematized. That&rsquo;s not an insult; it&rsquo;s a diagnosis. It&rsquo;s also the most common reason founders&rsquo; first agents fail. More on that in <Link href="/articles/ai-priority-map" className="text-accent underline underline-offset-2 hover:no-underline">the Priority Map</Link>.</p>
 
-            <h2 className="text-h2 font-semibold text-ink mt-10 pt-10 border-t border-rule">What agents do well in a small firm in , honestly</h2>
+            <h2 className="text-h2 font-semibold text-ink mt-10 pt-10 border-t border-rule">What agents do well in a small firm in 2026, honestly</h2>
             <div className="overflow-x-auto my-6">
               <table className="w-full text-body text-left border-collapse">
                 <thead>

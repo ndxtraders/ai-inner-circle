@@ -15,7 +15,7 @@ export default function ArticleBody() {
           <h1 className="text-display font-semibold leading-tight mb-6">
             Why Your Leads Go Cold (and How AI Follow-Up Fixes Speed-to-Lead)
           </h1>
-          <p className="text-small text-ink-muted">Jul 19, 2026 &middot; 4 min read</p>
+          <p className="text-small text-ink-muted">Feb 13, 2026 &middot; 4 min read</p>
         </Section>
 
         {/* Article body */}
@@ -33,7 +33,7 @@ export default function ArticleBody() {
             <p>Walk through what happens when a lead comes in at your firm:</p>
             <p>The inquiry lands in your inbox. You&rsquo;re on a client call. After the call you have forty minutes of notes to send, then another call. You see the lead at 4pm, think &ldquo;good one, I&rsquo;ll reply properly tonight,&rdquo; and tonight becomes tomorrow morning becomes Thursday.</p>
             <p>The lead didn&rsquo;t go cold; it sat in a queue with exactly one worker, and the worker was billed out. This is the Cold Fast breaking point, and it has a property most founders miss: <strong>it punishes your best weeks hardest.</strong> The busier you are with delivery, the slower you respond, so the more demand you have, the more of it you lose. Feast creates the famine.</p>
-            <p>Discipline doesn&rsquo;t fix a structural problem. &ldquo;I&rsquo;ll check email more often&rdquo; is a resolution, not a system. The fix is taking the founder out of the first response entirely.</p>
+            <p>Discipline doesn&rsquo;t fix a structural problem. &ldquo;I&rsquo;ll check email more often&rdquo; is a resolution that won&rsquo;t survive a busy week. The fix is taking the founder out of the first response entirely.</p>
 
             <h2 className="text-h2 font-semibold text-ink mt-10 pt-10 border-t border-rule">What a real speed-to-lead fix looks like</h2>
             <p>Not an autoresponder. &ldquo;We got your message and will reply within 2 business days&rdquo; is speed-to-lead theater. Buyers read it as the queue notice it is. A working fix does four jobs, in order:</p>
@@ -43,7 +43,7 @@ export default function ArticleBody() {
               <li><strong>Books the call.</strong> Qualified leads get your calendar link inside the first reply, while the intent is hot.</li>
               <li><strong>Routes the rest politely.</strong> Bad-fit inquiries get a respectful no or a referral, and you never spent attention on them.</li>
             </ol>
-            <p>That&rsquo;s a job description, which means it&rsquo;s agent work. (<Link href="/articles/ai-agent-vs-chatbot-vs-automation" className="text-accent underline underline-offset-2 hover:no-underline">What kind of tool does this take? The four-layer comparison &rarr;</Link> answers it: this is the agent layer, not a chatbot and not an autoresponder.)</p>
+            <p>That&rsquo;s a job description, which means it&rsquo;s agent work. (<Link href="/articles/ai-agent-vs-chatbot-vs-automation" className="text-accent underline underline-offset-2 hover:no-underline">What kind of tool does this take? The four-layer comparison &rarr;</Link> answers it: this is the agent layer.)</p>
             <p><strong>The draft-first option, for the nervous:</strong> the agent can stage replies for one-tap approval instead of sending. You keep final say; the reply still goes out in minutes instead of Thursday, because approving takes seconds and writing took the time. Most founders start here and graduate to auto-send for the routine tier once they&rsquo;ve watched it work for a month.</p>
 
             <h2 className="text-h2 font-semibold text-ink mt-10 pt-10 border-t border-rule">The honest caveats</h2>
