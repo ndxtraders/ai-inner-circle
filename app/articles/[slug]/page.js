@@ -11,6 +11,7 @@ import { ARTICLES } from '../../content/articles'
 // generated from app/content/articles.js, the single source of truth.
 import futureBody from '../content/future-of-ai-agents-in-business'
 import whyWritingBody from '../content/why-ai-writing-sucks'
+import goodAiWritingBody from '../content/why-good-ai-writing-feels-wrong'
 import whyRoboticBody from '../content/why-chatgpt-sounds-robotic'
 import destroysTrustBody from '../content/how-ai-content-destroys-trust'
 import priorityMapBody from '../content/ai-priority-map'
@@ -28,6 +29,7 @@ import getClientsBody from '../content/get-clients-without-cold-email'
 const BODIES = {
   'future-of-ai-agents-in-business': futureBody,
   'why-ai-writing-sucks': whyWritingBody,
+  'why-good-ai-writing-feels-wrong': goodAiWritingBody,
   'why-chatgpt-sounds-robotic': whyRoboticBody,
   'how-ai-content-destroys-trust': destroysTrustBody,
   'ai-priority-map': priorityMapBody,

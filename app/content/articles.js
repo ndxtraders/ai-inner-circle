@@ -56,6 +56,44 @@ export const ARTICLES = [
     wordCount: 800,
   },
   {
+    slug: 'why-good-ai-writing-feels-wrong',
+    track: 'Authority Engine',
+    title: 'Why Good AI Writing Feels So Wrong',
+    metaTitle: 'Why Good AI Writing Feels So Wrong | AI Inner Circle',
+    subtitle: null,
+    date: 'Jul 25, 2026',
+    dateISO: '2026-07-25',
+    readTime: '8 min read',
+    description:
+      'AI writing fails on structure, not vocabulary. One of my published articles scored 9.68/10 on word-level patterns and 2.5/10 on structure. Here is the symmetry problem behind it, and the fix.',
+    excerpt:
+      'You read the AI draft, every sentence is clean, and it still sounds like a robot. The tell is symmetry, not word choice. Balanced two-part reversals, three-beat lists, matched section endings. Here is how to see it and how to break it.',
+    image: 'https://aiinnercircle.com/opengraph-image',
+    wordCount: 1900,
+    faq: [
+      {
+        q: 'Why does AI writing sound robotic even when the grammar is correct?',
+        a: 'Because of sentence shape rather than word choice. Language models favor balanced constructions, two-part reversals, three-item lists, matched section endings, since those are high-probability continuations. The regularity is what readers register as machine-written, and it survives every vocabulary edit you make.',
+      },
+      {
+        q: 'Can better prompts fix AI-sounding writing?',
+        a: 'Only partly. Prompts move the surface and leave the shape. Asking for a more human tone changes word choice while the balanced structures stay, because they come from how the output is generated. Editing for structure works. Asking more politely does not.',
+      },
+      {
+        q: 'What are the specific patterns that make writing sound like AI?',
+        a: 'Four, and they are one problem at different scales. Two-beat reversals of the not-X-but-Y kind, three-beat lists, four-or-more parallel runs, and short punchy lines closing every section. All four are symmetry devices. Repetition is what gives them away.',
+      },
+      {
+        q: 'How do I edit AI output so it sounds human?',
+        a: 'Break the symmetry instead of swapping words. Collapse two-part reversals into the positive claim. Make one item in a list longer than the others. Let most sections end on their last real sentence. Keep uneven rhythm, asides, and conversational signposting, since those read as human.',
+      },
+      {
+        q: 'Should I disclose that AI helped write an article?',
+        a: 'It costs less than being caught and it buys more trust than a clean claim. This article was drafted with AI, and saying so plainly is more useful to a reader than pretending a first pass came out perfect. What matters is whether the thinking, the data, and the judgment are yours.',
+      },
+    ],
+  },
+  {
     slug: 'why-chatgpt-sounds-robotic',
     track: 'Authority Engine',
     title: 'Why ChatGPT Writing Will Always Sound Robotic',
