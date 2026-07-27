@@ -147,7 +147,7 @@ const QUESTIONS = [
     pain:
       "You own a job, not an asset. You are the ceiling everything waits on.",
     solution:
-      "Hire your Inbox Triage and Decision & Delegation Memo. They handle the routine so the business runs without you in the loop. Both start in Month 5.",
+      "This is the one that takes the whole program. Your Command Center goes in on day one, then a department of Assistants arrives every month until the routine runs without you standing over it.",
     fieldKey: 'vacation_test',
   },
   {
@@ -173,7 +173,7 @@ const QUESTIONS = [
     pain:
       "You are the single point of failure. The business only moves as fast as your attention.",
     solution:
-      "Hire Maestro, your Command Center, and your Decision & Delegation Memo. Maestro routes the routine and turns your calls into briefs the team runs without you. Your Command Center is where the whole system starts.",
+      "Maestro is where this starts, and he goes in on day one. He routes the work to the right specialist so the small decisions stop queuing behind you. The rest is the six months: every department that lands takes another set of calls off your desk.",
     fieldKey: 'bottleneck',
   },
 ]

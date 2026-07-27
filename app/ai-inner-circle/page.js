@@ -163,7 +163,7 @@ const MONTHS = [
     n: '05',
     theme: 'Get Out of the Bottleneck',
     body: 'Move the routine out of your head into AI Assistants that run it, so you stop being the ceiling.',
-    skills: ['Transcription to SOP', 'Inbox Triage', 'Decision & Delegation Memo', 'Team Knowledge Base'],
+    skills: ['Transcription to SOP', 'Inbox Triage', 'Win Capture & Case Study Engine', 'Team Knowledge Base'],
   },
   {
     n: '06',

@@ -193,7 +193,7 @@ const MONTHS = [
     skills: [
       ['Transcription to SOP', 'your process writer'],
       ['Inbox Triage', 'your gatekeeper'],
-      ['Decision & Delegation Memo', 'your delegation officer'],
+      ['Win Capture & Case Study Engine', 'turns wins into proof'],
       ['Team Knowledge Base', 'your company librarian'],
     ],
   },
@@ -233,7 +233,7 @@ const ORG_CHART = `YOU
  │
  ├── 5 · OPERATIONS
  │      Transcription to SOP · Inbox Triage
- │      Decision & Delegation Memo · Team Knowledge Base
+ │      Win Capture & Case Study Engine · Team Knowledge Base
  │
  └── 6 · CLIENT SUCCESS
         Client Health Monitor · Client Results Report
