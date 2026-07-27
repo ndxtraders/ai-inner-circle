@@ -150,7 +150,7 @@ export const ARTICLES = [
       },
       {
         q: 'Does a shorter instruction file make my AI agent better?',
-        a: 'It makes it cheaper and easier to maintain. What Anthropic measured was the token cost. Nobody has tested whether trimming improves the work itself, so treat this as a cost and upkeep decision, and do not reopen an agent that already works just to save a few dollars.',
+        a: 'If you build it the way we do in AI Inner Circle, it does. Maestro, your new AI Chief of Staff, acts as a coordinator that only needs to know what kind of work each specialist handles and when to hand it over. A team of specialist AI agents carries the depth instead, and each one opens its full playbook only for the job in front of it. The coordinator file gets shorter because the expertise moved somewhere better, which means the specialist working on your task has more instruction aimed at that task than one big assistant trying to hold everything at once.',
       },
       {
         q: 'What should I actually cut from my AI instructions?',
