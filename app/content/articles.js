@@ -128,9 +128,10 @@ export const ARTICLES = [
   {
     slug: 'why-smaller-ai-agents-cost-less',
     track: 'Authority Engine',
-    // The H1 keeps the punchy line; metaTitle carries the search-shaped
-    // phrasing so the two jobs don't fight each other.
-    title: 'Is Your Fat Old Agent As Good As A Skinny New One?',
+    // The H1 sets up the expected tradeoff ("cost less") and reverses it in a
+    // parenthetical aside, so the surprise reads as a confidence rather than a
+    // claim. metaTitle drops the parenthetical for a cleaner search string.
+    title: 'Why Smaller AI Agents Cost Less (but work better)',
     metaTitle: 'Why Smaller AI Agents Cost Less and Work Better | AI Inner Circle',
     subtitle: 'Anthropic deleted 80% of Claude Code’s instructions and the scores held',
     date: 'Jul 27, 2026',
@@ -140,7 +141,7 @@ export const ARTICLES = [
       'Anthropic cut more than 80% of Claude Code’s instructions and its test scores held. Here is what that means for the AI agent you already built, and the four checks worth running on it.',
     excerpt:
       'Anthropic deleted 80% of Claude Code’s instruction manual and the scores stayed the same. I counted my own Command Center instructions: 475 lines. What I found is that a coordinator who knows who to call, backed by specialists who carry the depth, was already the cheaper shape.',
-    image: 'https://aiinnercircle.com/Claude-Magician-trick.jpg',
+    image: 'https://aiinnercircle.com/Claude-Magician-trick.webp',
     wordCount: 1100,
     faq: [
       {

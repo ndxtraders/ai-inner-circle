@@ -15,7 +15,7 @@ export default function ArticleBody() {
         <Section bg="paper" width="prose">
           <div className="eyebrow mb-6">Articles</div>
           <h1 className="text-display font-semibold leading-tight mb-6">
-            Is Your Fat Old Agent As Good As A Skinny New One?
+            Why Smaller AI Agents Cost Less (but work better)
           </h1>
           <p className="text-small text-ink-muted">Jul 27, 2026 &middot; 6 min read</p>
         </Section>
@@ -39,7 +39,7 @@ export default function ArticleBody() {
 
             <div className="my-6">
               <Image
-                src="/Claude-Magician-trick.jpg"
+                src="/Claude-Magician-trick.webp"
                 alt="Cartoon of Claude performing a magic trick, pulling the same result out of a far smaller instruction manual"
                 width={1200}
                 height={630}
