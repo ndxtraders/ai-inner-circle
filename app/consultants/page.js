@@ -89,7 +89,7 @@ const WORKSHOPS = [
     title: 'Your First 10 Conversations',
     promise: 'Real buyer conversations on your calendar. No cold email. No ad spend.',
     skills: [
-      ['LinkedIn Signal Scraper', 'your scout'],
+      ['LinkedIn Signal Scout', 'your scout'],
       ['ICP Match & Prioritizer', 'your list builder'],
       ['Surgical DM Writer', 'your opener'],
       ['AI Slop Killer', 'your editor'],
@@ -97,18 +97,6 @@ const WORKSHOPS = [
   },
   {
     n: '03',
-    dept: 'The Media Team',
-    title: '30 Minutes to a Month of Content',
-    promise: 'Record 30 minutes a week. Show up everywhere in your voice. Get cited by AI search.',
-    skills: [
-      ['Recording to Content Engine', 'your production studio'],
-      ['SEO / GEO Citation Optimizer', 'gets you found and cited'],
-      ['LinkedIn Ghostwriter', 'your ghostwriter'],
-      ['Content Repurposer', 'your distribution desk'],
-    ],
-  },
-  {
-    n: '04',
     dept: 'The Deal Desk',
     title: 'Turn Replies Into Revenue',
     promise: 'Every reply becomes a booked call. Every call gets a proposal, before the buyer cools off.',
@@ -120,6 +108,18 @@ const WORKSHOPS = [
     ],
   },
   {
+    n: '04',
+    dept: 'The Media Team',
+    title: '30 Minutes to a Month of Content',
+    promise: 'Record 30 minutes a week. Show up everywhere in your voice. Get cited by AI search.',
+    skills: [
+      ['Recording to Content Engine', 'your production studio'],
+      ['SEO / GEO Citation Optimizer', 'gets you found and cited'],
+      ['LinkedIn Ghostwriter', 'your ghostwriter'],
+      ['Content Repurposer', 'your distribution desk'],
+    ],
+  },
+  {
     n: '05',
     dept: 'The Operations Team',
     title: 'Get Out of the Bottleneck',
@@ -127,7 +127,7 @@ const WORKSHOPS = [
     skills: [
       ['Transcription to SOP', 'your process writer'],
       ['Inbox Triage', 'your gatekeeper'],
-      ['Decision & Delegation Memo', 'your delegation officer'],
+      ['Win Capture & Case Study Engine', 'your proof builder'],
       ['Team Knowledge Base', 'your company librarian'],
     ],
   },
@@ -138,7 +138,7 @@ const WORKSHOPS = [
     promise: 'Spot churn before it hits. Get paid on time. Deliver like you have a full ops team.',
     skills: [
       ['Client Health Monitor', 'your account manager'],
-      ['Client Reporting Dashboard', 'your reporting analyst'],
+      ['Client Results Report', 'your reporting analyst'],
       ['Invoice & Payment Chaser', 'your collections desk'],
       ['GTM Teardown & Rebuild', 'your strategy consultant'],
     ],
@@ -154,29 +154,29 @@ const ORG_CHART = `YOU
  │      Offer & Pricing Architect · Objection Tester
  │
  ├── 2 · SALES FLOOR
- │      LinkedIn Signal Scraper · ICP Match & Prioritizer
+ │      LinkedIn Signal Scout · ICP Match & Prioritizer
  │      Surgical DM Writer · AI Slop Killer
  │
- ├── 3 · MEDIA TEAM
- │      Recording to Content · SEO/GEO Optimizer
- │      LinkedIn Ghostwriter · Content Repurposer
- │
- ├── 4 · DEAL DESK
+ ├── 3 · DEAL DESK
  │      Reply Classifier · Follow-up & Reactivation
  │      Discovery Call-Prep · Proposal & Quote Generator
  │
+ ├── 4 · MEDIA TEAM
+ │      Recording to Content · SEO/GEO Optimizer
+ │      LinkedIn Ghostwriter · Content Repurposer
+ │
  ├── 5 · OPERATIONS
  │      Transcription to SOP · Inbox Triage
- │      Decision & Delegation Memo · Team Knowledge Base
+ │      Win Capture & Case Study Engine · Team Knowledge Base
  │
  └── 6 · CLIENT SUCCESS
-        Client Health Monitor · Client Reporting Dashboard
+        Client Health Monitor · Client Results Report
         Invoice & Payment Chaser · GTM Teardown & Rebuild`
 
 // Each item kills a specific reason to hesitate. From brain/offer-v2.md deliverable stack.
 const INCLUDED = [
   ['Maestro, your AI Chief of Staff', 'You talk to one coordinator, not 24 tools. He checks every draft in your voice before you see it, so nothing generic goes out under your name.'],
-  ['24 Assistants across 6 departments, one a month', 'Offer Desk, Sales Floor, Media Team, Deal Desk, Operations, Client Success. The routine moves off your plate one function at a time. The monthly pace keeps it from becoming overwhelming.'],
+  ['24 Assistants across 6 departments, one a month', 'Offer Desk, Sales Floor, Deal Desk, Media Team, Operations, Client Success. The routine moves off your plate one function at a time. The monthly pace keeps it from becoming overwhelming.'],
   ['Just-in-time hiring', 'When a skill isn’t on staff, Maestro builds the specialist that same session. Your team never stalls waiting on a hire.'],
   ['The AI Brain', 'Your voice, offer, and market captured once, read by every hire. The work sounds like you, not a template.'],
   ['Files are the memory', 'Nothing resets between sessions. Each specialist’s output becomes the next one’s raw material.'],
