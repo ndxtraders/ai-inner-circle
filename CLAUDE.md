@@ -1,5 +1,28 @@
 # CLAUDE.md
 
+## Articles: three registration points
+
+A new article has to be registered in three places. Miss the third and the page
+returns 404 with **no build error**, which is the only silent failure in this
+repo.
+
+1. `app/content/articles.js` — the metadata entry (field notes are at the top
+   of that file)
+2. `app/articles/[slug]/page.js` — the `import` line
+3. `app/articles/[slug]/page.js` — the `BODIES` map entry ← **the one that gets
+   forgotten**
+
+Two more things that are not visible from the code:
+
+- The date and read-time line is **hardcoded** in `app/articles/content/<slug>.js`
+  and is not read from the registry. A date change has to be made in both files.
+- Never run `npm run build` while the dev server is up. It clobbers `.next/` and
+  the running server starts throwing `Cannot find module './vendor-chunks/next.js'`.
+  Stop the preview first.
+
+Writing the article itself (voice routing, the ai-check gate, the review
+checkpoint) is the `article-writer` skill, not this file.
+
 ## Workflow Orchestration
 
 ### 1. Plan Node Default
