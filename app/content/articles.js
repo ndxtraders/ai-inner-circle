@@ -126,6 +126,46 @@ export const ARTICLES = [
     wordCount: 1400,
   },
   {
+    slug: 'why-smaller-ai-agents-cost-less',
+    track: 'Authority Engine',
+    // The H1 keeps the punchy line; metaTitle carries the search-shaped
+    // phrasing so the two jobs don't fight each other.
+    title: 'Is Your Fat Old Agent As Good As A Skinny New One?',
+    metaTitle: 'Why Smaller AI Agents Cost Less and Work Better | AI Inner Circle',
+    subtitle: 'Anthropic deleted 80% of Claude Code’s instructions and the scores held',
+    date: 'Jul 27, 2026',
+    dateISO: '2026-07-27',
+    readTime: '6 min read',
+    description:
+      'Anthropic cut more than 80% of Claude Code’s instructions and its test scores held. Here is what that means for the AI agent you already built, and the four checks worth running on it.',
+    excerpt:
+      'Anthropic deleted 80% of Claude Code’s instruction manual and the scores stayed the same. I counted my own Command Center instructions: 475 lines. What I found is that a coordinator who knows who to call, backed by specialists who carry the depth, was already the cheaper shape.',
+    image: 'https://aiinnercircle.com/Claude-Magician-trick.jpg',
+    wordCount: 1100,
+    faq: [
+      {
+        q: 'Did Anthropic really delete 80% of Claude Code’s instructions?',
+        a: 'Yes. Anthropic removed over 80% of the Claude Code system prompt for its Claude 5 generation models and reported no measurable loss on its coding evaluations. The claim is specific: same product, same tests, same scores with a far shorter instruction set.',
+      },
+      {
+        q: 'Does a shorter instruction file make my AI agent better?',
+        a: 'It makes it cheaper and easier to maintain. What Anthropic measured was the token cost. Nobody has tested whether trimming improves the work itself, so treat this as a cost and upkeep decision, and do not reopen an agent that already works just to save a few dollars.',
+      },
+      {
+        q: 'What should I actually cut from my AI instructions?',
+        a: 'Anything the AI could work out by looking at the files in front of it, anything only needed once a month, and any two rules that contradict each other. Conflicting rules are the cheapest fix and the one almost nobody checks, because each rule looks reasonable sitting on the page by itself.',
+      },
+      {
+        q: 'What should never be cut?',
+        a: 'Safety rules. Every “never delete this” and “never send without my approval” stays in the file that loads every session, whatever it costs. A prohibition that is not loaded at the moment it matters is not a prohibition, and this is where trimming most often goes wrong.',
+      },
+      {
+        q: 'Why does a coordinator plus specialists cost less than one big AI agent?',
+        a: 'Because the coordinator only needs to know what kind of work each specialist does, not what the specialist knows. The deep material stays in separate files that open only when a job calls for them, so you pay for expertise at the moment you use it instead of loading all of it into every session.',
+      },
+    ],
+  },
+  {
     slug: 'ai-priority-map',
     // Not in a track. Rendered as the featured "Start with the map" strip
     // between the hero and the tracks on /articles.
