@@ -137,27 +137,27 @@ const CADENCE = [
 const MONTHS = [
   {
     n: '01',
-    theme: 'Your First 10 Conversations',
-    body: 'Real buyer conversations on your calendar in week one, without cold email or ad spend.',
-    skills: ['LinkedIn Signal Scraper', 'ICP Match & Prioritizer', 'Surgical DM Writer', 'AI Slop Killer'],
-  },
-  {
-    n: '02',
     theme: 'The Offer They Can’t Ignore',
     body: 'Rebuild your offer so the right buyers feel dumb saying no. Price stops being the objection.',
     skills: ['Sales Council', 'Unique Mechanism Builder', 'Offer & Pricing Architect', 'Objection Tester'],
   },
   {
-    n: '03',
-    theme: '30 Minutes to a Month of Content',
-    body: 'Record 30 minutes a week. Show up everywhere in your voice, and get cited by AI search.',
-    skills: ['Recording to Content Engine', 'SEO / GEO Citation Optimizer', 'LinkedIn Ghostwriter', 'Content Repurposer'],
+    n: '02',
+    theme: 'Your First 10 Conversations',
+    body: 'Real buyer conversations on your calendar in week one, without cold email or ad spend.',
+    skills: ['LinkedIn Signal Scout', 'ICP Match & Prioritizer', 'Surgical DM Writer', 'AI Slop Killer'],
   },
   {
-    n: '04',
+    n: '03',
     theme: 'Turn Replies Into Revenue',
     body: 'Every reply becomes a booked call. Every call gets a proposal, before the buyer cools off.',
     skills: ['Reply Classifier', 'Follow-up & Reactivation', 'Discovery Call-Prep', 'Proposal & Quote Generator'],
+  },
+  {
+    n: '04',
+    theme: '30 Minutes to a Month of Content',
+    body: 'Record 30 minutes a week. Show up everywhere in your voice, and get cited by AI search.',
+    skills: ['Recording to Content Engine', 'SEO / GEO Citation Optimizer', 'LinkedIn Ghostwriter', 'Content Repurposer'],
   },
   {
     n: '05',
@@ -169,7 +169,7 @@ const MONTHS = [
     n: '06',
     theme: 'Run Like a Full Team',
     body: 'Spot churn before it hits, get paid on time, and deliver like you have a full ops team.',
-    skills: ['Client Health Monitor', 'Client Reporting Dashboard', 'Invoice & Payment Chaser', 'GTM Teardown & Rebuild'],
+    skills: ['Client Health Monitor', 'Client Results Report', 'Invoice & Payment Chaser', 'GTM Teardown & Rebuild'],
   },
 ]
 

@@ -40,7 +40,7 @@ const QUESTIONS = [
     pain:
       "You disappear from the feed. Out of sight, you fall out of the buying conversation.",
     solution:
-      "Hire your Recording to Content Engine and Content Repurposer. Record 30 minutes and they turn it into a month of content. Both start in Month 3.",
+      "Hire your Recording to Content Engine and Content Repurposer. Record 30 minutes and they turn it into a month of content. Both start in Month 4.",
     fieldKey: 'content_grind',
   },
   {
@@ -53,7 +53,7 @@ const QUESTIONS = [
     pain:
       "Buyers find your competitors instead of you. You're absent where decisions start.",
     solution:
-      "Hire your SEO / GEO Citation Optimizer and LinkedIn Ghostwriter. They get you found by Google and cited by AI. Both start in Month 3.",
+      "Hire your SEO / GEO Citation Optimizer and LinkedIn Ghostwriter. They get you found by Google and cited by AI. Both start in Month 4.",
     fieldKey: 'invisible_online',
   },
   // Pillar 2: Pipeline Engine (fill the calendar) - 3 questions
@@ -67,7 +67,7 @@ const QUESTIONS = [
     pain:
       "Pipeline runs on referrals and luck. When they dry up, so does revenue.",
     solution:
-      "Hire your LinkedIn Signal Scraper and ICP Match & Prioritizer. They surface real buyers showing intent and score them for you. Both start in Month 2.",
+      "Hire your LinkedIn Signal Scout and ICP Match & Prioritizer. They surface real buyers showing intent and score them for you. Both start in Month 2.",
     fieldKey: 'empty_calendar',
   },
   {
@@ -93,7 +93,7 @@ const QUESTIONS = [
     pain:
       "Unpredictable revenue. You can't plan, hire, or grow on a pipeline you can't control.",
     solution:
-      "Hire your LinkedIn Signal Scraper and ICP Match & Prioritizer. They turn lead-gen into a repeatable weekly engine. Both start in Month 2.",
+      "Hire your LinkedIn Signal Scout and ICP Match & Prioritizer. They turn lead-gen into a repeatable weekly engine. Both start in Month 2.",
     fieldKey: 'feast_or_famine',
   },
   // Pillar 3: Conversion Engine (turn interest into revenue) - 3 questions
@@ -120,7 +120,7 @@ const QUESTIONS = [
     pain:
       "Interested buyers slip away through neglect. You sit on revenue you already earned.",
     solution:
-      "Hire your Reply Classifier and Follow-up & Reactivation. They sort hot replies and keep every lead warm. Both start in Month 4.",
+      "Hire your Reply Classifier and Follow-up & Reactivation. They sort hot replies and keep every lead warm. Both start in Month 3.",
     fieldKey: 'cold_fast',
   },
   {
@@ -133,7 +133,7 @@ const QUESTIONS = [
     pain:
       "The #1 deal killer in B2B. Speed loses to slower, and you were slower.",
     solution:
-      "Hire your Proposal & Quote Generator and Discovery Call-Prep. They put a branded proposal in front of the buyer while the deal is warm. Both start in Month 4.",
+      "Hire your Proposal & Quote Generator and Discovery Call-Prep. They put a branded proposal in front of the buyer while the deal is warm. Both start in Month 3.",
     fieldKey: 'slow_quotes',
   },
   // Pillar 4: Founder Freedom (stop being the bottleneck) - 3 questions

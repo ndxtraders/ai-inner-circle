@@ -155,7 +155,7 @@ const MONTHS = [
     theme: 'Your First 10 Conversations',
     body: 'Real buyer conversations on your calendar. No cold email. No ad spend.',
     skills: [
-      ['LinkedIn Signal Scraper', 'your scout'],
+      ['LinkedIn Signal Scout', 'your scout'],
       ['ICP Match & Prioritizer', 'your list builder'],
       ['Surgical DM Writer', 'your opener'],
       ['AI Slop Killer', 'your editor'],
@@ -163,18 +163,6 @@ const MONTHS = [
   },
   {
     n: '03',
-    dept: 'The Media Team',
-    theme: '30 Minutes to a Month of Content',
-    body: 'Record 30 minutes a week. Show up everywhere in your voice. Get cited by AI search.',
-    skills: [
-      ['Recording to Content Engine', 'your production studio'],
-      ['SEO / GEO Citation Optimizer', 'gets you found and cited'],
-      ['LinkedIn Ghostwriter', 'your ghostwriter'],
-      ['Content Repurposer', 'your distribution desk'],
-    ],
-  },
-  {
-    n: '04',
     dept: 'The Deal Desk',
     theme: 'Turn Replies Into Revenue',
     body: 'Every reply becomes a booked call. Every call gets a proposal, before the buyer cools off.',
@@ -183,6 +171,18 @@ const MONTHS = [
       ['Follow-up & Reactivation', 'your follow-up rep'],
       ['Discovery Call-Prep', 'your research analyst'],
       ['Proposal & Quote Generator', 'your proposal writer'],
+    ],
+  },
+  {
+    n: '04',
+    dept: 'The Media Team',
+    theme: '30 Minutes to a Month of Content',
+    body: 'Record 30 minutes a week. Show up everywhere in your voice. Get cited by AI search.',
+    skills: [
+      ['Recording to Content Engine', 'your production studio'],
+      ['SEO / GEO Citation Optimizer', 'gets you found and cited'],
+      ['LinkedIn Ghostwriter', 'your ghostwriter'],
+      ['Content Repurposer', 'your distribution desk'],
     ],
   },
   {
@@ -204,7 +204,7 @@ const MONTHS = [
     body: 'Spot churn before it hits. Get paid on time. Deliver like you have a full ops team.',
     skills: [
       ['Client Health Monitor', 'your account manager'],
-      ['Client Reporting Dashboard', 'your reporting analyst'],
+      ['Client Results Report', 'your reporting analyst'],
       ['Invoice & Payment Chaser', 'your collections desk'],
       ['GTM Teardown & Rebuild', 'your strategy consultant'],
     ],
@@ -220,23 +220,23 @@ const ORG_CHART = `YOU
  │      Offer & Pricing Architect · Objection Tester
  │
  ├── 2 · SALES FLOOR
- │      LinkedIn Signal Scraper · ICP Match & Prioritizer
+ │      LinkedIn Signal Scout · ICP Match & Prioritizer
  │      Surgical DM Writer · AI Slop Killer
  │
- ├── 3 · MEDIA TEAM
- │      Recording to Content · SEO/GEO Optimizer
- │      LinkedIn Ghostwriter · Content Repurposer
- │
- ├── 4 · DEAL DESK
+ ├── 3 · DEAL DESK
  │      Reply Classifier · Follow-up & Reactivation
  │      Discovery Call-Prep · Proposal & Quote Generator
+ │
+ ├── 4 · MEDIA TEAM
+ │      Recording to Content · SEO/GEO Optimizer
+ │      LinkedIn Ghostwriter · Content Repurposer
  │
  ├── 5 · OPERATIONS
  │      Transcription to SOP · Inbox Triage
  │      Decision & Delegation Memo · Team Knowledge Base
  │
  └── 6 · CLIENT SUCCESS
-        Client Health Monitor · Client Reporting Dashboard
+        Client Health Monitor · Client Results Report
         Invoice & Payment Chaser · GTM Teardown & Rebuild`
 
 function PricingCards() {
