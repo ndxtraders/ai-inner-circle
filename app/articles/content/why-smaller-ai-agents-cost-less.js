@@ -86,7 +86,7 @@ export default function ArticleBody() {
               <li><strong>Ask when each rule is actually needed.</strong> Anything used once a month belongs in a side file the AI opens on request. Anything used every session stays put.</li>
               <li><strong>Leave the safety rules alone.</strong> Every &ldquo;never delete this&rdquo; and &ldquo;never send without my approval&rdquo; stays in the main file, whatever it costs. A safety rule that isn&rsquo;t loaded at the moment it matters is not a safety rule, and this is where I&rsquo;d expect most people to cut too deep.</li>
             </ul>
-            <p>One caution before you start deleting. What Anthropic measured was the token cost. That gets you a cheaper bill and easier upkeep.</p>
+            <p>One caution before you start deleting. Anthropic ran their own evaluations, on their own product, and the scores held. Nobody has run that test on your agent. What you can count on is the cheaper bill and the easier upkeep, so trim for those and treat anything else as a bonus.</p>
 
             <p>The goal was never less instruction. It was less duplicated instruction, and the right instructions at the right time.</p>
             <p>Inside the AI Inner Circle, you build the same thing for your own business: a coordinator who knows who to call, and specialists who carry the depth. <Link href="/consultants" className="text-accent underline underline-offset-2 hover:no-underline">See how the membership works &rarr;</Link></p>
