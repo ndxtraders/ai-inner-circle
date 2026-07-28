@@ -1,0 +1,39 @@
+#!/usr/bin/env bash
+# Block a push whose seat names or department months contradict the product.
+#
+# The product source of truth is ai-inner-circle-agents/consultants/drops (and
+# coaches/drops). This site is a hand-maintained copy of it, and on 2026-07-27
+# three retired seat names plus a whole department in the wrong month had been
+# live here for weeks with nothing to flag it.
+#
+# Enable once per clone:
+#   git config core.hooksPath .githooks
+#
+# Bypass a single push (say the product rename lands after the site copy):
+#   git push --no-verify
+set -uo pipefail
+
+CHECK="$HOME/Desktop/ai-inner-circle-agents/scripts/check-seat-names.sh"
+SITE="$(git rev-parse --show-toplevel)"
+
+# The product repo is a sibling on Rev's machine only. A CI runner or a fresh
+# clone elsewhere has no way to verify, and refusing to push there would be
+# worse than not checking -- fail open, but say so.
+if [[ ! -x "$CHECK" ]]; then
+  echo "pre-push: seat-name check skipped (no $CHECK)" >&2
+  exit 0
+fi
+
+if ! "$CHECK" "$SITE"; then
+  cat >&2 <<'MSG'
+
+pre-push: BLOCKED. This site contradicts the product.
+
+The product is the source of truth. Fix the site, or if a seat was
+renamed, add the old name to:
+  ai-inner-circle-agents/scripts/retired-seat-names.txt
+
+To push anyway: git push --no-verify
+MSG
+  exit 1
+fi
