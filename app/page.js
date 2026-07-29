@@ -374,8 +374,7 @@ export default function HomePage() {
                 Everyone telling you what AI to buy is also selling it.
               </h2>
               <p className="text-body text-ink-muted mb-8">
-                Sixty minutes with someone who has no reason to tell you yes. You get an honest
-                read on whether AI actually helps your business, the one thing to do first, and
+                You get an honest read on whether AI actually helps your business move forward, the one thing to do first, and
                 who should build it. In writing, within 48 hours.
               </p>
               <Button href="/ai-second-opinion" variant="primary">
@@ -387,8 +386,8 @@ export default function HomePage() {
             </div>
             <div className="border-l-2 border-accent pl-6">
               <p className="text-body text-ink-soft leading-relaxed">
-                Bring the quote you were sent, the tool you&rsquo;re evaluating, or just the
-                problem you can&rsquo;t name yet. If AI isn&rsquo;t your constraint, I&rsquo;ll
+                Bring the quote you were sent, the tools you&rsquo;re evaluating, or just the
+                problem you want to solve. If AI isn&rsquo;t your constraint, I&rsquo;ll
                 say so, and your fee moves to a Quick Win call instead.
               </p>
             </div>
