@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import Section from '../components/Section'
@@ -7,7 +8,7 @@ export const metadata = {
   alternates: { canonical: '/ai-second-opinion' },
   title: 'AI Second Opinion — Rev Vaughn',
   description:
-    'A paid second opinion on whether AI actually helps your business, from someone with no reason to sell you a build. 60 minutes, a written recommendation, refunded if the answer is no.',
+    'A paid second opinion on whether AI actually helps your business, from someone with no reason to sell you a build. 60 minutes, a written recommendation, and a straight answer either way.',
   openGraph: {
     title: 'AI Second Opinion — Rev Vaughn',
     description:
@@ -40,8 +41,7 @@ export default function AISecondOpinionPage() {
               Book Your AI Second Opinion
             </Button>
             <p className="text-small text-ink-faint mt-3">
-              60 minutes. A written recommendation in 48 hours. Refunded in full if AI
-              isn&rsquo;t what your business needs.
+              60 minutes, one on one. A written recommendation in your inbox within 48 hours.
             </p>
           </div>
         </Section>
@@ -177,7 +177,7 @@ export default function AISecondOpinionPage() {
           <div className="max-w-prose mb-14">
             <div className="eyebrow mb-4">What you get</div>
             <h2 className="text-h1 font-semibold tracking-tight text-ink">
-              Four things, and one of them is a refund.
+              Four things you keep.
             </h2>
           </div>
           <div className="grid md:grid-cols-2 gap-10">
@@ -341,10 +341,14 @@ export default function AISecondOpinionPage() {
             </div>
             <div className="border-t border-ink pt-6">
               <div className="text-small font-medium text-accent mb-3">03</div>
-              <h3 className="text-h3 font-semibold text-ink mb-3">You do nothing</h3>
+              <h3 className="text-h3 font-semibold text-ink mb-3">It isn&rsquo;t an AI problem</h3>
               <p className="text-body text-ink-muted">
-                Sometimes AI isn&rsquo;t the constraint. If that&rsquo;s your situation I&rsquo;ll
-                say so, tell you what the real constraint is, and refund the call.
+                Sometimes the constraint is the offer, the messaging, or the funnel. If
+                that&rsquo;s your situation I&rsquo;ll say so, and your fee moves to a{' '}
+                <Link href="/quick-win" className="underline hover:text-accent">
+                  Quick Win call
+                </Link>
+                , which is the diagnostic built for it.
               </p>
             </div>
           </div>
@@ -353,28 +357,33 @@ export default function AISecondOpinionPage() {
         {/* 10 · The guarantee */}
         <Section bg="grey" width="content">
           <div className="max-w-prose">
-            <div className="eyebrow mb-4">The guarantee</div>
+            <div className="eyebrow mb-4">If the answer is no</div>
             <h2 className="text-h1 font-semibold tracking-tight text-ink mb-8">
-              If AI isn&rsquo;t your answer, you don&rsquo;t pay.
+              Sometimes AI isn&rsquo;t the problem.
             </h2>
             <p className="text-lead text-ink mb-8 border-l-2 border-accent pl-6">
               If my honest recommendation is that AI won&rsquo;t move your business right now,
-              I&rsquo;ll tell you on the call and refund your fee in full.
+              I&rsquo;ll tell you on the call and put your fee toward a Quick Win call instead.
             </p>
             <div className="space-y-5 text-body text-ink-soft">
               <p>
-                That&rsquo;s not a satisfaction guarantee. It&rsquo;s narrower, and it&rsquo;s
-                stronger.
+                It happens more than you&rsquo;d think. Often the constraint sits upstream: the
+                offer is soft, the messaging is vague, or the funnel leaks somewhere nobody has
+                looked. No agent fixes any of that.
               </p>
               <p>
-                It doesn&rsquo;t depend on whether you liked the call. It depends on my
-                recommendation. If I look at your business and conclude AI isn&rsquo;t what you
-                need right now, I say so, you get your money back, and you still get the written
-                recommendation explaining what I&rsquo;d do instead.
+                So that outcome has a place to go. The{' '}
+                <Link href="/quick-win" className="underline hover:text-accent">
+                  Quick Win call
+                </Link>{' '}
+                is the diagnostic for the revenue system itself, and your fee moves straight
+                across to it. You still get the written recommendation, and it explains what
+                I&rsquo;d do instead.
               </p>
               <p>
-                I expect to trigger this a handful of times a year. It costs me very little, and
-                it&rsquo;s the only way to prove the answer wasn&rsquo;t decided before we met.
+                This isn&rsquo;t a satisfaction guarantee. It doesn&rsquo;t depend on whether you
+                liked the call. It depends on my read of your business, which is the part you
+                came here to buy.
               </p>
             </div>
           </div>
@@ -406,8 +415,11 @@ export default function AISecondOpinionPage() {
                 <li>Pre-revenue. Come back when there&rsquo;s a business to diagnose.</li>
                 <li>Looking for someone to validate a decision you&rsquo;ve already made.</li>
                 <li>
-                  Your problem is the offer, the messaging, or the funnel. That&rsquo;s the Quick
-                  Win call, not this one.
+                  Your problem is the offer, the messaging, or the funnel. That&rsquo;s the{' '}
+                  <Link href="/quick-win" className="underline hover:text-accent">
+                    Quick Win call
+                  </Link>
+                  , not this one.
                 </li>
                 <li>
                   You want it built today, no diagnosis. That&rsquo;s a different conversation and
@@ -425,7 +437,7 @@ export default function AISecondOpinionPage() {
               <div className="eyebrow mb-4">The investment</div>
               <h2 className="text-h1 font-semibold tracking-tight text-ink">$300</h2>
               <p className="text-body text-ink-muted mt-4">
-                Sixty minutes, a written recommendation, and a refund if the answer is no.
+                Sixty minutes, a written recommendation, and a straight answer either way.
               </p>
             </div>
             <div className="space-y-5 text-body text-ink-soft">
@@ -435,8 +447,12 @@ export default function AISecondOpinionPage() {
               </p>
               <p>
                 The $300 credits in full toward an AI Audit or a Command Center install if you
-                book one within 30 days. So if the answer is yes and you want help, this call
-                costs you nothing. If the answer is no, it also costs you nothing.
+                book one within 30 days. If AI turns out not to be your constraint, it credits
+                toward a{' '}
+                <Link href="/quick-win" className="underline hover:text-accent">
+                  Quick Win call
+                </Link>{' '}
+                instead. Either way the $300 goes toward the thing you actually need.
               </p>
               <p>
                 I take a limited number of these each month, because I write every recommendation
@@ -465,7 +481,8 @@ export default function AISecondOpinionPage() {
               <h3 className="text-h3 font-semibold text-ink mb-3">Is this a sales call?</h3>
               <p className="text-body text-ink-muted">
                 No. There&rsquo;s no deck and no pitch at the end. You&rsquo;ll leave with a
-                recommendation that sometimes says do nothing, and I refund those.
+                recommendation that sometimes says AI isn&rsquo;t your problem, and those calls
+                end with your fee moving somewhere more useful.
               </p>
             </div>
             <div className="border-t border-ink pt-6">
@@ -493,8 +510,12 @@ export default function AISecondOpinionPage() {
                 What if you tell me I don&rsquo;t need AI?
               </h3>
               <p className="text-body text-ink-muted">
-                Then I tell you, and I refund your fee in full. You keep the written
-                recommendation and the recording. That outcome is built into the offer on purpose.
+                Then I tell you, and your fee moves to a{' '}
+                <Link href="/quick-win" className="underline hover:text-accent">
+                  Quick Win call
+                </Link>
+                , which diagnoses the revenue system instead. You keep the written recommendation
+                and the recording. That outcome is built into the offer on purpose.
               </p>
             </div>
             <div className="border-t border-ink pt-6">
@@ -534,8 +555,8 @@ export default function AISecondOpinionPage() {
               Get one honest answer before you spend real money.
             </h2>
             <p className="text-lead text-ink-muted mb-10">
-              Sixty minutes. A written recommendation in your inbox within 48 hours. Refunded in
-              full if AI isn&rsquo;t what your business needs.
+              Sixty minutes. A written recommendation in your inbox within 48 hours. And a
+              straight answer, including the version where the answer is no.
             </p>
             <Button href={CHECKOUT_URL} external variant="primary">
               Book Your AI Second Opinion
