@@ -18,7 +18,7 @@ export const metadata = {
 }
 
 const CHECKOUT_URL =
-  'https://docs.google.com/document/d/1US9lt00lMMkuCSLJtij56VZSjE9Q2DBD/edit?usp=sharing'
+  'https://aiinnercircle.com/contact'
 
 export default function AISecondOpinionPage() {
   return (
@@ -38,7 +38,7 @@ export default function AISecondOpinionPage() {
               your business, what to do first, and who should do it. In writing, within 48 hours.
             </p>
             <Button href={CHECKOUT_URL} external variant="primary">
-              Book Your AI Second Opinion
+              Contact Me for Availability
             </Button>
             <p className="text-small text-ink-faint mt-3">
               60 minutes, one on one. A written recommendation in your inbox within 48 hours.
@@ -462,7 +462,7 @@ export default function AISecondOpinionPage() {
                 myself.
               </p>
               <Button href={CHECKOUT_URL} external variant="primary">
-                Book Your AI Second Opinion
+                Contact Me for Availability
               </Button>
               <p className="text-small text-ink-faint">
                 Your order will be processed by Stripe via a secure MailerLite checkout form.
@@ -562,7 +562,7 @@ export default function AISecondOpinionPage() {
               straight answer, including the version where the answer is no.
             </p>
             <Button href={CHECKOUT_URL} external variant="primary">
-              Book Your AI Second Opinion
+              Contact Me for Availability
             </Button>
             <p className="text-small text-ink-faint mt-3">
               Your order will be processed by Stripe via a secure MailerLite checkout form.
