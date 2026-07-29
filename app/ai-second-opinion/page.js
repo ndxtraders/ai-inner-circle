@@ -30,7 +30,7 @@ export default function AISecondOpinionPage() {
           <div className="max-w-prose">
             <div className="eyebrow mb-6">Program &middot; AI Second Opinion</div>
             <h1 className="text-display font-semibold tracking-tight text-ink mb-8">
-              Everyone telling you what AI to buy is also selling it.
+              Know You Need To Do Something With AI, Not Sure What?
             </h1>
             <p className="text-lead text-ink-muted mb-10">
               Sixty minutes with someone who has spent over twenty years building revenue systems.
