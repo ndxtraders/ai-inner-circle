@@ -46,13 +46,13 @@ export default function AISecondOpinionPage() {
           </div>
         </Section>
 
-        {/* 02 · Is this you */}
+        {/* 02 · Is this for you */}
         <Section bg="grey" width="content">
           <div className="grid md:grid-cols-2 gap-12 items-start">
             <div>
-              <div className="eyebrow mb-4">Is this you?</div>
+              <div className="eyebrow mb-4">Is this right for you?</div>
               <h2 className="text-h1 font-semibold tracking-tight text-ink">
-                You know you need to do something. You don&rsquo;t know what.
+                Not sure where to start with AI?
               </h2>
             </div>
             <ul className="space-y-4 text-body text-ink-soft">
