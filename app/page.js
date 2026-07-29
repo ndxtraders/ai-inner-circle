@@ -365,7 +365,37 @@ export default function HomePage() {
           </div>
         </Section>
 
-{/* AI BRAIN WORKSHOP — ENTRY OFFER */}
+        {/* 4. AI SECOND OPINION — PAID DIAGNOSTIC */}
+        <Section bg="greyDark" width="content">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <div className="eyebrow mb-4">Before you spend money · AI Second Opinion</div>
+              <h2 className="text-h1 font-semibold tracking-tight text-ink mb-6">
+                Everyone telling you what AI to buy is also selling it.
+              </h2>
+              <p className="text-body text-ink-muted mb-8">
+                Sixty minutes with someone who has no reason to tell you yes. You get an honest
+                read on whether AI actually helps your business, the one thing to do first, and
+                who should build it. In writing, within 48 hours.
+              </p>
+              <Button href="/ai-second-opinion" variant="primary">
+                See the AI Second Opinion
+              </Button>
+              <p className="text-small text-ink-faint mt-3">
+                $300 &middot; 60 minutes &middot; credited toward whatever you do next
+              </p>
+            </div>
+            <div className="border-l-2 border-accent pl-6">
+              <p className="text-body text-ink-soft leading-relaxed">
+                Bring the quote you were sent, the tool you&rsquo;re evaluating, or just the
+                problem you can&rsquo;t name yet. If AI isn&rsquo;t your constraint, I&rsquo;ll
+                say so, and your fee moves to a Quick Win call instead.
+              </p>
+            </div>
+          </div>
+        </Section>
+
+        {/* 5. AI BRAIN WORKSHOP — ENTRY OFFER */}
         <Section bg="paper" width="content">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
@@ -392,8 +422,8 @@ export default function HomePage() {
           </div>
         </Section>
 
-        {/* 4. WHY CHOOSE AI INNER CIRCLE MEMBERSHIP */}
-        <Section bg="paper" width="content">
+        {/* 6. WHY CHOOSE AI INNER CIRCLE MEMBERSHIP */}
+        <Section bg="grey" width="content">
           <div className="grid md:grid-cols-2 gap-12 items-start">
             <div>
               <div className="eyebrow mb-4">Why become an AI Inner Circle Member</div>
@@ -414,7 +444,7 @@ export default function HomePage() {
           </div>
         </Section>
 
-        {/* 5. SELECTED WINS */}
+        {/* 7. SELECTED WINS */}
         <Section bg="paper" width="content">
           <div className="max-w-prose mb-12">
             <p className="eyebrow mb-4">Selected Wins</p>
@@ -433,7 +463,7 @@ export default function HomePage() {
           </ul>
         </Section>
 
-        {/* 6. THREE PILLARS */}
+        {/* 8. THREE PILLARS */}
         <Section bg="grey" width="content">
           <div className="max-w-prose mb-14">
             <div className="eyebrow mb-4">The three pillars</div>
@@ -452,7 +482,7 @@ export default function HomePage() {
           </div>
         </Section>
 
-        {/* 7. CURRICULUM */}
+        {/* 9. CURRICULUM */}
         <Section bg="paper" width="content">
           <div className="max-w-prose mb-12">
             <div className="eyebrow mb-4">Inside the membership</div>
@@ -502,7 +532,7 @@ export default function HomePage() {
           </div>
         </Section>
 
-        {/* 8. TESTIMONIALS */}
+        {/* 10. TESTIMONIALS */}
         <Section bg="grey" width="wide">
           <div className="max-w-prose mb-14">
             <p className="eyebrow mb-6">What the Experts Say</p>
@@ -522,7 +552,7 @@ export default function HomePage() {
           </div>
         </Section>
 
-        {/* 9. PRICING — FIRST CTA */}
+        {/* 11. PRICING — FIRST CTA */}
         <Section bg="paper" width="content">
           <div className="max-w-prose mb-14">
             <div className="eyebrow mb-4">Join the Inner Circle</div>
@@ -533,7 +563,7 @@ export default function HomePage() {
           <PricingCards />
         </Section>
 
-        {/* 10. ABOUT */}
+        {/* 12. ABOUT */}
         <Section bg="grey" width="content">
           <div className="grid md:grid-cols-12 gap-10 items-start">
             <div className="md:col-span-4">
@@ -561,7 +591,7 @@ export default function HomePage() {
           </div>
         </Section>
 
-        {/* 11. CLOSING CTA */}
+        {/* 13. CLOSING CTA */}
         <Section bg="paper" width="content">
           <div className="max-w-prose mb-14">
             <div className="eyebrow mb-4">Join the Inner Circle</div>
