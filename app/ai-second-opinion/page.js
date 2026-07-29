@@ -8,11 +8,11 @@ export const metadata = {
   alternates: { canonical: '/ai-second-opinion' },
   title: 'AI Second Opinion — Rev Vaughn',
   description:
-    'A paid second opinion on whether AI actually helps your business, from someone with no reason to sell you a build. 60 minutes, a written recommendation, and a straight answer either way.',
+    'A paid second opinion on whether AI actually helps your business without the sales hype, a written recommendation, and a straight answer either way.',
   openGraph: {
     title: 'AI Second Opinion — Rev Vaughn',
     description:
-      'A paid second opinion on whether AI actually helps your business, from someone with no reason to sell you a build.',
+      'A paid second opinion on whether AI actually helps move your business forward.',
     url: 'https://aiinnercircle.com/ai-second-opinion',
   },
 }
@@ -33,8 +33,8 @@ export default function AISecondOpinionPage() {
               Everyone telling you what AI to buy is also selling it.
             </h1>
             <p className="text-lead text-ink-muted mb-10">
-              Sixty minutes with someone who has spent twenty years building revenue systems
-              and has no reason to tell you yes. You get an honest read on whether AI helps
+              Sixty minutes with someone who has spent over twenty years building revenue systems.
+              You get an honest read on whether AI helps
               your business, what to do first, and who should do it. In writing, within 48 hours.
             </p>
             <Button href={CHECKOUT_URL} external variant="primary">
@@ -56,17 +56,20 @@ export default function AISecondOpinionPage() {
               </h2>
             </div>
             <ul className="space-y-4 text-body text-ink-soft">
+               <li>
+                If you know you need to do something with AI in your business but are not sure where to start...
+              </li>
               <li>
-                Someone quoted you five figures for AI agents and you can&rsquo;t tell whether
+                Maybe someone quoted you five figures for AI agents and you can&rsquo;t tell whether
                 it&rsquo;s real.
               </li>
               <li>
                 Every option looks equally plausible, so you&rsquo;ve picked none of them.
               </li>
-              <li>You bought a tool last year. It&rsquo;s still sitting there.</li>
+              <li>Maybe you bought a tool last year. It&rsquo;s still sitting there.</li>
               <li>Everyone with an opinion is also selling the solution.</li>
               <li>
-                You took the assessment, you saw the red zones, and you still aren&rsquo;t sure
+                If you took the AI assessment, you saw the red zones, and you still aren&rsquo;t sure
                 what to do first.
               </li>
             </ul>
