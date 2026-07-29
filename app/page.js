@@ -371,7 +371,7 @@ export default function HomePage() {
             <div>
               <div className="eyebrow mb-4">Before you spend money · AI Second Opinion</div>
               <h2 className="text-h1 font-semibold tracking-tight text-ink mb-6">
-                Everyone telling you what AI to buy is also selling it.
+                Know you need to do something with AI, not sure what?
               </h2>
               <p className="text-body text-ink-muted mb-8">
                 You get an honest read on whether AI actually helps your business move forward, the one thing to do first, and
