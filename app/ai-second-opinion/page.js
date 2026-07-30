@@ -28,7 +28,7 @@ export default function AISecondOpinionPage() {
         {/* 01 · Hero */}
         <Section bg="paper" width="content" className="pt-20 md:pt-28">
           <div className="max-w-prose">
-            <div className="eyebrow mb-6">Program &middot; AI Second Opinion</div>
+            <div className="eyebrow mb-6">Consulting Call &middot; AI Second Opinion</div>
             <h1 className="text-display font-semibold tracking-tight text-ink mb-8">
               Know You Need To Do Something With AI, Not Sure What?
             </h1>
@@ -82,7 +82,7 @@ export default function AISecondOpinionPage() {
             <div>
               <div className="eyebrow mb-4">The real cost</div>
               <h2 className="text-h1 font-semibold tracking-tight text-ink">
-                The expensive mistake isn&rsquo;t waiting. It&rsquo;s buying the wrong thing.
+                Buying the wrong thing is expensive.
               </h2>
             </div>
             <div className="space-y-5 text-body text-ink-soft">
@@ -108,7 +108,7 @@ export default function AISecondOpinionPage() {
           <div className="max-w-prose mb-14">
             <div className="eyebrow mb-4">Why nobody will tell you</div>
             <h2 className="text-h1 font-semibold tracking-tight text-ink">
-              Every answer you&rsquo;re getting is priced in.
+              What the other guys are really selling.
             </h2>
           </div>
           <div className="grid md:grid-cols-2 gap-10">
@@ -153,7 +153,7 @@ export default function AISecondOpinionPage() {
             <div>
               <div className="eyebrow mb-4">What this is</div>
               <h2 className="text-h1 font-semibold tracking-tight text-ink">
-                A paid hour with someone who isn&rsquo;t trying to sell you anything.
+                A paid consulting call with someone with real world experience and results.
               </h2>
             </div>
             <div className="space-y-5 text-body text-ink-soft">
@@ -229,7 +229,7 @@ export default function AISecondOpinionPage() {
           <div className="max-w-prose mb-14">
             <div className="eyebrow mb-4">How the call runs</div>
             <h2 className="text-h1 font-semibold tracking-tight text-ink">
-              You can read the whole agenda before you book.
+              What we cover on your call.
             </h2>
           </div>
           <div className="space-y-8">
