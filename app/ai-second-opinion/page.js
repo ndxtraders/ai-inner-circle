@@ -302,10 +302,8 @@ export default function AISecondOpinionPage() {
                 So you should ask why my answer would be any different from the agency&rsquo;s.
               </p>
               <p>
-                Here&rsquo;s the structural reason. My business runs on founder-led brands who
-                come back and who send other people. One build that doesn&rsquo;t fit is worth a
-                few thousand dollars and costs me the next five years of that relationship. The
-                math on telling you the truth isn&rsquo;t close.
+                Here&rsquo;s the structural reason. My business runs on experts and founder-led brands who
+                come back and who send other people. One build that doesn&rsquo;t fit costs me more in relationships than I make. 
               </p>
               <p>
                 There&rsquo;s a practical reason too. I run these systems inside my own
