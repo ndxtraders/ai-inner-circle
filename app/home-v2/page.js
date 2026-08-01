@@ -17,6 +17,10 @@ export const metadata = {
   robots: { index: false, follow: false },
 }
 
+// Every join CTA on this page points at the Skool community. The internal
+// /consultants route is not the destination for this prototype.
+const JOIN_URL = 'https://www.skool.com/ai-inner-circle-3875/about'
+
 const PAINS = [
   'You do all the work.',
   'Everything lives in your head.',
@@ -87,10 +91,10 @@ const DEPARTMENTS = [
   ['6', 'Client Success', ['Client Health Monitor', 'Client Results Report', 'Invoice & Payment Chaser', 'GTM Teardown & Rebuild']],
 ]
 
-const REFUSALS = [
-  ['It refuses to work without your business.', 'No Brain, no work. It stops and runs the interview instead.'],
-  ['It refuses to send anything without your permission.', 'Nothing sends, posts, publishes without your approval. Every one of those is your move.'],
-  ['It tells you what it cannot do.', 'The LinkedIn AI Assistant cannot safely browse LinkedIn without an external App, and it says so in the welcome letter.'],
+const FIRST_SITTING = [
+  'Set up your Command Center',
+  'Build your AI Business Brain',
+  'Onboard your AI Team and run your first task',
 ]
 
 // The shipped four-item version, matching app/consultants/page.js.
@@ -158,7 +162,7 @@ export default function HomeV2() {
                 output you can actually use.
               </p>
               <div className="flex flex-wrap gap-4 items-center mb-6">
-                <Button href="/consultants" variant="primary">
+                <Button href={JOIN_URL} variant="primary" external>
                   Join AI Inner Circle
                 </Button>
                 <Link
@@ -348,10 +352,13 @@ export default function HomeV2() {
               </div>
             ))}
           </div>
-          <div className="max-w-prose border-t border-rule pt-8">
+          <div className="max-w-prose border-t border-rule pt-8 space-y-3">
             <p className="text-body text-ink">
               You are in the loop to review and either approve or send back for rework. Human for
               trust, AI for scale.
+            </p>
+            <p className="text-body text-ink-muted">
+              No Brain, no work. Your team refuses to start until your business is loaded.
             </p>
           </div>
         </Section>
@@ -438,45 +445,33 @@ export default function HomeV2() {
         </Section>
 
 
-        {/* 10. WHAT IT REFUSES TO DO */}
+        {/* 10. YOUR FIRST AFTERNOON */}
         <Section bg="grey">
-          <p className="eyebrow mb-6">The refusals</p>
-          <h2 className="text-h1 font-semibold tracking-tight text-ink mb-10 max-w-prose">
-            What it refuses to do.
-          </h2>
-          <p className="text-body text-ink max-w-prose mb-12">
-            You have probably been burned by an AI product already. So here are the parts that my AI team says no to doing.
-          </p>
-          <div className="space-y-8 mb-10">
-            {REFUSALS.map(([title, body]) => (
-              <div key={title} className="border-t border-ink pt-5 max-w-prose">
-                <p className="text-ink font-medium mb-2">{title}</p>
-                <p className="text-body text-ink-muted">{body}</p>
-              </div>
-            ))}
-          </div>
-
-          <div className="max-w-prose">
-          </div>
-        </Section>
-
-        {/* 11. YOUR FIRST AFTERNOON */}
-        <Section bg="paper">
           <p className="eyebrow mb-6">Your first afternoon</p>
           <h2 className="text-h1 font-semibold tracking-tight text-ink mb-10 max-w-prose">
             You see it work on day one.
           </h2>
-          <div className="max-w-prose space-y-5 text-body text-ink">
+          <div className="max-w-prose space-y-8 text-body text-ink">
             <p>Setup and your first real job happen in the same sitting.</p>
+            <ol className="space-y-4">
+              {FIRST_SITTING.map((step, i) => (
+                <li key={step} className="flex gap-5">
+                  <span className="text-h3 font-semibold text-accent shrink-0 leading-none pt-1">
+                    {i + 1}
+                  </span>
+                  <span className="text-body font-medium text-ink">{step}</span>
+                </li>
+              ))}
+            </ol>
             <p>
               By the time you close the laptop, there is one finished deliverable in your folder with
-              your approval on it. You get a “Ready-to-Use” file.
+              your approval on it. You get “Ready-to-Use” work product.
             </p>
           </div>
         </Section>
 
-        {/* 12. EVERY FRIDAY */}
-        <Section bg="grey">
+        {/* 11. EVERY FRIDAY */}
+        <Section bg="paper">
           <p className="eyebrow mb-6">Every Friday</p>
           <h2 className="text-h1 font-semibold tracking-tight text-ink mb-10 max-w-prose">
             You are not doing this alone.
@@ -495,7 +490,7 @@ export default function HomeV2() {
           </div>
         </Section>
 
-        {/* 13. WHO BUILT IT, AND WHAT I CANNOT PROVE */}
+        {/* 12. WHO BUILT IT, AND WHAT I CANNOT PROVE */}
         <Section bg="grey">
           <p className="eyebrow mb-6">About</p>
           <h2 className="text-h1 font-semibold tracking-tight text-ink mb-10 max-w-prose">
@@ -551,7 +546,7 @@ export default function HomeV2() {
           </div>
         </Section>
 
-        {/* 14. WHAT IT WILL NOT DO, AND WHAT IT COSTS */}
+        {/* 13. WHAT IT WILL NOT DO, AND WHAT IT COSTS */}
         <Section bg="paper">
           <p className="eyebrow mb-6">Straight talk</p>
           <h2 className="text-h1 font-semibold tracking-tight text-ink mb-10 max-w-prose">
@@ -574,7 +569,7 @@ export default function HomeV2() {
               rather than evidence. Left out of the prototype pending your call. */}
         </Section>
 
-        {/* 15. THE OFFER */}
+        {/* 14. THE OFFER */}
         <Section bg="grey">
           <p className="eyebrow mb-6">Join the Inner Circle</p>
           <h2 className="text-h1 font-semibold tracking-tight text-ink mb-10">
@@ -592,7 +587,7 @@ export default function HomeV2() {
             Cancel anytime. Everything you built stays in your folder, on your machine, in files you can
             open in any text editor.
           </p>
-          <Button href="/consultants" variant="primary">
+          <Button href={JOIN_URL} variant="primary" external>
             Join AI Inner Circle
           </Button>
           <div className="mt-8 space-y-3 max-w-prose">
@@ -613,7 +608,7 @@ export default function HomeV2() {
           </div>
         </Section>
 
-        {/* 16. THE CLOSE */}
+        {/* 15. THE CLOSE */}
         <Section bg="paper">
           <p className="eyebrow mb-6">Join the Inner Circle</p>
           <h2 className="text-h1 font-semibold tracking-tight text-ink mb-8 max-w-prose">
@@ -629,7 +624,7 @@ export default function HomeV2() {
               $249 soon.
             </p>
           </div>
-          <Button href="/consultants" variant="primary">
+          <Button href={JOIN_URL} variant="primary" external>
             Join AI Inner Circle
           </Button>
         </Section>
