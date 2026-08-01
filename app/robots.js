@@ -30,7 +30,10 @@ const AI_CRAWLERS = [
 // Post-conversion pages. Not in the sitemap either; disallowing them keeps crawl
 // budget on the pages that can actually rank or get cited.
 // /ai used to be listed here. The page is deleted, so it 404s on its own now.
-const DISALLOW = ['/thank-you', '/voice-thank-you', '/ai-brain/access', '/api/']
+// /home-v2 is a prototype of the homepage, not the live page. It also carries
+// noindex in its own metadata and is absent from STATIC_ROUTES in sitemap.js.
+// Remove all three when it either ships or gets deleted.
+const DISALLOW = ['/thank-you', '/voice-thank-you', '/ai-brain/access', '/api/', '/home-v2']
 
 export default function robots() {
   return {
