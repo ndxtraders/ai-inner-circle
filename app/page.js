@@ -100,21 +100,17 @@ const FIRST_SITTING = [
   'Onboard your AI Team and run your first task',
 ]
 
-// The shipped four-item version, matching app/consultants/page.js.
+// Three client wins. The fourth, a pre-AI business-building line, moved out of
+// this grid and into its own block below the wins in section 12.
 const WINS = [
   ['144% more booked calls', 'CPL below goal, 30% conversion across the Cardone Ventures portfolio.'],
   ['$6.57M total', 'Converted 40%+ of prospects to buyers for the new SquadUp Summit event.'],
   ['Sold out in 48 hours', 'First launch sold out, driven by email and social for HRE Beauty.'],
-  ['Built multiple $1M+ campaigns before AI', 'Founded or helped start 7 businesses in Japan, Korea, Taiwan, China, the UK and the US, with two of them growing from zero to $20M+ per year.'],
 ]
 
+// Not currently rendered on the homepage. The Kevin Rogers quote that used to
+// run in section 12 was cut; this one is kept here for when Rev wants it back.
 const TESTIMONIALS = [
-  {
-    quote:
-      'Although I could have hired almost anyone, I was proud to call Rev my personal copywriter inside Copy Chief.',
-    name: 'Kevin Rogers',
-    title: 'Founder, Copy Chief',
-  },
   {
     quote:
       'Reduced CPL below goal. Booked calls rose 144% with 30% conversion rates. Rev’s work set a new standard for how we approach campaign structure, messaging, and analytics across multiple brands.',
@@ -266,7 +262,7 @@ export default function HomePage() {
         <Section bg="grey">
           <p className="eyebrow mb-6">You have tried the usual fixes</p>
           <h2 className="text-h1 font-semibold tracking-tight text-ink mb-12 max-w-prose">
-            They all break in the same place.
+            The usual fixes don’t work.
           </h2>
           <div className="grid md:grid-cols-2 gap-x-10 gap-y-8 mb-10">
             {FIXES.map(([title, body]) => (
@@ -277,15 +273,15 @@ export default function HomePage() {
             ))}
           </div>
           <div className="max-w-prose border-t border-rule pt-8">
-            <p className="text-body text-ink">All four hand a flawed solution.</p>
+            <p className="text-body text-ink">All four hand you a flawed solution.</p>
           </div>
         </Section>
 
         {/* 5. I ALREADY DO THIS */}
         <Section bg="grey">
-          <p className="eyebrow mb-6">The honest objection</p>
+          <p className="eyebrow mb-6">What the “experts” tell you to do</p>
           <h2 className="text-h1 font-semibold tracking-tight text-ink mb-10 max-w-prose">
-            You already built something like this yourself.
+            Why projects won’t fix this.
           </h2>
           <div className="max-w-prose space-y-5 text-body text-ink mb-10">
             <p>If you are good at AI, this is the first thing you thought.</p>
@@ -349,13 +345,10 @@ export default function HomePage() {
               </div>
             ))}
           </div>
-          <div className="max-w-prose border-t border-rule pt-8 space-y-3">
+          <div className="max-w-prose border-t border-rule pt-8">
             <p className="text-body text-ink">
               You are in the loop to review and either approve or send back for rework. Human for
               trust, AI for scale.
-            </p>
-            <p className="text-body text-ink-muted">
-              No Brain, no work. Your team refuses to start until your business is loaded.
             </p>
           </div>
         </Section>
@@ -365,7 +358,7 @@ export default function HomePage() {
           <div className="max-w-content mx-auto">
             <p className="eyebrow mb-6">What arrives</p>
             <h2 className="text-h1 font-semibold tracking-tight text-ink mb-8 max-w-prose">
-              A department a month, for six months.
+              Onboard a new department a month, for six months.
             </h2>
             <div className="max-w-prose space-y-5 text-body text-ink mb-14">
               <p>
@@ -469,7 +462,7 @@ export default function HomePage() {
 
         {/* 11. EVERY FRIDAY */}
         <Section bg="paper">
-          <p className="eyebrow mb-6">Every Friday</p>
+          <p className="eyebrow mb-6">Coaching and Q&amp;A Every Friday</p>
           <h2 className="text-h1 font-semibold tracking-tight text-ink mb-10 max-w-prose">
             You are not doing this alone.
           </h2>
@@ -511,7 +504,7 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
             {WINS.map(([result, detail]) => (
               <div key={result} className="border-t border-ink pt-5">
                 <p className="text-h3 font-semibold text-ink mb-2">{result}</p>
@@ -522,16 +515,15 @@ export default function HomePage() {
 
 
 
-          <div className="mb-12 max-w-prose">
-            <blockquote className="border-l-2 border-accent pl-6">
-              <p className="text-body text-ink mb-4 leading-relaxed">
-                &ldquo;{TESTIMONIALS[0].quote}&rdquo;
-              </p>
-              <footer className="text-small">
-                <div className="font-semibold text-ink">{TESTIMONIALS[0].name}</div>
-                <div className="text-ink-muted">{TESTIMONIALS[0].title}</div>
-              </footer>
-            </blockquote>
+          <div className="mb-12 max-w-prose border-t border-ink pt-5">
+            <p className="text-h3 font-semibold text-ink mb-2">
+              Built multiple million dollar businesses before AI
+            </p>
+            <p className="text-body text-ink-muted">
+              I’ve founded or helped start more than a dozen businesses in Japan, Korea, Taiwan,
+              China, the UK and the US (grew 2 from zero to $20M+ per year), and have introduced
+              thousands of products into new markets.
+            </p>
           </div>
 
           {/* The honesty paragraph. Does not get softened and does not get moved. */}
