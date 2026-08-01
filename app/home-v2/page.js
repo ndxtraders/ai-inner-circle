@@ -18,22 +18,22 @@ export const metadata = {
 }
 
 const PAINS = [
-  'You reply late. The deal goes cold.',
-  'Your best process lives in your head.',
+  'You do all the work.',
+  'Everything lives in your head.',
+  'You make every decision.',
   'You post, and it sounds like everyone else.',
-  'Leads come in. Most never hear back.',
-  'You know AI should help. You don’t know where to start.',
+  'You know AI can help, but you don’t know where to start.',
 ]
 
 const FIXES = [
   ['Generic chat AI', 'You retype the same setup. Every session starts from zero.'],
-  ['Prompt libraries', 'A better prompt, then a folder of prompts to manage.'],
+  ['Prompt libraries', 'A better prompt, then a folder of overwhelming prompts to manage.'],
   ['Courses', 'You finish with notes. The work still is not built.'],
   ['Hiring or an agency', 'Slow, expensive, and your context moves into their head.'],
 ]
 
 const GAPS = [
-  ['It only covers the jobs you thought of.', 'The expensive work is the work you have not noticed yet.'],
+  ['It only covers the jobs you thought of.', 'The important work is the work you have not noticed yet.'],
   ['It loads your context when you remember.', 'Your setup is optional. On a busy week, optional means off.'],
   ['It stops when the window closes.', 'What file did your best session last month actually produce?'],
   ['There is nobody to hand off to.', 'You are the router, and that map lives in your head.'],
@@ -58,7 +58,7 @@ const SHIFTS = [
   {
     red: 'Endless Fixes',
     green: 'Ready To Use',
-    line: 'Drafts reach you already checked against your voice.',
+    line: 'Drafts reach you already checked against your business brain.',
   },
 ]
 
@@ -89,10 +89,8 @@ const DEPARTMENTS = [
 
 const REFUSALS = [
   ['It refuses to work without your business.', 'No Brain, no work. It stops and runs the interview instead.'],
-  ['It refuses to send anything.', 'Nothing sends, posts, publishes, or pays. Every one of those is your move.'],
-  ['It refuses to invent.', 'One invented result costs more trust than a hundred honest not-yets.'],
-  ['It refuses to pad.', 'An empty week gets reported as an empty week.'],
-  ['It tells you what it cannot do.', 'The LinkedIn hire cannot browse LinkedIn, and it says so in the welcome letter.'],
+  ['It refuses to send anything without your permission.', 'Nothing sends, posts, publishes without your approval. Every one of those is your move.'],
+  ['It tells you what it cannot do.', 'The LinkedIn AI Assistant cannot safely browse LinkedIn without an external App, and it says so in the welcome letter.'],
 ]
 
 // The shipped four-item version, matching app/consultants/page.js.
@@ -100,7 +98,7 @@ const WINS = [
   ['144% more booked calls', 'CPL below goal, 30% conversion across the Cardone Ventures portfolio.'],
   ['$6.57M total', 'Converted 40%+ of prospects to buyers for the new SquadUp Summit event.'],
   ['Sold out in 48 hours', 'First launch sold out, driven by email and social for HRE Beauty.'],
-  ['$1M+ in sales', 'Built the control campaign for Grant Cardone’s 10X Business Coach.'],
+  ['Built multiple $1M+ campaigns before AI', 'Founded or helped start 7 businesses in Japan, Korea, Taiwan, China, the UK and the US, with two of them growing from zero to $20M+ per year.'],
 ]
 
 const TESTIMONIALS = [
@@ -120,29 +118,20 @@ const TESTIMONIALS = [
 
 const INCLUDES = [
   'A new department of four AI hires every month',
-  'Maestro, your chief of staff, checking the work before you see it',
+  'Maestro, your chief of staff, checks the work before you see it',
   'Your Command Center, set up with you',
-  'One to two live workshops a month',
+  'One workshop a month',
   'A live Friday coaching call with Rev',
   'Daily access to the community',
 ]
 
 const LIMITS = [
-  ['You still have to show up.', 'This cuts your work. It does not remove you. You still press send.'],
-  ['It runs on Claude.', 'You need a Claude plan on top of the membership, from $20 a month, plus the desktop app.'],
-  ['A couple of months cost a little more.', 'The outreach month wants a paid LinkedIn plan and a few dollars of data.'],
-  ['The compounding takes time.', 'Month one is useful the same day. The full payoff takes a few months.'],
-  ['You are early.', 'This is a founding cohort. I would rather say so than pretend there is a crowd.'],
+  ['You still have to show up.', 'This cuts your work. It does not remove you. You still review and approve everything.'],
+  ['It runs on Claude.', 'You need a $20 Claude Pro plan on top of the membership plus the desktop app.'],
+  ['A couple of months cost a little more.', 'The outreach month requires an external App and a few dollars of data. Paying for LinkedIn Premium gets you better results.'],
+  ['The compounding takes time.', 'Month one is useful the same day. The full payoff takes time.'],
+  ['You are early.', 'This is a founding cohort for a small group of early adopters. The price will increase soon.'],
 ]
-
-function VideoSlot({ label }) {
-  return (
-    <div className="border border-dashed border-rule bg-paper-grey px-6 py-8 text-center my-8">
-      <p className="text-small tracking-widest text-ink-faint mb-1">VIDEO</p>
-      <p className="text-body text-ink-muted">{label}</p>
-    </div>
-  )
-}
 
 export default function HomeV2() {
   return (
@@ -162,7 +151,7 @@ export default function HomeV2() {
             <div className="md:col-span-2">
               <p className="eyebrow mb-6">For experts, consultants, and founder-led brands</p>
               <h1 className="text-display font-semibold tracking-tight text-ink mb-8">
-                A self-staffing AI team that runs without you as the bottleneck.
+                Self-staffing AI Teams that run without you as the bottleneck.
               </h1>
               <p className="text-lead text-ink-muted mb-10 max-w-prose">
                 Pre-built AI Assistants that know your business, complete the work, and create on-brand
@@ -239,7 +228,7 @@ export default function HomeV2() {
                   'You paste in the real task.',
                   'You rewrite most of what comes back.',
                   'You close the window. All of it is gone.',
-                  'Next Tuesday you do it again.',
+                  'Next day, you do it all over again.',
                 ].map((step, i) => (
                   <li key={step} className="flex gap-4 text-body text-ink">
                     <span className="text-small text-accent font-medium pt-1 w-5 shrink-0">
@@ -249,25 +238,22 @@ export default function HomeV2() {
                   </li>
                 ))}
               </ol>
-              <div className="max-w-prose space-y-4 text-body text-ink">
-                <p>So you decide you are bad at prompting.</p>
+              <div className="max-w-prose text-body text-ink">
                 <p>
                   The real problem sits upstream. Your offer, your buyer, and your voice live in your
-                  head. A prompt is you handing all three over again, every single time.
+                  head.
                 </p>
-                <p className="font-medium">Nobody keeps that up.</p>
               </div>
-              <VideoSlot label="20 seconds. The loop repeating, then breaking." />
             </div>
 
             <aside className="border-l-2 border-accent pl-6 space-y-4 text-body text-ink-muted md:mt-2">
               <p className="text-h3 font-semibold text-ink">Where this ends up.</p>
               <p>
-                A former client, north of $100M, now runs two Claude skills. One makes branded decks.
-                The other fixes the decks, because they sound like AI slop.
+                A former client, north of $100M, built two AI Agents on his own. One makes branded
+                decks. The other fixes the decks, because they sound like AI slop.
               </p>
               <p className="text-ink font-medium">
-                They built an AI repair tool for their other AI tool.
+                They built an AI repair tool for their other AI builder tool.
               </p>
               <p>Nobody fixed the thinking. They standardized the cleanup.</p>
             </aside>
@@ -290,10 +276,7 @@ export default function HomeV2() {
             ))}
           </div>
           <div className="max-w-prose border-t border-rule pt-8">
-            <p className="text-body text-ink">
-              All four hand the job of remembering your business back to you. On every task, forever.
-              That is not a discipline problem. It is what happens when nothing requires it.
-            </p>
+            <p className="text-body text-ink">All four hand a flawed solution.</p>
           </div>
         </Section>
 
@@ -318,8 +301,7 @@ export default function HomeV2() {
             ))}
           </div>
           <p className="text-body text-ink max-w-prose">
-            None of that is about quality. Your output is fine. The gap is coverage, enforcement,
-            persistence, and handoff.
+            The gap is coverage, enforcement, persistence, and handoff.
           </p>
         </Section>
 
@@ -347,7 +329,7 @@ export default function HomeV2() {
         <Section bg="paper">
           <p className="eyebrow mb-6">How it runs</p>
           <h2 className="text-h1 font-semibold tracking-tight text-ink mb-12 max-w-prose">
-            Nine moves. That is the whole system.
+            Three Steps to Success.
           </h2>
           <div className="grid md:grid-cols-3 gap-10 mb-12">
             {MISSIONS.map((col) => (
@@ -368,10 +350,9 @@ export default function HomeV2() {
           </div>
           <div className="max-w-prose border-t border-rule pt-8">
             <p className="text-body text-ink">
-              That last column is you, and it is a third of the system on purpose. Nothing here sends,
-              posts, publishes, or pays. The team drafts and you decide. Human for trust, AI for scale.
+              You are in the loop to review and either approve or send back for rework. Human for
+              trust, AI for scale.
             </p>
-            <VideoSlot label="45 seconds. The board, with work moving into Your Move." />
           </div>
         </Section>
 
@@ -388,12 +369,11 @@ export default function HomeV2() {
                 four by the end.
               </p>
               <p>
-                Month one is The Offer Desk. You finish it holding four documents that do not exist
-                today, starting with what is actually broken in your offer.
+                Month one is The Offer Desk. You finish it holding four documents that form your AI
+                Business Brain.
               </p>
               <p className="text-ink-muted">
-                And nothing waits on the calendar. If a job comes up that nobody covers, Maestro builds
-                the specialist that session.
+                If a job comes up that nobody covers, Maestro builds the specialist that session.
               </p>
             </div>
           </div>
@@ -422,7 +402,7 @@ export default function HomeV2() {
           </div>
         </Section>
 
-        {/* 9. THE WEDNESDAY AFTERNOON */}
+        {/* 9. THE FRIDAY AFTERNOON */}
         <Section bg="paper">
           <p className="eyebrow mb-6">From my own desk</p>
           <h2 className="text-h1 font-semibold tracking-tight text-ink mb-10 max-w-prose">
@@ -430,32 +410,31 @@ export default function HomeV2() {
           </h2>
           <div className="max-w-prose space-y-5 text-body text-ink leading-relaxed">
             <p>
-              4:06 pm. I needed a landing page live by end of business, and I had to leave for a concert
-              at 5.
+              It’s 4:06 pm on a Friday afternoon, and I needed a landing page live by the end of the
+              business day.
             </p>
-            <p>I did not have a landing page builder on my team.</p>
+            <p className="font-medium">Two Problems:</p>
+            <ol className="space-y-2 list-decimal pl-5">
+              <li>I had to leave for a concert with my family by 5 pm at the latest (no exceptions)</li>
+              <li>I did not have a landing page builder on my team.</li>
+            </ol>
             <p>
-              So I told Maestro about the job. He built one on the spot, briefed it, and reviewed the
-              draft against my voice before it ever reached me.
+              So I told Maestro about the job. Without me asking, he built one on the spot, briefed it,
+              and reviewed the draft against my voice before it ever reached me.
             </p>
             <p>
-              That specialist stays. I call it the Rolodex. Next time I need a landing page, it is
-              already on call.
+              That Landing Page specialist now lives in my Freelancer Rolodex. Next time I need a
+              landing page, it is already on call.
             </p>
             <p className="text-h3 font-semibold text-ink">
-              I never built a hundred agents I will never use.
+              I never have to build a hundred agents I will never use.
             </p>
             <p className="text-ink-muted">
-              So you are never stuck waiting for next month. If a job comes up that nobody covers,
-              Maestro writes the specialist that session.
+              So you are never stuck waiting. If a job comes up that nobody covers, Maestro “hires” the
+              specialist that session.
             </p>
           </div>
-          <div className="max-w-prose">
-            <VideoSlot label="90 seconds. The Wednesday afternoon, start to finish." />
-            <p className="text-small text-ink-muted italic">
-              I reviewed that page myself, because approval is my job. It was 90% good to go.
-            </p>
-          </div>
+
         </Section>
 
 
@@ -466,7 +445,7 @@ export default function HomeV2() {
             What it refuses to do.
           </h2>
           <p className="text-body text-ink max-w-prose mb-12">
-            You have probably been burned by an AI product already. So here are the parts that say no.
+            You have probably been burned by an AI product already. So here are the parts that my AI team says no to doing.
           </p>
           <div className="space-y-8 mb-10">
             {REFUSALS.map(([title, body]) => (
@@ -476,12 +455,8 @@ export default function HomeV2() {
               </div>
             ))}
           </div>
-          <p className="text-body text-ink max-w-prose">
-            None of that is modesty. A tool that claimed it could browse LinkedIn would hand you
-            invented names, and you would quit in week three.
-          </p>
+
           <div className="max-w-prose">
-            <VideoSlot label="30 seconds. A hire stopping because the Brain is missing." />
           </div>
         </Section>
 
@@ -489,17 +464,13 @@ export default function HomeV2() {
         <Section bg="paper">
           <p className="eyebrow mb-6">Your first afternoon</p>
           <h2 className="text-h1 font-semibold tracking-tight text-ink mb-10 max-w-prose">
-            You feel it work on day one.
+            You see it work on day one.
           </h2>
           <div className="max-w-prose space-y-5 text-body text-ink">
             <p>Setup and your first real job happen in the same sitting.</p>
             <p>
-              By the time you close the laptop there is one finished deliverable in your folder with your
-              approval on it. A file with a name and a date, which is what Ready To Use means around
-              here.
-            </p>
-            <p className="text-ink-muted">
-              That is the rhythm from there. The team drafts, Maestro checks it, you approve.
+              By the time you close the laptop, there is one finished deliverable in your folder with
+              your approval on it. You get a “Ready-to-Use” file.
             </p>
           </div>
         </Section>
@@ -512,14 +483,14 @@ export default function HomeV2() {
           </h2>
           <div className="max-w-prose space-y-5 text-body text-ink">
             <p>
-              Every Friday there is a live coaching call with me. Bring what you are stuck on and we
+              Every Friday, I personally run a live coaching call. Bring what you are stuck on and we
               work it out on the call.
             </p>
             <p>
-              The community runs the rest of the week, so nothing has to sit in your head until Friday.
+              The community runs the rest of the week, so nothing has to wait until Friday.
             </p>
             <p className="text-ink-muted">
-              One to two live workshops a month on top of that.
+              You also get one live workshop a month on top of that.
             </p>
           </div>
         </Section>
@@ -539,8 +510,8 @@ export default function HomeV2() {
               And I was the bottleneck. Every task started with me explaining the business from scratch.
             </p>
             <p>
-              So I taught the AI my business instead, and put it somewhere it reads on its own. It is the
-              system I run my own work on every day.
+              So I taught the AI my business instead. Now, it is the system I run my own work on every
+              day.
             </p>
             <p className="text-ink-muted">
               I have built revenue systems for founder-led brands for 25 years. Same shape as this
@@ -557,10 +528,7 @@ export default function HomeV2() {
             ))}
           </div>
 
-          <p className="text-small text-ink-faint mb-12">
-            Clients and campaigns include Grant Cardone, 10X Health, Cardone Ventures, SquadUp Summit,
-            Copy Chief, Email Copy Academy, CardoMax, and REVIVX.
-          </p>
+
 
           <div className="mb-12 max-w-prose">
             <blockquote className="border-l-2 border-accent pl-6">
@@ -575,22 +543,10 @@ export default function HomeV2() {
           </div>
 
           {/* The honesty paragraph. Does not get softened and does not get moved. */}
-          <div className="max-w-prose space-y-5 text-body text-ink border-t border-ink pt-8">
-            <p className="font-medium">
-              Now the straight part. Every number above came from work I did for clients. None are
-              results from someone using this membership.
-            </p>
-            <p>
-              The founding cohort is new. Nobody has finished the program yet, and I am not going to
-              dress up a client number to look like a member number.
-            </p>
-            <p>
-              What you can do instead is read the thing before you pay for it. It is plain files. The
-              reading list at the top of each hire, the test it has to pass, and the jobs it refuses to
-              take.
-            </p>
-            <p className="text-ink-muted">
-              That is a weaker promise than a member result. It is also one you can check yourself.
+          <div className="max-w-prose border-t border-ink pt-8">
+            <p className="text-body text-ink">
+              The founding cohort is new. You are getting the systems I use every day to attract,
+              engage, and convert clients at a massive discount.
             </p>
           </div>
         </Section>
@@ -645,13 +601,13 @@ export default function HomeV2() {
               <Link href="/ai-brain" className="text-ink underline hover:text-accent">
                 AI Brain Workshop
               </Link>{' '}
-              is $49 and it is the same idea at one tenth the size. You build the file that tells AI who
-              you are, and you keep it whether you ever join or not.
+              is $49. You build the file that tells AI who you are, how you work, write, and make
+              decisions. You keep it whether you ever join the full program or not.
             </p>
             <p className="text-small text-ink-faint">
-              Coaching or courses rather than consulting?{' '}
+              Coaching rather than consulting?{' '}
               <Link href="/coaches" className="text-ink-muted underline hover:text-accent">
-                There is a track for that.
+                There is a coaching track for that.
               </Link>
             </p>
           </div>
@@ -661,15 +617,15 @@ export default function HomeV2() {
         <Section bg="paper">
           <p className="eyebrow mb-6">Join the Inner Circle</p>
           <h2 className="text-h1 font-semibold tracking-tight text-ink mb-8 max-w-prose">
-            Your business is going to stay in your head until you write it down.
+            Your business is going to stay in your head until you build your AI Business Brain.
           </h2>
           <div className="max-w-prose space-y-5 text-body text-ink mb-10">
             <p>
               Your offer, your buyer, and the way you sound are all sitting in one place right now, and
-              that place is your head. Nothing gets written down by itself.
+              that place is your head.
             </p>
             <p>
-              Twenty minutes of questions starts it. The founding price is $199 a month and it rises to
+              Twenty minutes of questions to start. The founding price is $199 a month. It rises to
               $249 soon.
             </p>
           </div>
