@@ -39,7 +39,11 @@ const GAPS = [
   ['There is nobody to hand off to.', 'You are the router, and that map lives in your head.'],
 ]
 
-// Rev's concept model. The table IS the section. One short line per pair, no more.
+// The assessment's "Breaking Point" red, from app/consultants/assessment/page.js:191.
+// Not in the Tailwind palette, so it is applied inline rather than adding a shared token.
+const RED = '#d9534f'
+
+// Rev's concept model. Problem in red, result in green and bold. No boxes.
 const SHIFTS = [
   {
     red: 'Generic Output',
@@ -271,6 +275,7 @@ export default function HomeV2() {
         </Section>
 
 
+        {/* 4. WHY THE USUAL FIXES FAIL */}
         <Section bg="grey">
           <p className="eyebrow mb-6">You have tried the usual fixes</p>
           <h2 className="text-h1 font-semibold tracking-tight text-ink mb-12 max-w-prose">
@@ -293,7 +298,7 @@ export default function HomeV2() {
         </Section>
 
         {/* 5. I ALREADY DO THIS */}
-        <Section bg="paper">
+        <Section bg="grey">
           <p className="eyebrow mb-6">The honest objection</p>
           <h2 className="text-h1 font-semibold tracking-tight text-ink mb-10 max-w-prose">
             You already built something like this yourself.
@@ -319,26 +324,20 @@ export default function HomeV2() {
         </Section>
 
         {/* 6. THE THREE SHIFTS. Rev's red/green model. The table IS the section. */}
-        <Section bg="greyDark">
+        <Section bg="paper">
           <p className="eyebrow mb-6">What changes</p>
           <h2 className="text-h1 font-semibold tracking-tight text-ink mb-12 max-w-prose">
             Three things change once your AI knows your business.
           </h2>
           <div className="border-t border-ink">
             {SHIFTS.map((s) => (
-              <div key={s.green} className="border-b border-ink py-8">
-                <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-4 md:gap-6 items-stretch">
-                  <div className="bg-paper border border-rule px-5 py-4 flex items-center">
-                    <span className="text-h3 text-ink-faint">{s.red}</span>
-                  </div>
-                  <div className="flex items-center justify-center text-ink-faint text-h3 rotate-90 md:rotate-0" aria-hidden="true">
-                    &rarr;
-                  </div>
-                  <div className="bg-accent-soft border border-accent px-5 py-4 flex items-center">
-                    <span className="text-h3 font-semibold text-ink">{s.green}</span>
-                  </div>
-                </div>
-                <p className="text-body text-ink-muted mt-4 max-w-prose">{s.line}</p>
+              <div key={s.green} className="border-b border-ink py-7">
+                <p className="flex flex-wrap items-baseline gap-x-4 gap-y-1 mb-3">
+                  <span className="text-h3" style={{ color: RED }}>{s.red}</span>
+                  <span className="text-h3 text-ink-faint" aria-hidden="true">&rarr;</span>
+                  <span className="text-h3 font-bold text-accent">{s.green}</span>
+                </p>
+                <p className="text-body text-ink-muted max-w-prose">{s.line}</p>
               </div>
             ))}
           </div>
@@ -460,6 +459,7 @@ export default function HomeV2() {
         </Section>
 
 
+        {/* 10. WHAT IT REFUSES TO DO */}
         <Section bg="grey">
           <p className="eyebrow mb-6">The refusals</p>
           <h2 className="text-h1 font-semibold tracking-tight text-ink mb-10 max-w-prose">
