@@ -13,7 +13,7 @@ const BASE = 'https://aiinnercircle.com'
 // the signal. Article routes are generated from app/content/articles.js
 // below, using each article's real publish date.
 const STATIC_ROUTES = [
-  ['/', 1.0, 'weekly', '2026-07-12'],
+  ['/', 1.0, 'weekly', '2026-08-01'],
   ['/consultants', 0.9, 'weekly', '2026-07-15'],
   ['/coaches', 0.9, 'weekly', '2026-07-15'],
   ['/assessment', 0.8, 'monthly', '2026-07-12'],
@@ -26,6 +26,7 @@ const STATIC_ROUTES = [
   ['/growth-as-a-service', 0.6, 'monthly', '2026-07-12'],
   ['/ai-leverage', 0.6, 'monthly', '2026-07-12'],
   ['/resources', 0.6, 'monthly', '2026-07-12'],
+  ['/ai-second-opinion', 0.5, 'monthly', '2026-08-01'],
   ['/ai-audit', 0.5, 'monthly', '2026-07-12'],
   ['/mentor', 0.5, 'monthly', '2026-07-12'],
   ['/quick-win', 0.5, 'monthly', '2026-07-12'],

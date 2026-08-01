@@ -5,11 +5,31 @@ carousels, videos, presentations, and email.
 
 - **Source:** `app/page.js` (608 lines)
 - **Captured:** 2026-08-01, at commit `ed4e351` on branch `homepage-v2-prototype`
-- **Status when captured:** live at `/`. Nothing here has been deleted or changed.
-  `app/page.js` is untouched. This file exists so the copy survives independently
-  of any future rewrite.
-- **Successor:** `/home-v2` prototype (`app/home-v2/page.js`), specced in
+- **Status:** **retired.** This was live at `/` until 2026-08-01, when the v2 page
+  replaced it. It is no longer on the site.
+- **Successor:** the current `app/page.js`, specced in
   `PRD-homepage-messaging-2026-08-01.md`
+
+**To get the original file back:**
+
+```bash
+git show 776ef49:app/page.js
+```
+
+That is the last commit where this version was live. Redirect it to a file to
+restore it outright. This markdown holds the copy; that SHA holds the working
+React.
+
+**What did not survive the swap.** Most of this page is duplicated on
+`/consultants`, `/coaches`, and `/case-studies` — the clients strip, all six
+testimonials, and the six-month hiring plan all still ship there. Two things
+were not anywhere else, and both moved to the site footer rather than onto the
+new homepage:
+
+- **AI Second Opinion ($300)** — this page was its only inbound link on the
+  whole site, and it was missing from the sitemap too. Both are fixed.
+- **The $999 1:1 coaching tier** — presented nowhere else. The footer now links
+  its apply path. It still has no page of its own.
 
 Sections are numbered as they appear in the source. Data-array content is
 reproduced in full, since that is where most of the reusable copy lives.

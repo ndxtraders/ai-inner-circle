@@ -5,281 +5,140 @@ import Footer from './components/Footer'
 import Section from './components/Section'
 import Button from './components/Button'
 
+// The homepage. Built from "planning docs/PRD-homepage-messaging-2026-08-01.md"
+// and shipped 2026-08-01, replacing the previous version.
+//
+// The copy this page replaced is archived at
+// "planning docs/home-page-v1-archive.md", and the working file it replaced is
+// recoverable with:
+//   git show 776ef49:app/page.js
 export const metadata = {
   alternates: { canonical: '/' },
   title: 'AI Inner Circle | Rev Vaughn',
   description:
-    'Revenue Growth Systems for B2B Service Providers. Get access to the AI systems Rev Vaughn uses every day to attract, engage, and convert buyers.',
+    'Self-staffing AI teams that run without you as the bottleneck. Pre-built AI Assistants that know your business, complete the work, and create on-brand output you can actually use.',
 }
 
-const CLIENTS = [
-  'Grant Cardone',
-  '10X Health',
-  'Cardone Ventures',
-  'SquadUp Summit',
-  '10X Business Coach',
-  'Heather Rae Essentials',
-  'CardoMax',
-  'Copy Chief',
-  'Email Copy Academy',
-  'VestRight',
-  'Allied Development',
-  'Remix Your Business',
-  'REVIVX',
-  'Get More Math',
-  'SpaSurge',
-  'Zenpreneurs',
-  '10X GrowthCon',
-  '10X Health UK',
-  'IV Academy',
-  '10X Roofing',
-  '10X Home Services',
-  '10X DECODE',
+// Every join CTA on this page opens the Skool community. /consultants is
+// reachable from the header nav, but it is deliberately not the destination
+// for the homepage buttons.
+const JOIN_URL = 'https://www.skool.com/ai-inner-circle-3875/about'
+
+const PAINS = [
+  'You do all the work.',
+  'Everything lives in your head.',
+  'You make every decision.',
+  'You post, and it sounds like everyone else.',
+  'You know AI can help, but you don’t know where to start.',
 ]
 
+const FIXES = [
+  ['Generic chat AI', 'You retype the same setup. Every session starts from zero.'],
+  ['Prompt libraries', 'A better prompt, then a folder of overwhelming prompts to manage.'],
+  ['Courses', 'You finish with notes. The work still is not built.'],
+  ['Hiring or an agency', 'Slow, expensive, and your context moves into their head.'],
+]
+
+const GAPS = [
+  ['It only covers the jobs you thought of.', 'The important work is the work you have not noticed yet.'],
+  ['It loads your context when you remember.', 'Your setup is optional. On a busy week, optional means off.'],
+  ['It stops when the window closes.', 'What file did your best session last month actually produce?'],
+  ['There is nobody to hand off to.', 'You are the router, and that map lives in your head.'],
+]
+
+// The assessment's "Breaking Point" red, from app/consultants/assessment/page.js:191.
+// Not in the Tailwind palette, so it is applied inline rather than adding a shared token.
+const RED = '#d9534f'
+
+// Rev's concept model. Problem in red, result in green and bold. No boxes.
+const SHIFTS = [
+  {
+    red: 'Generic Output',
+    green: 'AI Knows Your Business',
+    line: 'Your Business Brain gets built once. Every Assistant reads it before it starts.',
+  },
+  {
+    red: 'Slower Work',
+    green: 'Tasks Completed',
+    line: 'Every job ends with a file, and a test for what finished means.',
+  },
+  {
+    red: 'Endless Fixes',
+    green: 'Ready To Use',
+    line: 'Drafts reach you already checked against your business brain.',
+  },
+]
+
+const MISSIONS = [
+  {
+    green: 'AI Knows Your Business',
+    moves: [['Build Center', 'the folder, on your machine'], ['Brief Maestro', 'twenty minutes of questions'], ['Load References', 'your real material, not samples']],
+  },
+  {
+    green: 'Tasks Completed',
+    moves: [['Onboard Team', 'your first department walks in'], ['Launch Department', 'four Assistants, one job each'], ['Assign Work', 'describe the problem, name no tools']],
+  },
+  {
+    green: 'Ready To Use',
+    moves: [['Track Work', 'a live board, always current'], ['Review Output', 'already checked against your voice'], ['Approve Work', 'send it, or send it back']],
+  },
+]
+
+// Verbatim from app/page.js. Consultants track, which is the example track.
+const DEPARTMENTS = [
+  ['1', 'Offer Desk', ['Sales Council', 'Unique Mechanism Builder', 'Offer & Pricing Architect', 'Objection Tester']],
+  ['2', 'Sales Floor', ['LinkedIn Signal Scout', 'ICP Match & Prioritizer', 'Surgical DM Writer', 'AI Slop Killer']],
+  ['3', 'Deal Desk', ['Reply Classifier', 'Follow-up & Reactivation', 'Discovery Call-Prep', 'Proposal & Quote Generator']],
+  ['4', 'Media Team', ['Recording to Content', 'SEO / GEO Optimizer', 'LinkedIn Ghostwriter', 'Content Repurposer']],
+  ['5', 'Operations', ['Transcription to SOP', 'Inbox Triage', 'Win Capture & Case Study Engine', 'Team Knowledge Base']],
+  ['6', 'Client Success', ['Client Health Monitor', 'Client Results Report', 'Invoice & Payment Chaser', 'GTM Teardown & Rebuild']],
+]
+
+const FIRST_SITTING = [
+  'Set up your Command Center',
+  'Build your AI Business Brain',
+  'Onboard your AI Team and run your first task',
+]
+
+// The shipped four-item version, matching app/consultants/page.js.
 const WINS = [
-  {
-    result: '$1M+ in sales',
-    detail: "Created the control campaign for Grant Cardone's 10X Business Coach.",
-  },
-  {
-    result: '$6.57M total',
-    detail: 'Converted 40%+ of prospects to buyers for the new SquadUp Summit event.',
-  },
-  {
-    result: '$20M+ annually',
-    detail: 'Helped grow martech company Front Porch from startup to scale.',
-  },
-  {
-    result: '26 countries',
-    detail: 'Led an online ad network with clients across 26 countries.',
-  },
-  {
-    result: '144% more booked calls',
-    detail: 'CPL reduced below goal. Booked calls rose 144% with 30% conversion rates across Cardone Ventures portfolio.',
-  },
-  {
-    result: 'Sold out in 48 hours',
-    detail: 'First launch sold out in 48 hours, driven by email and social media for HRE Beauty.',
-  },
+  ['144% more booked calls', 'CPL below goal, 30% conversion across the Cardone Ventures portfolio.'],
+  ['$6.57M total', 'Converted 40%+ of prospects to buyers for the new SquadUp Summit event.'],
+  ['Sold out in 48 hours', 'First launch sold out, driven by email and social for HRE Beauty.'],
+  ['Built multiple $1M+ campaigns before AI', 'Founded or helped start 7 businesses in Japan, Korea, Taiwan, China, the UK and the US, with two of them growing from zero to $20M+ per year.'],
 ]
 
 const TESTIMONIALS = [
   {
     quote:
-      "When I think of campaigns that convert, I think of Rev. PERIOD. I've brought Rev in on million-dollar campaign launches, hired him for my 7-figure marketing agency, and seen firsthand what happens when real, A-level copy hits the page. Getting time on Rev's calendar is rare. If he's available, take it. Most people won't get the chance. If you do, don't walk… run.",
-    name: 'Garen Mazon',
-    title: 'Co-Founder, SpaSurge',
-    org: '#1 Spa Marketing Agency',
-  },
-  {
-    quote:
-      "Rev Vaughn is that ultra-rare copywriter who practically cannot fail. That's because he has not only mastered the craft, but he also deeply understands people and what drives their desires. Although I could have hired almost anyone, I was proud to call Rev my personal copywriter inside Copy Chief.",
+      'Although I could have hired almost anyone, I was proud to call Rev my personal copywriter inside Copy Chief.',
     name: 'Kevin Rogers',
     title: 'Founder, Copy Chief',
-    org: '#1 Copywriting Community',
   },
   {
     quote:
-      'Knocked it out of the park. Exceeded our sales goal. I fully endorse Rev. Kevin Rogers and I hired him to redo our Email Copy Academy funnel, and Rev knocked it out of the park. We even exceeded our sales goal. I was blown away by how well it did.',
-    name: 'Chris Orzechowski',
-    title: 'Creator, Email Copy Academy',
-    org: '#1 Email Marketing Program',
-  },
-  {
-    quote:
-      'Our first launch sold out in only 48 hours, driven by email and social media. I had the opportunity to work with Rev on several of our consumer brands, including HRE Beauty and CardoMax. His ability to blend strategy, creative execution, and data made a measurable difference in how those brands grew.',
-    name: 'Lisa De Rosa',
-    title: 'Director, Corporate Partnerships',
-    org: 'Cardone Ventures',
-  },
-  {
-    quote:
-      "Reduced CPL below goal. Booked calls rose 144% with 30% conversion rates. Rev's work set a new standard for how we approach campaign structure, messaging, and analytics across multiple brands. I confidently recommend Rev for any role requiring strategic marketing leadership, copy expertise, and proven results.",
+      'Reduced CPL below goal. Booked calls rose 144% with 30% conversion rates. Rev’s work set a new standard for how we approach campaign structure, messaging, and analytics across multiple brands.',
     name: 'Joe Bradley',
-    title: 'Director, Marketing Partnerships',
-    org: 'Cardone Ventures',
-  },
-  {
-    quote:
-      "Listen to his training, and you'll make more money TODAY! I learned more about guiding people through the sales process than I learned from thousands of dollars in paid sales courses. It doesn't matter what industry you're in — listen to his training, and you'll make more money TODAY.",
-    name: 'Jimmy Parent',
-    title: 'Persuasion Scientist',
-    org: '',
+    title: 'Director, Marketing Partnerships, Cardone Ventures',
   },
 ]
 
-const PILLARS = [
-  {
-    n: '01',
-    title: 'Fill Your Pipeline',
-    body:
-      'AI Assistants find real buyers and start real conversations. No cold email. No ad spend. Just booked calls on your calendar.',
-  },
-  {
-    n: '02',
-    title: 'Become the Authority',
-    body:
-      'Record 30 minutes a week. Your voice shows up everywhere, in your words, and gets cited by AI search.',
-  },
-  {
-    n: '03',
-    title: 'Run Without You',
-    body:
-      'Move the routine into Assistants. The business keeps working when you step away. You stop being the ceiling.',
-  },
+const INCLUDES = [
+  'A new department of four AI hires every month',
+  'Maestro, your chief of staff, checks the work before you see it',
+  'Your Command Center, set up with you',
+  'One workshop a month',
+  'A live Friday coaching call with Rev',
+  'Daily access to the community',
 ]
 
-const CADENCE = [
-  { stat: 'Monthly', label: '1 or 2 Workshops every month. Live or pre-recorded.' },
-  { stat: 'Weekly', label: 'Friday Q&A with Rev' },
-  { stat: 'Daily', label: 'Direct access to Rev inside the community.' },
+const LIMITS = [
+  ['You still have to show up.', 'This cuts your work. It does not remove you. You still review and approve everything.'],
+  ['It runs on Claude.', 'You need a $20 Claude Pro plan on top of the membership plus the desktop app.'],
+  ['A couple of months cost a little more.', 'The outreach month requires an external App and a few dollars of data. Paying for LinkedIn Premium gets you better results.'],
+  ['The compounding takes time.', 'Month one is useful the same day. The full payoff takes time.'],
+  ['You are early.', 'This is a founding cohort for a small group of early adopters. The price will increase soon.'],
 ]
-
-const MONTHS = [
-  {
-    n: '01',
-    dept: 'The Offer Desk',
-    theme: 'The Offer They Can’t Ignore',
-    body: 'Rebuild the offer first. The right buyers feel dumb saying no. Price stops being the objection.',
-    skills: [
-      ['Sales Council', 'your advisory board'],
-      ['Unique Mechanism Builder', 'names what only you do'],
-      ['Offer & Pricing Architect', 'rebuilds your packages'],
-      ['Objection Tester', 'your toughest prospect'],
-    ],
-  },
-  {
-    n: '02',
-    dept: 'The Sales Floor',
-    theme: 'Your First 10 Conversations',
-    body: 'Real buyer conversations on your calendar. No cold email. No ad spend.',
-    skills: [
-      ['LinkedIn Signal Scout', 'your scout'],
-      ['ICP Match & Prioritizer', 'your list builder'],
-      ['Surgical DM Writer', 'your opener'],
-      ['AI Slop Killer', 'your editor'],
-    ],
-  },
-  {
-    n: '03',
-    dept: 'The Deal Desk',
-    theme: 'Turn Replies Into Revenue',
-    body: 'Every reply becomes a booked call. Every call gets a proposal, before the buyer cools off.',
-    skills: [
-      ['Reply Classifier', 'your front desk'],
-      ['Follow-up & Reactivation', 'your follow-up rep'],
-      ['Discovery Call-Prep', 'your research analyst'],
-      ['Proposal & Quote Generator', 'your proposal writer'],
-    ],
-  },
-  {
-    n: '04',
-    dept: 'The Media Team',
-    theme: '30 Minutes to a Month of Content',
-    body: 'Record 30 minutes a week. Show up everywhere in your voice. Get cited by AI search.',
-    skills: [
-      ['Recording to Content Engine', 'your production studio'],
-      ['SEO / GEO Citation Optimizer', 'gets you found and cited'],
-      ['LinkedIn Ghostwriter', 'your ghostwriter'],
-      ['Content Repurposer', 'your distribution desk'],
-    ],
-  },
-  {
-    n: '05',
-    dept: 'The Operations Team',
-    theme: 'Get Out of the Bottleneck',
-    body: 'Move the routine out of your head. AI Assistants run it. You stop being the ceiling.',
-    skills: [
-      ['Transcription to SOP', 'your process writer'],
-      ['Inbox Triage', 'your gatekeeper'],
-      ['Win Capture & Case Study Engine', 'turns wins into proof'],
-      ['Team Knowledge Base', 'your company librarian'],
-    ],
-  },
-  {
-    n: '06',
-    dept: 'Client Success',
-    theme: 'Run Like a Full Team',
-    body: 'Spot churn before it hits. Get paid on time. Deliver like you have a full ops team.',
-    skills: [
-      ['Client Health Monitor', 'your account manager'],
-      ['Client Results Report', 'your reporting analyst'],
-      ['Invoice & Payment Chaser', 'your collections desk'],
-      ['GTM Teardown & Rebuild', 'your strategy consultant'],
-    ],
-  },
-]
-
-const ORG_CHART = `YOU
- │
- MAESTRO · your Chief of Staff
- │
- ├── 1 · OFFER DESK
- │      Sales Council · Unique Mechanism Builder
- │      Offer & Pricing Architect · Objection Tester
- │
- ├── 2 · SALES FLOOR
- │      LinkedIn Signal Scout · ICP Match & Prioritizer
- │      Surgical DM Writer · AI Slop Killer
- │
- ├── 3 · DEAL DESK
- │      Reply Classifier · Follow-up & Reactivation
- │      Discovery Call-Prep · Proposal & Quote Generator
- │
- ├── 4 · MEDIA TEAM
- │      Recording to Content · SEO/GEO Optimizer
- │      LinkedIn Ghostwriter · Content Repurposer
- │
- ├── 5 · OPERATIONS
- │      Transcription to SOP · Inbox Triage
- │      Win Capture & Case Study Engine · Team Knowledge Base
- │
- └── 6 · CLIENT SUCCESS
-        Client Health Monitor · Client Results Report
-        Invoice & Payment Chaser · GTM Teardown & Rebuild`
-
-function PricingCards() {
-  return (
-    <div className="grid md:grid-cols-2 gap-8">
-
-      {/* Option 1 — Community */}
-      <div className="border border-rule bg-paper p-8 flex flex-col">
-        <div className="eyebrow mb-4">Community</div>
-        <h3 className="text-h2 font-semibold text-ink mb-2">AI Inner Circle</h3>
-        <div className="text-display font-semibold text-ink mb-1">$199</div>
-        <div className="text-small text-ink-muted mb-8">per month · rises to $249 · or $995 once</div>
-        <ul className="space-y-3 text-body text-ink-soft mb-10 flex-1">
-          <li className="flex gap-3"><span className="text-accent mt-1">–</span>24 AI Assistants over six months (a department a month)</li>
-          <li className="flex gap-3"><span className="text-accent mt-1">–</span>1-2 live workshops per month</li>
-          <li className="flex gap-3"><span className="text-accent mt-1">–</span>Friday Q&amp;A with Rev</li>
-          <li className="flex gap-3"><span className="text-accent mt-1">–</span>Answers to your questions inside the community</li>
-        </ul>
-        <Button href="/consultants" variant="primary">
-          Join AI Inner Circle
-        </Button>
-      </div>
-
-      {/* Option 2 — Coaching */}
-      <div className="border-2 border-accent bg-paper p-8 flex flex-col">
-        <div className="eyebrow mb-4">Community + Coaching</div>
-        <h3 className="text-h2 font-semibold text-ink mb-2">AI Inner Circle + 1:1</h3>
-        <div className="text-display font-semibold text-ink mb-1">$999</div>
-        <div className="text-small text-ink-muted mb-8">per month</div>
-        <ul className="space-y-3 text-body text-ink-soft mb-10 flex-1">
-          <li className="flex gap-3"><span className="text-accent mt-1">–</span>Everything in Community</li>
-          <li className="flex gap-3"><span className="text-accent mt-1">–</span>Weekly 1:1 coaching call with Rev</li>
-          <li className="flex gap-3"><span className="text-accent mt-1">–</span>Customized to your business, market and offer</li>
-          <li className="flex gap-3"><span className="text-accent mt-1">–</span>Email support in between sessions</li>
-        </ul>
-        <Button href="/contact" variant="primary">
-          Apply for Coaching
-        </Button>
-      </div>
-
-    </div>
-  )
-}
 
 export default function HomePage() {
   return (
@@ -288,317 +147,483 @@ export default function HomePage() {
       <main>
 
         {/* 1. HERO */}
-        <Section bg="paper" width="content" className="pt-20 md:pt-28">
+        <Section bg="paper" className="pt-16 md:pt-24">
           <div className="grid md:grid-cols-3 gap-10 items-start">
             <div className="md:col-span-2">
-              <div className="eyebrow mb-6">Go-To-Market · Revenue Systems · AI Leverage</div>
+              <p className="eyebrow mb-6">For experts, consultants, and founder-led brands</p>
               <h1 className="text-display font-semibold tracking-tight text-ink mb-8">
-                Revenue Growth Systems for B2B Service Providers
+                Self-staffing AI Teams that run without you as the bottleneck.
               </h1>
-              <p className="text-lead text-ink-muted mb-10">
-                Self-staffing AI teams that run without you as the bottleneck. Get the AI systems I use to attract, engage, and convert clients.
+              <p className="text-lead text-ink-muted mb-10 max-w-prose">
+                Pre-built AI Assistants that know your business, complete the work, and create on-brand
+                output you can actually use.
               </p>
-              <div className="flex flex-wrap gap-4 items-center">
-                <Button href="/consultants" variant="primary">
+              <div className="flex flex-wrap gap-4 items-center mb-6">
+                <Button href={JOIN_URL} variant="primary" external>
                   Join AI Inner Circle
                 </Button>
-                <Link href="/consultants/assessment" className="text-body text-ink-muted hover:text-ink transition-colors">
+                <Link
+                  href="/assessment"
+                  className="text-body text-ink-muted hover:text-ink transition-colors"
+                >
                   Not sure where to start? Take the 5-Minute AI Assessment &rarr;
                 </Link>
               </div>
+              <p className="text-small text-ink-faint">
+                $199 a month at the founding price. It rises to $249 soon.
+              </p>
             </div>
-            <div className="hidden md:flex flex-col items-center gap-4 pt-8">
+
+            <div className="flex flex-row md:flex-col items-center gap-6 md:gap-4 md:pt-4">
               <Image
                 src="/AI-Inner-Circle-Logo-940.jpg"
                 alt="AI Inner Circle"
-                width={220}
-                height={220}
-                className="opacity-90"
+                width={180}
+                height={180}
+                className="opacity-90 w-28 md:w-full h-auto"
               />
-              <Image
-                src="/claude-partner-network.png"
-                alt="Claude Partner Network"
-                width={279}
-                height={30}
-                className="h-auto max-w-full"
-              />
-            </div>
-          </div>
-        </Section>
-
-        {/* 2. CLIENTS STRIP */}
-        <section className="bg-paper-grey border-y border-rule py-12">
-          <div className="max-w-wide mx-auto px-6">
-            <p className="text-h3 font-semibold text-ink mb-6 text-center">Clients &amp; Campaigns</p>
-            <div className="flex flex-wrap justify-center gap-x-8 gap-y-3 text-body text-ink-soft">
-              {CLIENTS.map((c) => (
-                <span key={c} className="whitespace-nowrap">{c}</span>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* 3. AI ASSESSMENT BLOCK */}
-        <Section bg="grey" width="content">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <div className="eyebrow mb-4">5-Minute Assessment</div>
-              <h2 className="text-h1 font-semibold tracking-tight text-ink mb-6">
-                Find out exactly where AI fits in your business &mdash; and what to do first.
-              </h2>
-              <p className="text-body text-ink-muted mb-8">
-                If you know you need to use AI in your business but are not sure where to start. Answer 12 questions across 4 business pillars. At the end, you get a color-coded breakdown of exactly where your business is leaking time and money &mdash; and the AI Assistant that fixes each one.
-              </p>
-              <Button href="/consultants/assessment" variant="primary">
-                Take the AI Assessment
-              </Button>
-            </div>
-            <div className="flex items-center justify-center">
-              <Image
-                src="/ai-priority-map-preview-v2.png"
-                alt="AI Priority Map Preview"
-                width={480}
-                height={360}
-                className="w-full max-w-md"
-              />
-            </div>
-          </div>
-        </Section>
-
-        {/* 4. AI SECOND OPINION — PAID DIAGNOSTIC */}
-        <Section bg="greyDark" width="content">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <div className="eyebrow mb-4">Before you spend money · AI Second Opinion</div>
-              <h2 className="text-h1 font-semibold tracking-tight text-ink mb-6">
-                Know you need to do something with AI, not sure what?
-              </h2>
-              <p className="text-body text-ink-muted mb-8">
-                You get an honest read on whether AI actually helps your business move forward, the one thing to do first, and
-                who should build it. In writing, within 48 hours.
-              </p>
-              <Button href="/ai-second-opinion" variant="primary">
-                See the AI Second Opinion
-              </Button>
-              <p className="text-small text-ink-faint mt-3">
-                $300 &middot; 60 minutes &middot; credited toward whatever you do next
-              </p>
-            </div>
-            <div className="border-l-2 border-accent pl-6">
-              <p className="text-body text-ink-soft leading-relaxed">
-                Bring the quote you were sent, the tools you&rsquo;re evaluating, or just the
-                problem you want to solve. If AI isn&rsquo;t your constraint, I&rsquo;ll
-                say so, and your fee moves to a Quick Win call instead.
-              </p>
-            </div>
-          </div>
-        </Section>
-
-        {/* 5. AI BRAIN WORKSHOP — ENTRY OFFER */}
-        <Section bg="paper" width="content">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <div className="eyebrow mb-4">Start here · Self-paced workshop</div>
-              <h2 className="text-h1 font-semibold tracking-tight text-ink mb-6">
-                Build an AI that knows you, your business, and how you think.
-              </h2>
-              <p className="text-body text-ink-muted mb-8">
-                The AI Brain Workshop is the foundation everything else builds on. In about 2 to 3
-                hours, set up a version of Claude that stops handing you generic answers and starts
-                working like a partner who has known you for years. No tech skills. Yours to keep
-                forever.
-              </p>
-              <Button href="/ai-brain" variant="primary">
-                Explore the AI Brain Workshop
-              </Button>
-            </div>
-            <div className="border-l-2 border-accent pl-6">
-              <p className="text-body text-ink-soft leading-relaxed">
-                A step-by-step guide with a screenshot of every click, the guided plugin that builds
-                your AI Brain with you, and a live Q&amp;A. Founders&rsquo; cohort pricing is open now.
-              </p>
-            </div>
-          </div>
-        </Section>
-
-        {/* 6. WHY CHOOSE AI INNER CIRCLE MEMBERSHIP */}
-        <Section bg="grey" width="content">
-          <div className="grid md:grid-cols-2 gap-12 items-start">
-            <div>
-              <div className="eyebrow mb-4">Why become an AI Inner Circle Member</div>
-              <h2 className="text-h1 font-semibold tracking-tight text-ink">
-                &ldquo;Just use AI&rdquo; is not a growth strategy.
-              </h2>
-            </div>
-            <div className="space-y-5 text-body text-ink-soft">
-              <p>
-                Every week, I see founders stuck in one of two places.
-                Either they&rsquo;re doing everything themselves and can&rsquo;t keep up. Or they&rsquo;re
-                using AI and creating &ldquo;AI Slop&rdquo; their audience ignores.
-              </p>
-              <p>
-                AI Inner Circle fixes both. You keep the voice your audience trusts. AI handles the execution that was slowing you down.
-              </p>
-            </div>
-          </div>
-        </Section>
-
-        {/* 7. SELECTED WINS */}
-        <Section bg="paper" width="content">
-          <div className="max-w-prose mb-12">
-            <p className="eyebrow mb-4">Selected Wins</p>
-            <h2 className="text-h1 font-semibold text-ink leading-tight">
-              Results from the field.
-            </h2>
-          </div>
-          <ul className="grid md:grid-cols-2 gap-x-10 gap-y-8">
-            {WINS.map((w) => (
-              <li key={w.result} className="border-l-2 border-accent pl-6">
-                <p className="text-body text-ink-soft leading-relaxed">
-                  <span className="text-ink font-semibold">{w.result}</span> &mdash; {w.detail}
+              <div className="text-center">
+                <Image
+                  src="/claude-partner-network.png"
+                  alt="Claude Partner Network"
+                  width={279}
+                  height={30}
+                  className="h-auto max-w-full mb-2"
+                />
+                <p className="text-small text-ink-faint leading-snug">
+                  Rev is a member of Anthropic’s Claude Partner Network.
                 </p>
+              </div>
+            </div>
+          </div>
+        </Section>
+
+        {/* 2. IS THIS YOU */}
+        <Section bg="grey">
+          <p className="eyebrow mb-6">Is this you?</p>
+          <h2 className="text-h1 font-semibold tracking-tight text-ink mb-10 max-w-prose">
+            You’re the bottleneck. Everything waits on you.
+          </h2>
+          <ul className="space-y-4 max-w-prose mb-8">
+            {PAINS.map((p) => (
+              <li key={p} className="text-body text-ink flex gap-4">
+                <span className="text-accent mt-2 shrink-0 w-2 h-px bg-accent" aria-hidden="true" />
+                <span>{p}</span>
               </li>
             ))}
           </ul>
+          <p className="text-body text-ink-muted">Sound familiar? Keep reading.</p>
         </Section>
 
-        {/* 8. THREE PILLARS */}
-        <Section bg="grey" width="content">
-          <div className="max-w-prose mb-14">
-            <div className="eyebrow mb-4">The three pillars</div>
-            <h2 className="text-h1 font-semibold tracking-tight text-ink">
-              Grow without being the bottleneck.
-            </h2>
+        {/* 3. THE LOOP */}
+        <Section bg="paper">
+          <p className="eyebrow mb-6">The loop</p>
+          <h2 className="text-h1 font-semibold tracking-tight text-ink mb-10 max-w-prose">
+            Your AI forgets your business every time you close the window.
+          </h2>
+          <div className="grid md:grid-cols-3 gap-12">
+            <div className="md:col-span-2">
+              <ol className="space-y-3 mb-8">
+                {[
+                  'You type the same setup. Who you are. Who buys from you.',
+                  'You paste in the real task.',
+                  'You rewrite most of what comes back.',
+                  'You close the window. All of it is gone.',
+                  'Next day, you do it all over again.',
+                ].map((step, i) => (
+                  <li key={step} className="flex gap-4 text-body text-ink">
+                    <span className="text-small text-accent font-medium pt-1 w-5 shrink-0">
+                      {String(i + 1).padStart(2, '0')}
+                    </span>
+                    <span>{step}</span>
+                  </li>
+                ))}
+              </ol>
+              <div className="max-w-prose text-body text-ink">
+                <p>
+                  The real problem sits upstream. Your offer, your buyer, and your voice live in your
+                  head.
+                </p>
+              </div>
+            </div>
+
+            <aside className="border-l-2 border-accent pl-6 space-y-4 text-body text-ink-muted md:mt-2">
+              <p className="text-h3 font-semibold text-ink">Where this ends up.</p>
+              <p>
+                A former client, north of $100M, built two AI Agents on his own. One makes branded
+                decks. The other fixes the decks, because they sound like AI slop.
+              </p>
+              <p className="text-ink font-medium">
+                They built an AI repair tool for their other AI builder tool.
+              </p>
+              <p>Nobody fixed the thinking. They standardized the cleanup.</p>
+            </aside>
           </div>
-          <div className="grid md:grid-cols-3 gap-10">
-            {PILLARS.map((p) => (
-              <div key={p.n} className="border-t border-ink pt-6">
-                <div className="text-small font-medium text-accent mb-3">{p.n}</div>
-                <h3 className="text-h3 font-semibold text-ink mb-3">{p.title}</h3>
-                <p className="text-body text-ink-muted">{p.body}</p>
+        </Section>
+
+
+        {/* 4. WHY THE USUAL FIXES FAIL */}
+        <Section bg="grey">
+          <p className="eyebrow mb-6">You have tried the usual fixes</p>
+          <h2 className="text-h1 font-semibold tracking-tight text-ink mb-12 max-w-prose">
+            They all break in the same place.
+          </h2>
+          <div className="grid md:grid-cols-2 gap-x-10 gap-y-8 mb-10">
+            {FIXES.map(([title, body]) => (
+              <div key={title}>
+                <p className="text-ink font-medium mb-2">{title}</p>
+                <p className="text-body text-ink-muted">{body}</p>
               </div>
             ))}
           </div>
+          <div className="max-w-prose border-t border-rule pt-8">
+            <p className="text-body text-ink">All four hand a flawed solution.</p>
+          </div>
         </Section>
 
-        {/* 9. CURRICULUM */}
-        <Section bg="paper" width="content">
-          <div className="max-w-prose mb-12">
-            <div className="eyebrow mb-4">Inside the membership</div>
-            <h2 className="text-h1 font-semibold tracking-tight text-ink">
-              One Assistant a week. A full system by month six.
-            </h2>
-            <p className="text-lead text-ink-muted mt-4">
-              First you set up your Command Center, led by Maestro. Then a new department of Assistants arrives each month, and Rev demos one a week so you use each with confidence.
+        {/* 5. I ALREADY DO THIS */}
+        <Section bg="grey">
+          <p className="eyebrow mb-6">The honest objection</p>
+          <h2 className="text-h1 font-semibold tracking-tight text-ink mb-10 max-w-prose">
+            You already built something like this yourself.
+          </h2>
+          <div className="max-w-prose space-y-5 text-body text-ink mb-10">
+            <p>If you are good at AI, this is the first thing you thought.</p>
+            <p className="text-ink-muted">
+              Your project folder works. You built it yourself. Here is what it still does not do.
             </p>
           </div>
-          <div className="grid grid-cols-3 gap-8 mb-20">
-            {CADENCE.map((c) => (
-              <div key={c.label} className="border-t-2 border-accent pt-4">
-                <div className="text-h2 font-semibold text-ink mb-2">{c.stat}</div>
-                <div className="text-body text-ink-muted">{c.label}</div>
+          <div className="grid md:grid-cols-2 gap-x-10 gap-y-8 mb-10">
+            {GAPS.map(([title, body]) => (
+              <div key={title} className="border-t border-ink pt-5">
+                <p className="text-ink font-medium mb-2">{title}</p>
+                <p className="text-body text-ink-muted">{body}</p>
               </div>
             ))}
           </div>
-          <div className="eyebrow mb-8">The 6-month hiring plan</div>
-          <div className="grid md:grid-cols-3 gap-10">
-            {MONTHS.map((m) => (
-              <div key={m.n} className="border-t border-ink pt-6">
-                <div className="text-small font-medium text-accent mb-2">{m.n} · {m.dept}</div>
-                <h3 className="text-h3 font-semibold text-ink mb-3">{m.theme}</h3>
-                <p className="text-body text-ink-muted mb-4">{m.body}</p>
-                <ul className="space-y-1">
-                  {m.skills.map(([name, gloss]) => (
-                    <li key={name} className="text-small text-ink-faint">
-                      <span className="text-accent mr-2">&ndash;</span>
-                      <span className="text-ink-soft">{name}</span> · {gloss}
+          <p className="text-body text-ink max-w-prose">
+            The gap is coverage, enforcement, persistence, and handoff.
+          </p>
+        </Section>
+
+        {/* 6. THE THREE SHIFTS. Rev's red/green model. The table IS the section. */}
+        <Section bg="paper">
+          <p className="eyebrow mb-6">What changes</p>
+          <h2 className="text-h1 font-semibold tracking-tight text-ink mb-12 max-w-prose">
+            Three things change once your AI knows your business.
+          </h2>
+          <div className="border-t border-ink">
+            {SHIFTS.map((s) => (
+              <div key={s.green} className="border-b border-ink py-7">
+                <p className="flex flex-wrap items-baseline gap-x-4 gap-y-1 mb-3">
+                  <span className="text-h3" style={{ color: RED }}>{s.red}</span>
+                  <span className="text-h3 text-ink-faint" aria-hidden="true">&rarr;</span>
+                  <span className="text-h3 font-bold text-accent">{s.green}</span>
+                </p>
+                <p className="text-body text-ink-muted max-w-prose">{s.line}</p>
+              </div>
+            ))}
+          </div>
+        </Section>
+
+        {/* 7. HOW IT RUNS. The nine missions. */}
+        <Section bg="paper">
+          <p className="eyebrow mb-6">How it runs</p>
+          <h2 className="text-h1 font-semibold tracking-tight text-ink mb-12 max-w-prose">
+            Three Steps to Success.
+          </h2>
+          <div className="grid md:grid-cols-3 gap-10 mb-12">
+            {MISSIONS.map((col) => (
+              <div key={col.green}>
+                <p className="text-h3 font-semibold text-accent mb-6 pb-3 border-b border-ink">
+                  {col.green}
+                </p>
+                <ul className="space-y-5">
+                  {col.moves.map(([name, detail]) => (
+                    <li key={name}>
+                      <p className="text-body font-medium text-ink">{name}</p>
+                      <p className="text-body text-ink-muted">{detail}</p>
                     </li>
                   ))}
                 </ul>
               </div>
             ))}
           </div>
-
-          {/* Org chart payoff */}
-          <div className="mt-20">
-            <div className="eyebrow mb-4">Your org chart by month six</div>
-            <div className="overflow-x-auto border border-rule bg-paper-grey p-6">
-              <pre className="text-small text-ink-soft leading-relaxed whitespace-pre font-mono">{ORG_CHART}</pre>
-            </div>
-            <p className="text-body text-ink-muted mt-4 max-w-prose">
-              Twenty-four Assistants. Six departments. All reporting to Maestro. Cancel anytime and the team stays yours.
+          <div className="max-w-prose border-t border-rule pt-8 space-y-3">
+            <p className="text-body text-ink">
+              You are in the loop to review and either approve or send back for rework. Human for
+              trust, AI for scale.
+            </p>
+            <p className="text-body text-ink-muted">
+              No Brain, no work. Your team refuses to start until your business is loaded.
             </p>
           </div>
         </Section>
 
-        {/* 10. TESTIMONIALS */}
+        {/* 8. WHAT YOU ACTUALLY GET. The one full-width section. */}
         <Section bg="grey" width="wide">
-          <div className="max-w-prose mb-14">
-            <p className="eyebrow mb-6">What the Experts Say</p>
-            <h2 className="text-h1 font-semibold">Selected endorsements.</h2>
+          <div className="max-w-content mx-auto">
+            <p className="eyebrow mb-6">What arrives</p>
+            <h2 className="text-h1 font-semibold tracking-tight text-ink mb-8 max-w-prose">
+              A department a month, for six months.
+            </h2>
+            <div className="max-w-prose space-y-5 text-body text-ink mb-14">
+              <p>
+                Four new Assistants at the start of every month. All at once, nothing drip-fed. Twenty
+                four by the end.
+              </p>
+              <p>
+                Month one is The Offer Desk. You finish it holding four documents that form your AI
+                Business Brain.
+              </p>
+              <p className="text-ink-muted">
+                If a job comes up that nobody covers, Maestro builds the specialist that session.
+              </p>
+            </div>
           </div>
-          <div className="grid md:grid-cols-2 gap-x-10 gap-y-14">
-            {TESTIMONIALS.map((t) => (
-              <blockquote key={t.name} className="border-l-2 border-accent pl-6">
-                <p className="text-body text-ink mb-6 leading-relaxed">&ldquo;{t.quote}&rdquo;</p>
-                <footer className="text-small">
-                  <div className="font-semibold text-ink">{t.name}</div>
-                  <div className="text-ink-muted">{t.title}</div>
-                  {t.org && <div className="text-ink-faint">{t.org}</div>}
-                </footer>
-              </blockquote>
+
+          {/* Org chart. Rebuilt from the ASCII <pre> into a reflowing grid. */}
+          <div className="border-t border-ink pt-10">
+            <div className="text-center mb-10">
+              <p className="text-small tracking-widest text-ink-faint mb-2">YOU</p>
+              <div className="h-6 w-px bg-rule mx-auto" aria-hidden="true" />
+              <p className="text-h3 font-semibold text-accent">MAESTRO</p>
+              <p className="text-small text-ink-muted">your Chief of Staff</p>
+            </div>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {DEPARTMENTS.map(([n, dept, seats]) => (
+                <div key={n} className="border border-rule bg-paper p-5">
+                  <p className="text-small text-accent font-medium mb-1">{n}</p>
+                  <p className="text-h3 font-semibold text-ink mb-3">{dept}</p>
+                  <ul className="space-y-1">
+                    {seats.map((s) => (
+                      <li key={s} className="text-small text-ink-muted">{s}</li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+        </Section>
+
+        {/* 9. THE FRIDAY AFTERNOON */}
+        <Section bg="paper">
+          <p className="eyebrow mb-6">From my own desk</p>
+          <h2 className="text-h1 font-semibold tracking-tight text-ink mb-10 max-w-prose">
+            The team hires for the job you did not plan for.
+          </h2>
+          <div className="max-w-prose space-y-5 text-body text-ink leading-relaxed">
+            <p>
+              It’s 4:06 pm on a Friday afternoon, and I needed a landing page live by the end of the
+              business day.
+            </p>
+            <p className="font-medium">Two Problems:</p>
+            <ol className="space-y-2 list-decimal pl-5">
+              <li>I had to leave for a concert with my family by 5 pm at the latest (no exceptions)</li>
+              <li>I did not have a landing page builder on my team.</li>
+            </ol>
+            <p>
+              So I told Maestro about the job. Without me asking, he built one on the spot, briefed it,
+              and reviewed the draft against my voice before it ever reached me.
+            </p>
+            <p>
+              That Landing Page specialist now lives in my Freelancer Rolodex. Next time I need a
+              landing page, it is already on call.
+            </p>
+            <p className="text-h3 font-semibold text-ink">
+              I never have to build a hundred agents I will never use.
+            </p>
+            <p className="text-ink-muted">
+              So you are never stuck waiting. If a job comes up that nobody covers, Maestro “hires” the
+              specialist that session.
+            </p>
+          </div>
+
+        </Section>
+
+
+        {/* 10. YOUR FIRST AFTERNOON */}
+        <Section bg="grey">
+          <p className="eyebrow mb-6">Your first afternoon</p>
+          <h2 className="text-h1 font-semibold tracking-tight text-ink mb-10 max-w-prose">
+            You see it work on day one.
+          </h2>
+          <div className="max-w-prose space-y-8 text-body text-ink">
+            <p>Setup and your first real job happen in the same sitting.</p>
+            <ol className="space-y-4">
+              {FIRST_SITTING.map((step, i) => (
+                <li key={step} className="flex gap-5">
+                  <span className="text-h3 font-semibold text-accent shrink-0 leading-none pt-1">
+                    {i + 1}
+                  </span>
+                  <span className="text-body font-medium text-ink">{step}</span>
+                </li>
+              ))}
+            </ol>
+            <p>
+              By the time you close the laptop, there is one finished deliverable in your folder with
+              your approval on it. You get “Ready-to-Use” work product.
+            </p>
+          </div>
+        </Section>
+
+        {/* 11. EVERY FRIDAY */}
+        <Section bg="paper">
+          <p className="eyebrow mb-6">Every Friday</p>
+          <h2 className="text-h1 font-semibold tracking-tight text-ink mb-10 max-w-prose">
+            You are not doing this alone.
+          </h2>
+          <div className="max-w-prose space-y-5 text-body text-ink">
+            <p>
+              Every Friday, I personally run a live coaching call. Bring what you are stuck on and we
+              work it out on the call.
+            </p>
+            <p>
+              The community runs the rest of the week, so nothing has to wait until Friday.
+            </p>
+            <p className="text-ink-muted">
+              You also get one live workshop a month on top of that.
+            </p>
+          </div>
+        </Section>
+
+        {/* 12. WHO BUILT IT, AND WHAT I CANNOT PROVE */}
+        <Section bg="grey">
+          <p className="eyebrow mb-6">About</p>
+          <h2 className="text-h1 font-semibold tracking-tight text-ink mb-10 max-w-prose">
+            I built this for myself before I packaged it.
+          </h2>
+          <div className="max-w-prose space-y-5 text-body text-ink mb-12">
+            <p>
+              A couple of years ago I hit a wall with AI. It was fast. Everything it wrote sounded like
+              everyone else on the internet using AI.
+            </p>
+            <p>
+              And I was the bottleneck. Every task started with me explaining the business from scratch.
+            </p>
+            <p>
+              So I taught the AI my business instead. Now, it is the system I run my own work on every
+              day.
+            </p>
+            <p className="text-ink-muted">
+              I have built revenue systems for founder-led brands for 25 years. Same shape as this
+              product, built for humans first.
+            </p>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+            {WINS.map(([result, detail]) => (
+              <div key={result} className="border-t border-ink pt-5">
+                <p className="text-h3 font-semibold text-ink mb-2">{result}</p>
+                <p className="text-small text-ink-muted">{detail}</p>
+              </div>
             ))}
           </div>
-        </Section>
 
-        {/* 11. PRICING — FIRST CTA */}
-        <Section bg="paper" width="content">
-          <div className="max-w-prose mb-14">
-            <div className="eyebrow mb-4">Join the Inner Circle</div>
-            <h2 className="text-h1 font-semibold tracking-tight text-ink">
-              Stop guessing. Start building.
-            </h2>
+
+
+          <div className="mb-12 max-w-prose">
+            <blockquote className="border-l-2 border-accent pl-6">
+              <p className="text-body text-ink mb-4 leading-relaxed">
+                &ldquo;{TESTIMONIALS[0].quote}&rdquo;
+              </p>
+              <footer className="text-small">
+                <div className="font-semibold text-ink">{TESTIMONIALS[0].name}</div>
+                <div className="text-ink-muted">{TESTIMONIALS[0].title}</div>
+              </footer>
+            </blockquote>
           </div>
-          <PricingCards />
+
+          {/* The honesty paragraph. Does not get softened and does not get moved. */}
+          <div className="max-w-prose border-t border-ink pt-8">
+            <p className="text-body text-ink">
+              The founding cohort is new. You are getting the systems I use every day to attract,
+              engage, and convert clients at a massive discount.
+            </p>
+          </div>
         </Section>
 
-        {/* 12. ABOUT */}
-        <Section bg="grey" width="content">
-          <div className="grid md:grid-cols-12 gap-10 items-start">
-            <div className="md:col-span-4">
-              <div className="aspect-[4/5] relative w-full max-w-xs">
-                <Image
-                  src="/Rev-Vaughn-800.jpg"
-                  alt="Rev Vaughn"
-                  fill
-                  sizes="(max-width: 768px) 100vw, 320px"
-                  className="object-cover grayscale"
-                />
+        {/* 13. WHAT IT WILL NOT DO, AND WHAT IT COSTS */}
+        <Section bg="paper">
+          <p className="eyebrow mb-6">Straight talk</p>
+          <h2 className="text-h1 font-semibold tracking-tight text-ink mb-10 max-w-prose">
+            Read this part before you decide.
+          </h2>
+          <p className="text-body text-ink-muted max-w-prose mb-10">
+            This is where most people either commit or walk.
+          </p>
+          <div className="space-y-8 max-w-prose">
+            {LIMITS.map(([title, body]) => (
+              <div key={title} className="border-t border-rule pt-5">
+                <p className="text-ink font-medium mb-2">{title}</p>
+                <p className="text-body text-ink-muted">{body}</p>
               </div>
-            </div>
-            <div className="md:col-span-8">
-              <p className="eyebrow mb-6">About</p>
-              <h2 className="text-h1 font-semibold mb-6 leading-tight">
-                I&rsquo;m not teaching theory. I&rsquo;m building with these tools right now.
-              </h2>
-              <div className="space-y-5 text-body text-ink-muted">
-                <p>
-                  I&rsquo;ve founded or helped build over a dozen businesses across six countries &mdash; Japan, Korea, Taiwan, China, the UK, and the US. Every system inside AI Inner Circle is one I&rsquo;m actively running in my own businesses. You&rsquo;re not getting a course. You&rsquo;re getting what&rsquo;s working today.
-                </p>
-              </div>
-            </div>
+            ))}
+          </div>
+          {/* NOTE FOR REV: the It Works Guarantee is specced as OPTIONAL here.
+              It lives on /consultants only, it is explicitly not money-back, and
+              it has never been shown to be honored, so it is a stated position
+              rather than evidence. Left out of the prototype pending your call. */}
+        </Section>
+
+        {/* 14. THE OFFER */}
+        <Section bg="grey">
+          <p className="eyebrow mb-6">Join the Inner Circle</p>
+          <h2 className="text-h1 font-semibold tracking-tight text-ink mb-10">
+            $199 a month, founding price. It rises to $249 soon.
+          </h2>
+          <ul className="space-y-3 mb-10 max-w-prose">
+            {INCLUDES.map((i) => (
+              <li key={i} className="text-body text-ink flex gap-4">
+                <span className="text-accent mt-2 shrink-0 w-2 h-px bg-accent" aria-hidden="true" />
+                <span>{i}</span>
+              </li>
+            ))}
+          </ul>
+          <p className="text-body text-ink-muted max-w-prose mb-10">
+            Cancel anytime. Everything you built stays in your folder, on your machine, in files you can
+            open in any text editor.
+          </p>
+          <Button href={JOIN_URL} variant="primary" external>
+            Join AI Inner Circle
+          </Button>
+          <div className="mt-8 space-y-3 max-w-prose">
+            <p className="text-body text-ink-muted">
+              Not ready to join? The{' '}
+              <Link href="/ai-brain" className="text-ink underline hover:text-accent">
+                AI Brain Workshop
+              </Link>{' '}
+              is $49. You build the file that tells AI who you are, how you work, write, and make
+              decisions. You keep it whether you ever join the full program or not.
+            </p>
+            <p className="text-small text-ink-faint">
+              Coaching rather than consulting?{' '}
+              <Link href="/coaches" className="text-ink-muted underline hover:text-accent">
+                There is a coaching track for that.
+              </Link>
+            </p>
           </div>
         </Section>
 
-        {/* 13. CLOSING CTA */}
-        <Section bg="paper" width="content">
-          <div className="max-w-prose mb-14">
-            <div className="eyebrow mb-4">Join the Inner Circle</div>
-            <h2 className="text-h1 font-semibold tracking-tight text-ink">
-              Every week you wait is another week of overwhelm and falling behind.
-            </h2>
+        {/* 15. THE CLOSE */}
+        <Section bg="paper">
+          <p className="eyebrow mb-6">Join the Inner Circle</p>
+          <h2 className="text-h1 font-semibold tracking-tight text-ink mb-8 max-w-prose">
+            Your business is going to stay in your head until you build your AI Business Brain.
+          </h2>
+          <div className="max-w-prose space-y-5 text-body text-ink mb-10">
+            <p>
+              Your offer, your buyer, and the way you sound are all sitting in one place right now, and
+              that place is your head.
+            </p>
+            <p>
+              Twenty minutes of questions to start. The founding price is $199 a month. It rises to
+              $249 soon.
+            </p>
           </div>
-          <PricingCards />
+          <Button href={JOIN_URL} variant="primary" external>
+            Join AI Inner Circle
+          </Button>
         </Section>
 
       </main>
