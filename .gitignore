@@ -13,6 +13,9 @@
 # Production
 /build
 
+# Generated images (run `npm run org-chart` to rebuild)
+/scripts/org-chart/out/
+
 # Misc
 .DS_Store
 *.pem

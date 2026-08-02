@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "org-chart": "bash scripts/org-chart/render.sh"
   },
   "dependencies": {
     "jspdf": "^4.2.1",
