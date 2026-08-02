@@ -2,8 +2,16 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import { Menu, X } from 'lucide-react'
+import { Menu, X, ChevronDown } from 'lucide-react'
 import AnnouncementBar from './AnnouncementBar'
+
+// The two program pages sit under a Membership parent that links to the hub
+// at /join. Keeping them nested stops the nav from asking a visitor to pick a
+// track before anything has explained the difference.
+const PROGRAMS = [
+  ['/consultants', 'Consultants'],
+  ['/coaches', 'Coaches'],
+]
 
 export default function Header() {
   const [open, setOpen] = useState(false)
@@ -21,12 +29,30 @@ export default function Header() {
           <Link href="/assessment" className="text-ink-muted hover:text-ink transition-colors">
             AI Assessment
           </Link>
-          <Link href="/consultants" className="text-ink-muted hover:text-ink transition-colors">
-            For B2B Consultants
-          </Link>
-          <Link href="/coaches" className="text-ink-muted hover:text-ink transition-colors">
-            For B2B Coaches
-          </Link>
+          {/* Membership: opens on hover, and on focus so it is keyboard reachable */}
+          <div className="relative group">
+            <Link
+              href="/join"
+              className="text-ink-muted hover:text-ink transition-colors flex items-center gap-1"
+            >
+              Membership
+              <ChevronDown className="w-3.5 h-3.5" aria-hidden="true" />
+            </Link>
+            <div className="absolute left-0 top-full pt-3 hidden group-hover:block group-focus-within:block z-20">
+              <div className="border border-rule bg-paper py-2 min-w-[11rem]">
+                {PROGRAMS.map(([href, label]) => (
+                  <Link
+                    key={href}
+                    href={href}
+                    className="block px-4 py-2 text-ink-muted hover:text-ink hover:bg-paper-grey transition-colors"
+                  >
+                    {label}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </div>
+
           <Link href="/workshops" className="text-ink-muted hover:text-ink transition-colors">
             Workshops
           </Link>
@@ -54,12 +80,20 @@ export default function Header() {
           <Link href="/assessment" className="text-ink-muted hover:text-ink transition-colors" onClick={() => setOpen(false)}>
             AI Assessment
           </Link>
-          <Link href="/consultants" className="text-ink-muted hover:text-ink transition-colors" onClick={() => setOpen(false)}>
-            For B2B Consultants
+          {/* Mobile has room to show the children inline, so no toggle */}
+          <Link href="/join" className="text-ink-muted hover:text-ink transition-colors" onClick={() => setOpen(false)}>
+            Membership
           </Link>
-          <Link href="/coaches" className="text-ink-muted hover:text-ink transition-colors" onClick={() => setOpen(false)}>
-            For B2B Coaches
-          </Link>
+          {PROGRAMS.map(([href, label]) => (
+            <Link
+              key={href}
+              href={href}
+              className="pl-4 text-ink-muted hover:text-ink transition-colors"
+              onClick={() => setOpen(false)}
+            >
+              {label}
+            </Link>
+          ))}
           <Link href="/workshops" className="text-ink-muted hover:text-ink transition-colors" onClick={() => setOpen(false)}>
             Workshops
           </Link>

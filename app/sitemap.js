@@ -16,6 +16,7 @@ const STATIC_ROUTES = [
   ['/', 1.0, 'weekly', '2026-08-01'],
   ['/consultants', 0.9, 'weekly', '2026-07-15'],
   ['/coaches', 0.9, 'weekly', '2026-07-15'],
+  ['/join', 0.8, 'monthly', '2026-08-01'],
   ['/assessment', 0.8, 'monthly', '2026-07-12'],
   ['/consultants/assessment', 0.8, 'monthly', '2026-07-12'],
   ['/coaches/assessment', 0.8, 'monthly', '2026-07-12'],
