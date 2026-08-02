@@ -13,8 +13,65 @@ const PROGRAMS = [
   ['/coaches', 'Coaches'],
 ]
 
+// /resources holds more than these two. The parent link still goes there, so
+// nothing on that page becomes unreachable by surfacing only two children.
+const RESOURCES = [
+  ['/articles', 'Articles'],
+  ['/case-studies', 'Case Studies'],
+]
+
+// Desktop dropdown. Opens on hover, and on focus so it stays keyboard reachable.
+function NavDropdown({ href, label, items }) {
+  return (
+    <div className="relative group">
+      <Link
+        href={href}
+        className="text-ink-muted hover:text-ink transition-colors flex items-center gap-1"
+      >
+        {label}
+        <ChevronDown className="w-3.5 h-3.5" aria-hidden="true" />
+      </Link>
+      <div className="absolute left-0 top-full pt-3 hidden group-hover:block group-focus-within:block z-20">
+        <div className="border border-rule bg-paper py-2 min-w-[11rem]">
+          {items.map(([itemHref, itemLabel]) => (
+            <Link
+              key={itemHref}
+              href={itemHref}
+              className="block px-4 py-2 text-ink-muted hover:text-ink hover:bg-paper-grey transition-colors"
+            >
+              {itemLabel}
+            </Link>
+          ))}
+        </div>
+      </div>
+    </div>
+  )
+}
+
+// The mobile panel has room to show children inline, so no toggle.
+function MobileGroup({ href, label, items, onNavigate }) {
+  return (
+    <>
+      <Link href={href} className="text-ink-muted hover:text-ink transition-colors" onClick={onNavigate}>
+        {label}
+      </Link>
+      {items.map(([itemHref, itemLabel]) => (
+        <Link
+          key={itemHref}
+          href={itemHref}
+          className="pl-4 text-ink-muted hover:text-ink transition-colors"
+          onClick={onNavigate}
+        >
+          {itemLabel}
+        </Link>
+      ))}
+    </>
+  )
+}
+
 export default function Header() {
   const [open, setOpen] = useState(false)
+  const close = () => setOpen(false)
 
   return (
     <header className="border-b border-rule bg-paper">
@@ -29,36 +86,11 @@ export default function Header() {
           <Link href="/assessment" className="text-ink-muted hover:text-ink transition-colors">
             AI Assessment
           </Link>
-          {/* Membership: opens on hover, and on focus so it is keyboard reachable */}
-          <div className="relative group">
-            <Link
-              href="/join"
-              className="text-ink-muted hover:text-ink transition-colors flex items-center gap-1"
-            >
-              Membership
-              <ChevronDown className="w-3.5 h-3.5" aria-hidden="true" />
-            </Link>
-            <div className="absolute left-0 top-full pt-3 hidden group-hover:block group-focus-within:block z-20">
-              <div className="border border-rule bg-paper py-2 min-w-[11rem]">
-                {PROGRAMS.map(([href, label]) => (
-                  <Link
-                    key={href}
-                    href={href}
-                    className="block px-4 py-2 text-ink-muted hover:text-ink hover:bg-paper-grey transition-colors"
-                  >
-                    {label}
-                  </Link>
-                ))}
-              </div>
-            </div>
-          </div>
-
+          <NavDropdown href="/join" label="Membership" items={PROGRAMS} />
           <Link href="/workshops" className="text-ink-muted hover:text-ink transition-colors">
             Workshops
           </Link>
-          <Link href="/resources" className="text-ink-muted hover:text-ink transition-colors">
-            Resources
-          </Link>
+          <NavDropdown href="/resources" label="Resources" items={RESOURCES} />
           <Link href="/contact" className="text-ink-muted hover:text-ink transition-colors">
             Contact
           </Link>
@@ -77,30 +109,15 @@ export default function Header() {
       {/* Mobile panel */}
       {open && (
         <nav className="md:hidden border-t border-rule bg-paper px-6 py-4 flex flex-col gap-4 text-small">
-          <Link href="/assessment" className="text-ink-muted hover:text-ink transition-colors" onClick={() => setOpen(false)}>
+          <Link href="/assessment" className="text-ink-muted hover:text-ink transition-colors" onClick={close}>
             AI Assessment
           </Link>
-          {/* Mobile has room to show the children inline, so no toggle */}
-          <Link href="/join" className="text-ink-muted hover:text-ink transition-colors" onClick={() => setOpen(false)}>
-            Membership
-          </Link>
-          {PROGRAMS.map(([href, label]) => (
-            <Link
-              key={href}
-              href={href}
-              className="pl-4 text-ink-muted hover:text-ink transition-colors"
-              onClick={() => setOpen(false)}
-            >
-              {label}
-            </Link>
-          ))}
-          <Link href="/workshops" className="text-ink-muted hover:text-ink transition-colors" onClick={() => setOpen(false)}>
+          <MobileGroup href="/join" label="Membership" items={PROGRAMS} onNavigate={close} />
+          <Link href="/workshops" className="text-ink-muted hover:text-ink transition-colors" onClick={close}>
             Workshops
           </Link>
-          <Link href="/resources" className="text-ink-muted hover:text-ink transition-colors" onClick={() => setOpen(false)}>
-            Resources
-          </Link>
-          <Link href="/contact" className="text-ink-muted hover:text-ink transition-colors" onClick={() => setOpen(false)}>
+          <MobileGroup href="/resources" label="Resources" items={RESOURCES} onNavigate={close} />
+          <Link href="/contact" className="text-ink-muted hover:text-ink transition-colors" onClick={close}>
             Contact
           </Link>
         </nav>

@@ -43,7 +43,7 @@ export default function ResourcesPage() {
         <Section bg="paper" width="prose" className="pt-20 md:pt-28">
           <div className="eyebrow mb-6">Founder's Resources</div>
           <h1 className="text-display font-semibold tracking-tight text-ink mb-8">
-            Tools Built for the AI Team, Not the AI Tool.
+            Tools for Growth
           </h1>
           <p className="text-lead text-ink-muted leading-relaxed">
             Free assessments, frameworks, and AI skills I use with consultants, coaches, and founder-led brands.
@@ -55,7 +55,7 @@ export default function ResourcesPage() {
           <div className="border border-accent bg-paper-grey p-8 md:p-10">
             <p className="eyebrow mb-4">Free, 5 Minutes, No Email Required</p>
             <h2 className="text-h2 font-semibold text-ink leading-snug mb-4">
-              The AI Priority Map
+              The AI Assessment
             </h2>
             <p className="text-body text-ink-muted leading-relaxed mb-6">
               Find the biggest breaking points costing your business time, clients, and revenue, and the exact AI Assistant that fixes each one. Instant results.
